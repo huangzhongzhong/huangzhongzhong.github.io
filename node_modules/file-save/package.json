@@ -1,0 +1,30 @@
+{
+  "name": "file-save",
+  "version": "0.2.0",
+  "description": "auto create path and just save the file!",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chilijung/file-save.git"
+  },
+  "keywords": [
+    "file",
+    "save"
+  ],
+  "author": "chilijung <chilijung@gmail.com> (http://lijung.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chilijung/file-save/issues"
+  },
+  "homepage": "https://github.com/chilijung/file-save",
+  "dependencies": {
+    "mkdirp": "~0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "should": "~3.1.2"
+  }
+}
