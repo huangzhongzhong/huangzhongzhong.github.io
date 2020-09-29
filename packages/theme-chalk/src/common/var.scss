@@ -18,14 +18,29 @@ $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
 /* Color 颜色
 -------------------------- */
-/// color|1|Brand Color 主题色|0 
-$--color-primary: #155BD4 !default;
-/// color|1|Background Color 基础背景色-白色|4
-$--color-white: #FFFFFF !default;
-/// color|1|Background Color 基础背景色-黑色|4
-$--color-black: #000000 !default;
-/// 主题色衍生-叠加白色
 
+$--color-primary: #155BD4 !default; /*主题色*/
+$--color-white: #FFFFFF !default; /*基础色-白色*/
+$--color-black: #000000 !default; /*基础色-黑色*/
+
+$--color-success: #209E35 !default; /*功能色-正确状态*/
+$--color-warning: #E54409 !default; /*功能色-警告状态*/
+$--color-danger: #D40000 !default; /*功能色-危险状态*/
+$--color-info: #58595C !default; /*功能色-提示状态*/
+
+$--color-text-primary: #000000 !default;/*一级文本 主要*/
+$--color-text-regular: #262729 !default; /*二级文本 常规*/ 
+$--color-text-secondary: #73777A !default; /*三级文本 次要*/
+$--color-text-placeholder: #ADB0B8 !default;/*四级文本 占位*/
+
+$--color-border-base: #909399 !default; /*一级边框 基础*/
+$--color-border-light: #C0C3CC !default; /*二级边框 轻*/
+
+$--color-background-base: #F2F3F5 !default; /*背景 颜色 基础*/
+$--color-background-dark: #D8DDE5 !default;  /*增加*/ /*背景 颜色 重*/
+
+/*衍生颜色*/
+/// 主题色衍生-叠加白色
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; 
 // hover色
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* #447CDD */
@@ -41,16 +56,7 @@ $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /
 // 次要按钮背景色
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* #e8effb */
 
-$--color-primary-dark: mix($--color-black, $--color-primary, 90%) !default;
-
-/// color|1|Functional Color 功能色-正确状态 |1
-$--color-success: #209E35 !default;
-/// color|1|Functional Color 功能色-警告状态|1
-$--color-warning: #E54409 !default;
-/// color|1|Functional Color 功能色-危险状态|1
-$--color-danger: #D40000 !default;
-/// color|1|Functional Color 功能色-提示状态|1
-$--color-info: #58595C !default;
+// 暂时用不到 $--color-primary-dark: mix($--color-black, $--color-primary, 90%) !default; 
 
 // 功能色-轻-叠加白色-80%
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
@@ -63,81 +69,33 @@ $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
 $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
- 
-/// color|1|Font Color|2  
-// 一级文本 主要
-$--color-text-primary: #000000 !default;
-/// color|1|Font Color|2  
-// 二级文本 常规 
-$--color-text-regular: #262729 !default;
-/// color|1|Font Color|2   
-// 三级文本 次要
-$--color-text-secondary: #73777A !default;
-/// color|1|Font Color|2   
-// 四级文本 占位
-$--color-text-placeholder: #ADB0B8 !default;
-
-/// color|1|Border Color|3  
-// 一级边框 基础
-$--color-border-base: #909399 !default;
-/// color|1|Border Color|3  
-// 二级边框 轻 
-$--color-border-light: #C0C3CC !default;
-
-// Background 背景
-/// color|1|Background Color |4 
-// 背景 颜色 基础
-$--color-background-base: #F2F3F5 !default;  
-// 背景 颜色 重
-$--color-background-dark: #D8DDE5 !default;  /*增加*/
 
 
 /* 全局样式-引用的色值、其他属性、但不包括具体组件 */
 
+/* 背景 */
+$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
+/* 禁用 */
+$--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
+$--disabled-color-base: $--color-text-placeholder !default;/*禁用 颜色 基础*/
+$--disabled-border-base: $--color-border-light !default;/*禁用 边框 基础*/
+/* 链接 */
+$--link-color-base: $--color-primary !default;/*链接 颜色 基础*/
+$--link-color-hover: $--color-primary !default;/*链接 颜色 悬停*/
 
-// 背景 悬浮
-
-$--background-hover: $--color-primary-light-8 !default; /*增加*/
-
-
-/* Link 链接
--------------------------- */
-// 链接颜色 主色衍生
-$--link-color-base: $--color-primary !default;
-// 链接颜色 悬浮 颜色 
-$--link-color-hover: $--color-primary !default;
-
-
-/* Border 边框
--------------------------- */
-// 边框 宽度 大小 基础
-$--border-width-base: 1px !default;
-// 边框 样式 基础  ： solid边框大小
-$--border-style-base: solid !default;
-// 边框 颜色 悬停
-$--border-color-hover: $--color-primary !default;
-// 边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础
-$--border-base: $--border-width-base $--border-style-base $--color-border-base !default;
-
-/// borderRadius|1|Radius|0  
-// 大圆角
-$--border-radius-base: 4px !default;
-/// borderRadius|1|Radius|0  
-// 小圆角
-$--border-radius-small: 2px !default;
-/// borderRadius|1|Radius|0 
-// 全圆角（效果未知）
-$--border-radius-circle: 100% !default;
-/// borderRadius|1|Radius|0 
-// 无圆角
-$--border-radius-zero: 0 !default;
-
-// Box-shadow 投影
-/// boxShadow|1|Shadow|1 投影-基础
+/* 边框*/
+$--border-width-base: 1px !default;/*边框 宽度 大小 基础*/
+$--border-style-base: solid !default;/*边框 样式 基础  ： solid包围边框*/
+$--border-color-hover: $--color-primary !default;/*边框 颜色 悬停*/
+$--border-base: $--border-width-base $--border-style-base $--color-border-base !default;/*边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础 */
+/* 圆角*/
+$--border-radius-base: 4px !default; /*大圆角*/
+$--border-radius-small: 2px !default;/*小圆角*/
+$--border-radius-circle: 100% !default; /*全圆角（只能用于方形）*/
+$--border-radius-zero: 0 !default;/*无圆角*/
+// 投影
 $--box-shadow-base: 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09) !default;
-// boxShadow|1|Shadow|1 投影-暗
 $--box-shadow-dark: 0px 16px 24px 2px rgba(0, 4, 10, 0.16), 0px 4px 32px 4px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
-/// boxShadow|1|Shadow|1 投影-轻
 $--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12) !default;
 
 
@@ -180,16 +138,7 @@ $--index-normal: 1 !default;
 $--index-top: 1000 !default;
 $--index-popper: 2000 !default;
 
-/* Disable base 禁用-基础
--------------------------- */
-// 禁用 填充 基础
-$--disabled-fill-base: $--color-background-base !default;
 
-// 禁用 颜色 基础
-$--disabled-color-base: $--color-text-placeholder !default;
-
-// 禁用 边框 基础
-$--disabled-border-base: $--color-border-light !default;
 
 
 
@@ -198,48 +147,42 @@ $--disabled-border-base: $--color-border-light !default;
 /* Radio 单选 
 -------------------------- */
 // 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、最小、
-// 单选 字体 大小 
 $--radio-font-size: $--font-size-base !default; 
-// 单选 字体 粗细 
 // 所有单选字体的粗细
 $--radio-font-weight: $--font-weight-primary !default;
-// 基础用法和单选框组的颜色 ， 按钮样式的可能是由按钮那边控制的。 带有边框的本质上则不是按钮。
-// 单选 字体 颜色 
+// 基础用法和单选框组的字体颜色 ， 按钮样式的可能是由按钮那边控制的。 带有边框的本质上则不是按钮。
 $--radio-font-color: $--color-text-regular !default;
 
-// 所有单选按钮的大小，但是不包括按钮样式整组 带有边框中、小、最小。
-// 单选 选择按钮 高度
+// 所有单选输入框的大小，但是不包括按钮样式整组 带有边框中、小、最小。
 $--radio-input-height: 14px !default;
-// 单选 选择按钮 宽度
 $--radio-input-width: 14px !default;
-// 单选 选择按钮 背景 颜色 
-// 所有单选按钮的背景色，但是不包括按钮样式整组 带有边框小、最小。
+// 所有单选 输入框 的背景色，但是不包括按钮样式整组 带有边框小、最小。
 $--radio-input-background-color: $--color-white !default;
 // 问题：高度不控制到中等，字体颜色和大小又控制到中等。暂且不改。
 
-// 单选 选择按钮 边框 
+
+// 引用的边框样式集合，包括大小，样式，颜色
 $--radio-input-border: $--border-base !default;
 
-// 单选 选择按钮 边框 圆角 
+// 所有单选输入框边框圆角
 $--radio-input-border-radius: $--border-radius-circle !default;
-// 单选 选择按钮 边框 颜色 
-$--radio-input-border-color: $--color-border-base !default;
-//单选 选择按钮 边框 颜色 悬停 
+// 未被引用 $--radio-input-border-color: $--color-border-base !default;
+// 所有单选输入框的悬浮颜色，但是不包括按钮样式整组 
 $--radio-input-border-color-hover: $--color-primary !default;
 
 // 单选 图标 颜色 
-$--radio-icon-color: $--color-white !default;
+// 未被引用 $--radio-icon-color: $--color-white !default;
 
-// 单选 禁用 边框 颜色 
-$--radio-disabled-input-border-color: $--disabled-border-base !default;
-// 单选 禁用 边框 填充 
+// 所有未选中 单选 禁用 输入框 边框 颜色  
+$--radio-disabled-input-border-color:$--disabled-border-base !default;
+// 所有未选中 单选 禁用 输入框 填充 颜色 
 $--radio-disabled-input-fill: $--disabled-fill-base !default;
-// 单选 禁用 图标 颜色 
+//  所有未选中 单选 禁用 图标 颜色 （单选中心的小点）
 $--radio-disabled-icon-color: $--disabled-fill-base !default;
 
-// 单选 禁用 选中 选择按钮 边框 颜色
+// 单选 禁用 选中 输入框 边框 颜色
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-// 单选 禁用 选中 选择按钮 填充
+// 单选 禁用 选中 输入框 填充
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
 // 单选 禁用 选中 图标 颜色 
 $--radio-disabled-checked-icon-color: $--disabled-color-base !default;
