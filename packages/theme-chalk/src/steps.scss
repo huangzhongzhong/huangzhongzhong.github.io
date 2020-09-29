@@ -6,7 +6,7 @@
   @include m(simple) {
     padding: 13px 8%;
     border-radius: 4px;
-    background: $--background-color-base;
+    background: $--color-background-base;
   }
 
   @include m(horizontal) {

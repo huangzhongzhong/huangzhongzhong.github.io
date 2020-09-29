@@ -68,7 +68,7 @@
     @include m(bordered) {
       margin-bottom: 0;
       padding-bottom: 12px;
-      border-bottom: solid 1px $--border-color-light;
+      border-bottom: solid 1px $--color-border-light;
        // DatePicker 其他日期单位 年 内容区 顶部距离
       & + .el-picker-panel__content {
         margin-top: 0;

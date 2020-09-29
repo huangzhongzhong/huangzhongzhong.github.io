@@ -114,7 +114,7 @@
     }
 
     &.disabled div {
-      background-color: $--background-color-base;
+      background-color: $--color-background-base;
       opacity: 1;
       cursor: not-allowed;
       // 已审
@@ -147,6 +147,6 @@
     padding: 5px;
     color: $--datepicker-header-font-color;
     font-weight: 400;
-    border-bottom: solid 1px $--border-color-light;
+    border-bottom: solid 1px $--color-border-light;
   }
 }

@@ -15,9 +15,9 @@
     'textSecondary': '$--color-text-secondary',
     'textPlaceholder': '$--color-text-placeholder',
     'borderBase': '$--color-border-base',
-    'borderLight': '$--border-color-light',
-    'borderLighter': '$--border-color-light',
-    'borderExtraLight': '$--border-color-light'
+    'borderLight': '$--color-border-light',
+    'borderLighter': '$--color-border-light',
+    'borderExtraLight': '$--color-border-light'
   };
   const original = {
     primary: '#409EFF',

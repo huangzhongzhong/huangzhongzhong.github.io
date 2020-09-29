@@ -26,7 +26,7 @@
 
   @include e(placeholder) {
     @extend %size;
-    background: $--background-color-base;
+    background: $--color-background-base;
   }
 
   @include e(error) {
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    background: $--background-color-base;
+    background: $--color-background-base;
     // 已审
     color: $--color-text-placeholder;
     vertical-align: middle;

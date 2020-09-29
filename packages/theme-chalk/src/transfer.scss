@@ -30,13 +30,13 @@
 
     @include when(disabled) {
       border: $--border-base;
-      background-color: $--background-color-base;
+      background-color: $--color-background-base;
       // 已审
       color: $--color-text-placeholder;
 
       &:hover {
         border: $--border-base;
-        background-color: $--background-color-base;
+        background-color: $--color-background-base;
         // 已审
         color: $--color-text-placeholder;
       }

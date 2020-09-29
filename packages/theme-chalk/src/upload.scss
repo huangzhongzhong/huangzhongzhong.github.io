@@ -28,7 +28,7 @@
 
   /* 照片墙模式 */
   @include m(picture-card) {
-    background-color: $--background-color-base ;
+    background-color: $--color-background-base ;
     border: 1px dashed $--color-border-base ;
     border-radius: 6px;
     box-sizing: border-box;
@@ -178,7 +178,7 @@
     }
     
     &:hover {
-      background-color: $--background-color-base;
+      background-color: $--color-background-base;
 
       .el-icon-close {
         display: inline-block;
