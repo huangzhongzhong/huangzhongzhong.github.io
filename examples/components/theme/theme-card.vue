@@ -365,7 +365,7 @@ export default {
       return this.theme.global['$--color-text-primary'] || '#303133';
     },
     borderBaseColor() {
-      return this.theme.global['$--border-color-base'] || '#DCDFE6';
+      return this.theme.global['$--color-border-base'] || '#DCDFE6';
     },
     textSecondaryColor() {
       return this.theme.global['$--color-text-secondary'] || '#909399';

@@ -2,7 +2,7 @@
 @import "mixins/mixins";
 
 @include b(divider) {
-  background-color: $--border-color-base;
+  background-color: $--color-border-base;
   position: relative;
 
   @include m(horizontal) {

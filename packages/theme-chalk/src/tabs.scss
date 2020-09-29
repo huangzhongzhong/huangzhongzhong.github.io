@@ -208,7 +208,7 @@
   }
   @include m(border-card) {
     background: $--color-white;
-    border: 1px solid $--border-color-base;
+    border: 1px solid $--color-border-base;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
 
     > .el-tabs__content {
@@ -239,8 +239,8 @@
       &.is-active {
         color: $--color-primary;
         background-color: $--color-white;
-        border-right-color: $--border-color-base;
-        border-left-color: $--border-color-base;
+        border-right-color: $--color-border-base;
+        border-left-color: $--color-border-base;
       }
       &:not(.is-disabled):hover {
         color: $--color-primary;
@@ -284,7 +284,7 @@
     &.el-tabs--border-card {
       .el-tabs__header.is-bottom {
         border-bottom: 0;
-        border-top: 1px solid $--border-color-base;
+        border-top: 1px solid $--color-border-base;
       }
       .el-tabs__nav-wrap.is-bottom {
         margin-top: -1px;

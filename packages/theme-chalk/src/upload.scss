@@ -29,7 +29,7 @@
   /* 照片墙模式 */
   @include m(picture-card) {
     background-color: $--background-color-base ;
-    border: 1px dashed $--border-color-base ;
+    border: 1px dashed $--color-border-base ;
     border-radius: 6px;
     box-sizing: border-box;
     width: 148px;
@@ -61,7 +61,7 @@
 // 文件缩略图
 @include b(upload-dragger) {
   background-color: #fff;
-  border: 1px dashed $--border-color-base ;
+  border: 1px dashed $--color-border-base ;
   border-radius: 6px;
   box-sizing: border-box;
   width: 360px;
@@ -195,7 +195,7 @@
       }
 
       .el-upload-list__item-name:hover, .el-upload-list__item-name:focus {
-        color: $--link-hover-color;
+        color: $--link-color-hover;
         cursor: pointer;
       }
 

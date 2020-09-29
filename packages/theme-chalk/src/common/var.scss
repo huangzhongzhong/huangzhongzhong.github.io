@@ -2,11 +2,7 @@
 
 // Special comment for theme configurator 主题配置器的特殊注释
 // type|skipAutoTranslation|Category|Order 类型|跳过自动翻译|类别|订单
-// skipAutoTranslation 1翻译1
-
-
-/*独立色值*/
-/*独立圆角*/
+// skipAutoTranslation 
 
 /* Transition 过渡动画
 -------------------------- */
@@ -16,6 +12,9 @@ $--fade-linear-transition: opacity 200ms linear !default;
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 $--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
 $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+
+
+/* 全局颜色-都是色值或者色值运算 */
 
 /* Color 颜色
 -------------------------- */
@@ -80,7 +79,7 @@ $--color-text-placeholder: #ADB0B8 !default;
 
 /// color|1|Border Color|3  
 // 一级边框 基础
-$--border-color-base: #909399 !default;
+$--color-border-base: #909399 !default;
 /// color|1|Border Color|3  
 // 二级边框 轻 
 $--border-color-light: #C0C3CC !default;
@@ -91,19 +90,23 @@ $--border-color-light: #C0C3CC !default;
 $--background-color-base: #F2F3F5 !default;  
 // 背景 颜色 重
 $--background-color-drak: #D8DDE5 !default;  /*增加*/
-// 背景 颜色 透明
- // 待修改 换成透明的单词
-$--background-color-transparent: #F2F3F500 !default; 
+
+
+/* 全局样式-引用的色值、其他属性、但不包括具体组件 */
+
+
 // 背景 悬浮
+
 $--background-hover: $--color-primary-light-8 !default; /*增加*/
 
 
 /* Link 链接
 -------------------------- */
 // 链接颜色 主色衍生
-$--link-color: $--color-primary !default;
+$--link-color-base: $--color-primary !default;
 // 链接颜色 悬浮 颜色 
-$--link-hover-color: $--color-primary !default;
+$--link-color-hover: $--color-primary !default;
+
 
 /* Border 边框
 -------------------------- */
@@ -114,7 +117,7 @@ $--border-style-base: solid !default;
 // 边框 颜色 悬停
 $--border-color-hover: $--color-primary !default;
 // 边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-base: $--border-width-base $--border-style-base $--color-border-base !default;
 
 /// borderRadius|1|Radius|0  
 // 大圆角
@@ -140,7 +143,9 @@ $--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10
 
 /* Typography
 -------------------------- */
+// 字体路径？
 $--font-path: 'fonts' !default;
+// 字体显示？
 $--font-display: 'auto' !default;
 /// fontSize|1|Font Size|0 主标题字体大小 最大
 $--font-size-extra-large: 20px !default;
@@ -167,7 +172,7 @@ $--font-line-height-secondary: 16px !default;
 -------------------------- */
 $--size-base: 14px !default;
 
-/* z-index 指示？ 在输入框自定义模板那里有出现
+/* z-index 指示？ 在输入框自定义模板那里有出现,具体影响呢？
 -------------------------- */
 $--index-normal: 1 !default;
 $--index-top: 1000 !default;
@@ -177,6 +182,7 @@ $--index-popper: 2000 !default;
 -------------------------- */
 // 禁用 填充 基础
 $--disabled-fill-base: $--background-color-base !default;
+
 // 禁用 颜色 基础
 $--disabled-color-base: $--color-text-placeholder !default;
 
@@ -185,14 +191,7 @@ $--disabled-border-base: $--border-color-light !default;
 
 
 
-/* Icon 图标
--------------------------- */
-// 图标 颜色 应用在哪？
-$--icon-color: $--color-text-secondary !default; 
-// 图标-颜色-基础
-$--icon-color-base: $--color-info !default;
-
-
+/* 全局组件样式-各组件的全局样式 */
 
 
 /* Checkbox 多选
@@ -205,18 +204,21 @@ $--checkbox-font-weight: $--font-weight-primary !default;
 /// color||Color|0
 // 多选 字体 颜色
 $--checkbox-font-color: $--color-text-regular !default;
+
 // 多选 输入框 高度
 $--checkbox-input-height: 14px !default;
 // 多选 输入框 宽度
 $--checkbox-input-width: 14px !default;
+// 多选 输入框 边框
+$--checkbox-input-border: $--border-base !default;
+
 /// borderRadius||Border|2 多选-圆角
 // 多选 边框 圆角
 $--checkbox-border-radius: $--border-radius-small !default;
 /// color||Color|0
 // 多选 背景 颜色
 $--checkbox-background-color: $--color-white !default;
-// 多选 输入框 边框
-$--checkbox-input-border: $--border-base !default;
+
 
 /// color||Color|0
 // 多选 禁用 边框 颜色
@@ -242,12 +244,14 @@ $--checkbox-checked-input-border-color: $--color-primary !default;
 $--checkbox-checked-background-color: $--color-primary !default;
 // 多选 选中 图标 颜色
 $--checkbox-checked-icon-color: $--color-white !default;
+
 // 多选 输入框 边框 颜色 悬停
 $--checkbox-input-border-color-hover: $--color-primary !default;
 
 /// height||Other|4 高度 其他 多选 带有边框
 // 多选 带有边框 高度
 $--checkbox-bordered-height: 40px !default;
+
 /// padding||Spacing|3 内边距
 // 多选 带有边框 内边距 
 $--checkbox-bordered-padding: 9px 20px 9px 10px !default;
@@ -268,8 +272,8 @@ $--checkbox-bordered-medium-input-height: 14px !default;
 $--checkbox-bordered-medium-input-width: 14px !default;
 /// height||Other|4
 // 多选 带有边框 中号 高度
-
 $--checkbox-bordered-medium-height: 36px !default;
+
 // 多选 带有边框 小号 选择按钮 高度 
 $--checkbox-bordered-small-input-height: 12px !default;
 // 多选 带有边框 小号 选择按钮 宽度
@@ -306,18 +310,18 @@ $--radio-font-size: $--font-size-base !default;
 /// fontWeight||Font|1 字体粗细
 // 单选 字体 粗细 
 $--radio-font-weight: $--font-weight-primary !default;
-
 /// color||Color|0
 // 单选 字体 颜色 
 $--radio-font-color: $--color-text-regular !default;
+
 // 单选 选择按钮 高度
 $--radio-input-height: 14px !default;
 // 单选 选择按钮 宽度
 $--radio-input-width: 14px !default;
-
 /// borderRadius||Border|2 边框圆角
 // 单选 选择按钮 边框 圆角 
 $--radio-input-border-radius: $--border-radius-circle !default;
+
 /// color||Color|0
 // 单选 选择按钮 背景 颜色 
 $--radio-input-background-color: $--color-white !default;
@@ -325,7 +329,7 @@ $--radio-input-background-color: $--color-white !default;
 $--radio-input-border: $--border-base !default;
 /// color||Color|0
 // 单选 选择按钮 边框 颜色 
-$--radio-input-border-color: $--border-color-base !default;
+$--radio-input-border-color: $--color-border-base !default;
 /// color||Color|0
 // 单选 图标 颜色 
 $--radio-icon-color: $--color-white !default;
@@ -659,7 +663,7 @@ $--input-height: 40px !default;
 // 输入框 边框 
 $--input-border: $--border-base !default;
 // 输入框 边框 颜色
-$--input-border-color: $--border-color-base !default;
+$--input-border-color: $--color-border-base !default;
 
 /// borderRadius||Border|2 边框圆角
 // 输入框 边框 圆角 
@@ -771,7 +775,7 @@ $--group-title-width: 66px !default;
 // 标签页 字体 大小
 $--tab-font-size: $--font-size-base !default;
 // 标签页 边框 线 
-$--tab-border-line: 1px solid $--border-color-base !default;
+$--tab-border-line: 1px solid $--color-border-base !default;
 // 标签页 标题 颜色 激活 
 $--tab-header-color-active: $--color-text-secondary !default;
 // 标签页 标题 颜色 悬停
@@ -852,7 +856,7 @@ $--button-default-font-color: $--color-text-regular !default;
 $--button-default-background-color: $--color-white !default;
 /// color||Color|0
 // 按钮 默认 背景 颜色
-$--button-default-border-color: $--border-color-base !default;
+$--button-default-border-color: $--color-border-base !default;
 
 /// color||Color|0
 // 按钮 禁用 字体 颜色 
@@ -1128,7 +1132,7 @@ $--dropdown-menu-box-shadow: $--box-shadow-light !default;
 // 下拉 菜单选项 悬停 填充 
 $--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
 // 下拉 菜单 悬停 颜色
-$--dropdown-menuItem-hover-color: $--link-color !default;
+$--dropdown-menuItem-hover-color: $--link-color-base !default;
 
 
 /* Badge 标记
@@ -1340,7 +1344,7 @@ $--collapse-content-font-color: $--color-text-primary !default;
 /* Transfer 穿梭框
 --------------------------*/
 // 穿梭框 边框 颜色 
-$--transfer-border-color: $--border-color-base !default;
+$--transfer-border-color: $--color-border-base !default;
 // 穿梭框 边框 圆角 
 $--transfer-border-radius: $--border-radius-base !default;
 /// height||Other|4
