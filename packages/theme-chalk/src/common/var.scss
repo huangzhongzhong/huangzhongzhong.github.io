@@ -197,6 +197,23 @@ $--button-hover-tint-percent: 30% !default;/*叠加白色减轻百分比*/
 $--button-active-shade-percent: 20% !default;/*叠加黑色加重百分比*/
 
 
+/* Link 链接
+--------------------------*/
+$--link-font-size: $--font-size-base !default;
+$--link-font-weight: $--font-weight-primary !default;
+
+$--link-default-font-color: $--color-text-regular !default;
+$--link-default-active-color: $--color-primary !default;
+
+$--link-disabled-font-color: $--color-text-placeholder !default;
+
+$--link-primary-font-color: $--color-primary !default;
+$--link-success-font-color: $--color-success !default;
+$--link-warning-font-color: $--color-warning !default;
+$--link-danger-font-color: $--color-danger !default;
+$--link-info-font-color: $--color-info !default;
+
+
 /* Radio 单选 
 -------------------------- */
 // 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、超小、
@@ -515,11 +532,22 @@ $--datepicker-hover-font-color: $--color-primary !default;
 // 日期选择器  单元 悬停 颜色 
 $--datepicker-cell-hover-color: $--color-white !default; 
 
+
 /* Date Time Picker 时间日期选择器
 --------------------------*/
 
-/* upload
+
+/* upload 上传
 -------------------------- */
+
+
+/* Rate 评分
+--------------------------*/
+$--rate-height: 20px !default;
+$--rate-font-size: $--font-size-base !default;
+$--rate-icon-size: 18px !default;
+$--rate-icon-margin: 6px !default; 
+$--rate-icon-color: $--color-text-placeholder !default;
 
 
 /* Transfer 穿梭框
@@ -586,7 +614,7 @@ $--tag-font-size: 12px !default;
 $--tag-border-radius: $--border-radius-base !default;
 $--tag-padding: 0 10px !default;
 
-/* progress
+/* progress 进度条
 -------------------------- */
 
 /* Tree 树形控件
@@ -791,154 +819,66 @@ $--tooltip-arrow-size: 6px !default;
 $--tooltip-padding: 10px !default;
 
 
-
-
-
-
-
-
-/* Popup
+/* Popup 弹出蒙版
 -------------------------- */
-
-// 弹出框 蒙版 背景 颜色
 $--popup-modal-background-color: $--color-black !default;
-/// opacity||Other|1
-// 蒙版透明度
 $--popup-modal-opacity: 0.5 !default;
 
 /* Popover 弹出框
 -------------------------- */
-
-// 弹出框 背景 颜色
 $--popover-background-color: $--color-white !default;
-/// fontSize||Font|1
-// 弹出框 字体 大小
 $--popover-font-size: $--font-size-base !default;
-
-// 弹出框 边框 颜色 同样控制箭头
 $--popover-border-color: $--color-border-light !default;
-// 弹出框 箭头  大小
 $--popover-arrow-size: 6px  !default;
 
-/// padding||Spacing|3
-// 弹出框 内边距
 $--popover-padding: 12px !default;
-// 弹出框 内边距 大号
 $--popover-padding-large: 18px 20px !default;
-/// fontSize||Font|1
-// 弹出框 标题 字体 大小
 $--popover-title-font-size: 16px !default;
-
-// 弹出框 标题 字体 颜色 
 $--popover-title-font-color: $--color-text-primary !default;
 
-
-
-
+/* Popconfirm 气泡确认框
+-------------------------- */
 
 /* Card 卡片
 --------------------------*/
-
-// 卡片 边框 颜色 
 $--card-border-color: $--color-border-light !default;
-// 卡片 边框 圆角 
 $--card-border-radius: $--border-radius-base !default;
-/// padding||Spacing|3
-// 卡片 内边距
 $--card-padding: 20px !default;
-
-
-
-
-
-
-
-
-/* Rate 评分
---------------------------*/
-// 评分 高度
-$--rate-height: 20px !default;
-/// fontSize||Font|1
-// 评分 字体 大小
-$--rate-font-size: $--font-size-base !default;
-/// height||Other|3
-// 评分 图标 大小
-$--rate-icon-size: 18px !default;
-/// margin||Spacing|2
-// 评分 图标 外边距
-$--rate-icon-margin: 6px !default;
-// 评分 图标 颜色 
-$--rate-icon-color: $--color-text-placeholder !default;
-
-
-
-
-
 
 
 /* Scrollbar 滚动条
 --------------------------*/
-// 滚动条 背景 颜色
 $--scrollbar-background-color: rgba($--color-text-secondary, .3) !default;
-// 滚动条 悬停 背景 颜色 
 $--scrollbar-hover-background-color: rgba($--color-text-secondary, .5) !default;
 
 
 /* Carousel 走马灯
 --------------------------*/
-/// fontSize||Font|1
-// 走马灯 箭头 字体 大小
 $--carousel-arrow-font-size: 12px !default;
-// 走马灯 箭头 大小
 $--carousel-arrow-size: 36px !default;
-// 走马灯 箭头 背景
 $--carousel-arrow-background: rgba(31, 45, 61, 0.11) !default;
-// 走马灯 箭头 悬停 背景
 $--carousel-arrow-hover-background: rgba(31, 45, 61, 0.23) !default;
-/// width||Other|4
-// 走马灯 指示器 宽度
-$--carousel-indicator-width: 30px !default;
-/// height||Other|4
-// 走马灯 指示器 高度
+
+$--carousel-indicator-width: 30px !default;/* indicator 指示器 */
 $--carousel-indicator-height: 2px !default;
-// 走马灯 指示器 内边距 水平
 $--carousel-indicator-padding-horizontal: 4px !default;
-// 走马灯 指示器 内边距 垂直
 $--carousel-indicator-padding-vertical: 12px !default;
-// 走马灯 指示器 选中 颜色 ： 
+
 $--carousel-indicator-out-color: $--border-color-hover !default;
 
 
 /* Collapse 折叠面板
 --------------------------*/
-
-// 折叠面板 边框 颜色 
 $--collapse-border-color: $--color-border-light !default;
-/// height||Other|4
-// 折叠面板 标题 高度
+
 $--collapse-header-height: 48px !default;
-
-// 折叠面板 标题 背景 颜色 
 $--collapse-header-background-color: $--color-white !default;
-
-// 折叠面板 标题 字体 颜色 
 $--collapse-header-font-color: $--color-text-primary !default;
-/// fontSize||Font|1
-// 折叠面板 标题 字体 大小
 $--collapse-header-font-size: 13px !default;
 
-// 折叠面板 内容 背景 颜色
 $--collapse-content-background-color: $--color-white !default;
-/// fontSize||Font|1
-// 折叠面板 内容 字体 大小 
 $--collapse-content-font-size: 13px !default;
-
-// 折叠面板 内容 字体 颜色 
 $--collapse-content-font-color: $--color-text-primary !default;
-
-
-
-
 
 
 /* Footer 页脚？影响哪些
@@ -955,59 +895,18 @@ $--main-padding: 20px !default;
 
 /* Timeline 时间线
 --------------------------*/
-// 时间线 节点 大小 正常
 $--timeline-node-size-normal: 12px !default;
-// 时间线 节点 大号 
 $--timeline-node-size-large: 14px !default;
-// 时间线 节点 颜色
 $--timeline-node-color: $--color-border-light !default;
 
 
 /* Backtop 回到顶部
 --------------------------*/
-
-// 回到顶部 背景 颜色
 $--backtop-background-color: $--color-white !default;
-
-// 回到顶部 字体 颜色 
 $--backtop-font-color: $--color-primary !default;
-
-// 回到顶部 悬停 背景 颜色
 $--backtop-hover-background-color: $--background-hover !default;
 
 
-/* Link 链接
---------------------------*/
-/// fontSize||Font|1
-// 链接 字体 大小
-$--link-font-size: $--font-size-base !default;
-/// fontWeight||Font|1
-// 链接 字体 粗细 
-$--link-font-weight: $--font-weight-primary !default;
-
-// 链接  默认 字体 颜色
-$--link-default-font-color: $--color-text-regular !default;
-
-// 链接 默认 激活 颜色 
-$--link-default-active-color: $--color-primary !default;
-
-// 链接 禁用 字体 颜色 
-$--link-disabled-font-color: $--color-text-placeholder !default;
-
-// 链接 主要 字体 颜色 
-$--link-primary-font-color: $--color-primary !default;
-
-// 链接 正确 字体 颜色 
-$--link-success-font-color: $--color-success !default;
-
-// 链接  警告 字体 颜色
-$--link-warning-font-color: $--color-warning !default;
-
-// 链接  危险 字体 颜色 
-$--link-danger-font-color: $--color-danger !default;
-
-// 链接 提示 字体 颜色
-$--link-info-font-color: $--color-info !default;
 
 
 /* Calendar 日历
