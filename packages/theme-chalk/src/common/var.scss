@@ -700,79 +700,37 @@ $--messagebox-danger-color: $--color-danger !default;
 
 /* Notification  通知
 -------------------------- */
-// 通知 宽度
 $--notification-width: 330px !default;
-
-/// padding||Spacing|3
-// 通知 内边距 
 $--notification-padding: 14px 26px 14px 13px !default;
-// 通知-圆角
 $--notification-radius: 8px !default;
-// 通知 投影 ： 盒子 投影 轻
 $--notification-shadow: $--box-shadow-light !default;
 
-
-// 通知 边框 颜色 
 $--notification-border-color: $--color-white !default;
-// 通知 图标 大小
 $--notification-icon-size: 24px !default;
-// 通知 关闭 字体 大小 
 $--notification-close-font-size: $--message-close-size !default;
-// 通知 组 左边距 ？对应在哪里
+
 $--notification-group-margin-left: 13px !default;
-// 通知 组 右边距
 $--notification-group-margin-right: 8px !default;
-/// fontSize||Font|1
-// 通知 内容 字体 大小 
 $--notification-content-font-size: $--font-size-base !default;
-
-// 通知 内容 颜色 
 $--notification-content-color: $--color-text-regular !default;
-/// fontSize||Font|1
-// 通知 标题 字体 大小
-$--notification-title-font-size: 16px !default;
 
-// 通知 字体 颜色
+$--notification-title-font-size: 16px !default;
 $--notification-title-color: $--color-text-primary !default;
 
-
-// 通知 关闭 颜色 
 $--notification-close-color: $--color-text-secondary !default;
-
-// 通知 关闭 悬停 颜色 
 $--notification-close-hover-color: $--color-text-regular !default;
 
-
-// 通知 正确 图标 颜色 
 $--notification-success-icon-color: $--color-success !default;
-
-// 通知 提示 图标 颜色 
 $--notification-info-icon-color: $--color-info !default;
-
-// 通知 警告 图标 颜色 
 $--notification-warning-icon-color: $--color-warning !default;
-
-// 通知 危险 图标 颜色
 $--notification-danger-icon-color: $--color-danger !default;
 
-
-
-
-
-/* Group 组 控制哪里？
--------------------------- */
-// 组 选项 布局
-$--group-option-flex: 0 0 (1/5) * 100% !default;
-// 组 选项 偏移 底部 
-$--group-option-offset-bottom: 12px !default;
-// 组 选项 背景 悬停
-$--group-option-fill-hover: rgba($--color-black, 0.06) !default;
-// 组 标题 颜色：颜色 黑色
-$--group-title-color: $--color-black !default;
-// 组 标题 字体 大小
-$--group-title-font-size: $--font-size-base !default;
-// 组 标题 宽度
-$--group-title-width: 66px !default;
+/* Menu 菜单
+--------------------------*/
+$--menu-item-font-size: $--font-size-base !default;/*item 选项*/
+$--menu-item-font-color: $--color-text-primary !default;
+$--menu-item-hover-fill: $--border-color-hover !default;
+$--menu-background-color: $--color-white !default;
 
 
 /* Tab 标签页
@@ -925,19 +883,6 @@ $--steps-border-radius: $--border-radius-base !default;
 $--steps-padding: 20px !default;
 
 
-/* Menu 菜单
---------------------------*/
-/// fontSize||Font|1
-// 菜单 选项 字体 大小 
-$--menu-item-font-size: $--font-size-base !default;
-
-// 菜单 选项 字体 颜色
-$--menu-item-font-color: $--color-text-primary !default;
-
-// 菜单 背景 颜色 
-$--menu-background-color: $--color-white !default;
-// 菜单 选项 悬停 填充 
-$--menu-item-hover-fill: $--border-color-hover !default;
 
 
 /* Rate 评分
