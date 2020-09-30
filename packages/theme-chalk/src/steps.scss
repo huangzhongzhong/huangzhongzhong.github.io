@@ -2,11 +2,11 @@
 
 @include b(steps) {
   display: flex;
-
-  @include m(simple) {
+  
+  @include m(simple) {/*案例： 简洁风格步骤条*/
     padding: 13px 8%;
     border-radius: 4px;
-    background: $--color-background-base;
+    background: $--color-background-dark;
   }
 
   @include m(horizontal) {

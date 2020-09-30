@@ -299,16 +299,13 @@ $--checkbox-font-color: $--color-text-regular !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 $--checkbox-input-border: $--border-base !default;
-
 $--checkbox-border-radius: $--border-radius-small !default;
-
 $--checkbox-background-color: $--color-white !default;
 
 // 多选 禁用 
 $--checkbox-disabled-border-color: $--disabled-border-base !default;
 $--checkbox-disabled-input-fill: $--disabled-fill-base !default;
 $--checkbox-disabled-icon-color: $--disabled-color-base !default;
-
 
 $--checkbox-disabled-checked-input-fill: $--disabled-fill-base !default;
 $--checkbox-disabled-checked-input-border-color: $--disabled-border-base !default;
@@ -341,13 +338,13 @@ $--checkbox-bordered-mini-input-width: 12px !default;
 $--checkbox-bordered-mini-height: 28px !default;
 
 //  多选 按钮样式
+$--checkbox-button-font-color: $--color-text-regular !default;
 $--checkbox-button-background-color: $--color-white !default;
 
 $--checkbox-button-checked-background-color: $--color-primary-light-9 !default;
 $--checkbox-button-checked-font-color: $--color-primary !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
 
-$--checkbox-button-font-color: $--color-text-regular !default;
 $--checkbox-button-disabled-fill: $--color-white !default;
 $--checkbox-button-disabled-border: $--disabled-border-base !default;
 $--checkbox-button-disabled-background: $--color-white !default;
@@ -381,7 +378,7 @@ $--input-focus-fill: $--color-white !default;
 $--input-disabled-fill: $--disabled-fill-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
-$--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-disabled-placeholder-color: $--disabled-font-color !default;
 
 $--input-medium-font-size: 14px !default;
 $--input-medium-height: 36px !default;
@@ -413,7 +410,7 @@ $--select-input-font-size: 14px !default;
 
 // 选择器 选项
 $--select-option-color: $--color-text-regular !default;
-$--select-option-disabled-color: $--color-text-placeholder !default;
+$--select-option-disabled-color: $--disabled-font-color !default;
 $--select-option-disabled-background: $--color-white !default;
 
 $--select-option-height: 34px !default;
@@ -613,7 +610,7 @@ $--pagination-border-radius: 3px !default;
 $--pagination-button-color: $--color-text-primary !default;
 $--pagination-button-width: 35.5px !default;
 $--pagination-button-height: 28px !default;
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-color: $--disabled-font-color !default;
 $--pagination-button-disabled-background-color: $--color-white !default;
 
 $--pagination-hover-color: $--color-primary !default;
@@ -767,7 +764,7 @@ $--dropdown-menuItem-hover-color: $--link-color-base !default;
 
 /* Steps 步骤条
 --------------------------*/
-$--steps-border-color: $--disabled-border-base !default;
+// $--steps-border-color: $--disabled-border-base !default;
 $--steps-border-radius: $--border-radius-base !default; 
 $--steps-padding: 20px !default;
 

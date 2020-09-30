@@ -101,13 +101,14 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-
+    
+    // 多选 禁用
     @include when(disabled) {
       .el-checkbox__inner {
         background-color: $--checkbox-disabled-input-fill;
         border-color: $--checkbox-disabled-border-color;
         cursor: not-allowed;
-
+        
         &::after {
           cursor: not-allowed;
           border-color: $--checkbox-disabled-icon-color;
@@ -312,11 +313,11 @@
       cursor: not-allowed;
       background-image: none;
       background-color: $--checkbox-button-disabled-fill ;
-      border-color: $--checkbox-button-disabled-border;
+      border-color: $--disabled-font-color ;
       box-shadow: none;
     }
     &:first-child .el-checkbox-button__inner {
-      border-left-color: $--button-disabled-border-color;
+      border-left-color: $--disabled-border-base ;
     }
   }
 
