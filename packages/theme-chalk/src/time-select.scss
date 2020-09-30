@@ -24,14 +24,14 @@
   color: $--color-primary;
   font-weight: bold;
 }
-
+// 固定时间范围  字体禁用颜色   
 .time-select-item.disabled {
-  color: $--datepicker-border-color;
+  color: $--disabled-font-color ;
   cursor: not-allowed;
 }
-
+// time picker 固定时间点  固定时间范围 
 .time-select-item:hover {
-  background-color: $--background-hover;
+  background-color: $--background-hover ;
   font-weight: bold;
   cursor: pointer;
 }

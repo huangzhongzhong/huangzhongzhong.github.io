@@ -1,5 +1,6 @@
 @import "../common/var";
 
+// /* 案例：日期选择器 面板 */ 
 @include b(picker-panel) {
   color: $--color-text-regular;
   border: 1px solid $--datepicker-border-color;

@@ -245,7 +245,8 @@
   }
 }
 
-@include b(checkbox-button) {
+
+@include b(checkbox-button) { /*多选 按钮样式*/
   position: relative;
   display: inline-block;
 
@@ -256,10 +257,10 @@
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
-    background: $--button-default-background-color;
+    background: $--checkbox-button-background-color ;
     border: $--border-base;
     border-left: 0;
-    color: $--button-default-font-color;
+    color: $--checkbox-button-font-color ;
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
@@ -310,8 +311,8 @@
       color: $--button-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-background-color;
-      border-color: $--button-disabled-border-color;
+      background-color: $--checkbox-button-disabled-fill ;
+      border-color: $--checkbox-button-disabled-border;
       box-shadow: none;
     }
     &:first-child .el-checkbox-button__inner {

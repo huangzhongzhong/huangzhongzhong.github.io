@@ -3,6 +3,7 @@
 @import 'mixins/button';
 @import "common/var";
 
+// 单选
 @include b(radio) {
   color: $--radio-font-color;
   font-weight: $--radio-font-weight;
@@ -16,13 +17,14 @@
   margin-right: 30px;
   @include utils-user-select(none);
 
-  @include when(bordered) {
+  @include when(bordered) {  /*案例：单选 带有边框 */
     padding: $--radio-bordered-padding;
     border-radius: $--border-radius-base;
     border: $--border-base;
     box-sizing: border-box;
     height: $--radio-bordered-height;
-
+    background: $--radio-button-background-color ;
+ 
     &.is-checked {
       border-color: $--color-primary;
     }
@@ -99,7 +101,7 @@
         background-color: $--radio-disabled-input-fill;
         border-color: $--disabled-border-base ;
         cursor: not-allowed;
-
+       // 未知选择选的是哪里？ after在每个 <p> 元素的内容之后插入新内容： /*待解释*/
         &::after {
           cursor: not-allowed;
           background-color: $--radio-disabled-icon-color;
@@ -148,8 +150,7 @@
       }
     }
   }
-  @include e(inner) {
-    // 这里控制哪里？
+  @include e(inner) { /* 案例：radio 带有边框*/
     border: $--radio-input-border;
     border-radius: $--radio-input-border-radius;
     width: $--radio-input-width;
@@ -158,13 +159,14 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
-    box-sizing: border-box;
+    box-sizing: border-box; /*加边框*/ 
+    // 取消后竟然没有反应
 
     &:hover {
       border-color: $--radio-input-border-color-hover;
     }
-
-    &::after {
+    
+    &::after { /*控制所有单选按钮小点的大小*/
       width: 4px;
       height: 4px;
       border-radius: $--radio-input-border-radius;

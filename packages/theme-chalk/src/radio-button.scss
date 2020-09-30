@@ -6,17 +6,18 @@
   position: relative;
   display: inline-block;
   outline: none;
-
-  @include e(inner) {
+// 
+  @include e(inner) { /*案例： 单选 按钮样式 */
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
     vertical-align: middle;
-    background: $--button-default-background-color;
+    background: $--radio-button-background-color ;
     border: $--border-base;
     font-weight: $--button-font-weight;
     border-left: 0;
-    color: $--button-default-font-color;
+  
+    color: $--button-default-font-color;/*案例： 单选 按钮样式 未选中部分文字，不包括禁用 */
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
@@ -54,8 +55,8 @@
     outline: none;
     position: absolute;
     z-index: -1;
-
-    &:checked {
+     
+    &:checked { /*案例： radio 按钮样式 选中*/
       & + .el-radio-button__inner {
         color: $--radio-button-checked-font-color;
         background-color: $--radio-button-checked-background-color;
@@ -63,18 +64,18 @@
         box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
       }
     }
-
-    &:disabled {
+    
+    &:disabled {  /*案例： radio 按钮样式 未选中禁用*/ 
       & + .el-radio-button__inner {
         color: $--button-disabled-font-color;
         cursor: not-allowed;
         background-image: none;
-        background-color: $--button-disabled-background-color;
-        border-color: $--button-disabled-border-color;
+        background-color: $--radio-button-disabled-background ;
+        border-color: $--radio-button-disabled-border;
         box-shadow: none;
       }
-      &:checked + .el-radio-button__inner {
-        background-color: $--radio-button-disabled-checked-fill;
+      &:checked + .el-radio-button__inner { /*案例： radio 按钮样式 已选中禁用*/ 
+        background-color: $--radio-button-disabled-checked-background ;
       }
     }
   }

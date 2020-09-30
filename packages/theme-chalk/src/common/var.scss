@@ -20,7 +20,6 @@ $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
 /* Color 颜色
 -------------------------- */
-
 $--color-primary: #155bd4 !default; /*主题色*/
 $--color-white: #FFFFFF !default; /*基础色-白色*/
 $--color-black: #000000 !default; /*基础色-黑色*/
@@ -60,7 +59,6 @@ $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /
 // 次要按钮背景色
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* #e8effb */
 
-
 // 功能色-轻-叠加白色-80%
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
@@ -77,24 +75,27 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 /* -------------------------- 
 全局样式-引用的色值、其他属性、但不包括具体组件
 -------------------------- */
-
 /* 禁用 */
 $--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
 $--disabled-color-base: $--color-text-placeholder !default;/*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default;/*禁用 边框 基础*/
+$--disabled-font-color: $--color-text-placeholder !default;/*禁用 字体颜色 基础*/
 
-$--disabled-font-color: $--color-text-placeholder !default;
 
-/* 背景 */
+/* 悬停 */
 $--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
+$--background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
+$--link-color-hover: $--color-primary !default;/*链接 颜色 悬停*/
+$--border-color-hover: $--color-primary !default;/*边框 颜色 悬停*/
+
 /* 链接 */
 $--link-color-base: $--color-primary !default;/*链接 颜色 基础*/
-$--link-color-hover: $--color-primary !default;/*链接 颜色 悬停*/
+
 /* 边框*/
 $--border-width-base: 1px !default;/*边框 宽度 大小 基础*/
 $--border-style-base: solid !default;/*边框 样式 基础  ： solid包围边框*/
-$--border-color-hover: $--color-primary !default;/*边框 颜色 悬停*/
 $--border-base: $--border-width-base $--border-style-base $--color-border-base !default;/*边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础 */
+
 /* 圆角*/
 $--border-radius-base: 4px !default; /*大圆角*/
 $--border-radius-small: 2px !default;/*小圆角*/
@@ -172,9 +173,9 @@ $--button-mini-padding-horizontal: 15px !default;/*按钮 超小号 内边距 �
 $--button-default-font-color: $--color-text-regular !default;
 $--button-default-background-color: $--color-background-base !default;
 $--button-default-border-color: $--color-border-base !default;
-// 禁用按钮
+// 禁用按钮 只影响禁用状态默认按钮
 $--button-disabled-font-color: $--color-text-placeholder !default;
-$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-background-color: $--color-background-base !default;
 $--button-disabled-border-color: $--color-border-light !default;
 // 主要按钮
 $--button-primary-border-color: $--color-primary !default;
@@ -209,7 +210,7 @@ $--link-font-weight: $--font-weight-primary !default;
 $--link-default-font-color: $--color-text-regular !default;
 $--link-default-active-color: $--color-primary !default;
 
-$--link-disabled-font-color: $--color-text-placeholder !default;
+$--link-disabled-font-color: $--disabled-font-color !default;
 
 $--link-primary-font-color: $--color-primary !default;
 $--link-success-font-color: $--color-success !default;
@@ -240,11 +241,11 @@ $--radio-input-border: $--border-base !default;
 // 所有单选输入框边框圆角
 $--radio-input-border-radius: $--border-radius-circle !default;
 // 所有单选输入框的悬浮颜色，但是不包括按钮样式整组 
-$--radio-input-border-color-hover: $--color-primary !default;
+$--radio-input-border-color-hover: $--border-color-hover !default;
 
 $--radio-disabled-input-border-color:$--disabled-border-base !default;
 $--radio-disabled-input-fill: $--disabled-fill-base !default;
-
+// 这个应用在哪里？/*待解释*/
 $--radio-disabled-icon-color: $--disabled-fill-base !default;
 
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
@@ -276,14 +277,16 @@ $--radio-bordered-mini-height: 28px !default;
 
 // 单选按钮样式
 $--radio-button-font-size: $--font-size-base !default;
+$--radio-button-background-color: $--color-white !default;
 
 $--radio-button-checked-background-color: $--color-primary-light-9 !default;
 $--radio-button-checked-font-color: $--color-primary !default;
 $--radio-button-checked-border-color: $--color-primary !default;
 
-$--radio-button-disabled-checked-fill: $--disabled-fill-base !default;
-
-
+$--radio-button-disabled-fill: $--color-white !default;
+$--radio-button-disabled-border: $--disabled-border-base !default;
+$--radio-button-disabled-background: $--color-white !default;
+$--radio-button-disabled-checked-background: $--disabled-fill-base !default;
 
 /* Checkbox 多选
 -------------------------- */
@@ -305,6 +308,8 @@ $--checkbox-background-color: $--color-white !default;
 $--checkbox-disabled-border-color: $--disabled-border-base !default;
 $--checkbox-disabled-input-fill: $--disabled-fill-base !default;
 $--checkbox-disabled-icon-color: $--disabled-color-base !default;
+
+
 $--checkbox-disabled-checked-input-fill: $--disabled-fill-base !default;
 $--checkbox-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
@@ -335,9 +340,18 @@ $--checkbox-bordered-mini-input-height: 12px !default;
 $--checkbox-bordered-mini-input-width: 12px !default;
 $--checkbox-bordered-mini-height: 28px !default;
 
+//  多选 按钮样式
+$--checkbox-button-background-color: $--color-white !default;
+
 $--checkbox-button-checked-background-color: $--color-primary-light-9 !default;
 $--checkbox-button-checked-font-color: $--color-primary !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
+
+$--checkbox-button-font-color: $--color-text-regular !default;
+$--checkbox-button-disabled-fill: $--color-white !default;
+$--checkbox-button-disabled-border: $--disabled-border-base !default;
+$--checkbox-button-disabled-background: $--color-white !default;
+$--checkbox-button-disabled-checked-background: $--disabled-fill-base !default;
 
 
 /* Input 输入框
@@ -435,7 +449,7 @@ $--cascader-menu-border: solid 1px $--color-border-light !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
 
 $--cascader-node-background-hover: $--background-hover !default;/*node 节点*/
-$--cascader-node-color-disabled:$--color-text-placeholder !default;
+$--cascader-node-color-disabled:$--disabled-font-color !default;
 
 $--cascader-color-empty: $--color-text-secondary !default;
 $--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
@@ -455,30 +469,18 @@ $--switch-button-size: 16px !default;
 /* Slider 滑块 
 --------------------------*/
 
-// 滑块 已选中 背景 颜色
-$--slider-main-background-color: $--color-primary !default;
-
-// 滑块 未选中 背景 颜色 
-$--slider-runway-background-color: $--color-border-light !default;
-// 滑块 按钮 悬停 颜色  
+$--slider-main-background-color: $--color-primary !default; /*滑块 已选中 背景 颜色*/
+$--slider-runway-background-color: $--color-border-light !default; /*滑块 未选中 背景 颜色 */
 $--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
-// 滑块 停止 背景 颜色 
-$--slider-stop-background-color: $--color-white !default;
-// 滑块 禁用 颜色 
+$--slider-stop-background-color: $--color-white !default; //* 滑块 停止 背景 颜色 */
 $--slider-disable-color: $--color-text-placeholder !default;
-// 滑块 边缘
-$--slider-margin: 16px 0 !default;
-// 滑块 边框 圆角 
+
+$--slider-margin: 16px 0 !default; /* 外边距？*/
 $--slider-border-radius: 3px !default; /*独立圆角*/
-/// height|1|Other|4
-// 滑块 高度
 $--slider-height: 6px !default; 
-/// height||Other|4
-// 滑块 按钮 大小
+
 $--slider-button-size: 16px !default;
-// 滑块 按钮 包装（变大） 大小
 $--slider-button-wrapper-size: 36px !default;
-// 滑块 按钮 包装（变大） 抵消
 $--slider-button-wrapper-offset: -15px !default;
 
 
@@ -492,7 +494,7 @@ $--datepicker-off-font-color: $--color-text-placeholder !default;
 
 $--datepicker-header-font-color: $--color-text-regular !default;
 $--datepicker-icon-color: $--color-text-primary !default;
-$--datepicker-border-color: $--disabled-border-base !default;
+$--datepicker-border-color: $--color-border-light !default;
 
 $--datepicker-inner-border-color: $--color-border-light !default;
 
