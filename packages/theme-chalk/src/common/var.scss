@@ -735,46 +735,60 @@ $--menu-background-color: $--color-white !default;
 
 /* Tab 标签页
 -------------------------- */
-// 标签页 字体 大小
 $--tab-font-size: $--font-size-base !default;
-// 标签页 边框 线 
 $--tab-border-line: 1px solid $--color-border-base !default;
-// 标签页 标题 颜色 激活 
+
 $--tab-header-color-active: $--color-text-secondary !default;
-// 标签页 标题 颜色 悬停
 $--tab-header-color-hover: $--color-text-regular !default;
-// 标签页 标题 颜色 
 $--tab-header-color: $--color-text-regular !default;
-// 标签页 标题 填充 激活 
 $--tab-header-fill-active: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
-// 标签页 标题 填充 悬停 
 $--tab-header-fill-hover: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
-// 标签页 纵向 标题 宽度 
+
 $--tab-vertical-header-width: 90px !default;
-// 标签页 纵向 标题  计数 颜色
 $--tab-vertical-header-count-color: $--color-white !default;
-// 标签页 纵向 标题 计数 填充
 $--tab-vertical-header-count-fill: $--color-text-secondary !default;
+
+/* Breadcrumb 面包屑
+-------------------------- */
+
+/* Pag Header 页头
+-------------------------- */
+
+/* Dropdown 下拉
+-------------------------- */
+$--dropdown-menu-box-shadow: $--box-shadow-light !default;
+$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;/*menuItem 菜单选项*/
+$--dropdown-menuItem-hover-color: $--link-color-base !default;
+
+
+/* Steps 步骤条
+--------------------------*/
+$--steps-border-color: $--disabled-border-base !default;
+$--steps-border-radius: $--border-radius-base !default; 
+$--steps-padding: 20px !default;
 
 
 /* Dialog  对话框
 -------------------------- */
-// 对话框 背景 颜色 
 $--dialog-background-color: $--color-white !default;
-// 对话框 盒子 投影 
 $--dialog-box-shadow: $--box-shadow-dark !default;
-/// fontSize||Font|1
-// 对话框 标题 字体 大小 
+
 $--dialog-title-font-size: $--font-size-large !default;
-/// fontSize||Font|1 
-// 对话框 内容 字体 大小 
 $--dialog-content-font-size: 14px !default;
-/// fontLineHeight||LineHeight|2
-// 对话框 字体  行高 
 $--dialog-font-line-height: $--font-line-height-primary !default;
-/// padding||Spacing|3
-// 对话框 内边距 主要
+
 $--dialog-padding-primary: 20px !default;
+
+
+/* Tooltip 文字提示
+-------------------------- */
+$--tooltip-fill: $--color-text-primary !default;
+$--tooltip-color: $--color-white !default;
+$--tooltip-font-size: 12px !default;
+
+$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-arrow-size: 6px !default;
+$--tooltip-padding: 10px !default;
 
 
 
@@ -819,42 +833,6 @@ $--popover-title-font-size: 16px !default;
 $--popover-title-font-color: $--color-text-primary !default;
 
 
-/* Tooltip 文字提示
--------------------------- */
-/// color|1|Color|0
-// 文字提示 填充 
-$--tooltip-fill: $--color-text-primary !default;
-/// color|1|Color|0
-// 文字提示 颜色 
-$--tooltip-color: $--color-white !default;
-/// fontSize||Font|1
-// 文字提示 字体 大小
-$--tooltip-font-size: 12px !default;
-
-// 文字提示 边框 颜色 
-$--tooltip-border-color: $--color-text-primary !default;
-// 文字提示 箭头 大小
-$--tooltip-arrow-size: 6px !default;
-/// padding||Spacing|3
-// 文字提示 内边距
-$--tooltip-padding: 10px !default;
-
-
-
-
-
-
-
-
-/* Dropdown 下拉
--------------------------- */
-// 下拉 菜单 盒子 投影 
-$--dropdown-menu-box-shadow: $--box-shadow-light !default;
-// 下拉 菜单选项 悬停 填充 
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
-// 下拉 菜单 悬停 颜色
-$--dropdown-menuItem-hover-color: $--link-color-base !default;
-
 
 
 
@@ -872,15 +850,6 @@ $--card-padding: 20px !default;
 
 
 
-
-/* Steps 步骤条
---------------------------*/
-// 步骤条 边框 颜色 
-$--steps-border-color: $--disabled-border-base !default;
-// 步骤条 边框 圆角
-$--steps-border-radius: $--border-radius-base !default; 
-// 步骤条 内边距 
-$--steps-padding: 20px !default;
 
 
 
