@@ -98,35 +98,24 @@ $--box-shadow-base: 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0
 $--box-shadow-dark: 0px 16px 24px 2px rgba(0, 4, 10, 0.16), 0px 4px 32px 4px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
 $--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12) !default;
 
-
 /* Typography
 -------------------------- */
 // 字体路径？
 $--font-path: 'fonts' !default;
 // 字体显示？
 $--font-display: 'auto' !default;
-/// fontSize|1|Font Size|0 主标题字体大小 最大
-$--font-size-extra-large: 20px !default;
-/// fontSize|1|Font Size|0 标题字体大小 大号
-$--font-size-large: 18px !default;
-/// fontSize|1|Font Size|0 小标题字体大小 中号 
-$--font-size-medium: 16px !default;
-/// fontSize|1|Font Size|0 正文本体大小 基础
-$--font-size-base: 14px !default;
-/// fontSize|1|Font Size|0 正文（小）字体大小 小号
-$--font-size-small: 13px !default;
-/// fontSize|1|Font Size|0 辅助字体大小 最小号
-$--font-size-extra-small: 12px !default;
-/// fontWeight|1|Font Weight|1 主要字体粗细
-$--font-weight-primary: 500 !default;
-/// fontWeight|1|Font Weight|1 次要字体粗细
-$--font-weight-secondary: 400 !default;
-$--font-weight-bold: 600 !default;
+$--font-size-extra-large: 20px !default;/*主标题字体大小 最大*/
+$--font-size-large: 18px !default; /*标题字体大小 大号*/
+$--font-size-medium: 16px !default; /*小标题字体大小 中号*/ 
+$--font-size-base: 14px !default;/*正文本体大小 基础*/
+$--font-size-small: 13px !default;/*正文（小）字体大小 小号*/
+$--font-size-extra-small: 12px !default;/*辅助字体大小 超小号*/
+$--font-weight-primary: 500 !default;/*主要字体粗细*/
+$--font-weight-secondary: 400 !default;/*次要字体粗细*/
+$--font-weight-bold: 600 !default;/*加粗字体粗细*/ /*增加*/
 
-/// fontLineHeight|1|Line Height|2 主要字体行高
-$--font-line-height-primary: 24px !default;
-/// fontLineHeight|1|Line Height|2 次要字体行高
-$--font-line-height-secondary: 16px !default;
+$--font-line-height-primary: 24px !default; /*主要字体行高*/
+$--font-line-height-secondary: 16px !default;/*次要字体行高*/
 
 /* Size 大小 这是哪里的大小？
 -------------------------- */
@@ -139,24 +128,80 @@ $--index-top: 1000 !default;
 $--index-popper: 2000 !default;
 
 
-
-
-
 /* 全局组件样式-各组件的全局样式 */
+
+/* Button 按钮
+-------------------------- */
+// 按钮全局样式，关联checkbox和radio的单选
+$--button-font-size: $--font-size-base !default;
+$--button-font-weight: $--font-weight-primary !default;
+$--button-border-radius: $--border-radius-base !default;
+// 全局纵向padding，但不影响圆角按钮 因为圆角按钮单独的。
+$--button-padding-vertical: 12px !default;
+$--button-padding-horizontal: 20px !default;
+// 按钮中号 
+$--button-medium-font-size: $--font-size-base !default;
+$--button-medium-border-radius: $--border-radius-base !default;
+$--button-medium-padding-vertical: 10px !default;
+$--button-medium-padding-horizontal: 20px !default;
+// 按钮小号
+$--button-small-font-size: 12px !default;
+$--button-small-border-radius: #{$--border-radius-base - 1} !default;
+$--button-small-padding-vertical: 9px !default;
+$--button-small-padding-horizontal: 15px !default;
+// 按钮超小号
+$--button-mini-font-size: 12px !default;
+$--button-mini-border-radius: #{$--border-radius-base - 1} !default;
+$--button-mini-padding-vertical: 7px !default;/*按钮 超小号 内边距 纵向*/
+$--button-mini-padding-horizontal: 15px !default;/*按钮 超小号 内边距 横向*/
+// 默认按钮
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-background-color: $--color-white !default;
+$--button-default-border-color: $--color-border-base !default;
+// 禁用按钮
+$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-border-color: $--color-border-light !default;
+// 主要按钮
+$--button-primary-border-color: $--color-primary !default;
+$--button-primary-font-color: $--color-white !default;
+$--button-primary-background-color: $--color-primary !default;
+// 成功按钮
+$--button-success-border-color: $--color-success !default;
+$--button-success-font-color: $--color-white !default;
+$--button-success-background-color: $--color-success !default;
+// 警告案例
+$--button-warning-border-color: $--color-warning !default;
+$--button-warning-font-color: $--color-white !default;
+$--button-warning-background-color: $--color-warning !default;
+// 危险按钮
+$--button-danger-border-color: $--color-danger !default;
+$--button-danger-font-color: $--color-white !default;
+$--button-danger-background-color: $--color-danger !default;
+// 信息按钮
+$--button-info-border-color: $--color-info !default;
+$--button-info-font-color: $--color-white !default;
+$--button-info-background-color: $--color-info !default;
+// 按钮悬停 点击状态
+$--button-hover-tint-percent: 20% !default;/*叠加白色减轻20%*/
+$--button-active-shade-percent: 10% !default;/*叠加黑色加重10%*/
+
+
+
 
 /* Radio 单选 
 -------------------------- */
-// 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、最小、
+// 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、超小、
 $--radio-font-size: $--font-size-base !default; 
 // 所有单选字体的粗细
 $--radio-font-weight: $--font-weight-primary !default;
 // 基础用法和单选框组的字体颜色 ， 按钮样式的可能是由按钮那边控制的。 带有边框的本质上则不是按钮。
 $--radio-font-color: $--color-text-regular !default;
 
-// 所有单选输入框的大小，但是不包括按钮样式整组 带有边框中、小、最小。
+// 所有单选输入框的大小，但是不包括按钮样式整组 带有边框中、小、超小。
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
-// 所有单选 输入框 的背景色，但是不包括按钮样式整组 带有边框小、最小。
+// 所有单选 输入框 的背景色，但是不包括按钮样式整组 带有边框小、超小。
 $--radio-input-background-color: $--color-white !default;
 // 问题：高度不控制到中等，字体颜色和大小又控制到中等。暂且不改。
 
@@ -222,13 +267,13 @@ $--radio-bordered-small-input-width: 12px !default;
 // 单选 带有边框 小号  高度
 $--radio-bordered-small-height: 32px !default;
 
-// 单选 带有边框 最小号 内边距
+// 单选 带有边框 超小号 内边距
 $--radio-bordered-mini-padding: 6px 15px 0 10px !default;
-// 单选 带有边框 最小号 选择按钮 高度
+// 单选 带有边框 超小号 选择按钮 高度
 $--radio-bordered-mini-input-height: 12px !default;
-// 单选 带有边框 最小号 选择按钮 宽度
+// 单选 带有边框 超小号 选择按钮 宽度
 $--radio-bordered-mini-input-width: 12px !default;
-// 单选 带有边框 最小号  高度
+// 单选 带有边框 超小号  高度
 $--radio-bordered-mini-height: 28px !default;
 
 /// fontSize||Font|1  单选 按钮样式 
@@ -315,7 +360,7 @@ $--checkbox-bordered-medium-padding: 7px 20px 7px 10px !default;
 // 多选 带有边框 小号 内边距 
 $--checkbox-bordered-small-padding: 5px 15px 5px 10px !default;
 /// padding||Spacing|3
-// 多选 带有边框 最小号 内边距 
+// 多选 带有边框 超小号 内边距 
 $--checkbox-bordered-mini-padding: 3px 15px 3px 10px !default;
 
 /// 多选 带有边框 整体高度和选择按钮高宽
@@ -335,12 +380,12 @@ $--checkbox-bordered-small-input-width: 12px !default;
 // 多选 带有边框 小号 高度
 $--checkbox-bordered-small-height: 32px !default;
 
-// 多选 带有边框 最小号 选择按钮 高度
+// 多选 带有边框 超小号 选择按钮 高度
 $--checkbox-bordered-mini-input-height: 12px !default;
-// 多选 带有边框 最小号 选择按钮 宽度
+// 多选 带有边框 超小号 选择按钮 宽度
 $--checkbox-bordered-mini-input-width: 12px !default;
 /// height||Other|4
-// 多选 带有边框 最小号 高度
+// 多选 带有边框 超小号 高度
 $--checkbox-bordered-mini-height: 28px !default;
 
 
@@ -503,7 +548,7 @@ $--messagebox-danger-color: $--color-danger !default;
 -------------------------- */
 // 消息提示 投影
 $--message-shadow: $--box-shadow-base !default;
-// 消息提示 最小号 宽度 
+// 消息提示 超小号 宽度 
 $--message-min-width: 380px !default;
 // 消息提示 背景 颜色 
 $--message-background-color: $--color-background-base !default;
@@ -662,10 +707,10 @@ $--input-small-font-size: 13px !default;
 // 输入框 小号 高度
 $--input-small-height: 32px !default;
 /// fontSize||Font|1
-// 输入框 最小号 字体 大小
+// 输入框 超小号 字体 大小
 $--input-mini-font-size: 12px !default;
 /// height||Other|4
-// 输入框 最小号 高度
+// 输入框 超小号 高度
 $--input-mini-height: 28px !default;
 
 
@@ -737,134 +782,6 @@ $--tab-vertical-header-count-color: $--color-white !default;
 // 标签页 纵向 标题 计数 填充
 $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 
-
-/* Button 按钮
--------------------------- */
-/// fontSize||Font|1
-// 按钮 字体 大小 
-$--button-font-size: $--font-size-base !default;
-/// fontWeight||Font|1
-// 按钮 字体 宽度
-$--button-font-weight: $--font-weight-primary !default;
-/// borderRadius||Border|2
-// 按钮 边框 圆角
-$--button-border-radius: $--border-radius-base !default;
-/// padding||Spacing|3
-// 按钮 内边距 纵向
-$--button-padding-vertical: 12px !default;
-/// padding||Spacing|3
-// 按钮 内边距 横向
-$--button-padding-horizontal: 20px !default;
-
-/// fontSize||Font|1
-// 按钮 中号 字体 大小
-$--button-medium-font-size: $--font-size-base !default;
-/// borderRadius||Border|2
-// 按钮 中号 边框 圆角
-$--button-medium-border-radius: $--border-radius-base !default;
-/// padding||Spacing|3
-// 按钮 中号 内边距 纵向
-$--button-medium-padding-vertical: 10px !default;
-/// padding||Spacing|3
-// 按钮 中号 内边距 横向
-$--button-medium-padding-horizontal: 20px !default;
-
-/// fontSize||Font|1
-// 按钮 小号 字体 大小
-$--button-small-font-size: 12px !default;
-// 按钮 小号 边框 圆角
-$--button-small-border-radius: #{$--border-radius-base - 1} !default;
-/// padding||Spacing|3
-// 按钮 小号 内边距 纵向
-$--button-small-padding-vertical: 9px !default;
-/// padding||Spacing|3
-// 按钮 小号 内边距 横向 
-$--button-small-padding-horizontal: 15px !default;
-/// fontSize||Font|1
-// 按钮 最小号 字体 大小
-$--button-mini-font-size: 12px !default;
-// 按钮 最小号 边框 圆角 
-$--button-mini-border-radius: #{$--border-radius-base - 1} !default;
-/// padding||Spacing|3
-// 按钮 最小号 内边距 纵向
-$--button-mini-padding-vertical: 7px !default;
-/// padding||Spacing|3
-// 按钮 最小号 内边距 横向
-$--button-mini-padding-horizontal: 15px !default;
-
-
-// 按钮 默认 字体 颜色 
-$--button-default-font-color: $--color-text-regular !default;
-
-// 按钮 默认 背景 颜色 
-$--button-default-background-color: $--color-white !default;
-
-// 按钮 默认 背景 颜色
-$--button-default-border-color: $--color-border-base !default;
-
-
-// 按钮 禁用 字体 颜色 
-$--button-disabled-font-color: $--color-text-placeholder !default;
-
-// 按钮 禁用 背景 颜色
-$--button-disabled-background-color: $--color-white !default;
-
-// 按钮 禁用 边框 颜色
-$--button-disabled-border-color: $--color-border-light !default;
-
-
-// 按钮 主要 边框 颜色
-$--button-primary-border-color: $--color-primary !default;
-
-// 按钮 主要 字体 颜色
-$--button-primary-font-color: $--color-white !default;
-
-// 按钮 主要 背景 颜色
-$--button-primary-background-color: $--color-primary !default;
-
-
-// 按钮 正确 边框 颜色 
-$--button-success-border-color: $--color-success !default;
-
-// 按钮 正确 字体 颜色 
-$--button-success-font-color: $--color-white !default;
-
-// 按钮 正确 背景 颜色 
-$--button-success-background-color: $--color-success !default;
-
-
-// 按钮 警告 边框 颜色
-$--button-warning-border-color: $--color-warning !default;
-
-// 按钮 警告 字体 颜色
-$--button-warning-font-color: $--color-white !default;
-
-// 按钮 警告 背景 颜色
-$--button-warning-background-color: $--color-warning !default;
-
-
-// 按钮 危险 边框 颜色 
-$--button-danger-border-color: $--color-danger !default;
-
-// 按钮 危险 字体 颜色
-$--button-danger-font-color: $--color-white !default;
-
-// 按钮 危险 背景 颜色 
-$--button-danger-background-color: $--color-danger !default;
-
-
-// 按钮 提示 边框 颜色 
-$--button-info-border-color: $--color-info !default;
-
-// 按钮 提示 字体 颜色 
-$--button-info-font-color: $--color-white !default;
-
-// 按钮 提示 背景 颜色 
-$--button-info-background-color: $--color-info !default;
-
-// 按钮 悬停  着色 百分比
-$--button-hover-tint-percent: 20% !default;
-$--button-active-shade-percent: 10% !default;
 
 
 /* cascader 级联选择器 

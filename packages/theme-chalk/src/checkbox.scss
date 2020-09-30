@@ -269,6 +269,7 @@
     transition: $--all-transition;
     @include utils-user-select(none);
 
+    /*案例： checkbox 按钮样式第一行 */
     @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, 0);
 
     &:hover {

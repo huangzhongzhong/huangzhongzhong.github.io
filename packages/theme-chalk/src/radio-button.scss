@@ -25,7 +25,7 @@
     position: relative;
     cursor: pointer;
     transition: $--all-transition;
-
+    /*案例： Radio 按钮样式第一行 */
     @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, 0);
 
     &:hover {
