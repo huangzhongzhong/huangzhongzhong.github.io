@@ -73,16 +73,16 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
 /* 全局样式-引用的色值、其他属性、但不包括具体组件 */
 
-/* 背景 */
-$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
 /* 禁用 */
 $--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
 $--disabled-color-base: $--color-text-placeholder !default;/*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default;/*禁用 边框 基础*/
+
+/* 背景 */
+$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
 /* 链接 */
 $--link-color-base: $--color-primary !default;/*链接 颜色 基础*/
 $--link-color-hover: $--color-primary !default;/*链接 颜色 悬停*/
-
 /* 边框*/
 $--border-width-base: 1px !default;/*边框 宽度 大小 基础*/
 $--border-style-base: solid !default;/*边框 样式 基础  ： solid包围边框*/
@@ -127,6 +127,10 @@ $--index-normal: 1 !default;
 $--index-top: 1000 !default;
 $--index-popper: 2000 !default;
 
+/* Header 标题？影响哪些
+--------------------------*/
+  // 标题 内边距
+  $--header-padding: 0 20px !default;
 
 /* 全局组件样式-各组件的全局样式 */
 
@@ -187,8 +191,6 @@ $--button-hover-tint-percent: 30% !default;/*叠加白色减轻百分比*/
 $--button-active-shade-percent: 20% !default;/*叠加黑色加重百分比*/
 
 
-
-
 /* Radio 单选 
 -------------------------- */
 // 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、超小、
@@ -205,18 +207,13 @@ $--radio-input-width: 14px !default;
 $--radio-input-background-color: $--color-white !default;
 // 问题：高度不控制到中等，字体颜色和大小又控制到中等。暂且不改。
 
-
 // 引用的边框样式集合，包括大小，样式，颜色
 $--radio-input-border: $--border-base !default;
 
 // 所有单选输入框边框圆角
 $--radio-input-border-radius: $--border-radius-circle !default;
-// 未被引用 $--radio-input-border-color: $--color-border-base !default;
 // 所有单选输入框的悬浮颜色，但是不包括按钮样式整组 
 $--radio-input-border-color-hover: $--color-primary !default;
-
-// 单选 图标 颜色 
-// 未被引用 $--radio-icon-color: $--color-white !default;
 
 // 所有未选中 单选 禁用 输入框 边框 颜色  
 $--radio-disabled-input-border-color:$--disabled-border-base !default;
@@ -242,7 +239,6 @@ $--radio-checked-input-background-color: $--color-white !default;
 
 // 单选 选中 图标 颜色 
 $--radio-checked-icon-color: $--color-primary !default;
-
 
 // 单选 带有边框 高度
 $--radio-bordered-height: 40px !default;
@@ -349,152 +345,205 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
 
 /* Input 输入框
 -------------------------- */
-// 输入框 字体 大小 ：
 $--input-font-size: $--font-size-base !default;
-
-// 输入框 字体 颜色 
 $--input-font-color: $--color-text-regular !default;
-/// height||Other|4
-// 输入框 宽度
 $--input-width: 140px !default;
-/// height||Other|4
-// 输入框 高度
 $--input-height: 40px !default;
-// 输入框 边框 
+
 $--input-border: $--border-base !default;
-// 输入框 边框 颜色
 $--input-border-color: $--color-border-base !default;
-
-/// borderRadius||Border|2 边框圆角
-// 输入框 边框 圆角 
 $--input-border-radius: $--border-radius-base !default;
-// 输入框 边框 颜色 悬停 
-$--input-border-color-hover: $--border-color-hover !default;
 
-// 输入框 背景 颜色 
 $--input-background-color: $--color-white !default;
-// 输入框 填充 禁用 
-$--input-fill-disabled: $--disabled-fill-base !default;
-// 输入框 颜色 禁用 
-$--input-color-disabled: $--disabled-border-base !default;
 
-// 输入框 图标 颜色
 $--input-icon-color: $--color-text-secondary !default;
-
-// 输入框 占位 颜色
 $--input-placeholder-color: $--color-text-secondary !default;
-// 输入框 最大 宽度
+
 $--input-max-width: 314px !default;
 
-// 输入框 悬停 边框 
 $--input-hover-border: $--color-primary !default;
-// 输入框 清除 悬停 颜色 
 $--input-clear-hover-color: $--color-text-regular !default;
 
-// 输入框 焦点 边框 
 $--input-focus-border: $--color-primary !default;
-// 输入框 焦点 填充 
 $--input-focus-fill: $--color-white !default;
 
-// 输入框 禁用 填充 
 $--input-disabled-fill: $--disabled-fill-base !default;
-// 输入框 禁用 边框
 $--input-disabled-border: $--disabled-border-base !default;
-// 输入框 禁用 颜色
 $--input-disabled-color: $--disabled-color-base !default;
-// 输入框 禁用 占位 颜色 
 $--input-disabled-placeholder-color: $--color-text-placeholder !default;
 
-/// fontSize||Font|1
-// 输入框 中号 字体 大小
 $--input-medium-font-size: 14px !default;
-/// height||Other|4
-// 输入框 中号 高度
 $--input-medium-height: 36px !default;
-/// fontSize||Font|1
-// 输入框 小号 字体 大小
+
 $--input-small-font-size: 13px !default;
-/// height||Other|4
-// 输入框 小号 高度
 $--input-small-height: 32px !default;
-/// fontSize||Font|1
-// 输入框 超小号 字体 大小
+
 $--input-mini-font-size: 12px !default;
-/// height||Other|4
-// 输入框 超小号 高度
 $--input-mini-height: 28px !default;
 
-
-
+/* IuputNumber 计数器
+--------------------------*/
 
 /* Select 选择器
 -------------------------- */
-// 选择器 边框 颜色 悬停
 $--select-border-color-hover: $--color-primary !default;
-// 选择器 禁用 边框
 $--select-disabled-border: $--disabled-border-base !default;
-/// fontSize||Font|1
-// 选择器 字体 大小 
+
 $--select-font-size: $--font-size-base !default;
-// 选择器 关闭 悬停 颜色 ：
 $--select-close-hover-color: $--color-text-regular !default;/*待解决-改动无效果*/
 
-$--select-clearable-hover-color: $--color-text-regular !default;/*增加的*/
-
-// 选择器 输入框  字体图标 颜色   /*案例：Select选择器所有图标*/
+// /*案例：Select选择器所有图标*/
 $--select-input-color: $--color-text-secondary !default;
-// 选择器 多选 输入框 颜色      /*案例：Select选择器-远程搜索和创建条目输入后文字*/
+//  /*案例：Select选择器-远程搜索和创建条目输入后文字*/
 $--select-multiple-input-color: $--color-text-secondary !default;
  
-// 选择器 输入框 聚焦 边框 颜色
 $--select-input-focus-border-color: $--color-primary !default;
-/// fontSize||Font|1
-// 选择器 输入框 字体图标 大小
 $--select-input-font-size: 14px !default;
 
-
-
-
-// 选择器 选项 颜色
+// 选择器 选项
 $--select-option-color: $--color-text-regular !default;
-// 选择器 选项 禁用 颜色 
 $--select-option-disabled-color: $--color-text-placeholder !default;
-// 选择器 选项 禁用 背景 
 $--select-option-disabled-background: $--color-white !default;
-/// height||Other|4
-// 选择器 选项 高度
-$--select-option-height: 34px !default;
-// 选择器 选项 悬停 背景 
-$--select-option-hover-background: $--background-hover !default;
 
-// 选择器 选项 选中 字体 颜色 
+$--select-option-height: 34px !default;
+$--select-option-hover-background: $--background-hover !default;
 $--select-option-selected-font-color: $--color-primary !default;
-// 选择器 选项 选中 悬停 
-$--select-option-selected-hover: $--color-background-base !default;
+$--select-option-selected-hover: $--color-background-base !default; /*选择器 选项 选中 悬停 */
 
 // 选择器 分组标题 颜色 案例：
 $--select-group-color: $--color-info !default;
-// 选择器 组 高度 
 $--select-group-height: 30px !default;
-// 选择器 组 字体 大小
 $--select-group-font-size: 12px !default;
 
-// 选择器 下拉 背景 
+// 选择器 下拉 
 $--select-dropdown-background: $--color-white !default;
-// 选择器 下拉 投影
 $--select-dropdown-shadow: $--box-shadow-light !default;
-// 选择器 下拉 无选项 颜色
 $--select-dropdown-empty-color: $--color-text-secondary !default;
 
-/// height||Other|4 高度 选项
-// 选择器 下拉 最大 高度
 $--select-dropdown-max-height: 274px !default;
-// 选择器 下拉 内边距 
 $--select-dropdown-padding: 6px 0 !default;
-// 选择器 下拉 无选项 内边距
 $--select-dropdown-empty-padding: 10px 0 !default;
-// 选择器 下拉 边框 ： 包围边框大小
 $--select-dropdown-border: solid 1px $--color-border-light !default;
+
+
+/* Cascader 级联选择器
+-------------------------- */
+$--cascader-menu-font-color: $--color-text-regular !default;
+$--cascader-menu-selected-font-color: $--color-primary !default;
+$--cascader-menu-fill: $--color-white !default;
+$--cascader-menu-font-size: $--font-size-base !default;
+
+$--cascader-menu-radius: $--border-radius-base !default;
+$--cascader-menu-border: solid 1px $--color-border-light !default;
+$--cascader-menu-shadow: $--box-shadow-light !default;
+
+$--cascader-node-background-hover: $--background-hover !default;/*node 节点*/
+$--cascader-node-color-disabled:$--color-text-placeholder !default;
+
+$--cascader-color-empty: $--color-text-secondary !default;
+$--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
+
+
+/* Switch 开关
+-------------------------- */
+$--switch-on-color: $--color-primary !default;
+$--switch-off-color: $--color-border-light !default;
+$--switch-font-size: $--font-size-base !default;
+$--switch-core-border-radius: 10px !default;
+// TODO: width 代码写死的40px 所以下面这三个属性都没意义 /*官方注释*/
+$--switch-width: 40px !default;
+$--switch-height: 20px !default;
+$--switch-button-size: 16px !default;
+
+/* Slider 滑块 
+--------------------------*/
+
+// 滑块 已选中 背景 颜色
+$--slider-main-background-color: $--color-primary !default;
+
+// 滑块 未选中 背景 颜色 
+$--slider-runway-background-color: $--color-border-light !default;
+// 滑块 按钮 悬停 颜色  
+$--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
+// 滑块 停止 背景 颜色 
+$--slider-stop-background-color: $--color-white !default;
+// 滑块 禁用 颜色 
+$--slider-disable-color: $--color-text-placeholder !default;
+// 滑块 边缘
+$--slider-margin: 16px 0 !default;
+// 滑块 边框 圆角 
+$--slider-border-radius: 3px !default; /*独立圆角*/
+/// height|1|Other|4
+// 滑块 高度
+$--slider-height: 6px !default; 
+/// height||Other|4
+// 滑块 按钮 大小
+$--slider-button-size: 16px !default;
+// 滑块 按钮 包装（变大） 大小
+$--slider-button-wrapper-size: 36px !default;
+// 滑块 按钮 包装（变大） 抵消
+$--slider-button-wrapper-offset: -15px !default;
+
+
+/* time Picker 时间选择器
+--------------------------*/
+
+/* DatePicker 日期选择器
+--------------------------*/
+$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-off-font-color: $--color-text-placeholder !default;
+
+$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-icon-color: $--color-text-primary !default;
+$--datepicker-border-color: $--disabled-border-base !default;
+
+$--datepicker-inner-border-color: $--color-border-light !default;
+
+// 日期选择器 选项 背景 颜色 
+$--datepicker-inrange-background-color: $--background-hover !default;
+// 日期选择器 选项 悬停 背景 颜色 
+$--datepicker-inrange-hover-background-color: $--background-hover !default;
+
+$--datepicker-active-color: $--color-primary !default;
+$--datepicker-hover-font-color: $--color-primary !default;
+// 日期选择器  单元 悬停 颜色 
+$--datepicker-cell-hover-color: $--color-white !default; 
+
+/* Date Time Picker 时间日期选择器
+--------------------------*/
+
+/* upload
+-------------------------- */
+
+
+/* Transfer 穿梭框
+--------------------------*/
+// 穿梭框 边框 颜色 
+$--transfer-border-color: $--color-border-base !default;
+// 穿梭框 边框 圆角 
+$--transfer-border-radius: $--border-radius-base !default;
+/// height||Other|4
+// 穿梭框 面板 宽度
+$--transfer-panel-width: 200px !default;
+/// height||Other|4
+// 穿梭框 面板 标题 高度
+$--transfer-panel-header-height: 40px !default;
+
+// 穿梭框 面板 标题 背景 高度
+$--transfer-panel-header-background-color: $--color-background-base !default;
+/// height||Other|4
+// 穿梭框 面板 底部 高度
+$--transfer-panel-footer-height: 40px !default;
+/// height||Other|4
+// 穿梭框 面板 内容区 高度
+$--transfer-panel-body-height: 246px !default;
+/// height||Other|4
+// 穿梭框 选项 高度
+$--transfer-item-height: 30px !default;
+/// height||Other|4
+// 穿梭框 筛选器 高度
+$--transfer-filter-height: 32px !default;
+
 
 
 /* Alert 警告提示
@@ -664,33 +713,6 @@ $--notification-danger-icon-color: $--color-danger !default;
 
 
 
-/* Cascader 级联选择器
--------------------------- */
-
-// 级联选择器 菜单 字体 颜色 
-$--cascader-menu-font-color: $--color-text-regular !default;
-
-// 级联选择器 菜单 选中 字体 颜色 
-$--cascader-menu-selected-font-color: $--color-primary !default;
-// 级联选择器 菜单 填充
-$--cascader-menu-fill: $--color-white !default;
-// 级联选择器 菜单 字体 大小
-$--cascader-menu-font-size: $--font-size-base !default;
-// 级联选择器 菜单 圆角 
-$--cascader-menu-radius: $--border-radius-base !default;
-
-// 级联选择器 菜单 边框 
-$--cascader-menu-border: solid 1px $--color-border-light !default;
-// 级联选择器 菜单  投影
-$--cascader-menu-shadow: $--box-shadow-light !default;
-// 级联选择器 节点 背景 悬停
-$--cascader-node-background-hover: $--background-hover !default;
-// 级联选择器 节点 颜色  禁用
-$--cascader-node-color-disabled:$--color-text-placeholder !default;
-// 级联选择器 颜色 无选项 
-$--cascader-color-empty: $--color-text-secondary !default;
-// 级联选择器 标签 背景 
-$--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
 
 
 /* Group 组 控制哪里？
@@ -731,34 +753,6 @@ $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
 // 标签页 纵向 标题 计数 填充
 $--tab-vertical-header-count-fill: $--color-text-secondary !default;
-
-
-
-/* cascader 级联选择器 
--------------------------- */
-// 级联选择器 宽度
-$--cascader-height: 200px !default;
-
-
-/* Switch 开关
--------------------------- */
-
-// 开关 开 颜色 
-$--switch-on-color: $--color-primary !default;
-
-// 开关 关 颜色 
-$--switch-off-color: $--color-border-light !default;
-/// fontSize||Font|1
-// 开关 字体 大小 
-$--switch-font-size: $--font-size-base !default;
-// 开关 核心 边框 圆角  
-$--switch-core-border-radius: 10px !default;
-// height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义
-$--switch-width: 40px !default;
-// height||Other|4
-$--switch-height: 20px !default;
-// height||Other|4
-$--switch-button-size: 16px !default;
 
 
 /* Dialog  对话框
@@ -976,34 +970,7 @@ $--card-border-radius: $--border-radius-base !default;
 $--card-padding: 20px !default;
 
 
-/* Slider 滑块 
---------------------------*/
 
-// 滑块 已选中 背景 颜色
-$--slider-main-background-color: $--color-primary !default;
-
-// 滑块 未选中 背景 颜色 
-$--slider-runway-background-color: $--color-border-light !default;
-// 滑块 按钮 悬停 颜色  
-$--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
-// 滑块 停止 背景 颜色 
-$--slider-stop-background-color: $--color-white !default;
-// 滑块 禁用 颜色 
-$--slider-disable-color: $--color-text-placeholder !default;
-// 滑块 边缘
-$--slider-margin: 16px 0 !default;
-// 滑块 边框 圆角 
-$--slider-border-radius: 3px !default; /*独立圆角*/
-/// height|1|Other|4
-// 滑块 高度
-$--slider-height: 6px !default; 
-/// height||Other|4
-// 滑块 按钮 大小
-$--slider-button-size: 16px !default;
-// 滑块 按钮 包装（变大） 大小
-$--slider-button-wrapper-size: 36px !default;
-// 滑块 按钮 包装（变大） 抵消
-$--slider-button-wrapper-offset: -15px !default;
 
 
 /* Steps 步骤条
@@ -1048,37 +1015,6 @@ $--rate-icon-margin: 6px !default;
 $--rate-icon-color: $--color-text-placeholder !default;
 
 
-/* DatePicker 日期选择器
---------------------------*/
-// 日期选择器 字体 颜色 
-$--datepicker-font-color: $--color-text-regular !default;
-/// color|1|Color|0
-// 日期选择器 关闭 字体 颜色 
-$--datepicker-off-font-color: $--color-text-placeholder !default;
-
-// 日期选择器 标题 字体 颜色 
-$--datepicker-header-font-color: $--color-text-regular !default;
-// 日期选择器 图标 颜色 
-$--datepicker-icon-color: $--color-text-primary !default;
-// 日期选择器 边框 颜色
-$--datepicker-border-color: $--disabled-border-base !default;
-
-// 日期选择器 选项 边框 颜色 
-$--datepicker-inner-border-color: $--color-border-light !default;
-
-// 日期选择器 选项  背景 颜色 
-$--datepicker-inrange-background-color: $--background-hover !default;
-
-// 日期选择器 选项 悬停 背景 颜色 
-$--datepicker-inrange-hover-background-color: $--background-hover !default;
-
-// 日期选择器 激活 颜色 
-$--datepicker-active-color: $--color-primary !default;
-
-// 日期选择器 悬停 字体 颜色 
-$--datepicker-hover-font-color: $--color-primary !default;
-// 日期选择器  细胞 悬停 颜色 
-$--datepicker-cell-hover-color: $--color-white !default; 
 
 
 /* Loading 加载
@@ -1152,39 +1088,8 @@ $--collapse-content-font-size: 13px !default;
 $--collapse-content-font-color: $--color-text-primary !default;
 
 
-/* Transfer 穿梭框
---------------------------*/
-// 穿梭框 边框 颜色 
-$--transfer-border-color: $--color-border-base !default;
-// 穿梭框 边框 圆角 
-$--transfer-border-radius: $--border-radius-base !default;
-/// height||Other|4
-// 穿梭框 面板 宽度
-$--transfer-panel-width: 200px !default;
-/// height||Other|4
-// 穿梭框 面板 标题 高度
-$--transfer-panel-header-height: 40px !default;
-
-// 穿梭框 面板 标题 背景 高度
-$--transfer-panel-header-background-color: $--color-background-base !default;
-/// height||Other|4
-// 穿梭框 面板 底部 高度
-$--transfer-panel-footer-height: 40px !default;
-/// height||Other|4
-// 穿梭框 面板 内容区 高度
-$--transfer-panel-body-height: 246px !default;
-/// height||Other|4
-// 穿梭框 选项 高度
-$--transfer-item-height: 30px !default;
-/// height||Other|4
-// 穿梭框 筛选器 高度
-$--transfer-filter-height: 32px !default;
 
 
-/* Header 标题？影响哪些
-  --------------------------*/
-  // 标题 内边距
-$--header-padding: 0 20px !default;
 
 
 /* Footer 页脚？影响哪些
