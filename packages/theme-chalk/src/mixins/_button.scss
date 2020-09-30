@@ -1,4 +1,5 @@
 @import "../common/var";
+// 朴素按钮 
 @mixin button-plain($color) {
   color: $color;
   background: mix($--color-white, $color, 90%);
@@ -29,6 +30,7 @@
   }
 }
 
+// 按钮变量
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;

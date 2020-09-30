@@ -51,7 +51,7 @@
       margin-left: 5px;
     }
   }
-
+  /*案例： button按钮 基础用法 朴素按钮 */
   @include when(plain) {
     &:hover,
     &:focus {
@@ -67,12 +67,13 @@
       outline: none;
     }
   }
-
+  // /*案例： button按钮 按下状态 */ 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
+  // 知道了这个是锁死黑色，有些变量位置放常量不生效，就足够了。
   @include when(active) {
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
-
+// 
   @include when(disabled) {
     &,
     &:hover,
@@ -83,11 +84,11 @@
       background-color: $--button-disabled-background-color;
       border-color: $--button-disabled-border-color;
     }
-
+    // 文字按钮禁用状态
     &.el-button--text {
       background-color: transparent;
     }
-
+    // 朴素按钮状态
     &.is-plain {
       &,
       &:hover,
@@ -115,12 +116,12 @@
       background-color: rgba(255,255,255,.35);
     }
   }
-  //  /*案例： button 所有圆角按钮 */ 但不包括中、小、超小 意思是中小超小
+  //  /*案例： button 所有圆角按钮 */ 但不包括中、小、超小 意思是中小超小不值得特别优化呗。
   @include when(round) {
     border-radius: 20px;
     padding: 12px 23px;
   }
-
+//  /*案例： button 所有图标按钮 */ 
   @include when(circle) {
     border-radius: 50%;
     padding: $--button-padding-vertical;
@@ -140,6 +141,7 @@
   @include m(info) {
     @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
   }
+  // /*案例：button 不同尺寸 */
   @include m(medium) {
     @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
     @include when(circle) {
@@ -158,6 +160,7 @@
       padding: $--button-mini-padding-vertical;
     }
   }
+  // /*案例：button 文字按钮 */
   @include m(text) {
     border-color: transparent;
     color: $--color-primary;
