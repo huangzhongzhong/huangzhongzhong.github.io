@@ -14,7 +14,9 @@ $--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !defa
 $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
 
-/* 全局颜色-都是色值或者色值运算 */
+/* -------------------------- 
+全局颜色-都是色值或者色值运算 
+-------------------------- */
 
 /* Color 颜色
 -------------------------- */
@@ -56,7 +58,6 @@ $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /
 // 次要按钮背景色
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* #e8effb */
 
-// 暂时用不到 $--color-primary-dark: mix($--color-black, $--color-primary, 90%) !default; 
 
 // 功能色-轻-叠加白色-80%
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
@@ -71,7 +72,9 @@ $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
 
-/* 全局样式-引用的色值、其他属性、但不包括具体组件 */
+/* -------------------------- 
+全局样式-引用的色值、其他属性、但不包括具体组件
+-------------------------- */
 
 /* 禁用 */
 $--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
@@ -132,7 +135,10 @@ $--index-popper: 2000 !default;
   // 标题 内边距
   $--header-padding: 0 20px !default;
 
-/* 全局组件样式-各组件的全局样式 */
+
+/* --------------------------  
+全局组件样式-各组件的全局样式
+-------------------------- */
 
 /* Button 按钮
 -------------------------- */
@@ -609,113 +615,87 @@ $--pagination-button-disabled-background-color: $--color-white !default;
 $--pagination-hover-color: $--color-primary !default;
 
 
+/* Badge 标记
+-------------------------- */
+$--badge-background-color: $--color-danger !default;
+$--badge-radius: 10px !default;
+$--badge-font-size: 12px !default;
+$--badge-padding: 6px !default;
+$--badge-size: 18px !default;
+
+
+/* Avatar 头像
+--------------------------*/
+$--avatar-font-color: $--color-white !default;
+$--avatar-background-color: $--color-background-dark !default;/*独立色值*/
+$--avatar-text-font-size: 14px !default;
+$--avatar-icon-font-size: 18px !default;
+$--avatar-border-radius: $--border-radius-base !default;
+
+$--avatar-large-size: 40px !default;
+$--avatar-medium-size: 36px !default;
+$--avatar-small-size: 28px !default;
+
 
 /* Alert 警告提示
 -------------------------- */
-// 警告 内边距
 $--alert-padding: 8px 16px !default;
-/// borderRadius||Border|2 边框圆角
-// 警告 边框 圆角 ： 边框 圆角 基础
 $--alert-border-radius: $--border-radius-base !default;
-/// fontSize||Font|1 字体 大小
-// 警告 标题 字体 大小 
 $--alert-title-font-size: 13px !default;
-/// fontSize||Font|1
-// 警告 描述 字体 大小
-$--alert-description-font-size: 12px !default;
-/// fontSize||Font|1
-// 警告 关闭 字体 大小
-$--alert-close-font-size: 12px !default;
-/// fontSize||Font|1
-// 警告 关闭 定制 字体 大小
-$--alert-close-customed-font-size: 13px !default;
 
-// 警告 正确 颜色
+$--alert-description-font-size: 12px !default;/*description 描述*/
+$--alert-close-font-size: 12px !default;
+$--alert-close-customed-font-size: 13px !default;/*customed 定制*/
+
 $--alert-success-color: $--color-success-lighter !default;
-// 警告 信息 颜色
 $--alert-info-color: $--color-info-lighter !default;
-// 警告 警告 颜色 
 $--alert-warning-color: $--color-warning-lighter !default;
-// 警告 危险 颜色 
 $--alert-danger-color: $--color-danger-lighter !default;
 
-/// height||Other|4
-// 警告 图标 大小
 $--alert-icon-size: 16px !default;
-/// height||Other|4
-// 警告 图标 大号 大小
 $--alert-icon-large-size: 28px !default;
 
 
-/* MessageBox 弹框
--------------------------- */
-
-// 弹框 标题 颜色 
-$--messagebox-title-color: $--color-text-primary !default;
-// 弹框 宽度 
-$--msgbox-width: 420px !default;
-// 弹框 边框 圆角
-$--msgbox-border-radius: $--border-radius-base !default;
-/// fontSize||Font|1
-// 弹框 字体 大小 
-$--messagebox-font-size: $--font-size-large !default;
-/// fontSize||Font|1
-// 弹框 居中 字体 大小
-$--messagebox-content-font-size: $--font-size-base !default;
-
-// 弹框 居中 字体 颜色
-$--messagebox-content-color: $--color-text-regular !default;
-/// fontSize||Font|1
-// 弹框 错误 字体 大小
-$--messagebox-error-font-size: 12px !default;
-// 弹框 内边距 主要
-$--msgbox-padding-primary: 15px !default;
-
-// 弹框 正确 颜色
-$--messagebox-success-color: $--color-success !default;
-
-// 弹框 提示 颜色
-$--messagebox-info-color: $--color-info !default;
-
-// 弹框 警告 颜色 
-$--messagebox-warning-color: $--color-warning !default;
-
-// 弹框 危险 颜色  
-$--messagebox-danger-color: $--color-danger !default;
+/* Loading 加载
+--------------------------*/
+$--loading-spinner-size: 42px !default;/*spinner 旋转*/
+$--loading-fullscreen-spinner-size: 50px !default;/*fullscreen 全屏*/
 
 
 /* Message  消息提示
 -------------------------- */
-// 消息提示 投影
 $--message-shadow: $--box-shadow-base !default;
-// 消息提示 超小号 宽度 
 $--message-min-width: 380px !default;
-// 消息提示 背景 颜色 
 $--message-background-color: $--color-background-base !default;
-// 消息提示 内边距
 $--message-padding: 15px 15px 15px 20px !default;
 
-// 消息提示 关闭 图标 颜色
 $--message-close-icon-color: $--color-text-placeholder !default;
-/// height||Other|4
-// 消息提示 关闭 大小
 $--message-close-size: 16px !default;
-
-// 消息提示 关闭 悬停 颜色
 $--message-close-hover-color: $--color-text-secondary !default;
 
-
-// 消息提示 正确 字体 颜色 
 $--message-success-font-color: $--color-success !default;
-
-// 消息提示 提示 字体 颜色
 $--message-info-font-color: $--color-info !default;
-
-// 消息提示 警告 字体 颜色
 $--message-warning-font-color: $--color-warning !default;
-
-// 消息提示 危险 字体 颜色 
 $--message-danger-font-color: $--color-danger !default;
+
+
+/* MessageBox 弹框
+-------------------------- */
+$--messagebox-title-color: $--color-text-primary !default;
+$--msgbox-width: 420px !default;
+$--msgbox-border-radius: $--border-radius-base !default;
+
+$--messagebox-font-size: $--font-size-large !default;
+$--messagebox-content-font-size: $--font-size-base !default;
+$--messagebox-content-color: $--color-text-regular !default;
+$--messagebox-error-font-size: 12px !default;
+
+$--msgbox-padding-primary: 15px !default;
+
+$--messagebox-success-color: $--color-success !default;
+$--messagebox-info-color: $--color-info !default;
+$--messagebox-warning-color: $--color-warning !default;
+$--messagebox-danger-color: $--color-danger !default;
 
 
 /* Notification  通知
@@ -918,22 +898,6 @@ $--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
 $--dropdown-menuItem-hover-color: $--link-color-base !default;
 
 
-/* Badge 标记
--------------------------- */
-
-// 标记 背景 颜色 
-$--badge-background-color: $--color-danger !default;
-// 标记
-$--badge-radius: 10px !default;
-/// fontSize||Font|1
-// 标记
-$--badge-font-size: 12px !default;
-/// padding||Spacing|3
-// 标记
-$--badge-padding: 6px !default;
-/// height||Other|4
-// 标记
-$--badge-size: 18px !default;
 
 
 /* Card 卡片
@@ -995,14 +959,7 @@ $--rate-icon-color: $--color-text-placeholder !default;
 
 
 
-/* Loading 加载
---------------------------*/
-/// height||Other|4
-// 加载 旋转 大小
-$--loading-spinner-size: 42px !default;
-/// height||Other|4
-// 加载 全屏 旋转 大小
-$--loading-fullscreen-spinner-size: 50px !default;
+
 
 
 /* Scrollbar 滚动条
@@ -1153,32 +1110,7 @@ $--calendar-cell-width: 85px !default;
 
 
 
-/* Avatar 头像
---------------------------*/
 
-// 头像 字体 颜色
-$--avatar-font-color: $--color-white !default;
-
-// 头像 背景 颜色 
-$--avatar-background-color: $--color-background-dark !default;/*独立色值*/
-/// fontSize||Font Size|1
-// 头像 文本 字体 大小
-$--avatar-text-font-size: 14px !default;
-/// fontSize||Font Size|1
-// 头像 图标 字体 大小 
-$--avatar-icon-font-size: 18px !default;
-/// borderRadius||Border|2
-// 头像 边框 圆角
-$--avatar-border-radius: $--border-radius-base !default;
-/// size|1|Avatar Size|3
-// 头像 大号 大小 
-$--avatar-large-size: 40px !default;
-/// size|1|Avatar Size|3
-// 头像 中号 大小
-$--avatar-medium-size: 36px !default;
-/// size|1|Avatar Size|3
-// 头像 小号 大小
-$--avatar-small-size: 28px !default;
 
 
 /* Break-point 响应式断点
