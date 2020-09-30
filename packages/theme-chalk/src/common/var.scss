@@ -907,23 +907,11 @@ $--backtop-font-color: $--color-primary !default;
 $--backtop-hover-background-color: $--background-hover !default;
 
 
-
-
 /* Calendar 日历
 --------------------------*/
-/// border||Other|4
-// 日历 边框 ： 表格 边框
 $--calendar-border: $--table-border !default;
-/// color||Other|4
-// 日历 选中 背景 颜色
 $--calendar-selected-background-color: $--background-hover !default;
-// 日历 单选 宽度
 $--calendar-cell-width: 85px !default;
-
-
-
-
-
 
 
 /* Break-point 响应式断点
@@ -956,7 +944,3 @@ $--breakpoints-spec: (
   'lg-and-down': (max-width: $--xl - 1),
   'xl-only' : (min-width: $--xl),
 );
-// 单行注释
-/*
-区域注释
-*/ 
