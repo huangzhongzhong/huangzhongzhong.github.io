@@ -545,6 +545,70 @@ $--transfer-item-height: 30px !default;
 $--transfer-filter-height: 32px !default;
 
 
+/* Form 表单
+-------------------------- */
+/// fontSize||Font|1
+// 表单 标签 字体 大小
+$--form-label-font-size: $--font-size-base !default;
+
+
+/* Table 表格 
+-------------------------- */
+$--table-border-color: #C1CBDB !default; /*特定独立色值*/ 
+$--table-border: 1px solid $--table-border-color !default;
+
+$--table-font-color: $--color-text-regular !default;
+$--table-header-font-color: $--color-text-primary !default;
+
+// 表格 行 悬停 背景 颜色 
+$--table-row-hover-background-color: $--background-hover !default; /*row 行*/
+$--table-current-row-background-color: $--color-primary-light-9 !default;/*选中 行*/
+
+$--table-header-background-color: #EBF0FA !default;/*特定独立色值*/ 
+$--table-fixed-box-shadow: $--box-shadow-base !default;
+
+
+/* Tag 标签
+-------------------------- */
+$--tag-info-color: $--color-info !default;
+$--tag-primary-color: $--color-primary !default;
+$--tag-success-color: $--color-success !default;
+$--tag-warning-color: $--color-warning !default;
+$--tag-danger-color: $--color-danger !default;
+
+$--tag-font-size: 12px !default;
+$--tag-border-radius: $--border-radius-base !default;
+$--tag-padding: 0 10px !default;
+
+/* progress
+-------------------------- */
+
+/* Tree 树形控件
+-------------------------- */
+// 树形控件 节点 悬浮 背景 颜色 
+$--tree-node-hover-background-color: $--background-hover !default;
+// 树形控件 字体 颜色 
+$--tree-font-color: $--color-text-regular !default;
+// 树形控件 扩大 图标 颜色
+$--tree-expand-icon-color: $--color-text-secondary !default;
+
+
+/* Pagination 分页
+-------------------------- */
+$--pagination-font-size: 13px !default;
+$--pagination-background-color: $--color-white !default;
+$--pagination-font-color: $--color-text-primary !default;
+$--pagination-border-radius: 3px !default;
+
+$--pagination-button-color: $--color-text-primary !default;
+$--pagination-button-width: 35.5px !default;
+$--pagination-button-height: 28px !default;
+$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-background-color: $--color-white !default;
+
+$--pagination-hover-color: $--color-primary !default;
+
+
 
 /* Alert 警告提示
 -------------------------- */
@@ -775,63 +839,10 @@ $--dialog-font-line-height: $--font-line-height-primary !default;
 $--dialog-padding-primary: 20px !default;
 
 
-/* Table 表格 
--------------------------- */
-
-// 表格 边框 颜色 
-$--table-border-color: #C1CBDB !default; /*特定独立色值*/ 
-// 表格 边框 全包围  
-$--table-border: 1px solid $--table-border-color !default;
-
-// 表格 字体 颜色
-$--table-font-color: $--color-text-regular !default;
-
-// 表格 标题 字体 颜色
-$--table-header-font-color: $--color-text-primary !default;
-
-// 表格 行 悬停 背景 颜色 
-$--table-row-hover-background-color: $--background-hover !default;
-// 表格 当前 行 背景 颜色 ：
-$--table-current-row-background-color: $--color-primary-light-9 !default;
-
-// 表格 标题 背景 颜色 
-$--table-header-background-color: #EBF0FA !default;/*特定独立色值*/ 
-// 表格 固定 盒子 投影
-$--table-fixed-box-shadow: $--box-shadow-base !default;
 
 
-/* Pagination 分页
--------------------------- */
-/// fontSize||Font|1
-// 分页 字体 大小
-$--pagination-font-size: 13px !default;
 
-// 分页 背景 颜色 
-$--pagination-background-color: $--color-white !default;
 
-// 分页 字体 颜色
-$--pagination-font-color: $--color-text-primary !default;
-// 分页 边框 圆角
-$--pagination-border-radius: 3px !default;
-
-// 分页 按钮 颜色 
-$--pagination-button-color: $--color-text-primary !default;
-
-/// height||Other|4
-// 分页 按钮 宽度
-$--pagination-button-width: 35.5px !default;
-/// height||Other|4
-// 分页 按钮 高度
-$--pagination-button-height: 28px !default;
-
-// 分页 按钮 禁用 颜色 
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
-
-// 分页 按钮 禁用 背景 颜色 
-$--pagination-button-disabled-background-color: $--color-white !default;
-
-// 分页 悬停 颜色 
-$--pagination-hover-color: $--color-primary !default;
 
 
 /* Popup
@@ -891,43 +902,10 @@ $--tooltip-arrow-size: 6px !default;
 $--tooltip-padding: 10px !default;
 
 
-/* Tag 标签
--------------------------- */
-
-// 标签 提示 颜色
-$--tag-info-color: $--color-info !default;
-
-// 标签 主要 颜色
-$--tag-primary-color: $--color-primary !default;
-
-// 标签 正确 颜色
-$--tag-success-color: $--color-success !default;
-
-// 标签 警告 颜色 
-$--tag-warning-color: $--color-warning !default;
-
-// 标签 危险 颜色 
-$--tag-danger-color: $--color-danger !default;
-/// fontSize||Font|1
-// 标签 字 大小
-$--tag-font-size: 12px !default;
-// 标签 圆角 大小 
-$--tag-border-radius: $--border-radius-base !default;
-// 标签 内边距
-$--tag-padding: 0 10px !default;
 
 
-/* Tree 树形控件
--------------------------- */
 
-// 树形控件 节点 悬浮 背景 颜色 
-$--tree-node-hover-background-color: $--background-hover !default;
 
-// 树形控件 字体 颜色 
-$--tree-font-color: $--color-text-regular !default;
-
-// 树形控件 扩大 图标 颜色
-$--tree-expand-icon-color: $--color-text-secondary !default;
 
 
 /* Dropdown 下拉
@@ -1173,11 +1151,6 @@ $--calendar-selected-background-color: $--background-hover !default;
 $--calendar-cell-width: 85px !default;
 
 
-/* Form 表单
--------------------------- */
-/// fontSize||Font|1
-// 表单 标签 字体 大小
-$--form-label-font-size: $--font-size-base !default;
 
 
 /* Avatar 头像
