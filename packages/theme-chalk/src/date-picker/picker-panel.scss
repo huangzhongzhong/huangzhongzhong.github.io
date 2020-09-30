@@ -86,7 +86,7 @@
 
     @include when(disabled) {
       // 已审
-      color: $--color-text-placeholder ;
+      color: $--color-text-placeholder ; /*禁用 对应区域？*/
 
       &:hover {
         cursor: not-allowed;

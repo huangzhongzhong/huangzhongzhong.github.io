@@ -10,7 +10,7 @@
   @include when(disabled) {
     .el-collapse-item__header {
       // 已审
-      color: $--color-text-placeholder ;
+      color: $--color-text-placeholder ;/*禁用 对应区域？*/
       cursor: not-allowed;
     }
   }

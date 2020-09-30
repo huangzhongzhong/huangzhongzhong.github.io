@@ -64,8 +64,8 @@
     text-align: center;
     font-size: $--font-size-base;
     color: $--color-text-regular;
-
-    &::placeholder {
+    
+    &::placeholder { /*案例：timepicker 任意时间范围 不包括固定时间范围  datapicker 选择日期范围 选择月份范围   datatimepicker 日期和时间范围  默认的起始与结束时刻 */
       color: $--input-placeholder-color ;/*已改*/
     }
   }
@@ -187,7 +187,7 @@
       background-color: $--input-disabled-fill;
       color: $--input-disabled-color;
       cursor: not-allowed;
-      &::placeholder {
+      &::placeholder {/*可能是上面那个状态 &::placeholder的禁用状态*/
         // 已审
         color: $--input-disabled-placeholder-color;
       }

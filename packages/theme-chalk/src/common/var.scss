@@ -41,6 +41,8 @@ $--color-border-light: #C0C3CC !default; /*二级边框 轻*/
 $--color-background-base: #F2F3F5 !default; /*背景 颜色 基础*/
 $--color-background-dark: #D8DDE5 !default;  /*增加*/ /*背景 颜色 重*/
 
+$--color-: #D8DDE5 !default;  /*增加*/ 
+
 /*衍生颜色*/
 /// 主题色衍生-叠加白色
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; 
@@ -80,6 +82,8 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 $--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
 $--disabled-color-base: $--color-text-placeholder !default;/*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default;/*禁用 边框 基础*/
+
+$--disabled-font-color: $--color-text-placeholder !default;
 
 /* 背景 */
 $--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
@@ -238,75 +242,45 @@ $--radio-input-border-radius: $--border-radius-circle !default;
 // 所有单选输入框的悬浮颜色，但是不包括按钮样式整组 
 $--radio-input-border-color-hover: $--color-primary !default;
 
-// 所有未选中 单选 禁用 输入框 边框 颜色  
 $--radio-disabled-input-border-color:$--disabled-border-base !default;
-// 所有未选中 单选 禁用 输入框 填充 颜色 
 $--radio-disabled-input-fill: $--disabled-fill-base !default;
-//  所有未选中 单选 禁用 图标 颜色 （单选中心的小点）
+
 $--radio-disabled-icon-color: $--disabled-fill-base !default;
 
-// 单选 禁用 选中 输入框 边框 颜色
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-// 单选 禁用 选中 输入框 填充
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-// 单选 禁用 选中 图标 颜色 
 $--radio-disabled-checked-icon-color: $--disabled-color-base !default;
-
-// 单选 选中 字体 颜色  
+ 
 $--radio-checked-font-color: $--color-primary !default;
-
-// 单选 选中 选择按钮 边框 颜色 
 $--radio-checked-input-border-color: $--color-primary !default;
-// 单选 选中 选择按钮 背景 颜色
 $--radio-checked-input-background-color: $--color-white !default;
-
-// 单选 选中 图标 颜色 
 $--radio-checked-icon-color: $--color-primary !default;
 
-// 单选 带有边框 高度
 $--radio-bordered-height: 40px !default;
-
-// 单选 带有边框 内边距
 $--radio-bordered-padding: 12px 20px 0 10px !default;
-// 单选 带有边框 中号 内边距
+
 $--radio-bordered-medium-padding: 10px 20px 0 10px !default;
-// 单选 带有边框 中号 选择按钮 高度
 $--radio-bordered-medium-input-height: 14px !default;
-// 单选 带有边框 中号 选择按钮 宽度
 $--radio-bordered-medium-input-width: 14px !default;
-// 单选 带有边框 中号  高度
 $--radio-bordered-medium-height: 36px !default;
 
-// 单选 带有边框 小号 内边距
 $--radio-bordered-small-padding: 8px 15px 0 10px !default;
-// 单选 带有边框 小号 选择按钮 高度
 $--radio-bordered-small-input-height: 12px !default;
-// 单选 带有边框 小号 选择按钮 宽度
 $--radio-bordered-small-input-width: 12px !default;
-// 单选 带有边框 小号  高度
 $--radio-bordered-small-height: 32px !default;
 
-// 单选 带有边框 超小号 内边距
 $--radio-bordered-mini-padding: 6px 15px 0 10px !default;
-// 单选 带有边框 超小号 选择按钮 高度
 $--radio-bordered-mini-input-height: 12px !default;
-// 单选 带有边框 超小号 选择按钮 宽度
 $--radio-bordered-mini-input-width: 12px !default;
-// 单选 带有边框 超小号  高度
 $--radio-bordered-mini-height: 28px !default;
 
-/// fontSize||Font|1  单选 按钮样式 
-// 单选 按钮 字体 大小 
+// 单选按钮样式
 $--radio-button-font-size: $--font-size-base !default;
 
-// 单选 按钮 选中 背景 颜色 
 $--radio-button-checked-background-color: $--color-primary-light-9 !default;
-// 单选 按钮 选中 字体 颜色 
 $--radio-button-checked-font-color: $--color-primary !default;
-// 单选 按钮 选中 边框 颜色
 $--radio-button-checked-border-color: $--color-primary !default;
 
-// 单选 按钮 禁用 选中 填充 
 $--radio-button-disabled-checked-fill: $--disabled-fill-base !default;
 
 

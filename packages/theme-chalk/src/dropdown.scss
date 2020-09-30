@@ -111,7 +111,7 @@
     @include when(disabled) {
       cursor: default;
       // 已审
-      color: $--color-text-placeholder ;
+      color: $--color-text-placeholder ;/*禁用 对应区域?*/
       pointer-events: none;
     }
   }

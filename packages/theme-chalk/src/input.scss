@@ -23,9 +23,8 @@
     border-radius: $--input-border-radius;
     transition: $--border-transition-base;
     
-    // 已审
-    &::placeholder {
-      color: $--input-placeholder-color;
+    &::placeholder { /*案例：input 文本域*/
+      color: $--input-placeholder-color ;
     }
 
     &:hover {
@@ -53,8 +52,8 @@
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
       cursor: not-allowed;
-      // 已审
-      &::placeholder {
+      //  
+      &::placeholder { /*应该是文本域禁用状态*/
         color: $--input-disabled-placeholder-color;
       }
     }
@@ -121,9 +120,9 @@
     transition: $--border-transition-base;
     width: 100%;
     
-    // 已审
-    &::placeholder {
-      color: $--input-placeholder-color;
+    // 
+    &::placeholder { /*案例：input 除文本域，禁用以外的所有占位文字 */
+      color: $--input-placeholder-color ;
     }
 
     &:hover {
@@ -195,8 +194,7 @@
       color: $--input-disabled-color;
       cursor: not-allowed;
       
-      // 已审
-      &::placeholder {
+      &::placeholder { /*案例：input 禁用状态 */
         color: $--input-disabled-placeholder-color;
       }
     }
