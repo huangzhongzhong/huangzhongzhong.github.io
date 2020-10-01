@@ -10,10 +10,10 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--button-default-background-color;
+  background: $--button-default-background-color ;/*案例： button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
   border: $--border-base;
-  border-color: $--button-default-border-color;
-  color: $--button-default-font-color;
+  border-color: $--button-default-border-color ;/*案例 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  color: $--button-default-font-color ; /*案例 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -23,17 +23,17 @@
   font-weight: $--button-font-weight ;
   @include utils-user-select(none);
   & + & {
-    margin-left: 10px;
+    margin-left: 10px;/*案例： 待解释*/
   }
 
-  /*案例： button按钮全页 */
+  /*案例： button按钮全页 全局横竖内间距、文字大小、圆角*/
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
 
   &:hover,
   &:focus {
-    color: $--color-primary;
-    border-color: $--color-primary-light-7;
-    background-color: $--color-primary-light-9;
+    color: $--font-color-hover; /*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+    border-color: $--button-default-border-color-hover ; /*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+    background-color: $--button-default-background-color-hover;/*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
   }
 
   &:active {

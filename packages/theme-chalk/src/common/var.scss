@@ -88,6 +88,8 @@ $--background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背�
 $--link-color-hover: $--color-primary !default;/*链接 颜色 悬停*/
 $--border-color-hover: $--color-primary !default;/*边框 颜色 悬停*/
 
+$--font-color-hover: $--color-primary !default;/*字体 颜色 悬停*/
+
 /* 链接 */
 $--link-color-base: $--color-primary !default;/*链接 颜色 基础*/
 
@@ -169,10 +171,13 @@ $--button-mini-font-size: 12px !default;
 $--button-mini-border-radius: #{$--border-radius-base - 1} !default;
 $--button-mini-padding-vertical: 7px !default;/*按钮 超小号 内边距 纵向*/
 $--button-mini-padding-horizontal: 15px !default;/*按钮 超小号 内边距 横向*/
-// 默认按钮
+// 默认按钮 
 $--button-default-font-color: $--color-text-regular !default;
 $--button-default-background-color: $--color-background-base !default;
 $--button-default-border-color: $--color-border-base !default;
+$--button-default-border-color-hover: $--color-primary !default;
+$--button-default-background-color-hover: $--color-white !default;
+
 // 禁用按钮 只影响禁用状态默认按钮
 $--button-disabled-font-color: $--color-text-placeholder !default;
 $--button-disabled-background-color: $--color-background-base !default;
@@ -181,6 +186,7 @@ $--button-disabled-border-color: $--color-border-light !default;
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
 $--button-primary-background-color: $--color-primary !default;
+
 // 成功按钮
 $--button-success-border-color: $--color-success !default;
 $--button-success-font-color: $--color-white !default;
