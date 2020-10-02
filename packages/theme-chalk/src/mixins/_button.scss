@@ -1,9 +1,10 @@
 @import "../common/var";
 // 朴素按钮 
-@mixin button-plain($color) { /*对应： 朴素主要 朴素成功 朴素信息 朴素警告 朴素危险*/
+@mixin button-plain($color) { /*对应：朴素（主要、成功、信息、警告、危险）按钮*/
   color:$color;
   background: mix($--color-white, $color, 90%);
-  border-color: mix($--color-white, $color, 20%);
+  // border-color: mix($--color-white, $color, 20%);
+  border: solid 1px  mix($--color-white, $color, 20%) ;
 
   &:hover,
   &:focus {
@@ -30,7 +31,7 @@
   }
 }
 
-///*按钮混合规律，不包括默认，朴素，默认圆角按钮，搜索图标按钮*/
+///*对应： 按钮混合规律，包括主要、成功、信息、警告、危险、按钮*/
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;
@@ -56,7 +57,7 @@
     color: $color;
   }
 
-  &.is-disabled { /*对应禁用状态朴素（主要、成功、信息、警告、危险）*/
+  &.is-disabled { /*对应： 禁用状态主要、成功、信息、警告、危险*/
     &,
     &:hover,
     &:focus,

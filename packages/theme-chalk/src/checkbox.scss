@@ -309,7 +309,7 @@
 
   &.is-disabled {
     & .el-checkbox-button__inner {
-      color: $--button-disabled-font-color;
+      color: $--button-default-disabled-border-color;
       cursor: not-allowed;
       background-image: none;
       background-color: $--checkbox-button-disabled-fill ;

@@ -54,23 +54,26 @@
   }
   
   @include when(plain) {/*对应： button按钮 基础用法 朴素按钮 */
+    background: $--button-plain-background-color ;
+    border: $--button-plain-border;
+    color: $--button-default-font-color;
     &:hover,
     &:focus {
-      background: $--color-white;
-      border-color: $--color-primary;
-      color: $--color-primary;
+      background: $--button-plain-background-color-hover;
+      border-color: $--button-plain-border-color-hover;
+      color: $--button-plain-font-color-hover;
     }
 
     &:active {
-      background: $--color-white;
-      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      background: $--button-plain-background-color-active;
+      border-color: $--button-plain-border-color-active;
+      color: $--button-plain-font-color-active;
       outline: none;
     }
   }
-  // /*对应： button按钮 按下状态 */ 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
+  // 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
   // 这个可能是因为引用所以锁死了黑色，有些变量位置放常量不生效。
-  @include when(active) {
+  @include when(active) { /* 对应： button按钮 按下状态 */
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
@@ -79,24 +82,24 @@
     &,
     &:hover,
     &:focus {
-      color: $--button-disabled-font-color;
+      color: $--button-default-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-background-color;
-      border-color: $--button-disabled-border-color;
+      background-color: $--button-default-disabled-background-color;
+      border-color: $--button-default-disabled-border-color;
     }
-    // 文字按钮禁用状态
-    &.el-button--text {
+
+    &.el-button--text { /*禁用文字按钮*/
       background-color: transparent;
     }
-    // 朴素按钮状态
-    &.is-plain {
+  
+    &.is-plain { /*禁用朴素按钮*/
       &,
       &:hover,
       &:focus {
-        background-color: $--color-white;
-        border-color: $--button-disabled-border-color;
-        color: $--button-disabled-font-color;
+        background-color: $--button-plain-disabled-background-color;
+        border-color: $--button-plain-disabled-border-color;
+        color: $--button-plain-disabled-font-color;
       }
     }
   }
@@ -185,11 +188,12 @@
     &.is-disabled:hover,
     &.is-disabled:focus {
       border-color: transparent;
+      color:$--button-disabled-text-font-color;
     }
   }
 }
 
-@include b(button-group) {
+@include b(button-group) { /*按钮组*/
   @include utils-clearfix;
   display: inline-block;
   vertical-align: middle;
@@ -250,7 +254,7 @@
       border-left-color: rgba($--color-white, 0.5);
     }
   }
-
+// 这个是？
   @each $type in (primary, success, warning, danger, info) {
     .el-button--#{$type} {
       &:first-child {

@@ -150,7 +150,6 @@ $--index-popper: 2000 !default;
 /* Button 按钮
 -------------------------- */
 // 按钮悬停 按下状态混合百分比
-// 混合规律在 mixins-_button 文件。
 $--button-hover-tint-percent: 30% !default;/*叠加白色减轻百分比*/
 $--button-active-shade-percent: 20% !default;/*叠加黑色加重百分比*/
 
@@ -196,28 +195,35 @@ $--button-default-background-color-active: $--color-white !default;
 $--button-default-font-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
 $--button-default-border-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
 
+$--button-default-disabled-font-color: $--color-text-placeholder !default;
+$--button-default-disabled-background-color: $--color-background-base !default;
+$--button-default-disabled-border-color: $--color-border-light !default;
+
+
 // 朴素按钮
-$--button-plain-background-color: $--color-background-base !default;
-$--button-default-font-color: $--color-text-regular !default;
-$--button-default-border-color: $--color-border-base !default;
-
-$--button-default-background-color-hover: $--color-white !default;
-$--button-default-border-color-hover: $--color-primary !default;
-$--button-default-font-color-hover: $--font-color-hover !default;
-
-$--button-default-background-color-active: $--color-white !default;
-$--button-default-font-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
-$--button-default-border-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
-
 // 朴素（主要、成功、信息、警告、危险）规律在 mixins-_button 文件。
+$--button-plain-background-color: $--color-background-base !default;
+$--button-plain-border: dashed 1px $--color-border-base !default;
+$--button-plain-font-color: $--color-text-regular !default;
+
+$--button-plain-background-color-hover: $--color-white !default;
+$--button-plain-border-color-hover: $--color-primary !default;
+$--button-plain-font-color-hover: $--font-color-hover !default;
+
+$--button-plain-background-color-active: $--color-white !default;
+$--button-plain-border-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+$--button-plain-font-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+
+$--button-plain-disabled-background-color: $--color-background-base !default;
+$--button-plain-disabled-border-color: $--color-border-light !default;
+$--button-plain-disabled-font-color: $--color-text-placeholder !default;
 
 
+// 主要、成功、信息、警告、危险按钮混合与禁用规律在 mixins-_button 文件。
 // 主要按钮
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
 $--button-primary-background-color: $--color-primary !default;
-
-
 
 // 成功按钮
 $--button-success-border-color: $--color-success !default;
@@ -236,11 +242,8 @@ $--button-info-border-color: $--color-info !default;
 $--button-info-font-color: $--color-white !default;
 $--button-info-background-color: $--color-info !default;
 
-// 禁用按钮 只影响禁用状态默认按钮
-$--button-disabled-font-color: $--color-text-placeholder !default;
-$--button-disabled-background-color: $--color-background-base !default;
-$--button-disabled-border-color: $--color-border-light !default;
-
+// 文字按钮
+$--button-disabled-text-font-color: $--color-text-placeholder !default;
 
 
 
