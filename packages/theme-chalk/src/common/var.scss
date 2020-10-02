@@ -95,7 +95,7 @@ $--link-color-base: $--color-primary !default;/*链接 颜色 基础*/
 
 /* 边框*/
 $--border-width-base: 1px !default;/*边框 宽度 大小 基础*/
-$--border-style-base: solid !default;/*边框 样式 基础  ： solid包围边框*/
+$--border-style-base: solid !default;/*边框 样式 基础  ： solid单实线*/
 $--border-base: $--border-width-base $--border-style-base $--color-border-base !default;/*边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础 */
 
 /* 圆角*/
@@ -122,7 +122,7 @@ $--font-size-small: 13px !default;/*正文（小）字体大小 小号*/
 $--font-size-extra-small: 12px !default;/*辅助字体大小 超小号*/
 $--font-weight-primary: 500 !default;/*主要字体粗细*/
 $--font-weight-secondary: 400 !default;/*次要字体粗细*/
-$--font-weight-bold: 600 !default;/*加粗字体粗细*/ /*增加*/
+$--font-weight-bold: 700 !default;/*加粗字体粗细*/ /*增加*/
 
 $--font-line-height-primary: 24px !default; /*主要字体行高*/
 $--font-line-height-secondary: 16px !default;/*次要字体行高*/
@@ -149,13 +149,23 @@ $--index-popper: 2000 !default;
 
 /* Button 按钮
 -------------------------- */
-// 按钮全局样式，关联checkbox和radio的单选
+// 按钮悬停 按下状态混合百分比
+// 混合规律在 mixins-_button 文件。
+$--button-hover-tint-percent: 30% !default;/*叠加白色减轻百分比*/
+$--button-active-shade-percent: 20% !default;/*叠加黑色加重百分比*/
+
+
+// 按钮全局样式，关联checkbox和radio的按钮样式 $--border-radius-base
 $--button-font-size: $--font-size-base !default;
 $--button-font-weight: $--font-weight-primary !default;
+$--button-border: $--border-base !default;
 $--button-border-radius: $--border-radius-base !default;
+
+
 // 全局纵向padding，但不影响圆角按钮 因为圆角按钮单独的。
 $--button-padding-vertical: 12px !default;
 $--button-padding-horizontal: 20px !default;
+
 // 按钮中号 
 $--button-medium-font-size: $--font-size-base !default; 
 $--button-medium-border-radius: $--border-radius-base !default;
@@ -171,27 +181,49 @@ $--button-mini-font-size: 12px !default;
 $--button-mini-border-radius: #{$--border-radius-base - 1} !default;
 $--button-mini-padding-vertical: 7px !default;/*按钮 超小号 内边距 纵向*/
 $--button-mini-padding-horizontal: 15px !default;/*按钮 超小号 内边距 横向*/
-// 默认按钮 
-$--button-default-font-color: $--color-text-regular !default;
-$--button-default-background-color: $--color-background-base !default;
-$--button-default-border-color: $--color-border-base !default;
-$--button-default-border-color-hover: $--color-primary !default;
-$--button-default-background-color-hover: $--color-white !default;
 
-// 禁用按钮 只影响禁用状态默认按钮
-$--button-disabled-font-color: $--color-text-placeholder !default;
-$--button-disabled-background-color: $--color-background-base !default;
-$--button-disabled-border-color: $--color-border-light !default;
+// 默认按钮  
+/*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+$--button-default-background-color: $--color-background-base !default;
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-border-color: $--color-border-base !default;
+
+$--button-default-background-color-hover: $--color-white !default;
+$--button-default-border-color-hover: $--color-primary !default;
+$--button-default-font-color-hover: $--font-color-hover !default;
+
+$--button-default-background-color-active: $--color-white !default;
+$--button-default-font-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+$--button-default-border-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+
+// 朴素按钮
+$--button-plain-background-color: $--color-background-base !default;
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-border-color: $--color-border-base !default;
+
+$--button-default-background-color-hover: $--color-white !default;
+$--button-default-border-color-hover: $--color-primary !default;
+$--button-default-font-color-hover: $--font-color-hover !default;
+
+$--button-default-background-color-active: $--color-white !default;
+$--button-default-font-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+$--button-default-border-color-active: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
+
+// 朴素（主要、成功、信息、警告、危险）规律在 mixins-_button 文件。
+
+
 // 主要按钮
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
 $--button-primary-background-color: $--color-primary !default;
 
+
+
 // 成功按钮
 $--button-success-border-color: $--color-success !default;
 $--button-success-font-color: $--color-white !default;
 $--button-success-background-color: $--color-success !default;
-// 警告案例
+// 警告对应
 $--button-warning-border-color: $--color-warning !default;
 $--button-warning-font-color: $--color-white !default;
 $--button-warning-background-color: $--color-warning !default;
@@ -203,9 +235,16 @@ $--button-danger-background-color: $--color-danger !default;
 $--button-info-border-color: $--color-info !default;
 $--button-info-font-color: $--color-white !default;
 $--button-info-background-color: $--color-info !default;
-// 按钮悬停 按下状态
-$--button-hover-tint-percent: 30% !default;/*叠加白色减轻百分比*/
-$--button-active-shade-percent: 20% !default;/*叠加黑色加重百分比*/
+
+// 禁用按钮 只影响禁用状态默认按钮
+$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-background-color: $--color-background-base !default;
+$--button-disabled-border-color: $--color-border-light !default;
+
+
+
+
+
 
 
 /* Link 链接
@@ -257,6 +296,8 @@ $--radio-disabled-icon-color: $--disabled-fill-base !default;
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
 $--radio-disabled-checked-icon-color: $--disabled-color-base !default;
+
+$--radio-disabled-checked-font-color: $--disabled-font-color !default;
  
 $--radio-checked-font-color: $--color-primary !default;
 $--radio-checked-input-border-color: $--color-primary !default;
@@ -281,9 +322,35 @@ $--radio-bordered-mini-input-height: 12px !default;
 $--radio-bordered-mini-input-width: 12px !default;
 $--radio-bordered-mini-height: 28px !default;
 
-// 单选按钮样式
+// 单选按钮样式 
 $--radio-button-font-size: $--font-size-base !default;
+$--radio-button-font-weight: $--font-weight-primary !default;
+$--radio-button-font-color: $--color-text-regular !default;
 $--radio-button-background-color: $--color-white !default;
+
+$--radio-button-border: $--border-base !default;
+$--radio-button-border-left: $--border-width-base $--border-style-base $--color-border-base  !default;
+$--radio-button-border-radius-first: $--border-radius-base 0 0 $--border-radius-base !default;
+$--radio-button-border-radius-last: 0 $--border-radius-base $--border-radius-base 0 !default;
+
+$--radio-button-padding-vertical: $--button-padding-vertical !default;
+$--radio-button-padding-horizontal: $--button-padding-horizontal !default;
+
+// 按钮中号 
+$--radio-button-medium-font-size: $--button-medium-font-size !default; 
+$--radio-button-medium-border-radius: 0 !default;
+$--radio-button-medium-padding-vertical: $--button-medium-padding-vertical !default;
+$--radio-button-medium-padding-horizontal: $--button-medium-padding-horizontal !default;
+// 按钮小号
+$--radio-button-small-font-size: $--button-small-font-size !default;
+$--radio-button-small-border-radius: 0 !default;
+$--radio-button-small-padding-vertical: $--button-small-padding-vertical !default;
+$--radio-button-small-padding-horizontal: $--button-small-padding-horizontal !default;
+// 按钮超小号
+$--radio-button-mini-font-size: $--button-mini-font-size !default;
+$--radio-button-mini-border-radius: 0 !default;
+$--radio-button-mini-padding-vertical: $--button-mini-padding-vertical !default;/*按钮 超小号 内边距 纵向*/
+$--radio-button-mini-padding-horizontal: $--button-mini-padding-horizontal !default;/*按钮 超小号 内边距 横向*/
 
 $--radio-button-checked-background-color: $--color-primary-light-9 !default;
 $--radio-button-checked-font-color: $--color-primary !default;
@@ -293,6 +360,11 @@ $--radio-button-disabled-fill: $--color-white !default;
 $--radio-button-disabled-border: $--disabled-border-base !default;
 $--radio-button-disabled-background: $--color-white !default;
 $--radio-button-disabled-checked-background: $--disabled-fill-base !default;
+$--radio-button-disabled-checked-font-color: $--disabled-font-color !default;
+
+/*focus焦点样式需要radio-button文档末修改，搜索关键词： &:focus:not(.is-focus):not(:active):not(.is-disabled) { */
+
+
 
 /* Checkbox 多选
 -------------------------- */
@@ -406,9 +478,9 @@ $--select-disabled-border: $--disabled-border-base !default;
 $--select-font-size: $--font-size-base !default;
 $--select-close-hover-color: $--color-text-regular !default;/*待解决-改动无效果*/
 
-// /*案例：Select选择器所有图标*/
+// /*对应：Select选择器所有图标*/
 $--select-input-color: $--color-text-secondary !default;
-//  /*案例：Select选择器-远程搜索和创建条目输入后文字*/
+//  /*对应：Select选择器-远程搜索和创建条目输入后文字*/
 $--select-multiple-input-color: $--color-text-secondary !default;
  
 $--select-input-focus-border-color: $--color-primary !default;
@@ -424,7 +496,7 @@ $--select-option-hover-background: $--background-hover !default;
 $--select-option-selected-font-color: $--color-primary !default;
 $--select-option-selected-hover: $--color-background-base !default; /*选择器 选项 选中 悬停 */
 
-// 选择器 分组标题 颜色 案例：
+// 选择器 分组标题 颜色 对应：
 $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
 $--select-group-font-size: 12px !default;

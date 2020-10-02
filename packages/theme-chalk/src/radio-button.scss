@@ -2,50 +2,57 @@
 @import "mixins/_button";
 @import "common/var";
 
-@include b(radio-button) {
+@include b(radio-button) {/*对应： 单选 按钮样式 */
   position: relative;
   display: inline-block;
   outline: none;
-// 
-  @include e(inner) { /*案例： 单选 按钮样式 */
+  //
+  @include e(inner) {/*全局*/
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
     vertical-align: middle;
-    background: $--radio-button-background-color ;
-    border: $--border-base;
-    font-weight: $--button-font-weight;
-    border-left: 0;
-  
-    color: $--button-default-font-color;/*案例： 单选 按钮样式 未选中部分文字，不包括禁用 */
+    background: $--radio-button-background-color;
+    border: $--radio-button-border;
+    font-weight: $--radio-button-font-weight;
+    border-left: 0; /*控制按钮样式的边框重叠，有无才有差别，数量大小无明显差别*/
+
+    color: $--radio-button-font-color; /*对应： 单选 按钮样式 未选中部分文字，不包括禁用 */
     -webkit-appearance: none;
-    text-align: center;
+    text-align: center; /*改动未见反应*/
     box-sizing: border-box;
     outline: none;
-    margin: 0;
+    margin: 0; /*改动未见反应*/
     position: relative;
     cursor: pointer;
     transition: $--all-transition;
-    /*案例： Radio 按钮样式第一行 */
-    @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, 0);
+    
+    @include button-size( /*对应： Radio 按钮样式第一行 */
+      $--radio-button-padding-vertical,
+      $--radio-button-padding-horizontal,
+      $--radio-button-font-size,
+      0
+    );
 
-    &:hover {
+    &:hover { 
       color: $--color-primary;
+      
     }
 
-    & [class*="el-icon-"] {
+    & [class*="el-icon-"] { /*对应？*/
       line-height: 0.9;
 
-      & + span {
+      & + span { /*对应？*/
         margin-left: 5px;
       }
     }
   }
 
-  &:first-child {
+  &:first-child { /*第一个按钮*/
     .el-radio-button__inner {
-      border-left: $--border-base;
-      border-radius: $--border-radius-base 0 0 $--border-radius-base;
+      //
+      border-left: $--radio-button-border-left;
+      border-radius: $--radio-button-border-radius-first ;
       box-shadow: none !important;
     }
   }
@@ -55,8 +62,8 @@
     outline: none;
     position: absolute;
     z-index: -1;
-     
-    &:checked { /*案例： radio 按钮样式 选中*/
+
+    &:checked {/*对应： radio 按钮样式 选中*/
       & + .el-radio-button__inner {
         color: $--radio-button-checked-font-color;
         background-color: $--radio-button-checked-background-color;
@@ -64,51 +71,67 @@
         box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
       }
     }
-    
-    &:disabled {  /*案例： radio 按钮样式 未选中禁用*/ 
+
+    &:disabled { /*对应： radio 按钮样式 未选中禁用*/
       & + .el-radio-button__inner {
-        color: $--button-disabled-font-color;
+        color: $--radio-button-disabled-checked-font-color;
         cursor: not-allowed;
         background-image: none;
-        background-color: $--radio-button-disabled-background ;
+        background-color: $--radio-button-disabled-background;
         border-color: $--radio-button-disabled-border;
         box-shadow: none;
       }
-      &:checked + .el-radio-button__inner { /*案例： radio 按钮样式 已选中禁用*/ 
-        background-color: $--radio-button-disabled-checked-background ;
+      &:checked + .el-radio-button__inner { /*对应： radio 按钮样式 已选中禁用*/
+        background-color: $--radio-button-disabled-checked-background;
       }
     }
   }
 
-  &:last-child {
+  &:last-child {  /*最后一个按钮*/
     .el-radio-button__inner {
-      border-radius: 0 $--border-radius-base $--border-radius-base 0;
+      border-radius: $--radio-button-border-radius-last;
     }
   }
 
   &:first-child:last-child {
-    .el-radio-button__inner {
+    .el-radio-button__inner { /*对应？*/
       border-radius: $--border-radius-base;
     }
   }
 
   @include m(medium) {
     & .el-radio-button__inner {
-      @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, 0);
+      @include button-size(
+        $--radio-button-medium-padding-vertical,
+        $--radio-button-medium-padding-horizontal,
+        $--radio-button-medium-font-size,
+        $--radio-button-medium-border-radius,
+      );
     }
   }
   @include m(small) {
     & .el-radio-button__inner {
-      @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, 0);
+      @include button-size(
+        $--radio-button-small-padding-vertical,
+        $--radio-button-small-padding-horizontal,
+        $--radio-button-small-font-size,
+        $--radio-button-small-border-radius,
+      );
     }
   }
   @include m(mini) {
     & .el-radio-button__inner {
-      @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, 0);
+      @include button-size(
+        $--radio-button-mini-padding-vertical,
+        $--radio-button-mini-padding-horizontal,
+        $--radio-button-mini-font-size,
+        $--radio-button-mini-border-radius,
+      );
     }
   }
 
-  &:focus:not(.is-focus):not(:active):not(.is-disabled){ /*获得焦点时 样式提醒*/
+  &:focus:not(.is-focus):not(:active):not(.is-disabled) {
+    /*获得焦点时 样式提醒*/
     box-shadow: 0 0 2px 2px $--radio-button-checked-border-color;
   }
 }

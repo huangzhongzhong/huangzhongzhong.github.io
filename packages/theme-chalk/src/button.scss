@@ -10,10 +10,10 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--button-default-background-color ;/*案例： button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
-  border: $--border-base;
-  border-color: $--button-default-border-color ;/*案例 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
-  color: $--button-default-font-color ; /*案例 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  background: $--button-default-background-color ;/*对应： button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  border: $--button-border;
+  border-color: $--button-default-border-color ;/*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  color: $--button-default-font-color ; /*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -23,26 +23,27 @@
   font-weight: $--button-font-weight ;
   @include utils-user-select(none);
   & + & {
-    margin-left: 10px;/*案例： 待解释*/
+    margin-left: 10px;/*对应： 待解释*/
   }
 
-  /*案例： button按钮全页 全局横竖内间距、文字大小、圆角*/
+  /*对应： button按钮全页 全局横竖内间距、文字大小、圆角*/
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
 
   &:hover,
   &:focus {
-    color: $--font-color-hover; /*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
-    border-color: $--button-default-border-color-hover ; /*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
-    background-color: $--button-default-background-color-hover;/*案例 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+    color: $--button-default-font-color-hover; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+    border-color: $--button-default-border-color-hover ; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+    background-color: $--button-default-background-color-hover; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: $--button-default-font-color-active;
+    border-color: $--button-default-border-color-active;
+    background: $--button-default-background-color-active ;
     outline: none;
   }
 
-  &::-moz-focus-inner {
+  &::-moz-focus-inner { /*对应？*/
     border: 0;
   }
 
@@ -51,8 +52,8 @@
       margin-left: 5px;
     }
   }
-  /*案例： button按钮 基础用法 朴素按钮 */
-  @include when(plain) {
+  
+  @include when(plain) {/*对应： button按钮 基础用法 朴素按钮 */
     &:hover,
     &:focus {
       background: $--color-white;
@@ -67,8 +68,8 @@
       outline: none;
     }
   }
-  // /*案例： button按钮 按下状态 */ 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
-  // 知道了这个是锁死黑色，有些变量位置放常量不生效，就足够了。
+  // /*对应： button按钮 按下状态 */ 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
+  // 这个可能是因为引用所以锁死了黑色，有些变量位置放常量不生效。
   @include when(active) {
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
@@ -116,12 +117,12 @@
       background-color: rgba(255,255,255,.35);
     }
   }
-  //  /*案例： button 所有圆角按钮 */ 但不包括中、小、超小 意思是中小超小不值得特别优化呗。
+  //  /*对应： button 所有圆角按钮 */ 但不包括中、小、超小 意思是中小超小不值得特别优化呗。
   @include when(round) {
     border-radius: 20px;
     padding: 12px 23px;
   }
-//  /*案例： button 所有图标按钮 */ 
+//  /*对应： button 所有图标按钮 */ 
   @include when(circle) {
     border-radius: 50%;
     padding: $--button-padding-vertical;
@@ -141,7 +142,7 @@
   @include m(info) {
     @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
   }
-  // /*案例：button 不同尺寸 */
+  // /*对应：button 不同尺寸 */
   @include m(medium) {
     @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
     @include when(circle) {
@@ -160,7 +161,7 @@
       padding: $--button-mini-padding-vertical;
     }
   }
-  // /*案例：button 文字按钮 */
+  // /*对应：button 文字按钮 */
   @include m(text) {
     border-color: transparent;
     color: $--color-primary;

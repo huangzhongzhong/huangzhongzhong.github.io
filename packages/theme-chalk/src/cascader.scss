@@ -175,7 +175,7 @@
     outline: none;
     box-sizing: border-box;
     // 
-    &::placeholder { /*案例：cascader 可搜索 多选可搜索占位文字 */
+    &::placeholder { /*对应：cascader 可搜索 多选可搜索占位文字 */
       color: $--input-placeholder-color ;
     }
   }

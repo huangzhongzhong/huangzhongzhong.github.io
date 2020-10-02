@@ -23,7 +23,7 @@
     border-radius: $--input-border-radius;
     transition: $--border-transition-base;
     
-    &::placeholder { /*案例：input 文本域*/
+    &::placeholder { /*对应：input 文本域*/
       color: $--input-placeholder-color ;
     }
 
@@ -121,7 +121,7 @@
     width: 100%;
     
     // 
-    &::placeholder { /*案例：input 除文本域，禁用以外的所有占位文字 */
+    &::placeholder { /*对应：input 除文本域，禁用以外的所有占位文字 */
       color: $--input-placeholder-color ;
     }
 
@@ -194,7 +194,7 @@
       color: $--input-disabled-color;
       cursor: not-allowed;
       
-      &::placeholder { /*案例：input 禁用状态 */
+      &::placeholder { /*对应：input 禁用状态 */
         color: $--input-disabled-placeholder-color;
       }
     }

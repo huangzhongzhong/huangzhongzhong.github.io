@@ -3,7 +3,7 @@
 @include b(steps) {
   display: flex;
   
-  @include m(simple) {/*案例： 简洁风格步骤条*/
+  @include m(simple) {/*对应： 简洁风格步骤条*/
     padding: 13px 8%;
     border-radius: 4px;
     background: $--color-background-dark;

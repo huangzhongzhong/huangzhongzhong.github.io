@@ -1,9 +1,9 @@
 @import "../common/var";
 // 朴素按钮 
-@mixin button-plain($color) {
-  color: $color;
+@mixin button-plain($color) { /*对应： 朴素主要 朴素成功 朴素信息 朴素警告 朴素危险*/
+  color:$color;
   background: mix($--color-white, $color, 90%);
-  border-color: mix($--color-white, $color, 60%);
+  border-color: mix($--color-white, $color, 20%);
 
   &:hover,
   &:focus {
@@ -18,7 +18,7 @@
     outline: none;
   }
 
-  &.is-disabled {
+  &.is-disabled { /*对应禁用状态朴素（主要、成功、信息、警告、危险）*/
     &,
     &:hover,
     &:focus,
@@ -30,7 +30,7 @@
   }
 }
 
-// 按钮变量
+///*按钮混合规律，不包括默认，朴素，默认圆角按钮，搜索图标按钮*/
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;
@@ -43,35 +43,36 @@
     color: $color;
   }
   
-  &:active {
+  &:active {  
     background: mix($--color-black, $background-color, $--button-active-shade-percent);
     border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
     color: $color;
     outline: none;
   }
 
-  &.is-active {
-    background: mix($--color-black, $background-color, $--button-active-shade-percent);
-    border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
+  &.is-active { /*对应？可能没对应，改成红色未见反应*/
+    background: mix($--color-danger, $background-color, $--button-active-shade-percent);
+    border-color: mix($--color-danger, $border-color, $--button-active-shade-percent);
     color: $color;
   }
 
-  &.is-disabled {
+  &.is-disabled { /*对应禁用状态朴素（主要、成功、信息、警告、危险）*/
     &,
     &:hover,
     &:focus,
     &:active {
       color: $--color-white;
-      background-color: mix($background-color, $--color-white);
+      background-color: mix($background-color, $--color-white);/*为什么没指定比例呢？*/
       border-color: mix($border-color, $--color-white);
     }
   }
 
-  &.is-plain {
+  &.is-plain { /*对应禁用状态朴素（主要、成功、信息、警告、危险） 边框背景字体颜色都有影响  */
     @include button-plain($background-color);
   }
 }
 
+// 按钮的间距字体圆角全局设定，除了圆角按钮。
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;

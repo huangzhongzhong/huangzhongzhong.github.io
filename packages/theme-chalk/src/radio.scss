@@ -17,7 +17,7 @@
   margin-right: 30px;
   @include utils-user-select(none);
 
-  @include when(bordered) {  /*案例：单选 带有边框 */
+  @include when(bordered) {  /*对应：单选 带有边框 */
     padding: $--radio-bordered-padding;
     border-radius: $--border-radius-base;
     border: $--border-base;
@@ -94,7 +94,7 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    // 案例 Radio 禁用状态 
+    // 对应 Radio 禁用状态 
     @include when(disabled) {
       // 未选中
       .el-radio__inner {
@@ -150,7 +150,7 @@
       }
     }
   }
-  @include e(inner) { /* 案例：radio 带有边框*/
+  @include e(inner) { /* 对应：radio 带有边框*/
     border: $--radio-input-border;
     border-radius: $--radio-input-border-radius;
     width: $--radio-input-width;
