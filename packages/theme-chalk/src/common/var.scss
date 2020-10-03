@@ -76,7 +76,7 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 全局样式-引用的色值、其他属性、但不包括具体组件
 -------------------------- */
 /* 禁用 */
-$--disabled-fill-base: $--color-background-base !default;/*禁用 填充 基础*/
+$--disabled-background-base: $--color-background-base !default;/*禁用 填充 基础*/
 $--disabled-color-base: $--color-text-placeholder !default;/*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default;/*禁用 边框 基础*/
 $--disabled-font-color: $--color-text-placeholder !default;/*禁用 字体颜色 基础*/
@@ -292,9 +292,25 @@ $--radio-input-background-color: $--color-white !default;
 
 $--radio-input-border-color-hover: $--border-color-hover !default;
 
+// 选中
+$--radio-checked-font-color: $--color-primary !default;
+$--radio-checked-input-border-color: $--color-primary !default;
+$--radio-checked-input-background-color: $--color-white !default;
+$--radio-checked-icon-color: $--color-primary !default;
+
+// 禁用
+$--radio-disabled-input-background: $--disabled-background-base !default;
+$--radio-disabled-input-border-color:$--disabled-border-base !default;
+
+$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
+$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
+$--radio-disabled-checked-input-background: $--disabled-background-base !default;
+$--radio-disabled-checked-font-color: $--disabled-font-color !default;
+
+$--radio-disabled-font-color: $--color-text-placeholder !default;
+
 // 带有边框
 // 全局样式
-
 $--radio-bordered-margin-right: 16px !default;
 $--radio-bordered-margin-left: 16px !default;
 $--radio-bordered-border: $--border-base!default;
@@ -304,11 +320,10 @@ $--radio-bordered-background-color: $--color-white !default;
 $--radio-bordered-checked-border-color: $--color-primary!default;
 $--radio-bordered-disabled-border-color: $--disabled-border-base !default;
 
-// 默认
+// 默认大小
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 12px 20px !default;
 $--radio-bordered-border-radius:$--button-border-radius!default;
-
 
 $--radio-bordered-medium-padding: 10px 20px !default;
 $--radio-bordered-medium-height: 36px !default;
@@ -328,7 +343,8 @@ $--radio-bordered-mini-border-radius: $--button-mini-border-radius!default;
 $--radio-bordered-mini-input-height: 12px !default;
 $--radio-bordered-mini-input-width: 12px !default;
 
-// 单选按钮样式 
+// 单选按钮样式
+// 全局样式 
 $--radio-button-font-size: $--radio-font-size !default;
 $--radio-button-font-weight: $--radio-font-weight !default;
 $--radio-button-font-color: $--radio-font-color !default;
@@ -340,6 +356,7 @@ $--radio-button-border-left: $--border-width-base $--border-style-base $--color-
 $--radio-button-border-radius-first: $--border-radius-base 0 0 $--border-radius-base !default;
 $--radio-button-border-radius-last: 0 $--border-radius-base $--border-radius-base 0 !default;
 
+//默认大小 
 $--radio-button-padding-vertical: $--button-padding-vertical !default;
 $--radio-button-padding-horizontal: $--button-padding-horizontal !default;
 
@@ -359,37 +376,16 @@ $--radio-button-mini-border-radius: 0 !default;
 $--radio-button-mini-padding-vertical: $--button-mini-padding-vertical !default;/*按钮 超小号 内边距 纵向*/
 $--radio-button-mini-padding-horizontal: $--button-mini-padding-horizontal !default;/*按钮 超小号 内边距 横向*/
 
+// 按钮 选中
 $--radio-button-checked-background-color: $--color-primary-light-9 !default;
 $--radio-button-checked-font-color: $--color-primary !default;
 $--radio-button-checked-border-color: $--color-primary !default;
 
-$--radio-button-disabled-fill: $--color-white !default;
+$--radio-button-disabled-background: $--color-white !default;
 $--radio-button-disabled-border: $--disabled-border-base !default;
 $--radio-button-disabled-background: $--color-white !default;
-$--radio-button-disabled-checked-background: $--disabled-fill-base !default;
+$--radio-button-disabled-checked-background: $--disabled-background-base !default;
 $--radio-button-disabled-checked-font-color: $--disabled-font-color !default;
-
-// 选中
-$--radio-checked-font-color: $--color-primary !default;
-$--radio-checked-input-border-color: $--color-primary !default;
-$--radio-checked-input-background-color: $--color-white !default;
-$--radio-checked-icon-color: $--color-primary !default;
-
-// 禁用
-$--radio-disabled-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-input-border-color:$--disabled-border-base !default;
-
-
-$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
-
-$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-font-color: $--color-text-placeholder !default;
-
-$--radio-disabled-checked-font-color: $--disabled-font-color !default;
-
-
-
 
 /*focus焦点样式需要radio-button文档末修改，搜索关键词： &:focus:not(.is-focus):not(:active):not(.is-disabled) { */
 
@@ -411,10 +407,10 @@ $--checkbox-background-color: $--color-white !default;
 
 // 多选 禁用 
 $--checkbox-disabled-border-color: $--disabled-border-base !default;
-$--checkbox-disabled-input-fill: $--disabled-fill-base !default;
+$--checkbox-disabled-input-background: $--disabled-background-base !default;
 $--checkbox-disabled-icon-color: $--disabled-color-base !default;
 
-$--checkbox-disabled-checked-input-fill: $--disabled-fill-base !default;
+$--checkbox-disabled-checked-input-background: $--disabled-background-base !default;
 $--checkbox-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
 
@@ -452,10 +448,10 @@ $--checkbox-button-checked-background-color: $--color-primary-light-9 !default;
 $--checkbox-button-checked-font-color: $--color-primary !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
 
-$--checkbox-button-disabled-fill: $--color-white !default;
+$--checkbox-button-disabled-background: $--color-white !default;
 $--checkbox-button-disabled-border: $--disabled-border-base !default;
 $--checkbox-button-disabled-background: $--color-white !default;
-$--checkbox-button-disabled-checked-background: $--disabled-fill-base !default;
+$--checkbox-button-disabled-checked-background: $--disabled-background-base !default;
 
 
 /* Input 输入框
@@ -480,9 +476,9 @@ $--input-hover-border: $--color-primary !default;
 $--input-clear-hover-color: $--color-text-regular !default;
 
 $--input-focus-border: $--color-primary !default;
-$--input-focus-fill: $--color-white !default;
+$--input-focus-background: $--color-white !default;
 
-$--input-disabled-fill: $--disabled-fill-base !default;
+$--input-disabled-background: $--disabled-background-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
 $--input-disabled-placeholder-color: $--disabled-font-color !default;
@@ -545,7 +541,7 @@ $--select-dropdown-border: solid 1px $--color-border-light !default;
 -------------------------- */
 $--cascader-menu-font-color: $--color-text-regular !default;
 $--cascader-menu-selected-font-color: $--color-primary !default;
-$--cascader-menu-fill: $--color-white !default;
+$--cascader-menu-background: $--color-white !default;
 $--cascader-menu-font-size: $--font-size-base !default;
 
 $--cascader-menu-radius: $--border-radius-base !default;
@@ -837,7 +833,7 @@ $--notification-danger-icon-color: $--color-danger !default;
 --------------------------*/
 $--menu-item-font-size: $--font-size-base !default;/*item 选项*/
 $--menu-item-font-color: $--color-text-primary !default;
-$--menu-item-hover-fill: $--border-color-hover !default;
+$--menu-item-hover-background: $--border-color-hover !default;
 $--menu-background-color: $--color-white !default;
 
 
@@ -849,12 +845,12 @@ $--tab-border-line: 1px solid $--color-border-base !default;
 $--tab-header-color-active: $--color-text-secondary !default;
 $--tab-header-color-hover: $--color-text-regular !default;
 $--tab-header-color: $--color-text-regular !default;
-$--tab-header-fill-active: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
-$--tab-header-fill-hover: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
+$--tab-header-background-active: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
+$--tab-header-background-hover: rgba($--color-black, 0.06) !default; /*独立色值待调整*/
 
 $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
-$--tab-vertical-header-count-fill: $--color-text-secondary !default;
+$--tab-vertical-header-count-background: $--color-text-secondary !default;
 
 /* Breadcrumb 面包屑
 -------------------------- */
@@ -865,7 +861,7 @@ $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 /* Dropdown 下拉
 -------------------------- */
 $--dropdown-menu-box-shadow: $--box-shadow-light !default;
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;/*menuItem 菜单选项*/
+$--dropdown-menuItem-hover-background: $--color-primary-light-9 !default;/*menuItem 菜单选项*/
 $--dropdown-menuItem-hover-color: $--link-color-base !default;
 
 
@@ -890,7 +886,7 @@ $--dialog-padding-primary: 20px !default;
 
 /* Tooltip 文字提示
 -------------------------- */
-$--tooltip-fill: $--color-text-primary !default;
+$--tooltip-background: $--color-text-primary !default;
 $--tooltip-color: $--color-white !default;
 $--tooltip-font-size: 12px !default;
 

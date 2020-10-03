@@ -105,7 +105,7 @@
     // 多选 禁用
     @include when(disabled) {
       .el-checkbox__inner {
-        background-color: $--checkbox-disabled-input-fill;
+        background-color: $--checkbox-disabled-input-background;
         border-color: $--checkbox-disabled-border-color;
         cursor: not-allowed;
         
@@ -121,7 +121,7 @@
 
       &.is-checked {
         .el-checkbox__inner {
-          background-color: $--checkbox-disabled-checked-input-fill;
+          background-color: $--checkbox-disabled-checked-input-background;
           border-color: $--checkbox-disabled-checked-input-border-color;
 
           &::after {
@@ -132,7 +132,7 @@
 
       &.is-indeterminate {
         .el-checkbox__inner {
-          background-color: $--checkbox-disabled-checked-input-fill;
+          background-color: $--checkbox-disabled-checked-input-background;
           border-color: $--checkbox-disabled-checked-input-border-color;
 
           &::before {
@@ -312,7 +312,7 @@
       color: $--button-default-disabled-border-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--checkbox-button-disabled-fill ;
+      background-color: $--checkbox-button-disabled-background ;
       border-color: $--disabled-font-color ;
       box-shadow: none;
     }

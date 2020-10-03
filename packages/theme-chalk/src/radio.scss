@@ -99,7 +99,7 @@
     @include when(disabled) {
       // 未选中
       .el-radio__inner {
-        background-color: $--radio-disabled-input-fill;
+        background-color: $--radio-disabled-input-background;
         border-color: $--disabled-border-base ;
         cursor: not-allowed;
        //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
@@ -116,7 +116,7 @@
       // 已选中
       &.is-checked {
         .el-radio__inner {
-          background-color: $--radio-disabled-checked-input-fill;
+          background-color: $--radio-disabled-checked-input-background;
           border-color: $--radio-disabled-checked-input-border-color;
 
           &::after { /*中心小点*/

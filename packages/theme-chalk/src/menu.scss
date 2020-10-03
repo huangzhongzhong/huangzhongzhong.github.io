@@ -27,7 +27,7 @@
   &:hover,
   &:focus {
     outline: none;
-    background-color: $--menu-item-hover-fill;
+    background-color: $--menu-item-hover-background;
   }
 
   @include when(disabled) {
@@ -224,7 +224,7 @@
     @include menu-item;
 
     &:hover {
-      background-color: $--menu-item-hover-fill;
+      background-color: $--menu-item-hover-background;
     }
   }
   & .el-menu {

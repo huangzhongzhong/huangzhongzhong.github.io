@@ -84,7 +84,7 @@
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover, &:focus {
-      background-color: $--dropdown-menuItem-hover-fill;
+      background-color: $--dropdown-menuItem-hover-background;
       color: $--dropdown-menuItem-hover-color;
     }
 

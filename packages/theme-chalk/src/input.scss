@@ -48,7 +48,7 @@
 
   @include when(disabled) {
     .el-textarea__inner {
-      background-color: $--input-disabled-fill;
+      background-color: $--input-disabled-background;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
       cursor: not-allowed;
@@ -189,7 +189,7 @@
 
   @include when(disabled) {
     .el-input__inner {
-      background-color: $--input-disabled-fill;
+      background-color: $--input-disabled-background;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
       cursor: not-allowed;

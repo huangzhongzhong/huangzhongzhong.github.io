@@ -74,7 +74,7 @@
   @include e(dropdown) {
     margin: 5px 0;
     font-size: $--cascader-menu-font-size;
-    background: $--cascader-menu-fill;
+    background: $--cascader-menu-background;
     border: $--cascader-menu-border;
     border-radius: $--cascader-menu-radius;
     box-shadow: $--cascader-menu-shadow;

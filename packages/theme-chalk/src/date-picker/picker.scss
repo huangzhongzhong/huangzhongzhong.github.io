@@ -174,7 +174,7 @@
   }
 
   @include when(disabled) {
-    background-color: $--input-disabled-fill;
+    background-color: $--input-disabled-background;
     border-color: $--input-disabled-border;
     color: $--input-disabled-color;
     cursor: not-allowed;
@@ -184,7 +184,7 @@
     }
 
     input {
-      background-color: $--input-disabled-fill;
+      background-color: $--input-disabled-background;
       color: $--input-disabled-color;
       cursor: not-allowed;
       &::placeholder {/*可能是上面那个状态 &::placeholder的禁用状态*/

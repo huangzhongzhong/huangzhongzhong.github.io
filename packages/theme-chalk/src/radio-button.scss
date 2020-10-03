@@ -94,7 +94,7 @@
   }
 
   &:first-child:last-child {
-    .el-radio-button__inner { /*对应？*/
+    .el-radio-button__inner { /*对应？可能是按钮组中间的*/
       border-radius: $--border-radius-base;
     }
   }
