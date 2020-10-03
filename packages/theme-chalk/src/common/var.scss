@@ -159,7 +159,7 @@ $--button-font-size: $--font-size-base !default;
 $--button-font-weight: $--font-weight-primary !default;
 $--button-border: $--border-base !default;
 $--button-border-radius: $--border-radius-base !default;
-
+$--button-border-radius-small: $--border-radius-small !default;
 
 // 全局纵向padding，但不影响圆角按钮 因为圆角按钮单独的。
 $--button-padding-vertical: 12px !default;
@@ -246,6 +246,9 @@ $--button-info-background-color: $--color-info !default;
 $--button-text-font-color: $--color-primary !default;
 $--button-disabled-text-font-color: $--color-text-placeholder !default;
 
+
+
+
 /* Link 链接 
 --------------------------*/
 $--link-font-size: $--font-size-base !default;
@@ -265,6 +268,9 @@ $--link-warning-font-color: $--color-warning !default;
 $--link-danger-font-color: $--color-danger !default;
 $--link-info-font-color: $--color-info !default;
 // 像是没有active态，设置不生效。
+
+
+
 
 /* Radio 单选 
 -------------------------- */
@@ -287,44 +293,40 @@ $--radio-input-background-color: $--color-white !default;
 $--radio-input-border-color-hover: $--border-color-hover !default;
 
 // 带有边框
+// 全局样式
+
+$--radio-bordered-margin-right: 16px !default;
+$--radio-bordered-margin-left: 16px !default;
+$--radio-bordered-border: $--border-base!default;
+
+$--radio-bordered-background-color: $--color-white !default;
+// 状态
+$--radio-bordered-checked-border-color: $--color-primary!default;
+$--radio-bordered-disabled-border-color: $--disabled-border-base !default;
+
+// 默认
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 12px 20px !default;
-$--radio-bordered-border: $--border-base!default;
-$--radio-bordered-border-radiu:$--border-radius-base !default;
+$--radio-bordered-border-radius:$--button-border-radius!default;
+
 
 $--radio-bordered-medium-padding: 10px 20px !default;
+$--radio-bordered-medium-height: 36px !default;
+$--radio-bordered-medium-border-radius:$--button-medium-border-radius!default;
 $--radio-bordered-medium-input-height: 14px !default;
 $--radio-bordered-medium-input-width: 14px !default;
-$--radio-bordered-medium-height: 36px !default;
 
 $--radio-bordered-small-padding: 8px 15px !default;
+$--radio-bordered-small-height: 32px !default;
+$--radio-bordered-small-border-radius:$--button-small-border-radius!default;
 $--radio-bordered-small-input-height: 12px !default;
 $--radio-bordered-small-input-width: 12px !default;
-$--radio-bordered-small-height: 32px !default;
 
 $--radio-bordered-mini-padding: 7px 15px!default;
+$--radio-bordered-mini-height: 28px !default;
+$--radio-bordered-mini-border-radius: $--button-mini-border-radius!default;
 $--radio-bordered-mini-input-height: 12px !default;
 $--radio-bordered-mini-input-width: 12px !default;
-$--radio-bordered-mini-height: 28px !default;
-
-
-// 选中
-$--radio-checked-font-color: $--color-primary !default;
-$--radio-checked-input-border-color: $--color-primary !default;
-$--radio-checked-input-background-color: $--color-white !default;
-$--radio-checked-icon-color: $--color-primary !default;
-
-// 禁用
-$--radio-disabled-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-input-border-color:$--disabled-border-base !default;
-$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
-
-$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-font-color: $--color-text-placeholder !default;
-
-$--radio-disabled-checked-font-color: $--disabled-font-color !default;
-
 
 // 单选按钮样式 
 $--radio-button-font-size: $--radio-font-size !default;
@@ -366,6 +368,28 @@ $--radio-button-disabled-border: $--disabled-border-base !default;
 $--radio-button-disabled-background: $--color-white !default;
 $--radio-button-disabled-checked-background: $--disabled-fill-base !default;
 $--radio-button-disabled-checked-font-color: $--disabled-font-color !default;
+
+// 选中
+$--radio-checked-font-color: $--color-primary !default;
+$--radio-checked-input-border-color: $--color-primary !default;
+$--radio-checked-input-background-color: $--color-white !default;
+$--radio-checked-icon-color: $--color-primary !default;
+
+// 禁用
+$--radio-disabled-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-input-border-color:$--disabled-border-base !default;
+
+
+$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
+
+$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
+$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-font-color: $--color-text-placeholder !default;
+
+$--radio-disabled-checked-font-color: $--disabled-font-color !default;
+
+
+
 
 /*focus焦点样式需要radio-button文档末修改，搜索关键词： &:focus:not(.is-focus):not(:active):not(.is-disabled) { */
 

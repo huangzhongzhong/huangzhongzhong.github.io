@@ -148,7 +148,7 @@
   }
  /*对应：button 不同尺寸 */
   @include m(medium) {
-    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-border-radius);
     @include when(circle) {
       padding: $--button-medium-padding-vertical;
     }
