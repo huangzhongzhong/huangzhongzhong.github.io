@@ -85,7 +85,7 @@
   // TimePicker 任意时间范围 清空图标 
   .el-range__close-icon {
     font-size: 14px;
-    color: $--input-clear-hover-color ;/*已改*/
+    color: $--input-clear-icon-hover-color ;
     width: 25px;
     display: inline-block;
     float: none ; /*曾经出现过问题，修改后正常*/

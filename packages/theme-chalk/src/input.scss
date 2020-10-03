@@ -1,18 +1,18 @@
 @import "mixins/mixins";
 @import "common/var";
 
-@include b(textarea) {
+@include b(textarea) { /*文本域*/
   position: relative;
   display: inline-block;
   width: 100%;
   vertical-align: bottom;
-  font-size: $--font-size-base;
+  font-size: $--input-font-size;
 
   @include e(inner) {
     display: block;
     resize: vertical;
-    padding: 5px 15px;
-    line-height: 1.5;
+    padding: $--input-textarea-line-height-padding;
+    line-height: $--input-textarea-line-height;
     box-sizing: border-box;
     width: 100%;
     font-size: inherit;
@@ -23,12 +23,12 @@
     border-radius: $--input-border-radius;
     transition: $--border-transition-base;
     
-    &::placeholder { /*对应：input 文本域*/
+    &::placeholder { /*文本域占位文字*/
       color: $--input-placeholder-color ;
     }
 
     &:hover {
-      border-color: $--input-hover-border;
+      border-color: $--input-border-hover;
     }
 
     &:focus {
@@ -37,13 +37,13 @@
     }
   }
 
-  & .el-input__count {
-    color: $--color-info;
+  & .el-input__count { /*文本域计数数字*/
+    color: $--input-count-font-color;
     background: $--color-white;
     position: absolute;
-    font-size: 12px;
-    bottom: 5px;
-    right: 10px;
+    font-size: $--input-count-font-size;
+    bottom: $--input-count-bottom;
+    right: $--input-count-right;
   }
 
   @include when(disabled) {
@@ -59,20 +59,20 @@
     }
   }
 
-  @include when(exceed) {
+  @include when(exceed) { /*出错*/
     .el-textarea__inner {
-      border-color: $--color-danger;
+      border-color: $--input-exceed-border-color;
     }
 
     .el-input__count {
-      color: $--color-danger;
+      color: $--input-exceed-count-font-color;
     }
   }
 }
 
-@include b(input) {
+@include b(input) { /*输入框全局*/
   position: relative;
-  font-size: $--font-size-base;
+  font-size: $--input-font-size;
   display: inline-block;
   width: 100%;
   @include scroll-bar;
@@ -84,7 +84,7 @@
     transition: $--color-transition-base;
 
     &:hover {
-      color: $--input-clear-hover-color;
+      color: $--input-clear-icon-hover-color;
     }
   }
 
@@ -92,18 +92,18 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    color: $--color-info;
-    font-size: 12px;
+    color: $--input-count-font-color;
+    font-size: $--input-count-font-size;
 
-    .el-input__count-inner {
+    .el-input__count-inner { /*对应输入长度限制字符区域*/
       background: $--color-white;
       line-height: initial;
       display: inline-block;
-      padding: 0 5px;
+      padding: $--input-count-padding;
     }
   }
 
-  @include e(inner) {
+  @include e(inner) { /*输入框 全局*/
     -webkit-appearance: none;
     background-color: $--input-background-color;
     background-image: none;
@@ -116,7 +116,7 @@
     height: $--input-height;
     line-height: $--input-height;
     outline: none;
-    padding: 0 15px;
+    padding: $--input-inner-padding;
     transition: $--border-transition-base;
     width: 100%;
     
@@ -126,7 +126,7 @@
     }
 
     &:hover {
-      border-color: $--input-hover-border;
+      border-color: $--input-border-hover;
     }
 
     &:focus {
@@ -135,10 +135,10 @@
     }
   }
 
-  @include e(suffix) {
+  @include e(suffix) { /*右输入框图标*/
     position: absolute;
     height: 100%;
-    right: 5px;
+    right: $--input-suffix-right;
     top: 0;
     text-align: center;
     color: $--input-icon-color;
@@ -150,19 +150,19 @@
     pointer-events: all;
   }
 
-  @include e(prefix) {
+  @include e(prefix) { /*左输入框图标*/
     position: absolute;
     height: 100%;
-    left: 5px;
+    left: $--input-suffix-left;
     top: 0;
     text-align: center;
     color: $--input-icon-color;
     transition: all .3s;
   }
 
-  @include e(icon) {
+  @include e(icon) { /*输入框图标*/
     height: 100%;
-    width: 25px;
+    width: $--input-icon-width;
     text-align: center;
     transition: all .3s;
     line-height: $--input-height;
@@ -180,21 +180,21 @@
     pointer-events: none;
   }
 
-  @include when(active) {
+  @include when(active) { /*对应？*/
     .el-input__inner {
       outline: none;
       border-color: $--input-focus-border;
     }
   }
 
-  @include when(disabled) {
+  @include when(disabled) { /*对应：input 禁用状态 */
     .el-input__inner {
       background-color: $--input-disabled-background;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
       cursor: not-allowed;
       
-      &::placeholder { /*对应：input 禁用状态 */
+      &::placeholder { 
         color: $--input-disabled-placeholder-color;
       }
     }
@@ -204,31 +204,31 @@
     }
   }
 
-  @include when(exceed) {
+  @include when(exceed) { /*出错*/
     .el-input__inner {
-      border-color: $--color-danger;
+      border-color:$--input-exceed-border-color;
     }
 
     .el-input__suffix {
       .el-input__count {
-        color: $--color-danger;
+        color: $--input-exceed-count-font-color;
       }
     }
   }
 
-  @include m(suffix) {
+  @include m(suffix) {  /*对应？*/
     .el-input__inner {
       padding-right: 30px;
     }
   }
 
-  @include m(prefix) {
+  @include m(prefix) { /*对应？*/
     .el-input__inner {
       padding-left: 30px;
     }
   }
 
-  @include m(medium) {
+  @include m(medium) { 
     font-size: $--input-medium-font-size;
 
     @include e(inner) {
@@ -266,7 +266,7 @@
   }
 }
 
-@include b(input-group) {
+@include b(input-group) { /*复合型输入框*/
   line-height: normal;
   display: inline-table;
   width: 100%;
@@ -278,16 +278,16 @@
     display: table-cell;
   }
 
-  @include e((append, prepend)) {
-    background-color: $--color-background-base;
-    color: $--color-info;
+  @include e((append, prepend)) { 
+    background-color: $--input-group-background;
+    color: $--input-group-font-color;
     vertical-align: middle;
     display: table-cell;
     position: relative;
     border: $--border-base;
     border-radius: $--input-border-radius;
-    padding: 0 20px;
-    width: 1px;
+    padding: $--input-group-pddding; /*对应http和.com两个框*/
+    width: 1px; /*对应？*/
     white-space: nowrap;
 
     &:focus {
@@ -295,7 +295,7 @@
     }
 
     .el-select,
-    .el-button {
+    .el-button { /*搜索图标*/
       display: inline-block;
       margin: -10px -20px;
     }

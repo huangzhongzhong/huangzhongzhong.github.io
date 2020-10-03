@@ -142,6 +142,7 @@ $--font-size-medium: 16px !default; /*小标题字体大小 中号*/
 $--font-size-base: 14px !default; /*正文本体大小 基础*/
 $--font-size-small: 13px !default; /*正文（小）字体大小 小号*/
 $--font-size-extra-small: 12px !default; /*辅助字体大小 超小号*/
+
 $--font-weight-primary: 500 !default; /*主要字体粗细*/
 $--font-weight-secondary: 400 !default; /*次要字体粗细*/
 $--font-weight-bold: 700 !default; /*加粗字体粗细*/ /*增加*/
@@ -316,6 +317,7 @@ $--link-danger-font-color: $--color-danger !default;
 $--link-info-font-color: $--color-info !default;
 // 像是没有active态，设置不生效。
 
+
 /* Radio 单选 
 -------------------------- */
 /// 全局样式
@@ -441,6 +443,7 @@ $--radio-button-disabled-checked-font-color: $--disabled-font-color !default;
 
 /*focus焦点样式需要radio-button文档末修改，搜索关键词： &:focus:not(.is-focus):not(:active):not(.is-disabled) { */
 
+  
 /* Checkbox 多选
 -------------------------- */
 // 全局样式
@@ -511,14 +514,37 @@ $--checkbox-bordered-mini-height: 28px !default;
 $--checkbox-bordered-mini-border-radius: $--button-mini-border-radius !default;
 
 //  多选 按钮样式
+// 全局样式
 $--checkbox-button-font-color: $--color-text-regular !default;
 $--checkbox-button-background-color: $--color-white !default;
 $--checkbox-button-border: $--border-base !default;
+$--checkbox-line-height:1 !default;
 
 $--checkbox-button-border-radius-first: $--border-radius-base 0 0
   $--border-radius-base !default;
 $--checkbox-button-border-radius-last: 0 $--border-radius-base
   $--border-radius-base 0 !default;
+
+//默认大小
+$--checkbox-button-padding-vertical: $--button-padding-vertical !default;
+$--checkbox-button-padding-horizontal: $--button-padding-horizontal !default;
+$--checkbox-button-border-radius: 0 !default;
+
+// 按钮中号
+$--checkbox-button-medium-font-size: $--button-medium-font-size !default;
+$--checkbox-button-medium-border-radius: 0 !default;
+$--checkbox-button-medium-padding-vertical: $--button-medium-padding-vertical !default;
+$--checkbox-button-medium-padding-horizontal: $--button-medium-padding-horizontal !default;
+// 按钮小号
+$--checkbox-button-small-font-size: $--button-small-font-size !default;
+$--checkbox-button-small-border-radius: 0 !default;
+$--checkbox-button-small-padding-vertical: $--button-small-padding-vertical !default;
+$--checkbox-button-small-padding-horizontal: $--button-small-padding-horizontal !default;
+// 按钮超小号
+$--checkbox-button-mini-font-size: $--button-mini-font-size !default;
+$--checkbox-button-mini-border-radius: 0 !default;
+$--checkbox-button-mini-padding-vertical: $--button-mini-padding-vertical !default; /*按钮 超小号 内边距 纵向*/
+$--checkbox-button-mini-padding-horizontal: $--button-mini-padding-horizontal !default; /*按钮 超小号 内边距 横向*/
 
 // 选中
 $--checkbox-button-checked-background-color: $--color-primary-light-9 !default;
@@ -532,43 +558,74 @@ $--checkbox-button-disabled-border: $--disabled-border-base !default;
 $--checkbox-button-disabled-background: $--color-white !default;
 $--checkbox-button-disabled-checked-background: $--disabled-background-base !default;
 
+
+
 /* Input 输入框
 -------------------------- */
+// 全局样式
 $--input-font-size: $--font-size-base !default;
 $--input-font-color: $--color-text-regular !default;
 $--input-width: 140px !default;
 $--input-height: 40px !default;
+
+$--input-inner-padding: 0 15px !default;
+$--input-suffix-right: 5px !default;/*输入框图标位置*/
+$--input-suffix-left: 5px !default;
+$--input-icon-width: 25px !default;/*输入框图标盒子宽度*/
+
 
 $--input-border: $--border-base !default;
 $--input-border-color: $--color-border-base !default;
 $--input-border-radius: $--border-radius-base !default;
 
 $--input-background-color: $--color-white !default;
-
 $--input-icon-color: $--color-text-secondary !default;
-$--input-placeholder-color: $--color-text-secondary !default;
 
+$--input-placeholder-color: $--color-text-secondary !default;
 $--input-max-width: 314px !default;
 
-$--input-hover-border: $--color-primary !default;
-$--input-clear-hover-color: $--color-text-regular !default;
+$--input-count-font-color: $--color-text-secondary !default;
+$--input-count-font-size: $--font-size-extra-small !default;
 
+$--input-count-bottom: 5px !default;
+$--input-count-right: 10px !default;
+
+$--input-count-background-color: $--color-white !default;
+$--input-count-padding: 0 5px !default;
+
+// 悬停
+$--input-border-hover: $--color-primary !default;
+$--input-clear-icon-hover-color: $--color-text-regular !default;
 $--input-focus-border: $--color-primary !default;
-$--input-focus-background: $--color-white !default;
+// $--input-focus-background: $--color-white !default;  无引用代码
+
+$--input-exceed-border-color: $--color-danger;
+$--input-exceed-count-font-color:  $--color-danger !default;
 
 $--input-disabled-background: $--disabled-background-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
 $--input-disabled-placeholder-color: $--disabled-font-color !default;
 
-$--input-medium-font-size: 14px !default;
+$--input-medium-font-size: $--font-size-base !default;
 $--input-medium-height: 36px !default;
 
-$--input-small-font-size: 13px !default;
+$--input-small-font-size: $--font-size-small !default;
 $--input-small-height: 32px !default;
 
-$--input-mini-font-size: 12px !default;
+$--input-mini-font-size: $--font-size-extra-small !default;
 $--input-mini-height: 28px !default;
+
+// 文本域
+$--input-textarea-line-height: 1.5 !default;
+$--input-textarea-line-height-padding: 5px 15px !default;
+
+// 复合型输入框
+$--input-group-background: $--color-background-base !default;
+$--input-group-font-color: $--color-text-secondary !default;
+$--input-group-border: $--border-base !default;
+$--input-group-pddding: 0 20px !default; /*对应http和.com两个框*/
+$--input-group-margin: -10px -20px !default; /*搜索图标*/
 
 /* IuputNumber 计数器
 --------------------------*/

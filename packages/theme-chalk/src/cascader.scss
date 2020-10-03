@@ -14,7 +14,7 @@
   &:not(.is-disabled):hover {
     .el-input__inner {
       cursor: pointer;
-      border-color: $--input-hover-border;
+      border-color: $--input-border-hover;
     }
   }
 
@@ -39,7 +39,7 @@
     }
 
     .el-icon-circle-close:hover {
-      color: $--input-clear-hover-color;
+      color: $--input-clear-icon-hover-color;
     }
 
     @include when(focus) {

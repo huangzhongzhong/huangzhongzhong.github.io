@@ -43,7 +43,7 @@
       height: $--checkbox-bordered-medium-height;
 
       .el-checkbox__label {
-        line-height: 1;
+        line-height: $--checkbox-line-height;
         font-size: $--checkbox-bordered-medium-font-size;
       }
 
@@ -59,7 +59,7 @@
       height: $--checkbox-bordered-small-height;
 
       .el-checkbox__label {
-        line-height: 15px;
+        line-height: $--checkbox-line-height;
         font-size: $--checkbox-bordered-small-font-size;
       }
 
@@ -80,7 +80,7 @@
       height: $--checkbox-bordered-mini-height;
 
       .el-checkbox__label {
-        line-height: 12px;
+        line-height:$--checkbox-line-height;
         font-size: $--checkbox-bordered-mini-font-size;
       }
 
@@ -101,7 +101,7 @@
     cursor: pointer;
     outline: none;
     display: inline-block;
-    line-height: 1;
+    line-height: $--checkbox-line-height;
     position: relative;
     vertical-align: middle;
 
@@ -246,7 +246,7 @@
     /*全局多选标签文字*/
     display: inline-block;
     padding-left: 10px;
-    line-height: 1;
+    line-height:$--checkbox-line-height;
     font-size: $--checkbox-font-size;
   }
 
@@ -262,13 +262,13 @@
 
   @include e(inner) {
     display: inline-block;
-    line-height: 1;
+    line-height: $--checkbox-line-height;
     font-weight: $--checkbox-font-weight;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
     background: $--checkbox-button-background-color;
-    border: $--radio-button-border;
+    border: $--checkbox-button-border;
     border-left: 0;
     color: $--checkbox-button-font-color;
     -webkit-appearance: none;
@@ -282,11 +282,12 @@
 
     /*对应： checkbox 按钮样式第一行 */
     @include button-size(
-      $--button-padding-vertical,
-      $--button-padding-horizontal,
-      $--button-font-size,
-      0
+      $--checkbox-button-padding-vertical,
+      $--checkbox-button-padding-horizontal,
+      $--checkbox-font-size,
+      $--checkbox-button-border-radius
     );
+
 
     &:hover {
       color: $--checkbox-input-border-hover;
@@ -314,7 +315,7 @@
       color: $--checkbox-button-checked-font-color;
       background-color: $--checkbox-button-checked-background-color;
       border-color: $--checkbox-button-checked-border-color;
-      box-shadow: -1px 0 0 0 $--color-primary-light-4; /*投影？*/
+      box-shadow: -1px 0 0 0 $--color-primary-light-4; /*投影？体现在哪*/
     }
     &:first-child .el-checkbox-button__inner {
       /*第一个到最后一个*/
@@ -336,7 +337,7 @@
     }
   }
 
-  &:first-child {
+  &:first-child { 
     .el-checkbox-button__inner {
       border-left: $--checkbox-button-border;
       border-radius: $--checkbox-button-border-radius-first;
@@ -355,38 +356,38 @@
       border-radius: $--checkbox-button-border-radius-last;
     }
   }
-  @include m(medium) {
+  @include m(medium) {   /*注释到这里*/
     .el-checkbox-button__inner {
       @include button-size(
-        $--button-medium-padding-vertical,
-        $--button-medium-padding-horizontal,
-        $--button-medium-font-size,
-        0
+        $--checkbox-button-medium-padding-vertical,
+        $--checkbox-button-medium-padding-horizontal,
+        $--checkbox-button-medium-font-size,
+        $--checkbox-button-medium-border-radius
       );
     }
   }
   @include m(small) {
     .el-checkbox-button__inner {
       @include button-size(
-        $--button-small-padding-vertical,
-        $--button-small-padding-horizontal,
-        $--button-small-font-size,
-        0
+        $--checkbox-button-small-padding-vertical,
+        $--checkbox-button-small-padding-horizontal,
+        $--checkbox-button-small-font-size,
+        $--checkbox-button-small-border-radius
       );
     }
   }
   @include m(mini) {
     .el-checkbox-button__inner {
       @include button-size(
-        $--button-mini-padding-vertical,
-        $--button-mini-padding-horizontal,
-        $--button-mini-font-size,
-        0
+        $--checkbox-button-mini-padding-vertical,
+        $--checkbox-button-mini-padding-horizontal,
+        $--checkbox-button-mini-font-size,
+        $--checkbox-button-mini-border-radius
       );
     }
   }
 }
 
-@include b(checkbox-group) {
+@include b(checkbox-group) { /*对应？*/
   font-size: 0;
 }
