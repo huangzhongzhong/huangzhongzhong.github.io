@@ -46,7 +46,7 @@
       border-radius: $--radio-bordered-medium-border-radius;
       height: $--radio-bordered-medium-height;
       .el-radio__label {
-        font-size: $--radio-button-medium-font-size;
+        font-size: $--radio-bordered-medium-font-size;
       }
       .el-radio__inner {
         height: $--radio-bordered-medium-input-height;
@@ -60,7 +60,7 @@
       border-radius: $--radio-bordered-small-border-radius;
       height: $--radio-bordered-small-height;
       .el-radio__label {
-        font-size: $--radio-button-small-font-size;
+        font-size: $--radio-bordered-small-font-size;
       }
       .el-radio__inner {
         height: $--radio-bordered-small-input-height;
@@ -74,7 +74,7 @@
       border-radius: $--radio-bordered-mini-border-radius;
       height: $--radio-bordered-mini-height;
       .el-radio__label {
-        font-size: $--radio-button-mini-font-size;
+        font-size: $--radio-bordered-mini-font-size;
       }
       .el-radio__inner {
         height: $--radio-bordered-mini-input-height;
@@ -87,7 +87,7 @@
     margin-right: 0;
   }
 
-  @include e(input) {
+  @include e(input) { /*对应？*/
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -100,7 +100,7 @@
       // 未选中
       .el-radio__inner {
         background-color: $--radio-disabled-input-background;
-        border-color: $--disabled-border-base ;
+        border-color: $--radio-disabled-input-border-color;
         cursor: not-allowed;
        //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
         // &::after {
@@ -171,9 +171,9 @@
       width: $--radio-input-icon-width;
       height: $--radio-input-icon-height;
       border: $--radio-input-icon-border ;
-      border-color: $--color-white;
+      border-color: $--radio-input-icon-border-color;
       border-radius: $--radio-input-border-radius;
-      background-color: $--color-primary;
+      background-color: $--radio-input-icon-background-color;
     
       content: "";
       position: absolute;
@@ -188,6 +188,7 @@
     //   height: 0 !important;
     //   display:none !important
     // }
+    
 
   }
 
