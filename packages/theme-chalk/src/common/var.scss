@@ -201,7 +201,7 @@ $--button-default-disabled-border-color: $--color-border-light !default;
 
 
 // 朴素按钮
-// 朴素（主要、成功、信息、警告、危险）规律在 mixins-_button 文件。
+// 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixins-_button 文件。
 $--button-plain-background-color: $--color-background-base !default;
 $--button-plain-border: dashed 1px $--color-border-base !default;
 $--button-plain-font-color: $--color-text-regular !default;
@@ -219,7 +219,7 @@ $--button-plain-disabled-border-color: $--color-border-light !default;
 $--button-plain-disabled-font-color: $--color-text-placeholder !default;
 
 
-// 主要、成功、信息、警告、危险按钮混合与禁用规律在 mixins-_button 文件。
+// 主要、成功、信息、警告、危险按钮混合、禁用规律在 mixins-_button 文件。
 // 主要按钮
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
@@ -243,92 +243,94 @@ $--button-info-font-color: $--color-white !default;
 $--button-info-background-color: $--color-info !default;
 
 // 文字按钮
+$--button-text-font-color: $--color-primary !default;
 $--button-disabled-text-font-color: $--color-text-placeholder !default;
 
-
-
-
-
-
-/* Link 链接
+/* Link 链接 
 --------------------------*/
 $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
 
 $--link-default-font-color: $--color-text-regular !default;
-$--link-default-active-color: $--color-primary !default;
-
+$--link-default-font-hover-color: mix($--color-white, $--color-primary, $--button-hover-tint-percent) !default;
+$--link-default-font-active-color: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
 $--link-disabled-font-color: $--disabled-font-color !default;
+
+$--link-underline-hover-color: mix($--color-white, $--color-primary, $--button-hover-tint-percent) !default;
+$--link-underline-active-color: mix($--color-black, $--color-primary, $--button-active-shade-percent) !default;
 
 $--link-primary-font-color: $--color-primary !default;
 $--link-success-font-color: $--color-success !default;
 $--link-warning-font-color: $--color-warning !default;
 $--link-danger-font-color: $--color-danger !default;
 $--link-info-font-color: $--color-info !default;
-
+// 像是没有active态，设置不生效。
 
 /* Radio 单选 
 -------------------------- */
-// 所有单选字体的大小，但是不包括按钮样式整组 带有边框中、小、超小、
-$--radio-font-size: $--font-size-base !default; 
-// 所有单选字体的粗细
+/// 全局样式
 $--radio-font-weight: $--font-weight-primary !default;
-// 基础用法和单选框组的字体颜色 ， 按钮样式的可能是由按钮那边控制的。 带有边框的本质上则不是按钮。
 $--radio-font-color: $--color-text-regular !default;
-
-// 所有单选输入框的大小，但是不包括按钮样式整组 带有边框中、小、超小。
+$--radio-font-size: $--font-size-base !default; 
+$--radio-padding-left: 10px !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
-// 所有单选 输入框 的背景色，但是不包括按钮样式整组 带有边框小、超小。
-$--radio-input-background-color: $--color-white !default;
-// 问题：高度不控制到中等，字体颜色和大小又控制到中等。暂且不改。
+// 单选按钮中间小点的大小
+$--radio-input-icon-width: 8px !default;
+$--radio-input-icon-height: 8px !default;
+$--radio-input-icon-border: solid 3px !default;
 
-// 引用的边框样式集合，包括大小，样式，颜色
 $--radio-input-border: $--border-base !default;
-
-// 所有单选输入框边框圆角
 $--radio-input-border-radius: $--border-radius-circle !default;
-// 所有单选输入框的悬浮颜色，但是不包括按钮样式整组 
+$--radio-input-background-color: $--color-white !default;
+
 $--radio-input-border-color-hover: $--border-color-hover !default;
 
-$--radio-disabled-input-border-color:$--disabled-border-base !default;
-$--radio-disabled-input-fill: $--disabled-fill-base !default;
-// 这个应用在哪里？/*待解释*/
-$--radio-disabled-icon-color: $--disabled-fill-base !default;
+// 带有边框
+$--radio-bordered-height: 40px !default;
+$--radio-bordered-padding: 12px 20px !default;
+$--radio-bordered-border: $--border-base!default;
+$--radio-bordered-border-radiu:$--border-radius-base !default;
 
-$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
+$--radio-bordered-medium-padding: 10px 20px !default;
+$--radio-bordered-medium-input-height: 14px !default;
+$--radio-bordered-medium-input-width: 14px !default;
+$--radio-bordered-medium-height: 36px !default;
 
-$--radio-disabled-checked-font-color: $--disabled-font-color !default;
- 
+$--radio-bordered-small-padding: 8px 15px !default;
+$--radio-bordered-small-input-height: 12px !default;
+$--radio-bordered-small-input-width: 12px !default;
+$--radio-bordered-small-height: 32px !default;
+
+$--radio-bordered-mini-padding: 7px 15px!default;
+$--radio-bordered-mini-input-height: 12px !default;
+$--radio-bordered-mini-input-width: 12px !default;
+$--radio-bordered-mini-height: 28px !default;
+
+
+// 选中
 $--radio-checked-font-color: $--color-primary !default;
 $--radio-checked-input-border-color: $--color-primary !default;
 $--radio-checked-input-background-color: $--color-white !default;
 $--radio-checked-icon-color: $--color-primary !default;
 
-$--radio-bordered-height: 40px !default;
-$--radio-bordered-padding: 12px 20px 0 10px !default;
+// 禁用
+$--radio-disabled-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-input-border-color:$--disabled-border-base !default;
+$--radio-disabled-checked-icon-color: $--disabled-color-base !default;
 
-$--radio-bordered-medium-padding: 10px 20px 0 10px !default;
-$--radio-bordered-medium-input-height: 14px !default;
-$--radio-bordered-medium-input-width: 14px !default;
-$--radio-bordered-medium-height: 36px !default;
+$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
+$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
+$--radio-disabled-font-color: $--color-text-placeholder !default;
 
-$--radio-bordered-small-padding: 8px 15px 0 10px !default;
-$--radio-bordered-small-input-height: 12px !default;
-$--radio-bordered-small-input-width: 12px !default;
-$--radio-bordered-small-height: 32px !default;
+$--radio-disabled-checked-font-color: $--disabled-font-color !default;
 
-$--radio-bordered-mini-padding: 6px 15px 0 10px !default;
-$--radio-bordered-mini-input-height: 12px !default;
-$--radio-bordered-mini-input-width: 12px !default;
-$--radio-bordered-mini-height: 28px !default;
 
 // 单选按钮样式 
-$--radio-button-font-size: $--font-size-base !default;
-$--radio-button-font-weight: $--font-weight-primary !default;
-$--radio-button-font-color: $--color-text-regular !default;
+$--radio-button-font-size: $--radio-font-size !default;
+$--radio-button-font-weight: $--radio-font-weight !default;
+$--radio-button-font-color: $--radio-font-color !default;
+
 $--radio-button-background-color: $--color-white !default;
 
 $--radio-button-border: $--border-base !default;

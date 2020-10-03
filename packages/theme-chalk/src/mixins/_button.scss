@@ -24,7 +24,7 @@
     &:hover,
     &:focus,
     &:active {
-      color: mix($--color-white, $color, 40%);
+      color: mix($--color-white, $color, 60%);
       background-color: mix($--color-white, $color, 90%);
       border-color: mix($--color-white, $color, 80%);
     }
@@ -63,8 +63,8 @@
     &:focus,
     &:active {
       color: $--color-white;
-      background-color: mix($background-color, $--color-white);/*为什么没指定比例呢？*/
-      border-color: mix($border-color, $--color-white);
+      background-color: mix($background-color, $--color-white,30%);/*加上了比例*/
+      border-color: mix($border-color, $--color-white,30%);
     }
   }
 

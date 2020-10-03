@@ -22,7 +22,7 @@ $typeMap: (
   font-size: $--link-font-size;
   font-weight: $--link-font-weight;
 
-  @include when(underline) {
+  @include when(underline) { /*对应： 文字下划线 与文本颜色分离*/
     &:hover:after {
       content: "";
       position: absolute;
@@ -30,7 +30,10 @@ $typeMap: (
       right: 0;
       height: 0;
       bottom: 0;
-      border-bottom: 1px solid $--link-default-active-color
+      border-bottom: 1px solid $--link-underline-hover-color
+    }
+    &:after {
+      border-bottom: 1px solid $--link-underline-active-color
     }
   }
 
@@ -45,13 +48,13 @@ $typeMap: (
   }
     
     
-  &.el-link--default  {
+  &.el-link--default  { /*对应：默认链接*/
     color: $--link-default-font-color;
     &:hover {
-      color: $--link-default-active-color
+      color: $--link-default-font-hover-color
     }
     &:after {
-      border-color: $--link-default-active-color
+      border-color: $--link-default-font-active-color
     }
     @include when(disabled) {
       color: $--link-disabled-font-color
@@ -59,18 +62,18 @@ $typeMap: (
   }
 
   @each $type, $primaryColor in $typeMap {
-    &.el-link--#{$type} {
+    &.el-link--#{$type} { /*对应： 主要 成功 警告 危险 信息链接*/
       color: $primaryColor;
-      &:hover {
+      &:hover { 
         color: mix($primaryColor, $--color-white, 80%)
       }
       &:after {
-        border-color: $primaryColor
+        border-color:mix($primaryColor, $--color-black, 10%) /*不起作用，像是没有hover态*/
       }
       @include when(disabled) {
         color: mix($primaryColor, $--color-white, 50%)
       }
-      @include when(underline) {
+      @include when(underline) { /*下划线有被加重，不能加百分比*/
         &:hover:after {
           border-color: $primaryColor
         }

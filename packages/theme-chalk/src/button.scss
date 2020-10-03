@@ -5,15 +5,15 @@
 @import "mixins/utils";
 
 // 基础按钮样式 
-@include b(button) {
+@include b(button) { /*对应： 默认属性 后面有单独选择出来调整的除外 */
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--button-default-background-color ;/*对应： button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  background: $--button-default-background-color ;
   border: $--button-border;
-  border-color: $--button-default-border-color ;/*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
-  color: $--button-default-font-color ; /*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
+  border-color: $--button-default-border-color ;
+  color: $--button-default-font-color ; 
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -23,17 +23,17 @@
   font-weight: $--button-font-weight ;
   @include utils-user-select(none);
   & + & {
-    margin-left: 10px;/*对应： 待解释*/
+    margin-left: 10px;/*对应：？*/
   }
 
   /*对应： button按钮全页 全局横竖内间距、文字大小、圆角*/
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
 
   &:hover,
-  &:focus {
-    color: $--button-default-font-color-hover; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
-    border-color: $--button-default-border-color-hover ; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
-    background-color: $--button-default-background-color-hover; /*对应 button 基础用法 默认、圆角、图标，不同尺寸所有 */
+  &:focus { 
+    color: $--button-default-font-color-hover; 
+    border-color: $--button-default-border-color-hover ; 
+    background-color: $--button-default-background-color-hover; 
   }
 
   &:active {
@@ -43,7 +43,7 @@
     outline: none;
   }
 
-  &::-moz-focus-inner { /*对应？*/
+  &::-moz-focus-inner { /*对应：？*/
     border: 0;
   }
 
@@ -53,7 +53,7 @@
     }
   }
   
-  @include when(plain) {/*对应： button按钮 基础用法 朴素按钮 */
+  @include when(plain) {/*对应： 基础用法 朴素按钮 */
     background: $--button-plain-background-color ;
     border: $--button-plain-border;
     color: $--button-default-font-color;
@@ -73,12 +73,12 @@
   }
   // 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
   // 这个可能是因为引用所以锁死了黑色，有些变量位置放常量不生效。
-  @include when(active) { /* 对应： button按钮 按下状态 */
+  @include when(active) { /* 对应： 默认按下状态 */
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
 // 
-  @include when(disabled) {
+  @include when(disabled) { /* 对应：禁用状态 默认按钮 */
     &,
     &:hover,
     &:focus {
@@ -104,7 +104,7 @@
     }
   }
 
-  @include when(loading) {
+  @include when(loading) { /*对应 加载中*/
     position: relative;
     pointer-events: none;
 
@@ -117,7 +117,7 @@
       right: -1px;
       bottom: -1px;
       border-radius: inherit;
-      background-color: rgba(255,255,255,.35);
+      background-color: rgba(255,255,255,.20);/*覆盖在了主要按钮之上*/
     }
   }
   //  /*对应： button 所有圆角按钮 */ 但不包括中、小、超小 意思是中小超小不值得特别优化呗。
@@ -130,22 +130,23 @@
     border-radius: 50%;
     padding: $--button-padding-vertical;
   }
-  @include m(primary) {
+  /*对应： 主要、成功、警告、危险、信息、按钮*/
+  @include m(primary) { 
     @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
   }
-  @include m(success) {
+  @include m(success) { 
     @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
   }
-  @include m(warning) {
+  @include m(warning) { 
     @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
   }
-  @include m(danger) {
+  @include m(danger) { 
     @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
   }
-  @include m(info) {
+  @include m(info) { 
     @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
   }
-  // /*对应：button 不同尺寸 */
+ /*对应：button 不同尺寸 */
   @include m(medium) {
     @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
     @include when(circle) {
@@ -167,7 +168,7 @@
   // /*对应：button 文字按钮 */
   @include m(text) {
     border-color: transparent;
-    color: $--color-primary;
+    color: $--button-text-font-color;
     background: transparent;
     padding-left: 0;
     padding-right: 0;
@@ -198,16 +199,16 @@
   display: inline-block;
   vertical-align: middle;
 
-  & > .el-button {
+  & > .el-button { 
     float: left;
     position: relative;
     & + .el-button {
-      margin-left: 0;
+      margin-left: 0;/*改动未见效果*/
     }
     &.is-disabled {
       z-index: 1;
     }
-    &:first-child {
+    &:first-child { 
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -215,17 +216,17 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
-    &:first-child:last-child {
+    &:first-child:last-child { /*对应：所有按钮 除了圆角、图标*/
       border-top-right-radius: $--button-border-radius;
       border-bottom-right-radius: $--button-border-radius;
       border-top-left-radius: $--button-border-radius;
       border-bottom-left-radius: $--button-border-radius;
 
-      &.is-round {
+      &.is-round { /*圆角按钮圆角？改动未见效果*/
         border-radius: 20px;
       }
 
-      &.is-circle {
+      &.is-circle { /*图标按钮？改动未见效果*/
         border-radius: 50%;
       }
     }
@@ -251,20 +252,22 @@
     & > .el-button {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      border-left-color: rgba($--color-white, 0.5);
+      border-left-color: rgba($--color-white, 0.5);/*改动未见效果*/
     }
   }
 // 这个是？
   @each $type in (primary, success, warning, danger, info) {
     .el-button--#{$type} {
-      &:first-child {
-        border-right-color: rgba($--color-white, 0.5);
+      &:first-child { /*第一页默认、悬停时右边框，但默认边框被下一个压住*/
+        border-right-color: rgba($--color-white, 0.5); 
       }
-      &:last-child {
+      &:last-child { /*最后一个按钮默认左边框，也是悬停左边框*/
         border-left-color: rgba($--color-white, 0.5);
       }
-      &:not(:first-child):not(:last-child) {
-        border-left-color: rgba($--color-white, 0.5);
+      &:not(:first-child):not(:last-child) { /*中间按钮边框*/
+        /*第二个按钮默认,悬停左边框，压住了第一页的边框*/
+        border-left-color: rgba($--color-white, 0.5); 
+        /*第二个按钮默认,悬停右边框，但默认边框被下一个压住*/
         border-right-color: rgba($--color-white, 0.5);
       }
     }

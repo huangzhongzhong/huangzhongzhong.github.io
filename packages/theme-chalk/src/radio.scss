@@ -4,7 +4,7 @@
 @import "common/var";
 
 // 单选
-@include b(radio) {
+@include b(radio) {/*单选基础样式*/
   color: $--radio-font-color;
   font-weight: $--radio-font-weight;
   line-height: 1;
@@ -13,17 +13,18 @@
   display: inline-block;
   white-space: nowrap;
   outline: none;
-  font-size: $--font-size-base;
+  font-size: $--radio-font-size;
   margin-right: 30px;
   @include utils-user-select(none);
 
   @include when(bordered) {  /*对应：单选 带有边框 */
-    padding: $--radio-bordered-padding;
-    border-radius: $--border-radius-base;
-    border: $--border-base;
+    padding: $--radio-bordered-padding; /*边框padding*/
+    border: $--radio-bordered-border;
+    border-radius: $--radio-bordered-border-radiu;
     box-sizing: border-box;
-    height: $--radio-bordered-height;
+    height: $--radio-bordered-height; /*边框高度*/
     background: $--radio-button-background-color ;
+    /*如何隐藏单选按钮*/
  
     &.is-checked {
       border-color: $--color-primary;
@@ -101,11 +102,12 @@
         background-color: $--radio-disabled-input-fill;
         border-color: $--disabled-border-base ;
         cursor: not-allowed;
-       // 未知选择选的是哪里？ after在每个 <p> 元素的内容之后插入新内容： /*待解释*/
-        &::after {
-          cursor: not-allowed;
-          background-color: $--radio-disabled-icon-color;
-        }
+       //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
+        // &::after {
+        //   cursor: not-allowed;
+        //   // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来
+        //   background-color: $--radio-disabled-icon-color ;/*这个颜色var就删除了*/
+        // }
 
         & + .el-radio__label {
           cursor: not-allowed;
@@ -117,14 +119,13 @@
           background-color: $--radio-disabled-checked-input-fill;
           border-color: $--radio-disabled-checked-input-border-color;
 
-          &::after {
+          &::after { /*中心小点*/
             background-color: $--radio-disabled-checked-icon-color;
           }
         }
       }
-      & + span.el-radio__label {
-        // 已审
-        color: $--color-text-placeholder;
+      & + span.el-radio__label { /*禁用状态 标签文字*/
+        color: $--radio-disabled-font-color;
         cursor: not-allowed;
       }
     }
@@ -150,7 +151,7 @@
       }
     }
   }
-  @include e(inner) { /* 对应：radio 带有边框*/
+  @include e(inner) { /* 对应：单选全局*/
     border: $--radio-input-border;
     border-radius: $--radio-input-border-radius;
     width: $--radio-input-width;
@@ -159,7 +160,7 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
-    box-sizing: border-box; /*加边框*/ 
+    // box-sizing: border-box; /*加边框*/ 
     // 取消后竟然没有反应
 
     &:hover {
@@ -167,20 +168,30 @@
     }
     
     &::after { /*控制所有单选按钮小点的大小*/
-      width: 4px;
-      height: 4px;
+      width: $--radio-input-icon-width;
+      height: $--radio-input-icon-height;
+      border: $--radio-input-icon-border ;
+      border-color: $--color-white;
       border-radius: $--radio-input-border-radius;
-      background-color: $--color-white;
+      background-color: $--color-primary;
+    
       content: "";
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform .15s ease-in;
+      left: 50%; /*这是定位*/
+      top: 50%; /*这是定位*/
+      transform: translate(-50%, -50%) scale(0);  /*这里的50%也是定位，0表示缩放起点*/
+      transition: transform .15s ease-in; 
+      
     }
+    // @include when(bordered) { /*尝试将单选按钮隐藏，但是失败*/
+    //   width: 0 !important; 
+    //   height: 0 !important;
+    //   display:none !important
+    // }
+
   }
 
-  @include e(original) {
+  @include e(original) { /*对应？*/
     opacity: 0;
     outline: none;
     position: absolute;
@@ -200,8 +211,8 @@
   }
 
   // 
-  @include e(label) {
+  @include e(label) { /*单选全局字体大小和间距*/
     font-size: $--radio-font-size;
-    padding-left: 10px;
+    padding-left: $--radio-padding-left;
   }
 }
