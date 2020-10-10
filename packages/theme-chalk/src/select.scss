@@ -11,6 +11,7 @@
 @include b(select) {
   display: inline-block;
   position: relative;
+  
 
   .el-select__tags
     >span {
@@ -18,24 +19,26 @@
     }
 
   &:hover {
-    .el-input__inner {
+    .el-input__inner { /*默认悬浮边框色*/
       border-color: $--select-border-color-hover;
+      
     }
   }
+  
 
-  .el-input__inner {
+  .el-input__inner { 
     cursor: pointer;
-    padding-right: 35px;
+    padding-right: 35px; /*待解释*/
 
     &:focus {
-      border-color: $--select-input-focus-border-color;
+      border-color: $--select-input-focus-border-color;/*选择完毕之后的焦点状态，选择之前闪过*/
     }
   }
-  // 这是控制哪里
-  .el-input {
+  
+  .el-input { /*选择输入框*/
     & .el-select__caret {
       // 控制选择框图标颜色 
-      color: $--select-input-color ;
+      color: $--select-input-icon-color ;
       font-size: $--select-input-font-size;
       transition: transform .3s;
       transform: rotateZ(180deg);
@@ -50,7 +53,8 @@
         text-align: center;
         transform: rotateZ(180deg);
         border-radius: $--border-radius-circle;
-        color: $--select-input-color;
+        // $--select-input-icon-color
+        color:red; /* 待解释*/
         transition: $--color-transition-base;
 
         &:hover {
@@ -64,13 +68,14 @@
         cursor: not-allowed;
 
         &:hover {
-          border-color: $--select-disabled-border;
+          border-color: $--select-disabled-border; /*禁用悬停状态*/
         }
       }
     }
 
-    &.is-focus .el-input__inner {
+    &.is-focus .el-input__inner { /*输入框焦点状态*/
       border-color: $--select-input-focus-border-color;
+      box-shadow: $--select-input-focus-shadow;
     }
   }
 
@@ -92,6 +97,7 @@
     @include when(mini) {
       height: 14px;
     }
+    
   }
 
   // 这是控制哪里 
@@ -101,7 +107,7 @@
     top: 8px;
     z-index: $--index-top;
     right: 25px;
-    color: $--select-input-color;
+    color: $--select-input-icon-color;
     line-height: 18px;
     font-size: $--select-input-font-size;
 

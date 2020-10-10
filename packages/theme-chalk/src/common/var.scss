@@ -41,8 +41,6 @@ $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 重*/
 
-$--color-: #d8dde5 !default; /*增加*/
-
 /*衍生颜色*/
 /// 主题色衍生-叠加白色
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
@@ -129,6 +127,8 @@ $--box-shadow-dark: 0px 16px 24px 2px rgba(0, 4, 10, 0.16),
   0px 4px 32px 4px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
 $--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12),
   0px 0px 4px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12) !default;
+
+$--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-7 !default;
 
 /* Typography
 -------------------------- */
@@ -317,7 +317,6 @@ $--link-danger-font-color: $--color-danger !default;
 $--link-info-font-color: $--color-info !default;
 // 像是没有active态，设置不生效。
 
-
 /* Radio 单选 
 -------------------------- */
 /// 全局样式
@@ -366,8 +365,8 @@ $--radio-bordered-border: $--border-base !default;
 $--radio-bordered-border-radius: $--button-border-radius !default;
 
 // 是否显示单选按钮：显示则inline，隐藏则none。隐藏时paddig也要清零
-$--el-radio-input-display: none !default; 
-$--el-radio-label-padding: 0 !default; 
+$--el-radio-input-display: none !default;
+$--el-radio-label-padding: 0 !default;
 
 $--radio-bordered-background-color: $--color-white !default;
 $--radio-bordered-margin-left: 16px !default;
@@ -376,7 +375,7 @@ $--radio-bordered-margin-left: 16px !default;
 $--radio-bordered-checked-border-color: $--color-primary !default;
 $--radio-bordered-disabled-border-color: $--disabled-border-base !default;
 
-// 默认大小 
+// 默认大小
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 11px 20px !default;
 
@@ -449,7 +448,6 @@ $--radio-button-disabled-checked-font-color: $--disabled-font-color !default;
 
 /*focus焦点样式需要radio-button文档末修改，搜索关键词： &:focus:not(.is-focus):not(:active):not(.is-disabled) { */
 
-  
 /* Checkbox 多选
 -------------------------- */
 // 全局样式
@@ -524,7 +522,7 @@ $--checkbox-bordered-mini-border-radius: $--button-mini-border-radius !default;
 $--checkbox-button-font-color: $--color-text-regular !default;
 $--checkbox-button-background-color: $--color-white !default;
 $--checkbox-button-border: $--border-base !default;
-$--checkbox-line-height:1 !default;
+$--checkbox-line-height: 1 !default;
 
 $--checkbox-button-border-radius-first: $--border-radius-base 0 0
   $--border-radius-base !default;
@@ -563,8 +561,6 @@ $--checkbox-button-disabled-background: $--color-white !default;
 $--checkbox-button-disabled-border: $--disabled-border-base !default;
 $--checkbox-button-disabled-background: $--color-white !default;
 $--checkbox-button-disabled-checked-background: $--disabled-background-base !default;
-
-
 
 /* Input 输入框
 -------------------------- */
@@ -609,8 +605,11 @@ $--input-clear-icon-hover-color: $--color-text-regular !default;
 $--input-focus-border: $--color-primary !default;
 // $--input-focus-background: $--color-white !default;  无引用代码
 
+$--input-focus-shadow: $--box-shadow-primary !default; 
+
+
 $--input-exceed-border-color: $--color-danger;
-$--input-exceed-count-font-color:  $--color-danger !default;
+$--input-exceed-count-font-color: $--color-danger !default;
 
 $--input-disabled-background: $--disabled-background-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
@@ -639,23 +638,28 @@ $--input-group-margin: -10px -20px !default; /*搜索图标*/
 
 /* IuputNumber 计数器
 --------------------------*/
-// 参数跟随输入框。
+// 参数跟随其他属性，无修改必要。
+
 
 /* Select 选择器
 -------------------------- */
+// 全局样式
 $--select-border-color-hover: $--color-primary !default;
 $--select-disabled-border: $--disabled-border-base !default;
 
 $--select-font-size: $--font-size-base !default;
 $--select-close-hover-color: $--color-text-regular !default; /*待解决-改动无效果*/
+$--select-input-focus-shadow: $--input-focus-shadow !default; 
 
 // /*对应：Select选择器所有图标*/
-$--select-input-color: $--color-text-secondary !default;
+$--select-input-icon-color: $--color-text-secondary !default;
+
 //  /*对应：Select选择器-远程搜索和创建条目输入后文字*/
 $--select-multiple-input-color: $--color-text-secondary !default;
 
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
+
 
 // 选择器 选项
 $--select-option-color: $--color-text-regular !default;

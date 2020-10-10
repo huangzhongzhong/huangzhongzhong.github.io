@@ -34,6 +34,7 @@
     &:focus {
       outline: none;
       border-color: $--input-focus-border;
+      box-shadow: $--input-focus-shadow;
     }
   }
 
@@ -132,6 +133,7 @@
     &:focus {
       outline: none;
       border-color: $--input-focus-border;
+      box-shadow: $--input-focus-shadow;
     }
   }
 
@@ -272,6 +274,9 @@
   width: 100%;
   border-collapse: separate;
   border-spacing:0;
+ 
+
+  
 
   > .el-input__inner {
     vertical-align: middle;
