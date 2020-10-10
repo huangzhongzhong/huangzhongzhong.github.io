@@ -331,7 +331,7 @@ $--radio-input-width: 14px !default;
 // 单选按钮中间小点
 $--radio-input-icon-width: 8px !default;
 $--radio-input-icon-height: 8px !default;
-$--radio-input-icon-border: solid 3px !default;
+$--radio-input-icon-border: solid 2px !default;
 $--radio-input-icon-border-color: $--color-white !default;
 $--radio-input-icon-background-color: $--color-primary !default;
 
@@ -365,12 +365,18 @@ $--radio-bordered-margin-left: 16px !default;
 $--radio-bordered-border: $--border-base !default;
 $--radio-bordered-border-radius: $--button-border-radius !default;
 
+// 是否显示单选按钮：显示则inline，隐藏则none。隐藏时paddig也要清零
+$--el-radio-input-display: none !default; 
+$--el-radio-label-padding: 0 !default; 
+
 $--radio-bordered-background-color: $--color-white !default;
+$--radio-bordered-margin-left: 16px !default;
+
 // 状态
 $--radio-bordered-checked-border-color: $--color-primary !default;
 $--radio-bordered-disabled-border-color: $--disabled-border-base !default;
 
-// 默认大小 小号和最小号需要改小
+// 默认大小 
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 11px 20px !default;
 
@@ -563,16 +569,19 @@ $--checkbox-button-disabled-checked-background: $--disabled-background-base !def
 /* Input 输入框
 -------------------------- */
 // 全局样式
-$--input-font-size: $--font-size-base !default;
-$--input-font-color: $--color-text-regular !default;
 $--input-width: 140px !default;
 $--input-height: 40px !default;
+$--input-max-width: 314px !default;
 
-$--input-inner-padding: 0 15px !default;
-$--input-suffix-right: 5px !default;/*输入框图标位置*/
-$--input-suffix-left: 5px !default;
-$--input-icon-width: 25px !default;/*输入框图标盒子宽度*/
+$--input-inner-padding: 0 15px !default; /*输入框内容盒子左边距*/
+$--input-inner-suffix-padding-right: 30px !default; /*输入框内容盒子右边距*/
+$--input-inner-suffix-padding-left: 30px !default; /*输入框内容盒子右边距*/
+$--input-suffix-right: 5px !default; /*输入框图标盒子右边距*/
+$--input-suffix-left: 5px !default; /*输入框图标盒子左边距*/
+$--input-icon-width: 25px !default; /*输入框图标盒子宽度*/
 
+$--input-font-size: $--font-size-base !default;
+$--input-font-color: $--color-text-regular !default;
 
 $--input-border: $--border-base !default;
 $--input-border-color: $--color-border-base !default;
@@ -582,8 +591,9 @@ $--input-background-color: $--color-white !default;
 $--input-icon-color: $--color-text-secondary !default;
 
 $--input-placeholder-color: $--color-text-secondary !default;
-$--input-max-width: 314px !default;
 
+
+// 计数
 $--input-count-font-color: $--color-text-secondary !default;
 $--input-count-font-size: $--font-size-extra-small !default;
 
@@ -606,7 +616,7 @@ $--input-disabled-background: $--disabled-background-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
 $--input-disabled-placeholder-color: $--disabled-font-color !default;
-
+// 大小
 $--input-medium-font-size: $--font-size-base !default;
 $--input-medium-height: 36px !default;
 
@@ -629,6 +639,7 @@ $--input-group-margin: -10px -20px !default; /*搜索图标*/
 
 /* IuputNumber 计数器
 --------------------------*/
+// 参数跟随输入框。
 
 /* Select 选择器
 -------------------------- */
@@ -805,6 +816,7 @@ $--table-fixed-box-shadow: $--box-shadow-base !default;
 
 /* Tag 标签
 -------------------------- */
+
 $--tag-info-color: $--color-info !default;
 $--tag-primary-color: $--color-primary !default;
 $--tag-success-color: $--color-success !default;

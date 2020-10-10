@@ -218,13 +218,13 @@
 
   @include m(suffix) {  /*对应？*/
     .el-input__inner {
-      padding-right: 30px;
+      padding-right: $--input-inner-suffix-padding-right;
     }
   }
 
   @include m(prefix) { /*对应？*/
     .el-input__inner {
-      padding-left: 30px;
+      padding-left: $--input-inner-suffix-padding-left;
     }
   }
 
@@ -297,7 +297,7 @@
     .el-select,
     .el-button { /*搜索图标*/
       display: inline-block;
-      margin: -10px -20px;
+      margin: $--input-group-margin;
     }
 
     button.el-button,
