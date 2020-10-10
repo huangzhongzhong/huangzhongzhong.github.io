@@ -113,7 +113,7 @@
     font-size: $--select-input-font-size;
     &:hover {
       // $--select-close-hover-color
-      color:  red !important;
+      color:  red !important; /* 待解释*/
     }
   }
 
@@ -146,10 +146,10 @@
       background-color: transparent; 
       right: -7px;
       top: 0;
-      color: $--color-white; 
+      color: $--color-white;  /*标签图标颜色*/ /*被覆盖，可能是el-tag--info*/ 
 
       &:hover {
-        background-color: $--color-text-secondary;
+        background-color: $--color-text-secondary;/*标签图标悬浮背景色*/ /*被覆盖，可能是el-tag--info*/ 
       }
 
       &::before {

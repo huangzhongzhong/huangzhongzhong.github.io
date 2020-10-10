@@ -590,7 +590,6 @@ $--input-icon-color: $--color-text-secondary !default;
 
 $--input-placeholder-color: $--color-text-secondary !default;
 
-
 // 计数
 $--input-count-font-color: $--color-text-secondary !default;
 $--input-count-font-size: $--font-size-extra-small !default;
@@ -607,8 +606,7 @@ $--input-clear-icon-hover-color: $--color-text-regular !default;
 $--input-focus-border: $--color-primary !default;
 // $--input-focus-background: $--color-white !default;  无引用代码
 
-$--input-focus-shadow: $--box-shadow-primary !default; 
-
+$--input-focus-shadow: $--box-shadow-primary !default;
 
 $--input-exceed-border-color: $--color-danger;
 $--input-exceed-count-font-color: $--color-danger !default;
@@ -642,7 +640,6 @@ $--input-group-margin: -10px -20px !default; /*搜索图标*/
 --------------------------*/
 // 参数跟随其他属性，无修改必要。
 
-
 /* Select 选择器
 -------------------------- */
 // 全局样式
@@ -651,21 +648,18 @@ $--select-disabled-border: $--disabled-border-base !default;
 
 $--select-font-size: $--font-size-base !default;
 $--select-close-hover-color: $--color-text-regular !default; /*待解决-改动无效果*/
-$--select-input-focus-shadow: $--input-focus-shadow !default; 
+$--select-input-focus-shadow: $--input-focus-shadow !default;
 
 // /*对应：Select选择器所有图标*/
 $--select-input-icon-color: $--color-text-secondary !default;
 
-
 // 选择框所有标签
-$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default;
-// 选择框所有标签删除按钮
+$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default;/*标签外边距*/
+// 选择框所有标签删除按钮默认背景
 $--select-input-tag-icon-close-background-color: transparent !default;
-
 
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
-
 
 // 选择器 选项
 $--select-option-color: $--color-text-regular !default;
@@ -683,22 +677,31 @@ $--select-group-height: 30px !default;
 $--select-group-font-size: 12px !default;
 
 // 选择器 下拉
+$--select-dropdown-border: solid 1px $--color-border-light !default;
+$--select-dropdown-border-radius: $--border-radius-base !default;
 $--select-dropdown-background: $--color-white !default;
 $--select-dropdown-shadow: $--box-shadow-light !default;
-$--select-dropdown-empty-color: $--color-text-secondary !default;
 
+$--select-dropdown-empty-color: $--color-text-secondary !default;
+$--select-dropdown-empty-padding: 10px 0 !default;
 $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
-$--select-dropdown-empty-padding: 10px 0 !default;
-$--select-dropdown-border: solid 1px $--color-border-light !default;
+
+
+// 全局 选中勾号
+$--select-dropdown-after-right: 20px !default;
+$--select-dropdown-after-font-size: 12px !default;
+$--select-dropdown-after-font-weight: bold !default;
+
+
 
 // 远程搜索
 //对应：Select选择器-远程搜索和创建条目输入后文字
 $--select-input-remote-font-color: $--color-text-regular !default;
 // 内容左外边距，无法和输入框一样用padding
-$--select-input-remote-margin-left: 15px  !default;
-$--select-input-remote-height: 28px  !default;/*内容高度*/
-$--select-input-remote-height-mini: 14px  !default;/*最小号内容高度*/
+$--select-input-remote-margin-left: 15px !default;
+$--select-input-remote-height: 28px !default; /*内容高度*/
+$--select-input-remote-height-mini: 14px !default; /*最小号内容高度*/
 
 
 /* Cascader 级联选择器
@@ -835,6 +838,7 @@ $--table-fixed-box-shadow: $--box-shadow-base !default;
 
 /* Tag 标签
 -------------------------- */
+// 需要去tag.scss文件修改。因为有大量$变量。
 
 $--tag-info-color: $--color-info !default;
 $--tag-primary-color: $--color-primary !default;
@@ -845,8 +849,6 @@ $--tag-danger-color: $--color-danger !default;
 $--tag-font-size: 12px !default;
 $--tag-border-radius: $--border-radius-base !default;
 $--tag-padding: 0 10px !default;
-
-
 
 /* progress 进度条
 -------------------------- */

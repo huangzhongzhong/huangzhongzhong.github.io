@@ -2,32 +2,32 @@
 @import "common/var";
 @import "./popper";
 
-@include b(select-dropdown) {
+@include b(select-dropdown) { /*下拉框全局样式*/
   position: absolute;
   z-index: #{$--index-top + 1};
   border: $--select-dropdown-border;
-  border-radius: $--border-radius-base;
+  border-radius: $--select-dropdown-border-radius;
   background-color: $--select-dropdown-background;
   box-shadow: $--select-dropdown-shadow;
   box-sizing: border-box;
-  margin: 5px 0;
+  margin: 5px 0; /*边框到下拉框的距离*/ /*被覆盖，可能是？*/
 
-  @include when(multiple) {
+  @include when(multiple) { /*多选,包括扩展的远程搜索，创建条目*/
     & .el-select-dropdown__item.selected {
-      color: $--select-option-selected-font-color;
-      background-color: $--select-dropdown-background;
+      color: $--select-option-selected-font-color; /*已选中选项字体和图标颜色*/
+      background-color: $--select-dropdown-background; /*已选中选项背景颜色*/
 
       &.hover {
-        background-color: $--select-option-hover-background;
+        background-color: $--select-option-hover-background; /*已选中选项悬停背景*/
       }
 
-      &::after {
+      &::after { 
         position: absolute;
-        right: 20px;
+        right: $--select-dropdown-after-right; /*选中勾号右边距*/
         font-family: 'element-icons';
         content: "\e6da";
-        font-size: 12px;
-        font-weight: bold;
+        font-size: $--select-dropdown-after-font-size; /*选中勾号大小*/
+        font-weight:$--select-dropdown-after-font-weight; /*选中勾号粗细*/
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -39,21 +39,21 @@
   }
 }
 
-@include b(select-dropdown__empty) {
+@include b(select-dropdown__empty) { /*无数据提示*/
   padding: $--select-dropdown-empty-padding;
   margin: 0;
   text-align: center;
-  color: $--select-dropdown-empty-color;
+  color: $--select-dropdown-empty-color;  /*无数据提示字体颜色。*/
   font-size: $--select-font-size;
 }
 
 @include b(select-dropdown__wrap) {
-  max-height: $--select-dropdown-max-height;
+  max-height: $--select-dropdown-max-height; /*下拉框最大高度*/
 }
 
 @include b(select-dropdown__list) {
   list-style: none;
-  padding: $--select-dropdown-padding;
+  padding: $--select-dropdown-padding; /*列表上下间距*/
   margin: 0;
   box-sizing: border-box;
 }
