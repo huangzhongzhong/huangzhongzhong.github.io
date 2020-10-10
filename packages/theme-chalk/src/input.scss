@@ -325,7 +325,7 @@
   }
 
   @include e(prepend) {
-    border-right: 0;
+    border-right: 0; /*对应反应不明显*/
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }

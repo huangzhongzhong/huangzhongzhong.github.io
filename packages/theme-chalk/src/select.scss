@@ -54,7 +54,7 @@
         transform: rotateZ(180deg);
         border-radius: $--border-radius-circle;
         // $--select-input-icon-color
-        color:red; /* 待解释*/
+        color:red !important; /* 待解释*/
         transition: $--color-transition-base;
 
         &:hover {
@@ -88,14 +88,14 @@
     border: none;
     outline: none;
     padding: 0;
-    margin-left: 15px;
-    color: $--color-text-regular ; 
+    margin-left: $--select-input-remote-margin-left;
+    color: $--select-input-remote-font-color ; 
     font-size: $--select-font-size;
     appearance: none;
-    height: 28px;
+    height: $--select-input-remote-height;
     background-color: transparent;
     @include when(mini) {
-      height: 14px;
+      height: $--select-input-remote-height-mini;
     }
     
   }
@@ -107,12 +107,13 @@
     top: 8px;
     z-index: $--index-top;
     right: 25px;
-    color: $--select-input-icon-color;
+    // $--select-input-icon-color
+    color: red !important; /* 待解释*/
     line-height: 18px;
     font-size: $--select-input-font-size;
-
     &:hover {
-      color: $--select-close-hover-color;
+      // $--select-close-hover-color
+      color:  red !important;
     }
   }
 
@@ -133,18 +134,19 @@
   }
   
   // 这是哪里的标签？
-  .el-tag {
+  .el-tag { /* 选择框所有标签*/
     box-sizing: border-box;
-   
-    border-color: transparent ;
-    margin: 2px 0 2px 6px;
-    background-color:#f0f2f5;/*待解释*/
+    border-color: $--select-input-tag-icon-close-background-color ;
+    margin: $--select-input-tag-icon-close-margin;
+    // 加上！后能显示出红色，那是哪里的更高级盖住了它？是el-tag--info
+    background-color:#f0f2f5 ;/*标签背景*/
 
-    &__close.el-icon-close {
-      background-color: #f0f2f500;
+    &__close.el-icon-close { /* 选择框所有标签删除按钮*/
+      // #f0f2f500
+      background-color: transparent; 
       right: -7px;
       top: 0;
-      color: $--color-white;
+      color: $--color-white; 
 
       &:hover {
         background-color: $--color-text-secondary;
