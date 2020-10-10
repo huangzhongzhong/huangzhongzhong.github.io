@@ -41,6 +41,8 @@ $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 重*/
 
+// 透明颜色：直接写transparen
+
 /*衍生颜色*/
 /// 主题色衍生-叠加白色
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
@@ -654,8 +656,12 @@ $--select-input-focus-shadow: $--input-focus-shadow !default;
 // /*对应：Select选择器所有图标*/
 $--select-input-icon-color: $--color-text-secondary !default;
 
-//  /*对应：Select选择器-远程搜索和创建条目输入后文字*/
-$--select-multiple-input-color: $--color-text-secondary !default;
+
+// 选择框所有标签
+$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default;
+// 选择框所有标签删除按钮
+$--select-input-tag-icon-close-background-color: transparent !default;
+
 
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
@@ -685,6 +691,15 @@ $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 $--select-dropdown-empty-padding: 10px 0 !default;
 $--select-dropdown-border: solid 1px $--color-border-light !default;
+
+// 远程搜索
+//对应：Select选择器-远程搜索和创建条目输入后文字
+$--select-input-remote-font-color: $--color-text-regular !default;
+// 内容左外边距，无法和输入框一样用padding
+$--select-input-remote-margin-left: 15px  !default;
+$--select-input-remote-height: 28px  !default;/*内容高度*/
+$--select-input-remote-height-mini: 14px  !default;/*最小号内容高度*/
+
 
 /* Cascader 级联选择器
 -------------------------- */
@@ -830,6 +845,8 @@ $--tag-danger-color: $--color-danger !default;
 $--tag-font-size: 12px !default;
 $--tag-border-radius: $--border-radius-base !default;
 $--tag-padding: 0 10px !default;
+
+
 
 /* progress 进度条
 -------------------------- */
