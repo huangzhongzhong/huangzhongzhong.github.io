@@ -825,6 +825,10 @@ $--form-label-font-size: $--font-size-base !default;
 -------------------------- */
 $--table-border-color: #c1cbdb !default; /*特定独立色值*/
 $--table-border: 1px solid $--table-border-color !default;
+$--table-font-size: 12px !default;
+$--table-padding-padding-left: 4px !default;
+$--table-padding-padding-right: 4px !default;
+$--table-padding-paddingt: 4px  0px !default;
 
 $--table-font-color: $--color-text-regular !default;
 $--table-header-font-color: $--color-text-primary !default;

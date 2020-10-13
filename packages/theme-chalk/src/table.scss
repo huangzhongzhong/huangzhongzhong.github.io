@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 100%;
   background-color: $--color-white;
-  font-size: 12px;
+  font-size: $--table-font-size;
   color: $--table-font-color;
 
   // 数据为空
@@ -119,7 +119,7 @@
   }
 
   th, td {
-    padding: 12px 0;
+    padding: 4px 0; /*单元格上下padding*/
     min-width: 0;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -149,9 +149,9 @@
     }
   }
 
-  @include m(medium) {
+  @include m(medium) { /*中号大小表格，但是参数没那么完整*/
     th, td {
-      padding: 10px 0;
+      padding: 10px 0; 
     }
   }
 
@@ -195,8 +195,8 @@
       box-sizing: border-box;
       position: relative;
       vertical-align: middle;
-      padding-left: 4px;
-      padding-right: 4px;
+      padding-left: $--table-padding-padding-left;
+      padding-right: $--table-padding-padding-right;
       width: 100%;
 
       &.highlight {
@@ -233,8 +233,8 @@
     white-space: normal;
     word-break: break-all;
     line-height: 23px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $--table-padding-padding-left;
+    padding-right: $--table-padding-padding-right;
 
     &.el-tooltip {
       white-space: nowrap;
@@ -285,7 +285,7 @@
       border-right: $--table-border;
 
       &:first-child .cell {
-        padding-left: 10px;
+        padding-left: 8px; /*特殊表格左边距，对应带边框表格等*/
       }
     }
 
@@ -526,7 +526,7 @@
 
     & i {
       color: $--color-info;
-      font-size: 12px;
+      font-size: $--table-font-size;
       transform: scale(.75);
     }
   }
