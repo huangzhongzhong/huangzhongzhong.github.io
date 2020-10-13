@@ -149,6 +149,10 @@
     }
   }
 
+  th {
+    padding: 8px 0;
+  }
+
   @include m(medium) { /*中号大小表格，但是参数没那么完整*/
     th, td {
       padding: 10px 0; 
@@ -189,6 +193,11 @@
     overflow: hidden;
     user-select: none;
     background-color: $--table-header-background-color;
+    &:first-child {
+      .cell {
+        padding-left: 8px !important;
+      }
+    }
 
     > .cell {
       display: inline-block;
