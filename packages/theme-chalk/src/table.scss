@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 100%;
   background-color: $--color-white;
-  font-size: 14px;
+  font-size: 12px;
   color: $--table-font-color;
 
   // 数据为空
@@ -195,8 +195,8 @@
       box-sizing: border-box;
       position: relative;
       vertical-align: middle;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 4px;
+      padding-right: 4px;
       width: 100%;
 
       &.highlight {
