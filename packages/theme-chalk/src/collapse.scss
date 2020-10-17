@@ -35,8 +35,8 @@
         transform: rotate(90deg);
       }
     }
-    &.focusing:focus:not(:hover){
-      color: $--color-primary;
+    &.focusing:focus:not(:hover){/*未发现对应*/
+      color: $--color-primary ; 
     }
     @include when(active) {
       border-bottom-color: transparent;

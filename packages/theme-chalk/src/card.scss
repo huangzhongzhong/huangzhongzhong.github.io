@@ -16,7 +16,7 @@
   @include when(hover-shadow) {
     &:hover,
     &:focus {
-      box-shadow: $--box-shadow-light;
+      box-shadow: $--box-shadow-light; 
     }
   }
 

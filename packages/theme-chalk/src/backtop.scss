@@ -16,7 +16,7 @@
   cursor: pointer;
   z-index: 5;
 
-  &:hover {
+  &:hover { /*返回顶部悬停背景*/
     background-color: $--backtop-hover-background-color
   }
 }

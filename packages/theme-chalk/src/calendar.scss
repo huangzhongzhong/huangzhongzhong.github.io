@@ -74,7 +74,7 @@
     height: $--calendar-cell-width;
     &:hover {
       cursor: pointer;
-      background-color: $--calendar-selected-background-color;
+      background-color: $--calendar-selected-background-color; /*日历单元悬浮色*/
     }
   }
 }

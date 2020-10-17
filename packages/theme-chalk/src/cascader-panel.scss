@@ -83,7 +83,7 @@
   &:not(.is-disabled) {
     cursor: pointer;
     &:hover, &:focus {
-      background: $--cascader-node-background-hover;
+      background: $--cascader-node-background-hover; /*都禁用了为什么还有悬停？*/
     }
   }
 

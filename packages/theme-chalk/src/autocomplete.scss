@@ -6,7 +6,7 @@
 @import "./popper";
 
 
-@include b(autocomplete) {
+@include b(autocomplete) { /*input 带输入建议*/
   position: relative;
   display: inline-block;
 }
@@ -46,7 +46,7 @@
       background-color: $--select-option-hover-background;
     }
 
-    &.highlighted {
+    &.highlighted { /*未找到对应*/
       background-color: $--select-option-hover-background;
     }
 
@@ -69,7 +69,7 @@
       color: #999;
       @include utils-vertical-center;
 
-      &:hover {
+      &:hover {  /*未找到对应*/
         background-color: $--color-white;
       }
     }

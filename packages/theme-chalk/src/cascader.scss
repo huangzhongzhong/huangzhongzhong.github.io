@@ -11,10 +11,10 @@
   font-size: $--font-size-base;
   line-height: $--input-height;
 
-  &:not(.is-disabled):hover {
+  &:not(.is-disabled):hover { /*禁用似乎没有效果，正常状态悬停即显色*/
     .el-input__inner {
       cursor: pointer;
-      border-color: $--input-border-hover;
+      border-color: $--border-color-hover;  /*控制所有级联选择器边框*/
     }
   }
 
@@ -31,14 +31,14 @@
 
     .el-icon-arrow-down {
       transition: transform .3s;
-      font-size: 14px;
+      font-size: $--cascader-menu-font-size;/*所有选择器图标大小，但不包括下拉选择器的*/
 
       @include when(reverse) {
         transform: rotateZ(180deg);
       }
     }
 
-    .el-icon-circle-close:hover {
+    .el-icon-circle-close:hover { /*可清空图标悬停色*/
       color: $--input-clear-icon-hover-color;
     }
 
@@ -113,10 +113,10 @@
       .el-icon-close {
         flex: none;
         background-color: transparent ;
-        color: $--color-text-regular ;
+        color: $--tag-icon-close-color ; /*多选-关闭字体图标颜色*/
 
         &:hover {
-          background-color: $--color-text-secondary;
+          background-color: $--tag-icon-close-background-color-hover; /*多选-关闭字体图标悬停背景色*/
         }
       }
     }
@@ -145,8 +145,8 @@
     outline: none;
     cursor: pointer;
 
-    &:hover, &:focus {
-      background: $--cascader-node-background-hover;
+    &:hover, &:focus { 
+      background: $--cascader-node-background-hover ; /*未找到对应*/
     }
 
     &.is-checked {

@@ -52,7 +52,7 @@
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: $--color-primary;
+        color: $--dialog-close-color-hover; /*关闭图标悬浮颜色*/
       }
     }
   }

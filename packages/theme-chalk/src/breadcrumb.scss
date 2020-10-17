@@ -30,8 +30,8 @@
         transition: $--color-transition-base;
         color: $--color-text-primary;
 
-        &:hover {
-          color: $--color-primary;
+        &:hover { /*图形分隔符悬停文字色*/
+          color: $--link-color-hover;
           cursor: pointer;
         }
       }
@@ -42,7 +42,7 @@
       .el-breadcrumb__inner a {
         &, &:hover {
           font-weight: normal;
-          color: $--color-text-regular;
+          color: $--color-text-regular;/*最后一级文字色，但不用hover*/
           cursor: text;
         }
       }

@@ -45,7 +45,7 @@
     }
 
     &:hover {
-      background-color: $--carousel-arrow-hover-background;
+      background-color: $--carousel-arrow-hover-background;/*切换箭头悬停背景*/
     }
 
     & i {
@@ -81,7 +81,7 @@
         opacity: 0.64;
       }
       button {
-        background-color: $--carousel-indicator-out-color;
+        background-color: $--carousel-indicator-out-color; /*卡片指示器默认色*/
         opacity: 0.24;
       }
     }

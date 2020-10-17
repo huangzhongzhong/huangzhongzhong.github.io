@@ -102,15 +102,24 @@ $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
 
 /* 悬停 */
-$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/
+$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*//*主要应用在下拉框*/
+
 $--background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
-$--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/
+$--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/
+
 $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
 
 $--font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 
+// 可清空图标悬停颜色
+$--line-icon-color-hover:  $--color-text-regular !default; 
+
+$--tag-icon-close-color:  $--color-text-regular !default; /*多选-关闭字体图标色*/
+$--tag-icon-close-background-color-hover:  $--color-text-secondary !default; /*多选-关闭字体图标悬停背景色*/
+
 /* 链接 */
 $--link-color-base: $--color-primary !default; /*链接 颜色 基础*/
+
 
 /* 边框*/
 $--border-width-base: 1px !default; /*边框 宽度 大小 基础*/
@@ -460,7 +469,8 @@ $--checkbox-font-color: $--color-text-regular !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 $--checkbox-input-border: $--border-base !default;
-$--checkbox-input-border-hover: $--color-primary !default;
+$--checkbox-input-border-hover: $--border-color-hover !default;
+$--checkbox-input-font-color-hover: $--link-color-hover !default;
 
 $--checkbox-border-radius: $--border-radius-small !default;
 $--checkbox-background-color: $--color-white !default;
@@ -474,7 +484,7 @@ $--checkbox-checked-input-border-color: $--color-primary !default;
 $--checkbox-checked-background-color: $--color-primary !default;
 $--checkbox-checked-icon-color: $--color-white !default;
 
-$--checkbox-input-border-color-hover: $--color-primary !default;
+$--checkbox-input-border-color-hover: $--border-color-hover!default;
 
 // 多选 禁用
 $--checkbox-disabled-font-color: $--disabled-font-color !default;
@@ -640,6 +650,7 @@ $--input-group-margin: -10px -20px !default; /*搜索图标*/
 --------------------------*/
 // 参数跟随其他属性，无修改必要。
 
+
 /* Select 选择器
 -------------------------- */
 // 全局样式
@@ -687,17 +698,14 @@ $--select-dropdown-empty-padding: 10px 0 !default;
 $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 
-
 // 全局 选中勾号
 $--select-dropdown-after-right: 20px !default;
 $--select-dropdown-after-font-size: 12px !default;
 $--select-dropdown-after-font-weight: bold !default;
 
-
-
 // 远程搜索
 //对应：Select选择器-远程搜索和创建条目输入后文字
-$--select-input-remote-font-color: $--color-text-regular !default;
+$--select-input-remote-font-color: $--input-font-color !default;
 // 内容左外边距，无法和输入框一样用padding
 $--select-input-remote-margin-left: 15px !default;
 $--select-input-remote-height: 28px !default; /*内容高度*/
@@ -989,8 +997,9 @@ $--notification-danger-icon-color: $--color-danger !default;
 --------------------------*/
 $--menu-item-font-size: $--font-size-base !default; /*item 选项*/
 $--menu-item-font-color: $--color-text-primary !default;
-$--menu-item-hover-background: $--border-color-hover !default;
+$--menu-item-hover-background: $--background-hover !default;
 $--menu-background-color: $--color-white !default;
+
 
 /* Tab 标签页
 -------------------------- */
@@ -1022,7 +1031,7 @@ $--tab-vertical-header-count-background: $--color-text-secondary !default;
 /* Dropdown 下拉
 -------------------------- */
 $--dropdown-menu-box-shadow: $--box-shadow-light !default;
-$--dropdown-menuItem-hover-background: $--color-primary-light-9 !default; /*menuItem 菜单选项*/
+$--dropdown-menuItem-hover-background: $--background-hover !default; /*menuItem 菜单选项*/
 $--dropdown-menuItem-hover-color: $--link-color-base !default;
 
 /* Steps 步骤条
@@ -1041,6 +1050,7 @@ $--dialog-content-font-size: 14px !default;
 $--dialog-font-line-height: $--font-line-height-primary !default;
 
 $--dialog-padding-primary: 20px !default;
+$--dialog-close-color-hover: $--color-primary !default; /*关闭图标悬浮颜色*/
 
 /* Tooltip 文字提示
 -------------------------- */

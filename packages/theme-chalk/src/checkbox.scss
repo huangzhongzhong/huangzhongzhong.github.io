@@ -167,10 +167,10 @@
         color: $--checkbox-checked-font-color;
       }
     }
-    @include when(focus) {
-      /*focus时 视觉上区分*/
+    @include when(focus) {/*focus时 视觉上需要区分*/
       .el-checkbox__inner {
-        border-color: $--checkbox-input-border-color-hover;
+        background-color: $--box-shadow-primary;
+        border-color: $--checkbox-input-border-color-hover;/*为啥不生效？*/
       }
     }
     @include when(indeterminate) {
@@ -210,8 +210,8 @@
     transition: border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46),
       background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
 
-    &:hover {
-      border-color: $--checkbox-input-border-color-hover;
+    &:hover { /*多选按钮默认边框*/
+      border-color: $--checkbox-input-border-color-hover; 
     }
 
     &::after {
@@ -289,8 +289,8 @@
     );
 
 
-    &:hover {
-      color: $--checkbox-input-border-hover;
+    &:hover {/*对应按钮样式文字悬停色*/
+      color: $--checkbox-input-font-color-hover; 
     }
 
     & [class*="el-icon-"] {
