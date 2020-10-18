@@ -27,8 +27,8 @@
       color: $--input-placeholder-color ;
     }
 
-    &:hover {
-      border-color: $--input-border-hover;
+    &:hover { /*文本域悬停色*/
+      border-color: $--input-border-hover; 
     }
 
     &:focus {
@@ -85,7 +85,7 @@
     cursor: pointer;
     transition: $--color-transition-base;
 
-    &:hover {
+    &:hover { /*可清空图标悬停*/
       color: $--input-clear-icon-hover-color;
     }
   }
@@ -127,7 +127,7 @@
       color: $--input-placeholder-color ;
     }
 
-    &:hover {
+    &:hover { /*全局悬停边框*/
       border-color: $--input-border-hover;
     }
 

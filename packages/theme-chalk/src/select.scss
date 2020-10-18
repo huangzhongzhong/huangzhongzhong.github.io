@@ -18,8 +18,8 @@
       display: contents;
     }
 
-  &:hover {
-    .el-input__inner { /*默认悬浮边框色*/
+  &:hover { /*默认悬浮边框色*/
+    .el-input__inner { 
       border-color: $--select-border-color-hover;
       
     }
@@ -54,10 +54,10 @@
         transform: rotateZ(180deg);
         border-radius: $--border-radius-circle;
         // $--select-input-icon-color
-        color:red !important; /* 待解释*/
+        color: $--select-input-icon-color; /* 待解释*/
         transition: $--color-transition-base;
 
-        &:hover {
+        &:hover {  /*未找到对应*/
           color: $--select-close-hover-color;
         }
       }
@@ -107,13 +107,11 @@
     top: 8px;
     z-index: $--index-top;
     right: 25px;
-    // $--select-input-icon-color
-    color: red !important; /* 待解释*/
+    color: $--select-input-icon-color; /* 未找到对应*/
     line-height: 18px;
     font-size: $--select-input-font-size;
     &:hover {
-      // $--select-close-hover-color
-      color:  red !important; /* 待解释*/
+      color:  $--select-close-hover-color; /* 未找到对应*/
     }
   }
 
@@ -149,7 +147,7 @@
       color: $--color-white;  /*标签图标颜色*/ /*被覆盖，可能是el-tag--info*/ 
 
       &:hover {
-        background-color: $--color-text-secondary;/*标签图标悬浮背景色*/ /*被覆盖，可能是el-tag--info*/ 
+        background-color: $--tag-icon-close-background-color-hover;/*标签图标悬浮背景色*/ /*被覆盖，可能是el-tag--info*/ 
       }
 
       &::before {

@@ -298,23 +298,16 @@ $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
 
 $--link-default-font-color: $--color-text-regular !default;
-$--link-default-font-hover-color: mix(
-  $--color-white,
-  $--color-primary,
-  $--button-hover-tint-percent
-) !default;
+$--link-default-font-hover-color: $--link-color-hover;
 $--link-default-font-active-color: mix(
   $--color-black,
   $--color-primary,
   $--button-active-shade-percent
 ) !default;
 $--link-disabled-font-color: $--disabled-font-color !default;
-
-$--link-underline-hover-color: mix(
-  $--color-white,
-  $--color-primary,
-  $--button-hover-tint-percent
-) !default;
+// 下划线悬停色
+$--link-underline-hover-color: $--link-color-hover;
+// 下划线按下色
 $--link-underline-active-color: mix(
   $--color-black,
   $--color-primary,
@@ -611,8 +604,8 @@ $--input-count-background-color: $--color-white !default;
 $--input-count-padding: 0 5px !default;
 
 // 悬停
-$--input-border-hover: $--color-primary !default;
-$--input-clear-icon-hover-color: $--color-text-regular !default;
+$--input-border-hover: $--border-color-hover !default;
+$--input-clear-icon-hover-color: $--line-icon-color-hover !default;
 $--input-focus-border: $--color-primary !default;
 // $--input-focus-background: $--color-white !default;  无引用代码
 
@@ -658,7 +651,7 @@ $--select-border-color-hover: $--color-primary !default;
 $--select-disabled-border: $--disabled-border-base !default;
 
 $--select-font-size: $--font-size-base !default;
-$--select-close-hover-color: $--color-text-regular !default; /*待解决-改动无效果*/
+$--select-close-hover-color: $--line-icon-color-hover !default; /*待解决-改动无效果*/
 $--select-input-focus-shadow: $--input-focus-shadow !default;
 
 // /*对应：Select选择器所有图标*/
@@ -997,8 +990,15 @@ $--notification-danger-icon-color: $--color-danger !default;
 --------------------------*/
 $--menu-item-font-size: $--font-size-base !default; /*item 选项*/
 $--menu-item-font-color: $--color-text-primary !default;
-$--menu-item-hover-background: $--background-hover !default;
+$--menu-item-icon-color: $--color-text-regular !default;
+
+$--menu-item-background-color-hover: $--background-hover !default;
 $--menu-background-color: $--color-white !default;
+
+$--menu-title-font-color-active:$--color-primary !default;/*顶栏 导航已选中文字色*/
+$--menu-title-font-color-hover:$--color-primary !default;/*顶栏 我的工作台未选中悬停色*/
+
+// 暗色模式
 
 
 /* Tab 标签页

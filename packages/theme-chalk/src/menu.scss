@@ -27,7 +27,7 @@
   &:hover,
   &:focus {
     outline: none;
-    background-color: $--menu-item-hover-background;
+    background-color: $--menu-item-background-color-hover;
   }
 
   @include when(disabled) {
@@ -57,7 +57,7 @@
       line-height: 60px;
       margin: 0;
       border-bottom: 2px solid transparent;
-      color: $--color-text-secondary;
+      color: $--menu-item-font-color;
 
       a,
       a:hover {
@@ -66,7 +66,7 @@
 
       &:not(.is-disabled):hover,
       &:not(.is-disabled):focus{
-        background-color: #fff;
+        background-color: $--menu-background-color; /*对应顶栏一级导航悬停色$--color-white*/
       }
     }
     & > .el-submenu {
@@ -75,8 +75,8 @@
       &:focus,
       &:hover {
         outline: none;
-        .el-submenu__title {
-          color: $--color-text-primary;
+        .el-submenu__title { /*对应顶栏 我的工作台文字未选中悬停色*/
+          color: $--menu-title-font-color-hover;
         }
       }
 
@@ -91,7 +91,7 @@
         height: 60px;
         line-height: 60px;
         border-bottom: 2px solid transparent;
-        color: $--color-text-secondary;
+        color: $--menu-item-font-color;
 
         &:hover {
           background-color: #fff;
@@ -102,6 +102,7 @@
         vertical-align: middle;
         margin-left: 8px;
         margin-top: -3px;
+        color: $--menu-item-icon-color ; /* 顶栏两个我的工作台图标的颜色 $--menu-item-icon-color*/
       }
     }
     & .el-menu {
@@ -112,21 +113,21 @@
         height: 36px;
         line-height: 36px;
         padding: 0 10px;
-        color: $--color-text-secondary;
+        color: $--menu-item-font-color; /*对应顶栏 我的工作台 展开选项*/
       }
       & .el-menu-item.is-active,
       & .el-submenu.is-active > .el-submenu__title {
-        color: $--color-text-primary;
+        color: $--menu-title-font-color-active; /*二级导航已选中文字色*/
       }
     }
     & .el-menu-item:not(.is-disabled):hover,
     & .el-menu-item:not(.is-disabled):focus {
       outline: none;
-      color: $--color-text-primary;
+      color: $--menu-title-font-color-hover;
     }
     & > .el-menu-item.is-active {
       border-bottom: 2px solid $--color-primary;
-      color: $--color-text-primary;
+      color:$--menu-item-font-color; /*已选中一级导航文字色*/
     }
   }
   @include m(collapse) {
@@ -224,7 +225,7 @@
     @include menu-item;
 
     &:hover {
-      background-color: $--menu-item-hover-background;
+      background-color: $--menu-item-background-color-hover;
     }
   }
   & .el-menu {
@@ -243,6 +244,7 @@
     margin-top: -7px;
     transition: transform .3s;
     font-size: 12px;
+    color:red ; /*被挡住了，被什么挡住了呢？还关联影响到了白色导航的的icon*/
   }
   @include when(active) {
     .el-submenu__title {
@@ -251,6 +253,7 @@
   }
   @include when(opened) {
     > .el-submenu__title .el-submenu__icon-arrow {
+      // color:red ; /*侧栏白色导航一的箭头图标颜色*/
       transform: rotateZ(180deg);
     }
   }
@@ -263,6 +266,7 @@
     }
   }
   [class^="el-icon-"] {
+    // color:red ; /*侧栏白色导航一的左图标颜色*/
     vertical-align: middle;
     margin-right: 5px;
     width: 24px;
@@ -284,6 +288,7 @@
 }
 
 .horizontal-collapse-transition .el-submenu__title .el-submenu__icon-arrow {
+  // color:red !important; /*未找到对应*/
   transition: .2s;
   opacity: 0;
 }
