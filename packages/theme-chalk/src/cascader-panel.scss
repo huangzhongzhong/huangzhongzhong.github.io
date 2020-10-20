@@ -6,37 +6,38 @@
 
 @include b(cascader-panel) {
   display: flex;
-  border-radius: $--cascader-menu-radius;
-  font-size: $--cascader-menu-font-size;
-
+  border-radius: $--cascader-menu-radius; /*级联面板边框圆角，被下一个圆角样式所覆盖*/
+  font-size: $--cascader-menu-font-size;  /*级联面板的文字和右箭头大小左勾号大小*/
+ 
   @include when(bordered) {
-    border: $--cascader-menu-border;
-    border-radius: $--cascader-menu-radius;
+    border: $--cascader-menu-border; /*级联面板边框样式*/
+    border-radius: $--cascader-menu-radius; /*级联面板边框圆角，应该是被下拉面板覆盖*//*和上一个的区别未知，都能让边框变成直角*/
+
   }
 }
 
 @include b(cascader-menu) {
-  min-width: 180px;
+  min-width: 180px; /*级联面板最小宽度*/
   box-sizing: border-box;
-  color: $--cascader-menu-font-color;
-  border-right: $--cascader-menu-border;
+  color: $--cascader-menu-font-color;  /*级联面板默认文字、箭头色彩*/
+  border-right: $--cascader-menu-border;   /*级联面板多级分割线*/
 
   &:last-child {
     border-right: none;
     .el-cascader-node {
-      padding-right: 20px;
+      padding-right: 20px ;/*级联面板最后一版右侧padding*/
     }
   }
 
   @include e(wrap) {
-    height: 204px;
+    height: 204px; /*级联面板高度*/
   }
 
   @include e(list) {
     position: relative;
     min-height: 100%;
     margin: 0;
-    padding: 6px 0;
+    padding: 6px 0; /*级联面板内容区-上下边缘距离*/
     list-style: none;
     box-sizing: border-box;
   }
@@ -64,18 +65,19 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 30px 0 20px;
-  height: 34px;
-  line-height: 34px;
+  padding: 0 30px 0 20px; /*级联面板菜单单行左右间距*/
+  height: 34px; /*级联面板菜单行高度*/
+  line-height: 34px; /*级联面板菜单行高度*/
   outline: none;
 
-  &.is-selectable.in-active-path {
-    color: $--cascader-menu-font-color;
+  &.is-selectable.in-active-path {  /*选中某个标题展开下一级，但没选中这个标题本身*/ 
+    color: $--color-text-primary;
+    font-weight: 700;
   }
 
   &.in-active-path,
   &.is-selectable.in-checked-path,
-  &.is-active {
+  &.is-active { /*选中某个选项或者选中其子层级*/
     color: $--cascader-menu-selected-font-color;
     font-weight: bold;
   }
@@ -83,7 +85,7 @@
   &:not(.is-disabled) {
     cursor: pointer;
     &:hover, &:focus {
-      background: $--cascader-node-background-hover; /*都禁用了为什么还有悬停？*/
+      background: $--cascader-node-background-hover; /*都禁用了为什么还有悬停？是两种状态？*/
     }
   }
 

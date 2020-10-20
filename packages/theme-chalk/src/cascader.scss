@@ -77,7 +77,7 @@
     background: $--cascader-menu-background;
     border: $--cascader-menu-border;
     border-radius: $--cascader-menu-radius;
-    box-shadow: $--cascader-menu-shadow;
+    box-shadow: $--cascader-menu-shadow; /*级联面板下拉投影*/
   }
 
   @include e(tags) {
