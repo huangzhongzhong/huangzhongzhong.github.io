@@ -21,7 +21,6 @@
   &:hover { /*默认悬浮边框色*/
     .el-input__inner { 
       border-color: $--select-border-color-hover;
-      
     }
   }
   
@@ -111,7 +110,7 @@
     line-height: 18px;
     font-size: $--select-input-font-size;
     &:hover {
-      color:  $--select-close-hover-color; /* 未找到对应*/
+      color:  red; /* 未找到对应 */
     }
   }
 

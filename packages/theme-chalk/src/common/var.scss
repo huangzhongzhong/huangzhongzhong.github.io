@@ -102,7 +102,7 @@ $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
 
 /* 悬停 */
-$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*//*主要应用在下拉框*/
+$--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
 
 $--background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/
@@ -112,19 +112,19 @@ $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
 $--font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 
 // 可清空图标悬停颜色
-$--line-icon-color-hover:  $--color-text-regular !default; 
+$--line-icon-color-hover: $--color-text-regular !default;
 
-$--tag-icon-close-color:  $--color-text-regular !default; /*多选-关闭字体图标色*/
-$--tag-icon-close-background-color-hover:  $--color-text-secondary !default; /*多选-关闭字体图标悬停背景色*/
+$--tag-icon-close-color: $--color-text-regular !default; /*多选-关闭字体图标色*/
+$--tag-icon-close-background-color-hover: $--color-text-secondary !default; /*多选-关闭字体图标悬停背景色*/
 
 /* 链接 */
 $--link-color-base: $--color-primary !default; /*链接 颜色 基础*/
-
 
 /* 边框*/
 $--border-width-base: 1px !default; /*边框 宽度 大小 基础*/
 $--border-style-base: solid !default; /*边框 样式 基础  ： solid单实线*/
 $--border-base: $--border-width-base $--border-style-base $--color-border-base !default; /*边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础 */
+
 
 /* 圆角*/
 $--border-radius-base: 4px !default; /*大圆角*/
@@ -477,7 +477,7 @@ $--checkbox-checked-input-border-color: $--color-primary !default;
 $--checkbox-checked-background-color: $--color-primary !default;
 $--checkbox-checked-icon-color: $--color-white !default;
 
-$--checkbox-input-border-color-hover: $--border-color-hover!default;
+$--checkbox-input-border-color-hover: $--border-color-hover !default;
 
 // 多选 禁用
 $--checkbox-disabled-font-color: $--disabled-font-color !default;
@@ -607,7 +607,7 @@ $--input-count-padding: 0 5px !default;
 $--input-border-hover: $--border-color-hover !default;
 $--input-clear-icon-hover-color: $--line-icon-color-hover !default;
 $--input-focus-border: $--color-primary !default;
-// $--input-focus-background: $--color-white !default;  无引用代码
+$--input-focus-background: $--color-white !default; /*无引用代码*/
 
 $--input-focus-shadow: $--box-shadow-primary !default;
 
@@ -643,7 +643,6 @@ $--input-group-margin: -10px -20px !default; /*搜索图标*/
 --------------------------*/
 // 参数跟随其他属性，无修改必要。
 
-
 /* Select 选择器
 -------------------------- */
 // 全局样式
@@ -658,7 +657,7 @@ $--select-input-focus-shadow: $--input-focus-shadow !default;
 $--select-input-icon-color: $--color-text-secondary !default;
 
 // 选择框所有标签
-$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default;/*标签外边距*/
+$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default; /*标签外边距*/
 // 选择框所有标签删除按钮默认背景
 $--select-input-tag-icon-close-background-color: transparent !default;
 
@@ -692,9 +691,9 @@ $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 
 // 全局 选中勾号
-$--select-dropdown-after-right: 20px !default;
-$--select-dropdown-after-font-size: 12px !default;
-$--select-dropdown-after-font-weight: bold !default;
+$--select-dropdown-after-right: 20px !default; /*选中勾号右边距*/
+$--select-dropdown-after-font-size: 12px !default; /*选中勾号大小*/
+$--select-dropdown-after-font-weight: bold !default; /*选中勾号粗细*/
 
 // 远程搜索
 //对应：Select选择器-远程搜索和创建条目输入后文字
@@ -704,16 +703,17 @@ $--select-input-remote-margin-left: 15px !default;
 $--select-input-remote-height: 28px !default; /*内容高度*/
 $--select-input-remote-height-mini: 14px !default; /*最小号内容高度*/
 
-
 /* Cascader 级联选择器
 -------------------------- */
+
+
 $--cascader-menu-font-color: $--color-text-regular !default;
 $--cascader-menu-selected-font-color: $--color-primary !default;
 $--cascader-menu-background: $--color-white !default;
-$--cascader-menu-font-size: $--font-size-base !default;
+$--cascader-menu-font-size: $--font-size-base !default; /*级联面板的文字和右箭头大小左勾号大小*/
 
-$--cascader-menu-radius: $--border-radius-base !default;
-$--cascader-menu-border: solid 1px $--color-border-light !default;
+$--cascader-menu-radius: $--border-radius-base !default; /*级联面板边框圆角，应该是被下拉面板覆盖*/
+$--cascader-menu-border: solid 1px $--color-border-light !default; /*级联面板边框样式*/
 $--cascader-menu-shadow: $--box-shadow-light !default;
 
 $--cascader-node-background-hover: $--background-hover !default; /*node 节点*/
@@ -728,6 +728,7 @@ $--switch-on-color: $--color-primary !default;
 $--switch-off-color: $--color-border-light !default;
 $--switch-font-size: $--font-size-base !default;
 $--switch-core-border-radius: 10px !default;
+
 // TODO: width 代码写死的40px 所以下面这三个属性都没意义 /*官方注释*/
 $--switch-width: 40px !default;
 $--switch-height: 20px !default;
@@ -829,7 +830,7 @@ $--table-border: 1px solid $--table-border-color !default;
 $--table-font-size: 12px !default;
 $--table-padding-padding-left: 4px !default;
 $--table-padding-padding-right: 4px !default;
-$--table-padding-paddingt: 4px  0px !default;
+$--table-padding-paddingt: 4px 0px !default;
 
 $--table-font-color: $--color-text-regular !default;
 $--table-header-font-color: $--color-text-primary !default;
@@ -995,11 +996,10 @@ $--menu-item-icon-color: $--color-text-regular !default;
 $--menu-item-background-color-hover: $--background-hover !default;
 $--menu-background-color: $--color-white !default;
 
-$--menu-title-font-color-active:$--color-primary !default;/*顶栏 导航已选中文字色*/
-$--menu-title-font-color-hover:$--color-primary !default;/*顶栏 我的工作台未选中悬停色*/
+$--menu-title-font-color-active: $--color-primary !default; /*顶栏 导航已选中文字色*/
+$--menu-title-font-color-hover: $--color-primary !default; /*顶栏 我的工作台未选中悬停色*/
 
 // 暗色模式
-
 
 /* Tab 标签页
 -------------------------- */
