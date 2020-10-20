@@ -120,9 +120,9 @@
     outline: none;
     padding: $--input-inner-padding;
     transition: $--border-transition-base;
-    width: 100%;
+    width: 100%; /*输入框宽度*/
     
-    // 
+    
     &::placeholder { /*对应：input 除文本域，禁用以外的所有占位文字 */
       color: $--input-placeholder-color ;
     }
