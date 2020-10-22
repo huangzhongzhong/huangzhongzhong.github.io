@@ -5,9 +5,9 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: $--switch-font-size;
-  line-height: $--switch-height;
-  height: $--switch-height;
+  font-size: $--switch-font-size; /*未找到对应*/
+  line-height: $--switch-height;  /*文字描述-文字行高-顶部向下，会挤掉下一行*/
+  height: $--switch-height; /*开关盒子高度，但不影响开关大小，因为代码写死了*/
   vertical-align: middle;
   @include when(disabled) {
     & .el-switch__core,
@@ -18,27 +18,27 @@
 
   @include e(label) {
     transition: .2s;
-    height: $--switch-height;
+    height: $--switch-height; /*文字描述行高-底部向上*/
     display: inline-block;
-    font-size: $--switch-font-size;
-    font-weight: 500;
+    font-size: $--switch-font-size; /*文字大小似乎也是写死的，只影响盒子高度*/
+    font-weight: 500; /*文字描述粗细*/
     cursor: pointer;
     vertical-align: middle;
-    color: $--color-text-primary;
+    color: $--color-text-primary;  /*默认文字样式*/
 
     @include when(active) {
-      color: $--color-primary;
+      color: $--color-primary; /*激活文字样式*/
     }
 
     @include m(left) {
-      margin-right: 10px;
+      margin-right: 10px; /*文字描述-开关间距*/
     }
     @include m(right) {
-      margin-left: 10px;
+      margin-left: 10px;/*开关-文字描述间距*/
     }
     & * {
-      line-height: 1;
-      font-size: $--switch-font-size;
+      line-height: 1; /*还是文字行高-居中*/
+      font-size: $--switch-font-size;/*文字大小*/
       display: inline-block;
     }
   }
@@ -51,17 +51,17 @@
     margin: 0;
   }
 
-  @include e(core) {
+  @include e(core) { /*core:核心 可能大部分是写死的*/
     margin: 0;
     display: inline-block;
     position: relative;
-    width: $--switch-width;
-    height: $--switch-height;
-    border: 1px solid $--switch-off-color;
+    width: $--switch-width; /*未找到对应*/
+    height: $--switch-height; /*开关高度*/
+    border: 1px solid $--switch-off-color; /*未找到对应*/
     outline: none;
-    border-radius: $--switch-core-border-radius;
+    border-radius: $--switch-core-border-radius; /*未找到对应*/
     box-sizing: border-box;
-    background: $--switch-off-color;
+    background: $--switch-off-color; /*未找到对应*/
     cursor: pointer;
     transition: border-color .3s, background-color .3s;
     vertical-align: middle;
@@ -69,23 +69,23 @@
     &:after {
       content: "";
       position: absolute;
-      top: 1px;
-      left: 1px;
-      border-radius: $--border-radius-circle;
+      top: 1px; /*未找到对应*/
+      left: 1px;  /*未找到对应*/
+      border-radius: $--border-radius-circle; /*未找到对应*/
       transition: all .3s;
-      width: $--switch-button-size;
-      height: $--switch-button-size;
-      background-color: $--color-white;
+      width: $--switch-button-size; /*未找到对应*/
+      height: $--switch-button-size; /*未找到对应*/
+      background-color: $--color-white; /*未找到对应*/
     }
   }
 
   @include when(checked) {
     .el-switch__core {
-      border-color: $--switch-on-color;
-      background-color: $--switch-on-color;
+      border-color: $--switch-on-color; /*未找到对应*/
+      background-color: $--switch-on-color; /*未找到对应*/
       &::after {
         left: 100%;
-        margin-left: -$--switch-button-size - 1px;
+        margin-left: -$--switch-button-size - 1px;  /*未找到对应*/
       }
     }
   }
@@ -98,12 +98,12 @@
     .el-switch__label {
       &.el-switch__label--left {
         span {
-          left: 10px;
+          left: 10px; /*未找到对应*/
         }
       }
       &.el-switch__label--right {
         span {
-          right: 10px;
+          right: 10px; /*未找到对应*/
         }
       }
     }

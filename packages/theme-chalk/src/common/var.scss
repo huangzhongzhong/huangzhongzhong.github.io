@@ -219,7 +219,7 @@ $--button-default-background-color: $--color-background-base !default;
 $--button-default-font-color: $--color-text-regular !default;
 $--button-default-border-color: $--color-border-base !default;
 
-$--button-default-background-color-hover: $--color-white !default;
+$--button-default-background-color-hover: $--color-primary-light-9 !default;
 $--button-default-border-color-hover: $--color-primary !default;
 $--button-default-font-color-hover: $--font-color-hover !default;
 
@@ -242,7 +242,7 @@ $--button-default-disabled-border-color: $--color-border-light !default;
 // 朴素按钮
 // 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixins-_button 文件。
 $--button-plain-background-color: $--color-background-base !default;
-$--button-plain-border: dashed 1px $--color-border-base !default;
+$--button-plain-border: $--border-base !default;
 $--button-plain-font-color: $--color-text-regular !default;
 
 $--button-plain-background-color-hover: $--color-white !default;
@@ -705,8 +705,6 @@ $--select-input-remote-height-mini: 14px !default; /*最小号内容高度*/
 
 /* Cascader 级联选择器
 -------------------------- */
-
-
 $--cascader-menu-font-color: $--color-text-regular !default;
 $--cascader-menu-selected-font-color: $--color-primary !default;
 $--cascader-menu-background: $--color-white !default;
@@ -721,6 +719,7 @@ $--cascader-node-color-disabled: $--disabled-font-color !default;
 
 $--cascader-color-empty: $--color-text-secondary !default;
 $--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
+
 
 /* Switch 开关
 -------------------------- */
@@ -757,7 +756,6 @@ $--slider-button-wrapper-offset: -15px !default;
 /* DatePicker 日期选择器
 --------------------------*/
 $--datepicker-font-color: $--color-text-regular !default;
-$--datepicker-off-font-color: $--color-text-placeholder !default;
 
 $--datepicker-header-font-color: $--color-text-regular !default;
 $--datepicker-icon-color: $--color-text-primary !default;
@@ -766,12 +764,12 @@ $--datepicker-border-color: $--color-border-light !default;
 $--datepicker-inner-border-color: $--color-border-light !default;
 
 // 日期选择器 选项 背景 颜色
-$--datepicker-inrange-background-color: $--background-hover !default;
+$--datepicker-inrange-background-color-hover: $--background-hover !default;
 // 日期选择器 选项 悬停 背景 颜色
 $--datepicker-inrange-hover-background-color: $--background-hover !default;
 
 $--datepicker-active-color: $--color-primary !default;
-$--datepicker-hover-font-color: $--color-primary !default;
+$--datepicker-hover-font-color: $--link-color-hover!default;
 // 日期选择器  单元 悬停 颜色
 $--datepicker-cell-hover-color: $--color-white !default;
 
