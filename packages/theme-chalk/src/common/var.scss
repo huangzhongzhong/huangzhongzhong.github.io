@@ -103,12 +103,10 @@ $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜�
 
 /* 悬停 */
 $--background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
-
 $--background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
+
 $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/
-
 $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
-
 $--font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 
 // 可清空图标悬停颜色
@@ -765,8 +763,6 @@ $--datepicker-inner-border-color: $--color-border-light !default;
 
 // 日期选择器 选项 背景 颜色
 $--datepicker-inrange-background-color-hover: $--background-hover !default;
-// 日期选择器 选项 悬停 背景 颜色
-$--datepicker-inrange-hover-background-color: $--background-hover !default;
 
 $--datepicker-active-color: $--color-primary !default;
 $--datepicker-hover-font-color: $--link-color-hover!default;

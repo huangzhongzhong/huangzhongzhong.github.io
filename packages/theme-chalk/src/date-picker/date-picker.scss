@@ -2,9 +2,6 @@
 @import "../mixins/mixins";
 @import "./picker-panel.scss";
 
-/*日期选择器
-*/
-// 日期选择器
 @include b(date-picker) {
   width: 322px; /*日期时间选择器 日期和时间点 默认+设置默认时间 宽度*/ /*日期选择器（选择日-默认）+其他日期单位 宽度*/
 
@@ -50,27 +47,27 @@
     margin: 12px; /*日期时间选择器 日期和时间点 标题盒子外边距*/ /*日期选择器 选择日+其他日期单位 标题盒子外边距*/
     text-align: center;
 
-    @include m(bordered) {
+    @include m(bordered) { /*日期选择器 其他日期单位 年+月标题*/
       margin-bottom: 0;
-      padding-bottom: 12px; /*日期选择器 其他日期单位 年+月标题分割线间距*/
-      border-bottom: solid 1px $--color-border-light; /*日期选择器 其他日期单位 年+月标题内容分割线*/
+      padding-bottom: 12px; /*分割线间距*/
+      border-bottom: solid 1px $--color-border-light; /*内容分割线*/
       & + .el-picker-panel__content {
         margin-top: 0;
       }
     }
   }
 
-  @include e(header-label) {
-    font-size: 16px; /*日期选择器 选择日+其他日期单位 标题*/ /*日期时间选择器 日期和时间点 标题*/
+  @include e(header-label) { /*日期选择器 选择日+其他日期单位 */ /*日期时间选择器 日期和时间点 */ /*未单独写都是对应这个*/
+    font-size: 16px; /*标题*/ 
     font-weight: 500;
     padding: 0 5px;  /*日期选择器 选择日+其他日期单位（周+多个日期） 标题*/   /*日期时间选择器 日期和时间点 标题*/ 
-    line-height: 22px;   /*日期选择器 选择日+其他日期单位 标题*/   /*日期时间选择器 日期和时间点 标题*/ 
+    line-height: 22px;   /*标题*/ 
     text-align: center;
     cursor: pointer;
-    color: $--color-text-regular; /*日期选择器 选择日+其他日期单位 标题*/   /*日期时间选择器 日期和时间点 标题*/ 
+    color: $--color-text-regular; /*标题*/  
 
     &:hover {
-      color: $--datepicker-hover-font-color;   /*日期选择器 选择日+其他日期单位 标题*/   /*日期时间选择器 日期和时间点 标题*/ 
+      color: $--datepicker-hover-font-color;   /*标题*/  
     }
 
     &.active {
