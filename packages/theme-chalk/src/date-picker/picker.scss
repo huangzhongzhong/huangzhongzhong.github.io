@@ -2,6 +2,7 @@
 @import "../common/var";
 @import "../common/transition";
 
+// 这个页面主要控制？
 @include b(date-editor) {
   position: relative;
   display: inline-block;
@@ -47,7 +48,8 @@
   .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
-    color: $--color-text-secondary ;
+    /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）+日期选择器（选择日期范围+选择月份范围）+时间选择器（任意时间范围）*/ 
+    color:  $--color-text-secondary ;
     float: left;
     line-height: 32px;
   }
@@ -63,10 +65,11 @@
     width: 39%;
     text-align: center;
     font-size: $--font-size-base;
+     /* 日期时间选择器（日期和时间范围+默认的起始与结束时刻）+日期选择器（选择日期范围+选择月份范围）+时间选择器（任意时间范围）*/ 
     color: $--color-text-regular;
-    
-    &::placeholder { /*对应：timepicker 任意时间范围 不包括固定时间范围  datapicker 选择日期范围 选择月份范围   datatimepicker 日期和时间范围  默认的起始与结束时刻 */
-      color: $--input-placeholder-color ;/*已改*/
+    /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
+    &::placeholder { 
+      color: $--color-text-placeholder ;
     }
   }
 
@@ -79,13 +82,14 @@
     line-height: 32px;
     font-size: 14px;
     width: 5%;
-    color: $--color-text-primary;
+    /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
+    color: $--color-text-primary;/*“至”“-”*/
   }
 
-  // TimePicker 任意时间范围 清空图标 
+  /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
   .el-range__close-icon {
     font-size: 14px;
-    color: $--input-clear-icon-hover-color ;
+    color: $--color-text-secondary;/*左图标*/
     width: 25px;
     display: inline-block;
     float: none ; /*曾经出现过问题，修改后正常*/
@@ -105,11 +109,13 @@
     line-height: 1;
   }
 
+  /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
   @include when(active) {
-    border-color: $--color-primary;
+    border-color: $--color-primary; /*边框激活*/
 
-    &:hover {
-      border-color: $--color-primary;
+    &:hover { /*边框输入中*/
+      border-color: $--color-primary; 
+      box-shadow: $--box-shadow-primary;
     }
   }
 
@@ -173,7 +179,7 @@
     }
   }
 
-  @include when(disabled) {
+  @include when(disabled) { /*不方便查看，暂且不动*/
     background-color: $--input-disabled-background;
     border-color: $--input-disabled-border;
     color: $--input-disabled-color;
