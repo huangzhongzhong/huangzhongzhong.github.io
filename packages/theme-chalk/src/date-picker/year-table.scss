@@ -1,12 +1,13 @@
 @import "../common/var";
 
+// 日期选择器（其他日期单位（年））
 @include b(year-table) {
   font-size: 12px;
   margin: -1px;
   border-collapse: collapse;
 
   .el-icon {
-    color: $--datepicker-icon-color;
+    color: $--datepicker-icon-color ;/*未找到对应*/
   }
 
   td {
@@ -16,38 +17,41 @@
 
     &.today {
       .cell {
-        color: $--color-primary;
+        color: $--color-primary; /*今年*/
         font-weight: bold;
       }
     }
 
-    &.disabled .cell {
+    &.disabled .cell {/*未找到对应*/
       background-color: $--color-background-base;
       cursor: not-allowed;
-      // 已审
       color: $--color-text-placeholder;
-
       &:hover {
-        // 已审
         color: $--color-text-placeholder;
       }
     }
 
-    .cell {
+    .cell {/*日期选择器（其他日期单位（年））*/
       width: 48px;
       height: 32px;
       display: block;
       line-height: 32px;
-      color: $--datepicker-font-color;
+      color: $--datepicker-font-color;/*未选中年份数字*/
       margin: 0 auto;
 
       &:hover {
-        color: $--datepicker-hover-font-color;
+        color: $--datepicker-hover-font-color; /*悬停年份数字*/
       }
     }
 
-    &.current:not(.disabled) .cell {
-      color: $--datepicker-active-color;
+    &.current:not(.disabled) .cell { /*选中单元*/ /*增加了选中块*/
+      width: 60px;
+      height: 36px;
+      line-height: 36px;
+      color: $--color-white;
+      font-weight: bold;
+      background-color: $--color-primary;
+      border-radius: 18px;
     }
   }
 }
