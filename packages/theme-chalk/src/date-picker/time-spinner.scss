@@ -29,7 +29,8 @@
       }
 
       .el-time-spinner__item:hover:not(.disabled):not(.active) {
-        background: $--color-white;
+        /* 时间选择器（任意时间点+任意时间范围）右侧框内时间块悬停 */
+        background: $--background-hover-ligher; 
         cursor: default;
       }
     }
@@ -93,18 +94,19 @@
     color: $--color-text-regular;
 
     &:hover:not(.disabled):not(.active) {
-      background: $--color-background-base;
+      /* 时间选择器（任意时间点+任意时间范围） 左侧框内时间块悬停 */
+      background: $--background-hover-ligher;
       cursor: pointer;
     }
 
     &.active:not(.disabled) {
-      color: $--color-text-primary;
+      color: $--color-text-primary; /*时间选择器（任意时间点+任意时间范围） 当前选中时间文字*/
       font-weight: bold;
     }
 
     &.disabled {
       // 已审
-      color: $--color-text-placeholder;
+      color: $--color-text-placeholder; /*时间选择器（任意时间点+任意时间范围） 禁用时间文字*/
       cursor: not-allowed;
     }
   }

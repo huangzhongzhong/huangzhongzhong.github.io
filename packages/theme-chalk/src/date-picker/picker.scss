@@ -2,7 +2,7 @@
 @import "../common/var";
 @import "../common/transition";
 
-// 这个页面主要控制？
+// 日期时间选择器中的图标文字边框颜色
 @include b(date-editor) {
   position: relative;
   display: inline-block;
@@ -194,7 +194,6 @@
       color: $--input-disabled-color;
       cursor: not-allowed;
       &::placeholder {/*可能是上面那个状态 &::placeholder的禁用状态*/
-        // 已审
         color: $--input-disabled-placeholder-color;
       }
     }
