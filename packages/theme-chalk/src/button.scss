@@ -255,8 +255,8 @@
       border-left-color: rgba($--color-white, 0.5);/*改动未见效果*/
     }
   }
-// 这个是？
-  @each $type in (primary, success, warning, danger, info) {
+
+  @each $type in (primary, success, warning, danger, info) { /*按钮组*/
     .el-button--#{$type} {
       &:first-child { /*第一页默认、悬停时右边框，但默认边框被下一个压住*/
         border-right-color: rgba($--color-white, 0.5); 

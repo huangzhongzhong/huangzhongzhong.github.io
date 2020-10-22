@@ -5,54 +5,54 @@
   font-size: 12px;
   user-select: none;
 
-  @include when(week-mode) {
+  @include when(week-mode) { /*week：周*/ /*日期选择器 其他日期单位 周*/
     .el-date-table__row {
       &:hover {
         div {
-          background-color: $--datepicker-inrange-background-color;
+          background-color: $--datepicker-inrange-background-color-hover ; 
         }
         td.available:hover {
           color: $--datepicker-font-color;
         }
-        td:first-child div {
+        td:first-child div {  /*周选择条 左侧*/
           margin-left: 5px;
           border-top-left-radius: 15px;
           border-bottom-left-radius: 15px;
         }
-        td:last-child div {
+        td:last-child div { /*周选择条 右侧*/
           margin-right: 5px;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
         }
       }
 
-      &.current div {
-        background-color: $--datepicker-inrange-background-color;
+      &.current div { /*周选择条 选中区域*/
+        background-color: $--datepicker-inrange-background-color-hover;
       }
     }
   }
 
   td {
     width: 32px;
-    height: 30px;
-    padding: 4px 0;
-    box-sizing: border-box;
+    height: 30px; /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
+    padding: 4px 0; /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
+    box-sizing: border-box; 
     text-align: center;
     cursor: pointer;
     position: relative;
 
-    & div {
-      height: 30px;
-      padding: 3px 0;
+    & div {  
+      height: 30px;  /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
+      padding: 3px 0; /*日期时间选择器（全部）*/ /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
       box-sizing: border-box;
     }
 
     & span {
-      width: 24px;
-      height: 24px;
+      width: 24px; /*日期时间选择器（全部） 选中*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  选中 */
+      height: 24px; /*日期时间选择器（全部） 选中*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  选中*/
       display: block;
       margin: 0 auto;
-      line-height: 24px;
+      line-height: 24px; /*日期时间选择器（全部） 单元*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  单元*/
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -61,53 +61,61 @@
 
     &.next-month,
     &.prev-month {
-      color: $--datepicker-off-font-color;
+      /*日期时间选择器（全部） 禁用日期*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  禁用日期*/
+      color: $--disabled-font-color; 
     }
 
     &.today {
       position: relative;
       span {
-        color: $--color-primary;
+        color: $--link-color-base; /*日期时间选择器（全部） 当前日期*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  当前日期*/
         font-weight: bold;
       }
       &.start-date span,
       &.end-date span {
-        color: $--color-white;
+        color: $--color-white; /*未找到对应*/
       }
     }
 
     &.available:hover {
-      color: $--datepicker-hover-font-color;
+       /*日期时间选择器（全部） 悬停文字*/  /*日期选择器 选择日+其他日期单位（多个日期）+选择日期范围  悬停文字*/
+      color:$--datepicker-hover-font-color; 
     }
 
     &.in-range div {
-      background-color: $--datepicker-inrange-background-color;
+      /*日期时间选择器（日期和时间范围+默认的起始与结束时刻） 已选中范围*/  /*日期选择器（选择日期范围） 已选中范围*/
+      background-color: $--datepicker-inrange-background-color-hover;
       &:hover {
+        /*日期时间选择器（日期和时间范围+默认的起始与结束时刻） 悬停单元背景*/  /*日期选择器（选择日期范围） 悬停单元背景*/
         background-color: $--datepicker-inrange-hover-background-color;
       }
     }
 
     &.current:not(.disabled) span {
-      color: $--color-white;
-      background-color: $--datepicker-active-color;
+      // 
+      color: $--color-white; /*日期时间选择器(日期和时间点) 选中文字*/ /*日期选择器(选择日) 选中文字*/
+      /*日期时间选择器(日期和时间点) 选中背景*/ /*日期选择器(选择日) 选中背景*/
+      background-color: $--datepicker-active-color; 
     }
     &.start-date div,
     &.end-date div {
-      color: $--color-white;
+       /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）选中文字*/  /*日期选择器（其他日期单位（周）+选择日期范围） 选中文字*/
+      color:  $--color-white;
     }
 
     &.start-date span,
     &.end-date span {
-      background-color: $--datepicker-active-color;
+       /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）选中单元背景*/  /*日期选择器（其他日期单位（周）+选择日期范围） 选中单元背景 */
+      background-color: $--datepicker-active-color; 
     }
 
-    &.start-date div {
+    &.start-date div {  /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）选中区域左侧*/  /*日期选择器（其他日期单位（周）+选择日期范围） 选中区域左侧 */
       margin-left: 5px;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
     }
 
-    &.end-date div {
+    &.end-date div { /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）选中区域右侧*/  /*日期选择器（其他日期单位（周）+选择日期范围） 选中区域右侧 */
       margin-right: 5px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
@@ -124,7 +132,7 @@
     &.selected div {
       margin-left: 5px;
       margin-right: 5px;
-      background-color: $--datepicker-inrange-background-color;
+      background-color: $--datepicker-inrange-background-color-hover;
       border-radius: 15px;
       &:hover {
         background-color: $--datepicker-inrange-hover-background-color;
