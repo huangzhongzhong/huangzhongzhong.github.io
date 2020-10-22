@@ -2,7 +2,7 @@
 
 // /* 对应：日期选择器 面板 */ 
 @include b(picker-panel) {
-  color: $--color-text-regular;
+  color: $--color-text-regular; /*$--color-text-regular*/
   border: 1px solid $--datepicker-border-color;
   box-shadow: $--box-shadow-light;
   background: $--color-white;
