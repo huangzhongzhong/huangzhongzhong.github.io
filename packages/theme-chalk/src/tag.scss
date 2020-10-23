@@ -7,14 +7,14 @@
   color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
 
   @include when(hit) {
-    border-color: $--tag-primary-color;
+    border-color: $--tag-primary-color;/*未找到对应*/
   }
 // 关闭样式
   .el-tag__close {
     // 颜色 混合 
     color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
     &:hover {
-      color: $--color-white;
+      color: $--color-white; /*主色标签关闭字体图标*/
       background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
     }
   }
@@ -25,13 +25,13 @@
     color: mix($--tag-info-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-info-color;
+      border-color: $--tag-info-color;/*未找到对应*/
     }
 
     .el-tag__close {
       color: mix($--tag-info-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: $--color-white; /*信息标签关闭字体图标*/
         background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -49,7 +49,7 @@
     .el-tag__close {
       color: mix($--tag-success-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: $--color-white; /*成功标签关闭字体图标*/
         background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -61,7 +61,7 @@
     color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-warning-color;
+      border-color: $--tag-warning-color; /*警告标签关闭字体图标*/
     }
 
     .el-tag__close {
@@ -85,21 +85,21 @@
     .el-tag__close {
       color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: $--color-white; /*危险标签关闭字体图标*/
         background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
       }
     }
   }
 }
 
-@include b(tag) {
-  @include genTheme(10%, 20%, 100%, 100%);
+@include b(tag) { /*全局标签样式*/
+  @include genTheme(10%, 0%, 100%, 100%); /*背景，边框，（复杂），关闭图标背景*/
   display: inline-block;
   height: 32px;
   padding: $--tag-padding;
   line-height: 30px;
   font-size: $--tag-font-size;
-  color: $--tag-primary-color;
+  color: $--tag-primary-color;/*默认标签字体颜色*/
   border-width: 1px;
   border-style: solid;
   border-radius: $--tag-border-radius;
@@ -129,10 +129,10 @@
   }
 
   @include m(plain) {
-    @include genTheme(0, 40%, 100%, 100%);
+    @include genTheme(10%, 80%, 100%, 100%);
   }
 
-  @include m(medium) {
+  @include m(medium) { /*中等标签*/
     height: 28px;
     line-height: 26px;
 
@@ -141,7 +141,7 @@
     }
   }
 
-  @include m(small) {
+  @include m(small) { /*小号标签*/
     height: 24px;
     padding: 0 8px;
     line-height: 22px;
@@ -151,7 +151,7 @@
     }
   }
 
-  @include m(mini) {
+  @include m(mini) { /*最小号标签*/
     height: 20px;
     padding: 0 5px;
     line-height: 19px;

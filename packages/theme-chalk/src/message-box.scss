@@ -9,9 +9,9 @@
   width: $--msgbox-width;
   padding-bottom: 10px;
   vertical-align: middle;
-  background-color: $--color-white;
-  border-radius: $--msgbox-border-radius;
-  border: 1px solid $--color-border-light;
+  background-color: $--color-white; /*所有弹窗背景*/
+  border-radius: $--msgbox-border-radius; 
+  border: 1px solid $--color-border-light; /*所有弹窗边框*/
   font-size: $--messagebox-font-size;
   box-shadow: $--box-shadow-light;
   text-align: left;
@@ -46,7 +46,8 @@
     margin-bottom: 0;
     font-size: $--messagebox-font-size;
     line-height: 1;
-    color: $--messagebox-title-color;
+    color: $--messagebox-title-color; /*所有标题文字*/
+    font-weight: 700;
   }
 
   @include e(headerbtn) {
@@ -61,12 +62,12 @@
     cursor: pointer;
 
     .el-message-box__close {
-      color: $--color-info;
+      color: $--color-info; /*所有关闭图标默认色*/
     }
 
     &:focus, &:hover {
       .el-message-box__close {
-        color: $--color-primary;
+        color: $--color-primary; /*所有关闭图标悬停色*/
       }
     }
 
@@ -74,7 +75,7 @@
 
   @include e(content) {
     padding: 10px $--msgbox-padding-primary;
-    color: $--messagebox-content-color;
+    color: $--messagebox-content-color;  /*所有内容文字*/
     font-size: $--messagebox-content-font-size;
   }
   
@@ -86,9 +87,10 @@
     padding-top: 15px;
 
     & input.invalid {
-      border-color: $--color-danger;
-      &:focus {
-        border-color: $--color-danger;
+      border-color: $--color-danger; /*提交内容-邮箱报错 边框颜色 默认*/
+      &:focus { /*提交内容-邮箱报错 边框颜色 输入中*/
+        border-color: $--color-danger; 
+        box-shadow: $--box-shadow-danger; 
       }
     }
   }
@@ -109,20 +111,20 @@
       padding-right: 12px;
     }
 
-    &.el-icon-success {
-      color: $--messagebox-success-color;
+    &.el-icon-success { 
+      color: $--messagebox-success-color; /*弹框字体图标 正确色*/
     }
 
     &.el-icon-info {
-      color: $--messagebox-info-color;
+      color: $--messagebox-info-color; /*弹框字体图标 信息色*/
     }
 
     &.el-icon-warning {
-      color: $--messagebox-warning-color;
+      color: $--messagebox-warning-color; /*弹框字体图标 警告色*/
     }
 
     &.el-icon-error {
-      color: $--messagebox-danger-color;
+      color: $--messagebox-danger-color; /*弹框字体图标 危险色*/
     }
   }
 
@@ -135,8 +137,8 @@
     }
   }
 
-  @include e(errormsg) {
-    color: $--color-danger;
+  @include e(errormsg) { 
+    color: $--color-danger; /*未找到对应*/
     font-size: $--messagebox-error-font-size;
     min-height: 18px;
     margin-top: 2px;
@@ -186,7 +188,7 @@
       text-align: center;
     }
 
-    @include e(content) {
+    @include e(content) { 
       $padding-horizontal: $--msgbox-padding-primary + 12px;
 
       padding-left: $padding-horizontal;

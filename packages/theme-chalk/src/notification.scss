@@ -7,9 +7,9 @@
   padding: $--notification-padding;
   border-radius: $--notification-radius;
   box-sizing: border-box;
-  border: 1px solid $--notification-border-color;
+  border: 1px solid $--notification-border-color !important;/*未找到对应*/
   position: fixed;
-  background-color: $--color-white;
+  background-color: $--color-white; /*全部背景色*/
   box-shadow: $--notification-shadow;
   transition: opacity .3s, transform .3s, left .3s, right .3s, top 0.4s, bottom .3s;
   overflow: hidden;
@@ -30,7 +30,7 @@
   @include e(title) {
     font-weight: bold;
     font-size: $--notification-title-font-size;
-    color: $--notification-title-color;
+    color: $--notification-title-color; /*所有标题字体色*/
     margin: 0;
   }
 
@@ -38,7 +38,7 @@
     font-size: $--notification-content-font-size;
     line-height: 21px;
     margin: 6px 0 0 0;
-    color: $--notification-content-color;
+    color: $--notification-content-color;  /*所有内容字体色*/
     text-align: justify;
 
     p {
@@ -56,29 +56,29 @@
     position: absolute;
     top: 18px;
     right: 15px;
-    cursor: pointer;
-    color: $--notification-close-color;
+    cursor: pointer; 
+    color: $--notification-close-color;  /*所有关闭按钮默认色*/  
     font-size: $--notification-close-font-size;
 
     &:hover {
-      color: $--notification-close-hover-color;
+      color: $--notification-close-hover-color; /*所有关闭按钮悬停色*/  
     }
   }
 
   .el-icon-success {
-    color: $--notification-success-icon-color;
+    color: $--notification-success-icon-color; /*所有正确图标色*/  
   }
 
   .el-icon-error {
-    color: $--notification-danger-icon-color;
+    color: $--notification-danger-icon-color; /*所有危险图标色*/ 
   }
 
   .el-icon-info {
-    color: $--notification-info-icon-color;
+    color: $--notification-info-icon-color; /*所有信息图标色*/ 
   }
 
   .el-icon-warning {
-    color: $--notification-warning-icon-color;
+    color: $--notification-warning-icon-color; /*所有警告图标色*/ 
   }
 }
 
