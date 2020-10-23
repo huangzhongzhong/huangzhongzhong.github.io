@@ -823,7 +823,7 @@ $--form-label-font-size: $--font-size-base !default;
 
 /* Table 表格 
 -------------------------- */
-$--table-border-color: #c1cbdb !default; /*特定独立色值*/
+$--table-border-color: #c1cbdb !default; /*表格分割线*/
 $--table-border: 1px solid $--table-border-color !default;
 $--table-font-size: 12px !default;
 $--table-padding-padding-left: 4px !default;
@@ -834,11 +834,15 @@ $--table-font-color: $--color-text-regular !default;
 $--table-header-font-color: $--color-text-primary !default;
 
 // 表格 行 悬停 背景 颜色
-$--table-row-hover-background-color: $--background-hover !default; /*row 行*/
+$--table-row-hover-background-color: $--background-hover !default; /*row 行*/ /*表尾合计行 背景*//*表格悬停颜色*/
 $--table-current-row-background-color: $--color-primary-light-9 !default; /*选中 行*/
 
-$--table-header-background-color: #ebf0fa !default; /*特定独立色值*/
+$--table-header-background-color: #ebf0fa !default; /*表头背景色*/
+$--table-stripe-background-color: #F5F7FA !default; /*表格斑马线色*/
 $--table-fixed-box-shadow: $--box-shadow-base !default;
+// 斑马线呢？
+
+
 
 /* Tag 标签
 -------------------------- */
