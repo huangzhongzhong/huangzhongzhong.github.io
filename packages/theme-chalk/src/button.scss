@@ -189,7 +189,7 @@
     &.is-disabled:hover,
     &.is-disabled:focus {
       border-color: transparent;
-      color:$--button-disabled-text-font-color;
+      color:$--button-disabled-text-font-color; /*按钮（文字按钮（禁用））*/
     }
   }
 }
