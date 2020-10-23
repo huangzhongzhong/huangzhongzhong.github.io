@@ -41,6 +41,9 @@ $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 重*/
 
+//蒙版 
+$--Mask-background-colo-base: rgba(0, 0, 0, .5) !default;
+
 // 透明颜色：直接写transparen
 
 /*衍生颜色*/
@@ -129,6 +132,10 @@ $--border-radius-base: 4px !default; /*大圆角*/
 $--border-radius-small: 2px !default; /*小圆角*/
 $--border-radius-circle: 100% !default; /*全圆角（只能用于方形）*/
 $--border-radius-zero: 0 !default; /*无圆角*/
+
+
+
+
 // 投影
 $--box-shadow-base: 0px 0px 4px rgba(0, 0, 0, 0.16),
   0px 3px 6px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09) !default;
@@ -173,6 +180,7 @@ $--index-popper: 2000 !default;
 --------------------------*/
 // 标题 内边距
 $--header-padding: 0 20px !default;
+
 
 /* --------------------------  
 全局组件样式-各组件的全局样式
@@ -781,12 +789,10 @@ $--rate-height: 20px !default;
 $--rate-font-size: $--font-size-base !default;
 $--rate-icon-size: 18px !default;
 $--rate-icon-margin: 6px !default;
-$--rate-icon-color: $--color-text-placeholder !default;
+$--rate-icon-color: $--color-text-secondary !default;
 
 /* Transfer 穿梭框
 --------------------------*/
-// 穿梭框 边框 颜色
-$--transfer-border-color: $--color-border-base !default;
 // 穿梭框 边框 圆角
 $--transfer-border-radius: $--border-radius-base !default;
 /// height||Other|4
@@ -796,8 +802,6 @@ $--transfer-panel-width: 200px !default;
 // 穿梭框 面板 标题 高度
 $--transfer-panel-header-height: 40px !default;
 
-// 穿梭框 面板 标题 背景 高度
-$--transfer-panel-header-background-color: $--color-background-base !default;
 /// height||Other|4
 // 穿梭框 面板 底部 高度
 $--transfer-panel-footer-height: 40px !default;

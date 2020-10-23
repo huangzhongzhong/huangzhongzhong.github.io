@@ -92,7 +92,7 @@
     color: $--color-text-secondary;/*左图标*/
     width: 25px;
     display: inline-block;
-    float: none ; /*曾经出现过问题，修改后正常*/
+    float: right ; /*曾经出现过问题，修改成none后正常，但是这个不能随便改，另一处改动后出现了字段消失的异常*/
     line-height: 32px;
     
   }

@@ -15,13 +15,13 @@
     padding: 0 30px;
   }
 
-  @include e(button) {
+  @include e(button) {/*被覆盖*/
     display: block;
     margin: 0 auto;
     padding: 10px;
     border-radius: 50%;
-    color: $--color-white;
-    background-color: $--color-primary;
+    color: $--color-white ;/*按钮文字颜色 被覆盖*/
+    background-color: $--color-primary;/*按钮背景颜色 被覆盖*/
     font-size: 0;
 
     @include when(with-texts) {
@@ -31,13 +31,11 @@
     @include when(disabled) {
       border: $--border-base;
       background-color: $--color-background-base;
-      // 已审
       color: $--color-text-placeholder;
 
       &:hover {
         border: $--border-base;
         background-color: $--color-background-base;
-        // 已审
         color: $--color-text-placeholder;
       }
     }
@@ -61,10 +59,10 @@
 }
 
 @include b(transfer-panel) {
-  border: 1px solid $--transfer-border-color;
+  border: 1px solid $--color-border-base;/*穿梭框（全部） 边框*/
   border-radius: $--transfer-border-radius;
   overflow: hidden;
-  background: $--color-white;
+  background: $--color-white;/*穿梭框（全部） 背景*/
   display: inline-block;
   vertical-align: middle;
   width: $--transfer-panel-width;
@@ -105,11 +103,11 @@
     }
 
     &.el-checkbox {
-      color: $--color-text-regular;
+      color: $--color-text-regular; /*穿梭框（全部） 备选项文字*/
     }
 
     &:hover {
-      color: $--color-primary;
+      color: $--color-primary; /*穿梭框（全部） 备选项文字*/
     }
 
     &.el-checkbox .el-checkbox__label {
@@ -157,12 +155,12 @@
   .el-transfer-panel__header {
     height: $--transfer-panel-header-height;
     line-height: $--transfer-panel-header-height;
-    background: $--transfer-panel-header-background-color;
+    background: $--color-background-base; /*穿梭框（全部） 标题背景*/
     margin: 0;
     padding-left: 15px;
-    border-bottom: 1px solid $--transfer-border-color;
+    border-bottom: 1px solid $--color-border-base;/*穿梭框（全部） 标题内容分割线*/
     box-sizing: border-box;
-    color: $--color-black;
+    color: $--color-black;/*未找到对应*/
 
     .el-checkbox {
       display: block;
@@ -170,13 +168,13 @@
 
       .el-checkbox__label {
         font-size: 16px;
-        color: $--color-text-primary;
+        color: $--color-text-primary;/*穿梭框（全部） 标题文字*/
         font-weight: normal;
 
         span {
           position: absolute;
           right: 15px;
-          color: $--color-text-secondary;
+          color: $--color-text-secondary;/*穿梭框（全部） 选项数量*/
           font-size: 12px;
           font-weight: normal;
         }
@@ -186,10 +184,10 @@
 
   .el-transfer-panel__footer {
     height: $--transfer-panel-footer-height;
-    background: $--color-white;
+    background: $--color-white;/*穿梭框（可自定义） 底栏背景*/
     margin: 0;
     padding: 0;
-    border-top: 1px solid $--transfer-border-color;
+    border-top: 1px solid $--color-border-base;/*穿梭框（可自定义） 内容底栏分割线*/
     position: absolute;
     bottom: 0;
     left: 0;
@@ -199,7 +197,7 @@
 
     .el-checkbox {
       padding-left: 20px;
-      color: $--color-text-regular;
+      color: $--color-text-regular;/*未找到对应*/
     }
   }
 
@@ -208,7 +206,7 @@
     height: $--transfer-item-height;
     line-height: $--transfer-item-height;
     padding: 6px 15px 0;
-    color: $--color-text-secondary;
+    color: $--color-text-secondary;/*“无数据文字色”*/
     text-align: center;
   }
 
