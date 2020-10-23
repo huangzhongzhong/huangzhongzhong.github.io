@@ -145,6 +145,7 @@ $--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12),
   0px 0px 4px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12) !default;
 
 $--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-7 !default;
+$--box-shadow-danger: 0px 0px 0px 2px  mix($--color-white, $--color-danger, 70%) !default;
 
 /* Typography
 -------------------------- */
@@ -870,6 +871,7 @@ $--tree-font-color: $--color-text-regular !default;
 // 树形控件 扩大 图标 颜色
 $--tree-expand-icon-color: $--color-text-secondary !default;
 
+
 /* Pagination 分页
 -------------------------- */
 $--pagination-font-size: 13px !default;
@@ -927,6 +929,8 @@ $--alert-icon-large-size: 28px !default;
 --------------------------*/
 $--loading-spinner-size: 42px !default; /*spinner 旋转*/
 $--loading-fullscreen-spinner-size: 50px !default; /*fullscreen 全屏*/
+$--loading-mask-background-color: rgba(255, 255, 255, .8) !default; /*区域加载  白色遮罩*/
+
 
 /* Message  消息提示
 -------------------------- */

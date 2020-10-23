@@ -6,8 +6,8 @@
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
-  color: $--avatar-font-color;
-  background: $--avatar-background-color;
+  color: $--avatar-font-color; /*展示类型 图标和文字色*/
+  background: $--avatar-background-color;  /*展示类型 图标和文字版背景 */
   width: $--avatar-large-size;
   height: $--avatar-large-size;
   line-height: $--avatar-large-size;
