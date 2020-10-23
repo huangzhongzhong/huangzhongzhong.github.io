@@ -13,7 +13,7 @@
   max-width: 100%;
   background-color: $--color-white;
   font-size: $--table-font-size;
-  color: $--table-font-color;
+  color: $--table-font-color;/*表格正文字体颜色*/
 
   // 数据为空
   @include e(empty-block) {
@@ -30,7 +30,7 @@
     // set empty text line height up to contrainer min-height as workaround.
     line-height: 60px;
     width: 50%;
-    color: $--color-text-secondary;
+    color: $--color-text-secondary;/**/
   }
 
   // 展开行
@@ -44,7 +44,7 @@
   @include e(expand-icon) {
     position: relative;
     cursor: pointer;
-    color: #666; 
+    color: $--color-text-regular; /*表格（展开行+树形数据与懒加载） 箭头图标*/
     font-size: 12px;
     transition: transform 0.2s ease-in-out;
     height: 20px;
@@ -63,7 +63,7 @@
   }
 
   @include e(expanded-cell) {
-    background-color: $--color-white;
+    background-color: $--color-background-base;/*展开行背景色*/
 
     // 纯属为了增加权重
     &[class*=cell] {
@@ -71,7 +71,7 @@
     }
 
     &:hover {
-      background-color: transparent !important;
+      background-color: $--color-background-base !important;
     }
   }
 
@@ -108,12 +108,12 @@
   }
 
   thead {
-    color: $--table-header-font-color;
+    color: $--color-text-primary;/*表格（全部）表头字体色*/
     font-weight: 500;
 
-    &.is-group { /*多级表头*/
+    &.is-group { 
       th {
-        background: $--table-header-background-color;
+        background: $--table-header-background-color;/*多级表头背景色*/
       }
     }
   }
@@ -174,7 +174,7 @@
   }
 
   tr {
-    background-color: $--color-white;
+    background-color: $--color-white;/*表格（全部） 默认表格内容背景色*/
 
     input[type="checkbox"] {
       margin: 0;
@@ -182,7 +182,7 @@
   }
 
   th.is-leaf, td {
-    border-bottom: $--table-border;
+    border-bottom: $--table-border;/*表格（全部） 分割线*/
   }
 
   th.is-sortable {
@@ -192,7 +192,7 @@
   th {
     overflow: hidden;
     user-select: none;
-    background-color: $--table-header-background-color;
+    background-color: $--table-header-background-color; /*表格（除多级表头外全部） 默认表头背景色*/
     &:first-child {
       .cell {
         padding-left: 8px !important;
@@ -209,7 +209,7 @@
       width: 100%;
 
       &.highlight {
-        color: $--color-primary;
+        color: $--color-primary;/*未找到对应*/
       }
     }
 
@@ -219,7 +219,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #ff4d51;
+      background: $--color-danger;/*未找到对应 原色值：ff4d51*/
       margin-right: 5px;
       vertical-align: middle;
     }
@@ -258,7 +258,7 @@
     @include share-rule(border-pseudo) {
       content: '';
       position: absolute;
-      background-color: $--table-border-color;
+      background-color: $--table-border-color;/*表格（全部） 结尾分割线*/
       z-index: 1;
     }
 
@@ -291,20 +291,20 @@
     }
 
     th, td {
-      border-right: $--table-border;
+      border-right: $--table-border;/*表格（全部） 竖分割线*/
 
       &:first-child .cell {
         padding-left: 8px; /*特殊表格左边距，对应带边框表格等*/
       }
     }
-
+//  1px solid red
     th.gutter:last-of-type {
-      border-bottom: $--table-border;
+      border-bottom: $--table-border; /*未找到对应*/
       border-bottom-width: 1px;
     }
 
     & th {
-      border-bottom: $--table-border;
+      border-bottom: $--table-border; /*多级表头表头横向分割线*/
     }
   }
 
@@ -327,7 +327,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: $--color-border-light;
+      background-color: $--color-border-light ;/*固定列—+固定列和表头+流体高度 增加的线*/
       z-index: 4;
     }
   }
@@ -336,8 +336,8 @@
     position: absolute;
     top: -1px;
     right: 0;
-    background-color: $--color-white;
-    border-bottom: $--table-border;
+    background-color:$--color-white; /*未找到对应*/
+    border-bottom: $--table-border; /*未找到对应*/
   }
 
   @include e(fixed-right) {
@@ -368,8 +368,8 @@
 
     & tbody td {
       border-top: $--table-border;
-      background-color: $--table-row-hover-background-color;
-      color: $--table-font-color;
+      background-color: $--table-row-hover-background-color; /*未找到对应*/
+      color: $--table-font-color; /*未找到对应*/
     }
   }
 
@@ -388,7 +388,7 @@
   @include e(footer-wrapper) {
     margin-top: -1px;
     td {
-      border-top: $--table-border;
+      border-top: $--table-border; /*表尾合计行 底分割线*/
     }
   }
 
@@ -401,8 +401,8 @@
     overflow: hidden;
 
     & tbody td {
-      background-color: $--table-row-hover-background-color;
-      color: $--table-font-color;
+      background-color: $--table-row-hover-background-color;/*表尾合计行 背景*/
+      color: $--table-font-color;/*表尾合计行 文字*/
     }
   }
 
@@ -432,13 +432,13 @@
     .el-table--border {
       @include when(scrolling-right) {
         ~ .el-table__fixed-right {
-          border-left: $--table-border;
+          border-left: $--table-border;/*未找到对应*/
         }
       }
 
       @include when(scrolling-left) {
         ~ .el-table__fixed {
-          border-right: $--table-border;
+          border-right: $--table-border;/*未找到对应*/
         }
       }
     }
@@ -464,22 +464,22 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: $--color-text-secondary ;
+      border-bottom-color: $--color-text-secondary ;/*排序列上箭头颜色*/
       top: -12px;
     }
 
     &.descending {
-      border-top-color: $--color-text-secondary ;
+      border-top-color: $--color-text-secondary ;/*排序列下箭头颜色*/
       bottom: -10px;
     }
   }
 
   .ascending .sort-caret.ascending {
-    border-bottom-color: $--color-primary;
+    border-bottom-color: $--color-primary;/*未找到对应*/
   }
 
   .descending .sort-caret.descending {
-    border-top-color: $--color-primary;
+    border-top-color: $--color-primary;/*未找到对应*/
   }
 
   .hidden-columns {
@@ -492,11 +492,11 @@
     & .el-table__body {
       & tr.el-table__row--striped {
         td {
-          background: #FAFAFA; /*独立色值*/
+          background: $--table-stripe-background-color; /*斑马线*/
         }
 
         &.current-row td {
-          background-color: $--table-current-row-background-color;
+          background-color: $--table-current-row-background-color;/*未找到对应*/
         }
       }
     }
@@ -507,14 +507,14 @@
       &, &.el-table__row--striped {
         &, &.current-row {
           > td {
-            background-color: $--table-row-hover-background-color;
+            background-color: $--table-row-hover-background-color;/*未找到对应*/
           }
         }
       }
     }
 
     tr.current-row > td {
-      background-color: $--table-current-row-background-color;
+      background-color: $--table-current-row-background-color;/*未找到对应*/
     }
   }
 
@@ -524,7 +524,7 @@
     top: 0;
     bottom: 0;
     width: 0;
-    border-left: $--table-border;
+    border-left: $--table-border; /*未找到对应*/
     z-index: 10;
   }
 
@@ -534,7 +534,7 @@
     cursor: pointer;
 
     & i {
-      color: $--color-info;
+      color: $--color-info; /*未找到对应*/
       font-size: $--table-font-size;
       transform: scale(.75);
     }
@@ -548,7 +548,7 @@
 
   @include m(enable-row-hover) {
     .el-table__body tr:hover > td {
-      background-color: $--table-row-hover-background-color;
+      background-color: $--table-row-hover-background-color; /*表格悬停颜色（除固定列，固定列和表头，流体高度）*/
     }
   }
 
