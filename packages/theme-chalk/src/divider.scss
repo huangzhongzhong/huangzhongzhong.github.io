@@ -2,7 +2,7 @@
 @import "mixins/mixins";
 
 @include b(divider) {
-  background-color: $--color-border-base;
+  background-color: $--color-border-base; /*默认 分割线色*/
   position: relative;
 
   @include m(horizontal) {
@@ -23,10 +23,10 @@
 
   @include e(text) {
     position: absolute;
-    background-color: $--color-white;
+    background-color: $--color-white; /*设置文案 文案背景色*/
     padding: 0 20px;
     font-weight: 500;
-    color: $--color-text-primary;
+    color: $--color-text-primary; /*设置文案 文字色+图标色*/
     font-size: 14px;
 
     @include when(left) {

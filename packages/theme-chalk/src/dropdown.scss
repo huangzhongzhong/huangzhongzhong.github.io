@@ -6,7 +6,7 @@
 @include b(dropdown) {
   display: inline-block;
   position: relative;
-  color: $--color-text-regular;
+  color: $--color-text-regular; /*未找到对应*/
   font-size: $--font-size-base;
 
   .el-button-group {
@@ -36,7 +36,7 @@
     }
 
     &.el-button--default::before {
-      background: mix($--button-default-border-color, transparent, 50%);
+      background: mix($--button-default-border-color, transparent, 50%); /*未找到对应*/
     }
 
     &:hover {
@@ -69,8 +69,8 @@
   z-index: 10;
   padding: 10px 0;
   margin: 5px 0;
-  background-color: $--color-white;
-  border: 1px solid $--color-border-light;
+  background-color: $--color-white;/*下拉菜单 背景*/
+  border: 1px solid $--color-border-light; /*下拉菜单 边框*/
   border-radius: $--border-radius-base;
   box-shadow: $--dropdown-menu-box-shadow;
 
@@ -80,12 +80,12 @@
     padding: 0 20px;
     margin: 0;
     font-size: $--font-size-base;
-    color: $--color-text-regular;
+    color: $--color-text-regular; /*下拉菜单 默认文字色+图标色*/
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover, &:focus {
-      background-color: $--dropdown-menuItem-hover-background;
-      color: $--dropdown-menuItem-hover-color;
+      background-color: $--dropdown-menuItem-hover-background; /*下拉菜单 悬停背景色*/
+      color: $--dropdown-menuItem-hover-color;  /*下拉菜单 悬停文字色*/
     }
 
     i {
@@ -97,21 +97,20 @@
 
       position: relative;
       margin-top: $divided-offset;
-      border-top: 1px solid $--color-border-light;
+      border-top: 1px solid $--color-border-light; /*下拉菜单 分割线色*/
 
       &:before {
         content: '';
         height: $divided-offset;
         display: block;
         margin: 0 -20px;
-        background-color: $--color-white;
+        background-color: $--color-white; /*下拉菜单 分割线下方色块*/
       }
     }
 
     @include when(disabled) {
       cursor: default;
-      // 已审
-      color: $--color-text-placeholder ;/*禁用 对应区域?*/
+      color: $--disabled-font-color ; /*下拉菜单 禁用文字色*/
       pointer-events: none;
     }
   }

@@ -15,17 +15,17 @@
     position: absolute;
     left: 4px;
     height: 100%;
-    border-left: 2px solid $--timeline-node-color;
+    border-left: 2px solid $--timeline-node-color; /*时间线 连接线*/
   }
 
   @include e(icon) {
-    color: $--color-white;
+    color: $--color-white; /*自定义节点样式  图标色*/
     font-size: $--font-size-small;
   }
 
   @include e(node) {
     position: absolute;
-    background-color: $--timeline-node-color;
+    background-color: $--timeline-node-color; /*默认时间节点颜色*/
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@
       height: $--timeline-node-size-large;
     }
 
-    @include m(primary) {
+    @include m(primary) {  /*自定义时间节点样式 节点颜色*/
       background-color: $--color-primary;
     }
     @include m(success) {
@@ -67,11 +67,11 @@
   }
 
   @include e(content) {
-    color: $--color-text-primary;
+    color: $--color-text-primary; /*默认标题文字色*/
   }
 
   @include e(timestamp) {
-    color: $--color-text-secondary;
+    color: $--color-text-secondary; /*默认时间文字色*/
     line-height: 1;
     font-size: $--font-size-small;
 
