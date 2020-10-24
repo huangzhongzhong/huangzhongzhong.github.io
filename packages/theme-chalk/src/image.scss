@@ -26,7 +26,7 @@
 
   @include e(placeholder) {
     @extend %size;
-    background: $--color-background-base;
+    background: $--color-background-base; /*未找到对应，可能是图片默认背景色*/
   }
 
   @include e(error) {
@@ -35,9 +35,8 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    background: $--color-background-base;
-    // 已审
-    color: $--color-text-placeholder;
+    background: $--color-background-base; /*加载失败（默认） 背景色*/
+    color: $--color-text-secondary; /*加载失败（默认） 文字色*/
     vertical-align: middle;
   }
 
@@ -77,6 +76,7 @@
     width: 40px;
     height: 40px;
     font-size: 40px;
+    color: white;
   }
 
   @include e(canvas) {
@@ -94,8 +94,8 @@
     width: 282px;
     height: 44px;
     padding: 0 23px;
-    background-color: #606266;
-    border-color: #fff;
+    background-color: #606266; /*大图预览 底栏图标背景色*/
+    border-color: #fff; /*未找到对应*/
     border-radius: 22px;
 
     @include e(actions__inner) {
@@ -104,7 +104,7 @@
       text-align: justify;
       cursor: default;
       font-size: 23px;
-      color: #fff;
+      color: #fff; /*大图预览 底栏图标色*/
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -143,7 +143,7 @@
     top: 0;
     left: 0;
     opacity: .5;
-    background: #000;
+    background: #000; /*背景蒙版颜色*/
   }
 }
 

@@ -6,7 +6,7 @@
 @include b(dialog) {
   position: relative;
   margin: 0 auto 50px;
-  background: $--dialog-background-color;
+  background: $--dialog-background-color; /*全部对话框 背景色*/
   border-radius: $--border-radius-small;
   box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
@@ -47,12 +47,12 @@
     font-size: $--message-close-size;
 
     .el-dialog__close {
-      color: $--color-info;
+      color: $--color-info; /*全部对话框 关闭图标色*/
     }
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: $--dialog-close-color-hover; /*关闭图标悬浮颜色*/
+        color: $--dialog-close-color-hover; /*全部对话框 关闭图标悬停色*/
       }
     }
   }
@@ -60,12 +60,13 @@
   @include e(title) {
     line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
-    color: $--color-text-primary;
+    color: $--color-text-primary; /*全部对话框 标题色*/
+    font-weight: 700;
   }
 
   @include e(body) {
     padding: ($--dialog-padding-primary + 10px) $--dialog-padding-primary;
-    color: $--color-text-regular;
+    color: $--color-text-regular; /*全部对话框 正文文字色*/
     font-size: $--dialog-content-font-size;
     word-break: break-all;
   }

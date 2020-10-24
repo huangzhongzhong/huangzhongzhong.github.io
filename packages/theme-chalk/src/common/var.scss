@@ -124,9 +124,7 @@ $--box-shadow-danger: 0px 0px 0px 2px mix($--color-white, $--color-danger, 70%) 
 
 /* Typography
 -------------------------- */
-// 字体路径？
 $--font-path: "fonts" !default;
-// 字体显示？
 $--font-display: "auto" !default;
 $--font-size-extra-large: 20px !default; /*主标题字体大小 最大*/
 $--font-size-large: 18px !default; /*标题字体大小 大号*/

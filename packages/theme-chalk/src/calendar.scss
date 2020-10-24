@@ -3,18 +3,19 @@
 @import "button";
 @import "button-group";
 
+// 日历
 @include b(calendar) {
-  background-color:#fff;
+  background-color:white; /*全部 背景色*/
 
   @include e(header) {
     display: flex;
     justify-content: space-between;
     padding: 12px 20px;
-    border-bottom: $--table-border;
+    border-bottom: $--table-border; /*未找到对应*/
   }
 
   @include e(title) {
-    color: #000000;
+    color: $--color-text-primary; /*全部 月份文字色*/
     align-self: center;
   }
 
@@ -29,15 +30,14 @@
 
   thead th {
     padding: 12px 0;
-    color: $--color-text-regular;
+    color: $--color-text-regular; /*全部 周文字色*/
     font-weight: normal;
   }
 
   &:not(.is-range) {
     td.prev,
     td.next {
-      // 已审
-      color: $--color-text-placeholder;
+      color: $--color-text-placeholder; /*基本 非本月文字色*/
     }
   }
 
@@ -48,11 +48,11 @@
     transition: background-color 0.2s ease;
 
     @include when(selected) {
-      background-color: $--calendar-selected-background-color;
+      background-color: $--calendar-selected-background-color; /*全部 选中背景色*/
     }
 
     @include when(today) {
-      color: $--color-primary;
+      color: $--color-primary; /*今日文字色*/
     }
   }
 
