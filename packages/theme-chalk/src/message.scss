@@ -7,12 +7,13 @@
   border-radius: $--border-radius-base;
   border-width: $--border-width-base;
   border-style: $--border-style-base;
-  border-color: $--color-border-light; /*消息 边框色*/
+  border-color: $--color-info-lighter; /*消息 边框色*/
   position: fixed;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
-  background-color: $--message-background-color; /*消息 背景色*/
+  background-color: $--color-white; /*消息 背景色*/
+  box-shadow: $--box-shadow-light;
   transition: opacity 0.3s, transform .4s, top 0.4s;
   overflow: hidden;
   padding: $--message-padding;
@@ -40,8 +41,8 @@
   }
 
   @include m(success) { /*所有正确状态消息提示*/
-    background-color: $--color-success-lighter;
-    border-color: $--color-success-light;
+    background-color: $--color-white;
+    border-color: $--color-success-lighter;
 
     .el-message__content {
       color: $--message-success-font-color; /*消息提示文字色*/
@@ -49,8 +50,8 @@
   }
 
   @include m(warning) { /*所有警告状态消息提示*/
-    background-color: $--color-warning-lighter;
-    border-color: $--color-warning-light;
+    background-color: $--color-white;
+    border-color: $--color-warning-lighter;
 
     .el-message__content {
       color: $--message-warning-font-color; /*警告状态消息提示文字色*/
@@ -58,8 +59,8 @@
   }
 
   @include m(error) { /*所有危险状态消息提示*/
-    background-color: $--color-danger-lighter;
-    border-color: $--color-danger-light;
+    background-color: $--color-white;
+    border-color: $--color-danger-lighter;
 
     .el-message__content {
       color: $--message-danger-font-color; /*危险状态消息提示文字色*/

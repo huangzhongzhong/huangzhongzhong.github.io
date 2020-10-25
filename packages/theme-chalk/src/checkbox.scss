@@ -315,7 +315,7 @@
       color: $--checkbox-button-checked-font-color;
       background-color: $--checkbox-button-checked-background-color;
       border-color: $--checkbox-button-checked-border-color;
-      box-shadow: -1px 0 0 0 $--color-primary-light-4; /*投影？体现在哪*/
+      box-shadow: -1px 0 0 0 $--color-primary-light-5; /*投影？体现在哪*/
     }
     &:first-child .el-checkbox-button__inner {
       /*第一个到最后一个*/
