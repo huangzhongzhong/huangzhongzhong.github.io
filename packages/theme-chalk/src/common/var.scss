@@ -48,27 +48,25 @@ $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
 
 /*衍生颜色*/
 /// 主题色衍生-叠加白色
-$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+// $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
 // hover色 /* #447CDD */
-$--color-primary-light-2: mix($--color-white,$--color-primary,20%) !default; 
-$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
-$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
-// 禁用色
-$--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default; /* #8aadea */
-// 原禁用按钮边框色
-$--color-primary-light-6: mix($--color-white,$--color-primary,60%) !default; /* #A1BDEE */
-$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+// $--color-primary-light-2: mix($--color-white,$--color-primary,20%) !default; 
+// 禁用色 /* #8aadea */
+$--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default; 
+
 // 原标签边框色  /* #d0def6 */
 $--color-primary-light-8: mix($--color-white,$--color-primary,80%) !default; 
 // 次要按钮背景色 /* #e8effb */
 $--color-primary-light-9: mix($--color-white,$--color-primary,90%) !default; 
+
+/// 功能色衍生
 // 功能色-轻-叠加白色-80%
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
 $--color-info-light: mix($--color-white, $--color-info, 80%) !default;
 
-// 功能色-更轻-叠加白色-90%
+// 功能色-更轻-叠加白色-90% 作为背景使用
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
 $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
@@ -112,14 +110,13 @@ $--border-radius-circle: 100% !default; /*全圆角（只能用于方形）*/
 $--border-radius-zero: 0 !default; /*无圆角*/
 
 // 投影
-$--box-shadow-base: 0px 0px 4px rgba(0, 0, 0, 0.16),
-  0px 3px 6px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09) !default;
-$--box-shadow-dark: 0px 16px 24px 2px rgba(0, 4, 10, 0.16),
-  0px 4px 32px 4px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
-$--box-shadow-light: 0px 2px 8px rgba(0, 4, 10, 0.12),
-  0px 0px 4px rgba(0, 4, 10, 0.12), 0px 0px 4px rgba(0, 4, 10, 0.12) !default;
+$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
+$--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
+  0px 4px 32px  rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
+$--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
 
-$--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-7 !default;
+$--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-8 !default;
 $--box-shadow-danger: 0px 0px 0px 2px mix($--color-white, $--color-danger, 70%) !default;
 
 /* Typography
@@ -202,7 +199,7 @@ $--button-default-background-color-hover: $--color-primary-light-9 !default;
 $--button-default-border-color-hover: $--color-primary !default;
 $--button-default-font-color-hover: $--font-color-hover !default;
 
-$--button-default-background-color-active: $--color-white !default;
+$--button-default-background-color-active: $--color-primary-light-9 !default;
 $--button-default-font-color-active: mix(
   $--color-black,
   $--color-primary,
@@ -220,7 +217,7 @@ $--button-default-disabled-border-color: $--color-border-light !default;
 
 // 朴素按钮
 // 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixins-_button 文件。
-$--button-plain-background-color: $--color-background-base !default;
+$--button-plain-background-color: $--color-white !default;
 $--button-plain-border: $--border-base !default;
 $--button-plain-font-color: $--color-text-regular !default;
 
@@ -240,7 +237,7 @@ $--button-plain-font-color-active: mix(
   $--button-active-shade-percent
 ) !default;
 
-$--button-plain-disabled-background-color: $--color-background-base !default;
+$--button-plain-disabled-background-color: $--color-white !default;
 $--button-plain-disabled-border-color: $--color-border-light !default;
 $--button-plain-disabled-font-color: $--color-text-placeholder !default;
 
