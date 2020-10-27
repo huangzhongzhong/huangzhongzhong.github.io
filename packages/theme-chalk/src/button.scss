@@ -53,7 +53,7 @@
     }
   }
   
-  @include when(plain) {/*对应： 基础用法 朴素按钮 */
+  @include when(plain) {/*对应：基础用法 朴素按钮 */
     background: $--button-plain-background-color ;
     border: $--button-plain-border;
     color: $--button-default-font-color;
