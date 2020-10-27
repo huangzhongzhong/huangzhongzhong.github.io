@@ -336,6 +336,7 @@ $--radio-disabled-checked-input-background: $--disabled-background-base !default
 $--radio-disabled-checked-font-color: $--disabled-font-color !default;
 
 $--radio-disabled-font-color: $--color-text-placeholder !default;
+$--radio-disabled-icon-color: $--color-text-placeholder !default; /*加了这个也没看见显示出啥效果*/
 
 // 带有边框
 // 全局样式

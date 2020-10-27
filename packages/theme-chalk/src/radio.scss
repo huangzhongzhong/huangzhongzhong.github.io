@@ -18,6 +18,14 @@
   margin-right: $--radio-bordered-margin-right; /* 右侧外边距，可以用于快速排列*/
   @include utils-user-select(none);
 
+  &:hover {
+    color: $--color-primary; /*单选边框悬停色*/
+    font-weight: 700;
+    @include e(inner) {
+     border-color: $--color-primary;
+    }
+  }
+
   @include when(bordered) {
     /*对应：单选 带有边框 */
     padding: $--radio-bordered-padding; /*边框padding*/
@@ -26,15 +34,24 @@
     box-sizing: border-box;
     height: $--radio-bordered-height; /*边框高度*/
     background: $--radio-bordered-background-color;
-    /*如何隐藏单选按钮?*/
+
+    &:hover {
+      color:$--color-primary ;
+    }
+
 
     &.is-checked {
       border-color: $--radio-bordered-checked-border-color;
+      background-color: $--color-primary-light-9 ;
+       &.is-disabled {
+        background-color: $--color-background-base ;
+        }
     }
 
     &.is-disabled {
       cursor: not-allowed;
       border-color: $--radio-bordered-disabled-border-color;
+
     }
 
     & + .el-radio.is-bordered {
@@ -120,11 +137,12 @@
         border-color: $--radio-disabled-input-border-color;
         cursor: not-allowed;
         //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
-        // &::after {
-        //   cursor: not-allowed;
-        //   // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来
-        //   background-color: $--radio-disabled-icon-color ;/*这个颜色var就删除了*/
-        // }
+        &::after {
+          cursor: not-allowed;
+          // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来
+          // 被覆盖的样式，要不要留？/*暂不删除。
+          background-color: $--radio-disabled-icon-color ;
+        }
 
         & + .el-radio__label {
           cursor: not-allowed;
@@ -183,17 +201,15 @@
     box-sizing: border-box; /*加边框 对应未知*/
 
     &:hover {
-      border-color: $--radio-input-border-color-hover;
+      border-color: $--radio-input-border-color-hover; /*单选边框悬停色*/
     }
 
     &::after {
       /*控制所有单选按钮小点的大小*/
-      width: $--radio-input-icon-width;
-      height: $--radio-input-icon-height;
-      border: $--radio-input-icon-border;
-      border-color: $--radio-input-icon-border-color;
+      width: 4px;
+      height: 4px;
       border-radius: $--radio-input-border-radius;
-      background-color: $--radio-input-icon-background-color;
+      background-color: $--color-white;
 
       content: "";
       position: absolute;
