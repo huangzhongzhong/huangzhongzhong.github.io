@@ -18,7 +18,8 @@
       background-color: $--select-dropdown-background; /*已选中选项背景颜色*/
 
       &.hover {
-        background-color: $--select-option-hover-background; /*已选中选项悬停背景*/
+        font-weight: $--options-font-weight-hover; /*未找到对应*/
+        background-color: $--select-option-hover-background; /*未找到对应*/
       }
 
       &::after { 

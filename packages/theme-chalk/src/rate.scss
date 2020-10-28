@@ -1,6 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
+// 评分
 @include b(rate) {
   height: $--rate-height;
   line-height: 1;
@@ -21,7 +22,7 @@
     display: inline-block;
     font-size: $--rate-icon-size;
     margin-right: $--rate-icon-margin;
-    color: $--rate-icon-color ;/*普通改动无效果,最高级改动覆盖过多，还是等于不能改*/
+    color: $--rate-icon-color ;/*评分图标色*//*普通改动无效果,最高级改动覆盖过多，还是等于不能改*/
     transition: .3s;
     &.hover {
       transform: scale(1.15);

@@ -7,7 +7,7 @@
 @include b(message-box) {
   display: inline-block;
   width: $--msgbox-width;
-  padding-bottom: 10px;
+  padding-bottom: 24px;
   vertical-align: middle;
   background-color: $--color-white; /*所有弹窗背景*/
   border-radius: $--msgbox-border-radius; 
@@ -38,7 +38,7 @@
   @include e(header) {
     position: relative;
     padding: $--msgbox-padding-primary;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 
   @include e(title) {
@@ -48,6 +48,13 @@
     line-height: 1;
     color: $--messagebox-title-color; /*所有标题文字*/
     font-weight: 700;
+    &:before { /*标题加色块*/
+      content: "";
+      width: 4px;
+      border-left: 4px solid $--color-primary;
+      padding-left: 12px;
+      
+    }
   }
 
   @include e(headerbtn) {
@@ -74,7 +81,7 @@
   }
 
   @include e(content) {
-    padding: 10px $--msgbox-padding-primary;
+    padding: 24px $--msgbox-padding-primary; /*全部内容区*/
     color: $--messagebox-content-color;  /*所有内容文字*/
     font-size: $--messagebox-content-font-size;
   }
@@ -145,7 +152,7 @@
   }
 
   @include e(btns) {
-    padding: 5px 15px 0;
+    padding: 0 24px 0;
     text-align: right;
 
     & button:nth-child(2) {

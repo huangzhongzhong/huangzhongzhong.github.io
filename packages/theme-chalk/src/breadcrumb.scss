@@ -2,7 +2,7 @@
 @import "mixins/utils";
 @import "common/var";
 
-@include b(breadcrumb) {
+@include b(breadcrumb) { /*面包屑*/
   font-size: 14px;
   line-height: 1;
   @include utils-clearfix;
