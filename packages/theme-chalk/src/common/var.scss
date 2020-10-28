@@ -115,9 +115,11 @@ $--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 
 $--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
   0px 4px 32px  rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
 $--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
+$--box-shadow-focus-primary: 0 0 2px 2px  $--color-primary !default;
 
 $--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-8 !default;
 $--box-shadow-danger: 0px 0px 0px 2px mix($--color-white, $--color-danger, 70%) !default;
+
 
 /* Typography
 -------------------------- */

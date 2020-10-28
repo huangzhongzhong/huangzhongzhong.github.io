@@ -14,6 +14,14 @@
   user-select: none;
   margin-right: 30px;
 
+  &:hover {
+    color: $--color-primary; /*单选边框悬停色*/
+    font-weight: 700;
+    @include e(inner) {
+     border-color: $--color-primary;
+    }
+  }
+
   @include when(bordered) {
     /*带有边框*/
     padding: $--checkbox-bordered-padding;
@@ -133,8 +141,7 @@
         }
       }
 
-      &.is-indeterminate {
-        /*对应 全选*/
+      &.is-indeterminate {  /*对应 部分选中*/
         .el-checkbox__inner {
           background-color: $--checkbox-disabled-checked-input-background;
           border-color: $--checkbox-disabled-checked-input-border-color;
