@@ -87,7 +87,7 @@
     margin-top: 8px;
 
     &:hover {
-      color: $--font-color-hover;
+      color: $--options-font-color-hover;
     }
 
     @include when(disabled) {

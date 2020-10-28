@@ -83,9 +83,9 @@
     color: $--color-text-regular; /*下拉菜单 默认文字色+图标色*/
     cursor: pointer;
     outline: none;
-    &:not(.is-disabled):hover, &:focus {
-      background-color: $--dropdown-menuItem-hover-background; /*下拉菜单 悬停背景色*/
-      color: $--dropdown-menuItem-hover-color;  /*下拉菜单 悬停文字色*/
+    &:not(.is-disabled):hover, &:focus { /*影响不到选择器*/
+      background-color: $--options-background-hover; /*下拉菜单 悬停背景色*/
+      color: $--options-font-color-hover;  /*下拉菜单 悬停文字色*/
     }
 
     i {

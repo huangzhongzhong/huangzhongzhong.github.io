@@ -2,7 +2,7 @@
 @import "mixins/utils";
 @import "common/var";
 
-@include b(progress) {
+@include b(progress) { /*进度条*/
   position: relative;
   line-height: 1;
 

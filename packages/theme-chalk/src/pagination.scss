@@ -3,7 +3,7 @@
 @import "common/var";
 @import "select";
 
-@include b(pagination) { /*无特殊说明 均除带背景色的分页*/
+@include b(pagination) {/*分页*/  /*无特殊说明 均除带背景色的分页*/
   white-space: nowrap;
   padding: 2px 5px;
   color: $--pagination-font-color; /*所有未选中文字 */

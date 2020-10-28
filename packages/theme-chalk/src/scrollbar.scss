@@ -1,6 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
+// 选择器下拉选项？
 @include b(scrollbar) {
   overflow: hidden;
   position: relative;
@@ -37,7 +38,8 @@
     background-color: $--scrollbar-background-color;
     transition: .3s background-color;
 
-    &:hover {
+    &:hover { /*未找到对应*/
+      font-weight: $--options-font-weight-hover; /*增加的*/
       background-color: $--scrollbar-hover-background-color;
     }
   }

@@ -110,7 +110,7 @@
     line-height: 18px;
     font-size: $--select-input-font-size;
     &:hover {
-      color:  red; /* 未找到对应 */
+      color:  $--select-close-hover-color; /* 未找到对应 */
     }
   }
 

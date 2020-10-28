@@ -11,8 +11,8 @@
   @include e(inner) {
     display: block;
     resize: vertical;
-    padding: $--input-textarea-line-height-padding;
-    line-height: $--input-textarea-line-height;
+    padding: $--input-textarea-line-height-padding; /*文本域内容间距*/
+    line-height: $--input-textarea-line-height;  /*文本域行高*/
     box-sizing: border-box;
     width: 100%;
     font-size: inherit;
@@ -35,7 +35,8 @@
       outline: none;
       border-color: $--input-focus-border;
       box-shadow: $--input-focus-shadow;
-      position: relative;
+      position: relative;  /*根源加的，解决复合文本框层级问题*/
+     
     }
   }
 
@@ -54,7 +55,6 @@
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
       cursor: not-allowed;
-      //  
       &::placeholder { /*应该是文本域禁用状态*/
         color: $--input-disabled-placeholder-color;
       }
@@ -134,9 +134,9 @@
     &:focus {
       outline: none;
       border-color: $--input-focus-border;
-      box-shadow: $--input-focus-shadow;
-      position: relative;
-      z-index: 100;
+      box-shadow: $--input-focus-shadow; 
+      position: relative;  /*根源加的，解决复合文本框层级问题*/
+      // z-index: 1; /*这个方法会导致输入框在焦点的时候隐藏图标，不行*/
     }
   }
 
@@ -278,9 +278,6 @@
   border-collapse: separate;
   border-spacing:0;
  
-
-  
-
   > .el-input__inner {
     vertical-align: middle;
     display: table-cell;
@@ -303,7 +300,7 @@
     }
 
     .el-select,
-    .el-button { /*搜索图标*/
+    .el-button { /*选择按钮和搜索图标都有影响*/
       display: inline-block;
       margin: $--input-group-margin;
     }
