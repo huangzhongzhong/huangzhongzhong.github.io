@@ -64,6 +64,7 @@
       margin-right: 8px;
     }
     &:hover {
+      font-weight: $--options-font-weight-hover;
       background-color: $--tree-node-hover-background-color; /*悬停行背景*/
     }
 

@@ -28,6 +28,7 @@
   &:hover,
   &:focus {
     outline: none;
+    font-weight: $--Modal-title-font-weight;
     background-color: $--menu-item-background-color-hover; /*侧栏（默认颜色） 除导航一和选项4之外的导航悬停背景色*/
   }
 
@@ -84,9 +85,10 @@
       }
 
       &.is-active {
-        .el-submenu__title { /*未找到对应，这个属性可能写死了*/
+        .el-submenu__title { /*未找到对应，这个属性可能写死了*/ 
           border-bottom: 2px solid $--color-primary; 
           color: $--menu-title-font-color-active;
+          font-weight: $--Modal-title-font-weight;/*我的工作台，已选中字体粗细*/
         }
       }
 
@@ -134,6 +136,7 @@
       color: $--menu-title-font-color-hover; /*顶栏（默认颜色 “处理中心+订单管理”悬停文字色*/
     }
     & > .el-menu-item.is-active {
+      font-weight: $--Modal-title-font-weight;
       border-bottom: 2px solid $--color-primary;
       color:$--menu-title-font-color-active; /*顶栏（默认颜色 “处理中心+订单管理”已选中文字色*/
     }
@@ -233,7 +236,7 @@
     @include menu-item;
 
     &:hover {
-      background-color: $--menu-item-background-color-hover;  /*侧栏 ”导航一+选项四“悬停背景色*/
+      background-color: $--menu-item-background-color-hover;  /*侧栏(默认颜色) ”导航一+选项四“悬停背景色*/
     }
   }
   & .el-menu {

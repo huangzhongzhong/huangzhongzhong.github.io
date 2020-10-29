@@ -300,7 +300,7 @@
 //  1px solid red
     th.gutter:last-of-type {
       border-bottom: $--table-border; /*未找到对应*/
-      border-bottom-width: 1px;
+      border-bottom-width: 1px; /*未找到对应，不是控制流体高度的*/
     }
 
     & th {

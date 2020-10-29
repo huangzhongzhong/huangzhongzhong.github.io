@@ -76,7 +76,7 @@
     }
   }
 
-  @include e(wrap) {
+  @include e(wrap) { /*流体高度最大值，改动并没有反应*/
     max-height: 280px;
   }
 

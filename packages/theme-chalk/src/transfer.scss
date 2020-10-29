@@ -170,6 +170,9 @@
         font-size: 16px;
         color: $--color-text-primary;/*穿梭框（全部） 标题文字*/
         font-weight: normal;
+        &:hover{
+          color: $--color-primary;
+        }
 
         span {
           position: absolute;

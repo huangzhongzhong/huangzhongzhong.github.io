@@ -44,6 +44,8 @@
       margin: 0 auto;
       border-radius: 18px;
       &:hover {
+        background-color: $--options-background-hover;
+        font-weight: $--options-font-weight-hover;
         color: $--datepicker-hover-font-color /*悬停月份字体*/
       }
     }
