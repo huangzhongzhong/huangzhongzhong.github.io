@@ -47,7 +47,7 @@
     font-size: $--messagebox-font-size;
     line-height: 1;
     color: $--messagebox-title-color; /*所有标题文字*/
-    font-weight: 700;
+    font-weight: $--Modal-title-font-weight;
     &:before { /*标题加色块*/
       content: "";
       width: 4px;

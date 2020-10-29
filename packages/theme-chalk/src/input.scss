@@ -136,6 +136,7 @@
       border-color: $--input-focus-border;
       box-shadow: $--input-focus-shadow; 
       position: relative;  /*根源加的，解决复合文本框层级问题*/
+      
       // z-index: 1; /*这个方法会导致输入框在焦点的时候隐藏图标，不行*/
     }
   }
@@ -340,6 +341,7 @@
       &:focus {
         border-top-left-radius: $--input-border-radius;
         border-bottom-left-radius: $--input-border-radius;
+        z-index: 1; /*增加了优先级，让输入框悬停阴影得以正常显示*/
       }
     }
     .el-select .el-input.is-focus .el-input__inner {
@@ -354,6 +356,7 @@
       &:focus {
         border-top-right-radius: $--input-border-radius;
         border-bottom-right-radius: $--input-border-radius;
+        z-index: 1; /*增加了优先级，让输入框悬停阴影得以正常显示*/
       }
     }
     .el-select .el-input.is-focus .el-input__inner {

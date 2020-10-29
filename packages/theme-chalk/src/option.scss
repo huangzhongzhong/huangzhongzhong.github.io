@@ -22,7 +22,7 @@
       cursor: not-allowed;
 
       &:hover { /*禁用选项还需要hover态？不加hover态的话才会显示出其他样式*/
-        color: $--disabled-font-color;/*没有效果，禁用状态还是会变色*/
+        color: $--disabled-font-color; /*没有效果，禁用状态还是会变色*/
         background-color: $--color-white;
       }
     }

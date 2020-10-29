@@ -16,7 +16,7 @@
 
   &:hover {
     color: $--color-primary; /*单选边框悬停色*/
-    font-weight: 700;
+    font-weight: $--options-font-weight-hover;
     @include e(inner) {
      border-color: $--color-primary;
     }
