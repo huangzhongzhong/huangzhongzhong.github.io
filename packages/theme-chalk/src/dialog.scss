@@ -61,7 +61,7 @@
     line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
     color: $--color-text-primary; /*全部对话框 标题色*/
-    font-weight: 700;
+    font-weight: $--Modal-title-font-weight;
     padding-bottom: 0 !important; /*未找到对应*/
     &:before { /*标题加色块*/
       content: "";
