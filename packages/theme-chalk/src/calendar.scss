@@ -48,10 +48,12 @@
     transition: background-color 0.2s ease;
 
     @include when(selected) {
+      font-weight: $--options-font-weight-active; 
       background-color: $--calendar-selected-background-color; /*全部 选中背景色*/
     }
 
     @include when(today) {
+      font-weight: $--options-font-weight-active;
       color: $--color-primary; /*今日文字色*/
     }
   }
@@ -74,6 +76,7 @@
     height: $--calendar-cell-width;
     &:hover {
       cursor: pointer;
+      font-weight: $--options-font-weight-hover;
       background-color: $--calendar-selected-background-color; /*日历单元悬浮色*/
     }
   }

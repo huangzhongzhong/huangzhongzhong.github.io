@@ -20,7 +20,7 @@
   }
   @include e(new-tab) {
     float: right;
-    border: 1px solid $--color-border-light; /*动态增减标签页 加号边框*/
+    border: 1px solid $--color-border-base; /*动态增减标签页 加号边框*/
     height: 18px;
     width: 18px;
     line-height: 18px;
@@ -132,10 +132,12 @@
     }
 
     @include when(active) {
+      font-weight: $--options-font-weight-active;
       color: $--color-primary /*全部标签文字选中色*/
     }
 
     &:hover {
+      font-weight: $--options-font-weight-hover;
       color: $--color-primary; /*全部标签文字悬停色*/
       cursor: pointer;
     }
@@ -151,13 +153,13 @@
   }
   @include m(card) {
     > .el-tabs__header {
-      border-bottom: 1px solid $--color-border-light; /*选项卡+动态增减标签页+自定义增加标签页触发器 底分割线*/
+      border-bottom: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 底分割线*/
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
       content: none;
     }
     > .el-tabs__header .el-tabs__nav {
-      border: 1px solid $--color-border-light; /*选项卡+动态增减标签页+自定义增加标签页触发器 左上右分割线*/
+      border: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 左上右分割线*/
       border-bottom: none;
       border-radius: 4px 4px 0 0;
       box-sizing: border-box;
@@ -179,7 +181,7 @@
     }
     > .el-tabs__header .el-tabs__item {
       border-bottom: 1px solid transparent;
-      border-left: 1px solid $--color-border-light; /*选项卡+动态增减标签页+自定义增加标签页触发器 竖分割线*/
+      border-left: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 竖分割线*/
       transition: color .3s cubic-bezier(.645,.045,.355,1), padding .3s cubic-bezier(.645,.045,.355,1);
       &:first-child {
         border-left: none;
@@ -218,7 +220,7 @@
     }
     > .el-tabs__header { 
       background-color: $--color-background-base; /*卡片化 未选中标题背景色*/
-      border-bottom: 1px solid $--color-border-light; /*卡片化 未选中标题背景色*/
+      border-bottom: 1px solid $--color-border-base; /*卡片化 未选中标题边框色*/
       margin: 0;
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
