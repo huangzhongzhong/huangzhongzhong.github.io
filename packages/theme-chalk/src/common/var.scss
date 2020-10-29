@@ -81,7 +81,8 @@ $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜�
 $--options-background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
 $--options-background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
-$--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/
+$--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/ 
+$--options-font-weight-active: 700 !default; /*选项选中字体粗细*/ 
 
 // 其他悬停
 $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/

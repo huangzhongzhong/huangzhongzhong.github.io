@@ -6,7 +6,7 @@
 @include b(dropdown) {
   display: inline-block;
   position: relative;
-  color: $--color-text-regular; /*未找到对应*/
+  color: $--color-text-regular ; /*未找到对应*/
   font-size: $--font-size-base;
 
   .el-button-group {
@@ -84,6 +84,7 @@
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover, &:focus { /*影响不到选择器*/
+      font-weight: $--options-font-weight-active;
       background-color: $--options-background-hover; /*下拉菜单 悬停背景色*/
       color: $--options-font-color-hover;  /*下拉菜单 悬停文字色*/
     }

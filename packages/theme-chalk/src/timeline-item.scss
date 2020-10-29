@@ -19,7 +19,7 @@
   }
 
   @include e(icon) {
-    color: $--color-white; /*自定义节点样式  图标色*/
+    color: $--color-white; /*自定义节点样式  图标色 三个小点*/
     font-size: $--font-size-small;
   }
 
