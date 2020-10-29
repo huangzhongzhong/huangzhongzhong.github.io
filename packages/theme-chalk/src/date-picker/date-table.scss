@@ -9,9 +9,9 @@
     .el-date-table__row {
       &:hover {
         div {
-          background-color: $--datepicker-inrange-background-color-hover ; 
+          background-color: $--datepicker-inrange-background-color-hover ; /*悬停区域*/
         }
-        td.available:hover {
+        td.available:hover { /*周文字色*/
           color: $--datepicker-font-color;
         }
         td:first-child div {  /*周选择条 左侧*/
@@ -41,21 +41,26 @@
     cursor: pointer;
     position: relative;
 
-    & div {  /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
+    div {  /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围 */
       height: 30px;  
       padding: 3px 0; 
       box-sizing: border-box;
     }
 
-    & span { /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围*/
+    span { /*日期时间选择器（全部）*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围*/
       width: 24px; /*选中*/ 
       height: 24px; /*选中*/
       margin: 0 auto;
       line-height: 24px; /*单元*/ 
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%); /*可能是位置移动*/
       border-radius: 50%;
+      &:hover{ /*添加悬停控制要在这里加，不能在字体那里加*/
+        width: 24px; /*选中*/ 
+        height: 24px; /*选中*/
+        background-color: $--options-background-hover;
+      }
     }
 
     &.next-month,
@@ -68,7 +73,7 @@
       position: relative;
       span {
         color: $--link-color-base; /*日期时间选择器（全部） 当前日期*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  当前日期*/
-        font-weight: bold;
+        font-weight: $--options-font-weight-hover;
       }
       &.start-date span,
       &.end-date span {
@@ -77,7 +82,8 @@
     }
 
     &.available:hover {
-       /*日期时间选择器（全部） 悬停文字*/  /*日期选择器 选择日+其他日期单位（多个日期）+选择日期范围  悬停文字*/
+      /*日期时间选择器（全部） 悬停文字*/  /*日期选择器 选择日+其他日期单位（多个日期）+选择日期范围  悬停文字*/
+      font-weight: 700;
       color:$--datepicker-hover-font-color; 
     }
 
@@ -126,18 +132,20 @@
     &.selected div {  /*日期选择器（其他日期单位（多个日期）） */
       margin-left: 5px;    /*选中单元*/
       margin-right: 5px;
-      background-color: $--datepicker-inrange-background-color-hover;    /*选中单元外圈*/
+      background-color: $--datepicker-inrange-background-color-hover;    /*已选中单元外圈*/
       border-radius: 15px;
-      &:hover {
-        background-color: $--color-primary;/*选中单元外圈*/
-        /*待补动效*/
-      }
+      // &:hover {
+      //   background-color: $--color-primary-light-5;/*选中单元外圈*/
+      // }
     }
 
     &.selected span { /*日期选择器（其他日期单位（多个日期）） 选中单元*/
-      background-color: $--datepicker-active-color ; 
-      color:  $--color-white ;
+      background-color: $--datepicker-active-color ; /*已选中单元内圈*/
+      color: $--color-white ;
       border-radius: 15px;
+      &:hover {
+        background-color: $--color-primary-light-3;/*选中单元外圈*/
+      }
     }
 
     &.week {

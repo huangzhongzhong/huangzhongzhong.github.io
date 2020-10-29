@@ -3,7 +3,7 @@
 @import "common/var";
 @import "select";
 
-@include b(pagination) {/*分页*/  /*无特殊说明 均除带背景色的分页*/
+@include b(pagination) {/*分页*/  /*无特殊说明 均排除带背景色的分页*/
   white-space: nowrap;
   padding: 2px 5px;
   color: $--pagination-font-color; /*所有未选中文字 */
@@ -71,6 +71,11 @@
     cursor: pointer;
     margin: 0;
     color: $--pagination-button-color;   /*所有默认单箭头*/
+    // @include when(background) { /*带有背景色的分页*/
+    //   &:hover{
+    //     color: red;
+    //   }
+    // }
  
     .el-icon {
       display: block;
@@ -194,10 +199,12 @@
     .btn-next,
     .el-pager li {
       margin: 0 5px;
-      background-color: $--color-info-lighter; /*默认背景色*/
+      background-color: $--color-white; /*默认背景色*/
       color: $--color-text-regular; /*默认文字和图标色*/
       min-width: 30px;
+      border: $--border-base; /*带背景色的分页 边框色*/
       border-radius: 2px;
+      line-height: 26px;
 
       &.disabled {
         color: $--color-text-placeholder;/*禁用文字色？*/
@@ -206,6 +213,11 @@
 
     .btn-prev, .btn-next {
       padding: 0;
+      &:hover {
+        color: $--pagination-hover-color; /*悬停文字和双箭头色*/
+        border: $--border-primary;
+        background-color: $--color-primary-light-9; 
+      }
 
       &:disabled {
         color: $--color-text-placeholder; /*禁用图标色*/
@@ -215,11 +227,14 @@
     .el-pager li:not(.disabled) {
       &:hover {
         color: $--pagination-hover-color; /*悬停文字和双箭头色*/
+        border: $--border-primary;
+        background-color: $--color-primary-light-9; 
       }
 
       &.active {
         background-color: $--color-primary; /*选中背景色*/
         color: $--color-white; /*选中文字色*/
+        border: $--border-primary;
       }
     }
 
@@ -283,7 +298,7 @@
     }
 
     &:hover {
-      color: $--pagination-hover-color;/*未选中悬停文字和双箭头色*/
+      color: $--pagination-hover-color;/*未选中 悬停文字和双箭头色*/
     }
 
     &.active {

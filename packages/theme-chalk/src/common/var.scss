@@ -47,16 +47,12 @@ $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
 // 透明颜色：直接写transparen
 
 /*衍生颜色*/
-/// 主题色衍生-叠加白色
 // $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
-// hover色 /* #447CDD */
 // $--color-primary-light-2: mix($--color-white,$--color-primary,20%) !default; 
-// 禁用色 /* #8aadea */
+$--color-primary-light-3: mix($--color-white,$--color-primary,30%) !default; 
 $--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default; 
 $--color-primary-light-7: mix($--color-white,$--color-primary,70%) !default; 
-// 原标签边框色  /* #d0def6 */
 $--color-primary-light-8: mix($--color-white,$--color-primary,80%) !default; 
-// 次要按钮背景色 /* #e8effb */
 $--color-primary-light-9: mix($--color-white,$--color-primary,90%) !default; 
 
 /// 功能色衍生
@@ -101,13 +97,19 @@ $--tag-icon-close-background-color-hover: $--color-text-secondary !default; /*�
 /* 链接 */
 $--link-color-base: $--color-primary !default; /*链接 颜色 基础*/
 
+// 各种标题大小：
+$--Modal-title-font-size: 20px !default;
+$--Modal-title-font-weight: 700 !default;
+
+
 // 其他
 $--loading-icon-color: $--color-text-secondary !default; /*链接 颜色 基础*/
 
 /* 边框*/
 $--border-width-base: 1px !default; /*边框 宽度 大小 基础*/
 $--border-style-base: solid !default; /*边框 样式 基础  ： solid单实线*/
-$--border-base: $--border-width-base $--border-style-base $--color-border-base !default; /*边框 基础 ：边框 宽度 基础  边框 样式 基础  边框 颜色 基础 */
+$--border-base: $--border-width-base $--border-style-base $--color-border-base !default; 
+$--border-primary: $--border-width-base $--border-style-base $--color-primary !default; 
 
 /* 圆角*/
 $--border-radius-base: 4px !default; /*大圆角*/
@@ -145,9 +147,6 @@ $--font-weight-bold: 700 !default; /*加粗字体粗细*/ /*增加*/
 $--font-line-height-primary: 24px !default; /*主要字体行高*/
 $--font-line-height-secondary: 16px !default; /*次要字体行高*/
 
-// 各种标题大小：
-$--Modal-title-font-size: 20px !default;
-$--Modal-title-font-weight: 700 !default;
 
 /* Size 大小 这是哪里的大小？
 -------------------------- */

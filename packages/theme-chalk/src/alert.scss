@@ -1,6 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
+// 警告提示
 @include b(alert) {
   width: 100%;
   padding: $--alert-padding;
@@ -19,6 +20,7 @@
     .el-alert__closebtn {
       color: $--color-text-placeholder; /*全部关闭文字和符号 除了主题*/
     }
+    
   }
 
   @include when(dark) {

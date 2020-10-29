@@ -177,7 +177,8 @@
     }
     
     &:hover {
-      background-color: $--color-background-base; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停背景*/
+      color: $--options-font-color-hover; /*想改动点击上传图标色，未生效*/
+      background-color: $--options-background-hover; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停背景*/
 
       .el-icon-close {
         display: inline-block;
@@ -238,8 +239,11 @@
     [class^="el-icon"] {
       height: 100%;
       margin-right: 7px;
-      color: $--color-text-secondary; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
+      color: $--color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
       line-height: inherit;
+      &:hover{
+        color: $--color-primary;
+      }
     }
   }
 
