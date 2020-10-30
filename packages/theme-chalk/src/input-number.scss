@@ -40,7 +40,7 @@
     }
 
     &.is-disabled {
-      color: $--disabled-color-base;
+      color: $--disabled-color-base; /*未找到对应*/
       cursor: not-allowed;
     }
   }
@@ -63,7 +63,7 @@
       color: $--disabled-border-base;
 
       &:hover { /*为什么禁用还要有hover态*/
-        color: $--disabled-border-base;
+        color: $--disabled-border-base; /*未找到对应*/
         cursor: not-allowed;
       }
     }

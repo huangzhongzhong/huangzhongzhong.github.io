@@ -52,8 +52,7 @@
         text-align: center;
         transform: rotateZ(180deg);
         border-radius: $--border-radius-circle;
-        // $--select-input-icon-color
-        color: $--select-input-icon-color; /* 待解释*/
+        color: $--select-input-icon-color; /*未找到对应*/
         transition: $--color-transition-base;
 
         &:hover {  /*未找到对应*/
@@ -67,7 +66,7 @@
         cursor: not-allowed;
 
         &:hover {
-          border-color: $--select-disabled-border; /*禁用悬停状态*/
+          border-color: $--select-disabled-border; /*禁用状态 悬停边框色*/
         }
       }
     }

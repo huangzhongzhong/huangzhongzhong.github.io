@@ -69,7 +69,7 @@
     color: $--color-text-regular;
     /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
     &::placeholder { 
-      color: $--color-text-placeholder ;
+      color: $--color-text-secondary ;
     }
   }
 
