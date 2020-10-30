@@ -1,84 +1,86 @@
 @import "../common/var";
-
-@include b(month-table) {
+/*日期选择器（其他日期单位（月）+选择月份范围）*/ /*本页全部（除特殊标注）*/
+@include b(month-table) { 
   font-size: 12px;
   margin: -1px;
   border-collapse: collapse;
 
   td {
     text-align: center;
-    padding: 8px 0px;
+    padding: 8px 0px; /*月份单元*/
     cursor: pointer;
     & div {
-      height: 48px;
-      padding: 6px 0;
+      height: 48px; /*月份单元*/
+      padding: 6px 0; /*月份单元*/
       box-sizing: border-box;
     }
     &.today {
       .cell {
-        color: $--color-primary;
+        color: $--color-primary; /*当月*/
         font-weight: bold;
       }
       &.start-date .cell,
       &.end-date .cell {
-        color: $--color-white;
+        color: $--color-white;/*选中当月时候的文字颜色*/
       }
     }
 
-    &.disabled .cell {
-      background-color: $--color-background-base;
+    &.disabled .cell { /* 未找到对应 */
+      background-color: $--color-background-base; 
       cursor: not-allowed;
-      // 已审
       color: $--color-text-placeholder;
 
       &:hover {
-        // 已审
         color: $--color-text-placeholder;
       }
     }
 
-    .cell {
-      width: 60px;
-      height: 36px;
+    .cell {  
+      width: 60px; /*选中单元*/
+      height: 36px;/*选中单元*/
       display: block;
-      line-height: 36px;
-      color: $--datepicker-font-color;
+      line-height: 36px; /*改动导致内容区下移，对应未知 $--datepicker-hover-font-color*/
+      color: $--datepicker-font-color; /*除未选中和当月之外的月份字体颜色*/
       margin: 0 auto;
       border-radius: 18px;
       &:hover {
-        color: $--datepicker-hover-font-color;
+        background-color: $--options-background-hover;
+        font-weight: $--options-font-weight-hover;
+        color: $--datepicker-hover-font-color /*悬停月份字体*/
       }
     }
 
-    &.in-range div {
-      background-color: $--datepicker-inrange-background-color;
+    &.in-range div { /*日期选择器（选择月份范围）*/
+      background-color: $--datepicker-inrange-background-color-hover;/*已选中单元外圈背景*/ 
       &:hover {
-        background-color: $--datepicker-inrange-hover-background-color;
+        background-color: $--datepicker-inrange-background-color-hover;/*悬停单元外圈背景*/ 
       }
     }
     &.start-date div,
-    &.end-date div {
-      color: $--color-white;
+    &.end-date div { 
+      color: $--color-white; /*未找到对应*/
     }
 
     &.start-date .cell,
-    &.end-date .cell {
-      color: $--color-white;
-      background-color: $--datepicker-active-color;
+    &.end-date .cell { /*日期选择器（选择月份范围）*/
+      color: $--color-white; /*已选中单元字体颜色*/
+      background-color: $--datepicker-active-color; /*已选中单元背景*/
     }
 
-    &.start-date div {
+    &.start-date div { /*日期选择器（选择月份范围）*/ /*已选中单元外圈左背景*/ 
       border-top-left-radius: 24px;
       border-bottom-left-radius: 24px;
     }
 
-    &.end-date div {
+    &.end-date div { /*日期选择器（选择月份范围）*/ /*已选中单元外圈右背景*/ 
       border-top-right-radius: 24px;
       border-bottom-right-radius: 24px;
     }
 
-    &.current:not(.disabled) .cell {
-      color: $--datepicker-active-color;
+    &.current:not(.disabled) .cell { /*日期选择器（其他日期单位（月））*/
+      color: $--color-white;/*选中单元字体颜色*/
+      font-weight: bold;
+      background-color: $--datepicker-active-color; /*选中单元背景*/
     }
   }
 }

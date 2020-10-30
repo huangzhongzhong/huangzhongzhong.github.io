@@ -53,7 +53,7 @@
     }
   }
   
-  @include when(plain) {/*对应： 基础用法 朴素按钮 */
+  @include when(plain) {/*对应：基础用法 朴素按钮 */
     background: $--button-plain-background-color ;
     border: $--button-plain-border;
     color: $--button-default-font-color;
@@ -189,7 +189,7 @@
     &.is-disabled:hover,
     &.is-disabled:focus {
       border-color: transparent;
-      color:$--button-disabled-text-font-color;
+      color:$--button-disabled-text-font-color; /*按钮（文字按钮（禁用））*/
     }
   }
 }
@@ -255,8 +255,8 @@
       border-left-color: rgba($--color-white, 0.5);/*改动未见效果*/
     }
   }
-// 这个是？
-  @each $type in (primary, success, warning, danger, info) {
+
+  @each $type in (primary, success, warning, danger, info) { /*按钮组*/
     .el-button--#{$type} {
       &:first-child { /*第一页默认、悬停时右边框，但默认边框被下一个压住*/
         border-right-color: rgba($--color-white, 0.5); 

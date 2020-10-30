@@ -13,9 +13,9 @@
 }
 
 @include b(table-filter) {
-  border: solid 1px $--color-border-light;
+  border: solid 1px $--color-border-light;/*未找到对应*/
   border-radius: 2px;
-  background-color: $--color-white;
+  background-color: $--color-white;/*未找到对应*/
   box-shadow: $--dropdown-menu-box-shadow;
   box-sizing: border-box;
   margin: 2px 0;
@@ -35,13 +35,13 @@
     font-size: $--font-size-base;
 
     &:hover {
-      background-color: $--dropdown-menuItem-hover-background;
-      color: $--dropdown-menuItem-hover-color;
+      background-color: $--dropdown-menuItem-hover-background;/*未找到对应*/
+      color: $--dropdown-menuItem-hover-color;/*未找到对应*/
     }
 
     @include when(active) {
-      background-color: $--color-primary;
-      color: $--color-white;
+      background-color: $--color-primary;/*未找到对应*/
+      color: $--color-white;/*未找到对应*/
     }
   }
 
@@ -50,19 +50,19 @@
   }
 
   @include e(bottom) {
-    border-top: 1px solid $--color-border-light;
+    border-top: 1px solid $--color-border-light;/*未找到对应*/
     padding: 8px;
 
     button {
       background: transparent;
       border: none;
-      color: $--color-text-regular;
+      color: $--color-text-regular;/*未找到对应*/
       cursor: pointer;
       font-size: $--font-size-small;
       padding: 0 3px;
 
       &:hover {
-        color: $--color-primary;
+        color: $--color-primary;/*未找到对应*/
       }
 
       &:focus {
@@ -70,13 +70,13 @@
       }
 
       &.is-disabled {
-        color: $--disabled-color-base;
+        color: $--disabled-color-base;/*未找到对应*/
         cursor: not-allowed;
       }
     }
   }
 
-  @include e(wrap) {
+  @include e(wrap) { /*流体高度最大值，改动并没有反应*/
     max-height: 280px;
   }
 

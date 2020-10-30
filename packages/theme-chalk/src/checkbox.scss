@@ -14,6 +14,14 @@
   user-select: none;
   margin-right: 30px;
 
+  &:hover {
+    color: $--color-primary; /*单选边框悬停色*/
+    font-weight: $--options-font-weight-hover;
+    @include e(inner) {
+     border-color: $--color-primary;
+    }
+  }
+
   @include when(bordered) {
     /*带有边框*/
     padding: $--checkbox-bordered-padding;
@@ -33,7 +41,7 @@
     }
 
     & + .el-checkbox.is-bordered {
-      /*对应未知*/
+      /*未找到对应*/
       margin-left: 10px;
     }
 
@@ -133,8 +141,7 @@
         }
       }
 
-      &.is-indeterminate {
-        /*对应 全选*/
+      &.is-indeterminate {  /*对应 部分选中*/
         .el-checkbox__inner {
           background-color: $--checkbox-disabled-checked-input-background;
           border-color: $--checkbox-disabled-checked-input-border-color;
@@ -315,7 +322,7 @@
       color: $--checkbox-button-checked-font-color;
       background-color: $--checkbox-button-checked-background-color;
       border-color: $--checkbox-button-checked-border-color;
-      box-shadow: -1px 0 0 0 $--color-primary-light-4; /*投影？体现在哪*/
+      box-shadow: -1px 0 0 0 $--color-primary-light-5; /*投影？体现在哪*/
     }
     &:first-child .el-checkbox-button__inner {
       /*第一个到最后一个*/

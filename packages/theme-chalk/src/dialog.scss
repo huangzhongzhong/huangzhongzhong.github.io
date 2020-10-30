@@ -6,7 +6,7 @@
 @include b(dialog) {
   position: relative;
   margin: 0 auto 50px;
-  background: $--dialog-background-color;
+  background: $--dialog-background-color; /*全部对话框 背景色*/
   border-radius: $--border-radius-small;
   box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
@@ -32,7 +32,15 @@
 
   @include e(header) {
     padding: $--dialog-padding-primary;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    .el-dialog__title {
+      &:before { /*标题加色块*/
+        content: "";
+        width: 4px;
+        border-left: 4px solid $--color-primary;
+        padding-left: 12px;
+      }
+    }
   }
 
   @include e(headerbtn) {
@@ -47,32 +55,34 @@
     font-size: $--message-close-size;
 
     .el-dialog__close {
-      color: $--color-info;
+      color: $--color-info; /*全部对话框 关闭图标色*/
     }
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: $--dialog-close-color-hover; /*关闭图标悬浮颜色*/
+        color: $--dialog-close-color-hover; /*全部对话框 关闭图标悬停色*/
       }
     }
   }
 
-  @include e(title) {
+  @include e(title) { /*标题区域*/
     line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
-    color: $--color-text-primary;
+    color: $--color-text-primary; /*全部对话框 标题色*/
+    font-weight: $--Modal-title-font-weight;
+    padding-bottom: 0 !important; /*未找到对应*/
   }
 
-  @include e(body) {
-    padding: ($--dialog-padding-primary + 10px) $--dialog-padding-primary;
-    color: $--color-text-regular;
+  @include e(body) { /*正文区域*/
+    padding: 24px;
+    color: $--color-text-regular; /*全部对话框 正文文字色*/
     font-size: $--dialog-content-font-size;
     word-break: break-all;
   }
 
-  @include e(footer) {
-    padding: $--dialog-padding-primary;
-    padding-top: 10px;
+  @include e(footer) {  /*按钮操作区域*/
+    padding: 24px;
+    padding-top: 0px; /*未找到对应*/
     text-align: right;
     box-sizing: border-box;
   }
@@ -81,8 +91,17 @@
   @include m(center) {
     text-align: center;
 
+    @include e(title) { 
+      &:before { /*标题加色块*/
+        content: "";
+        width: 4px;
+        border-left: 0px solid $--color-primary;
+        padding-left: 12px;
+      }
+    }
+
     @include e(body) {
-      text-align: initial;
+      text-align: center;
       padding: 25px ($--dialog-padding-primary + 5px) 30px;
     }
 

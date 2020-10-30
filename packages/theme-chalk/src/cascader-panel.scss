@@ -57,7 +57,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $--cascader-color-empty;
+    color: $--cascader-color-empty; /*未找到对应*/
   }
 }
 
@@ -71,8 +71,8 @@
   outline: none;
 
   &.is-selectable.in-active-path {  /*选中某个标题展开下一级，但没选中这个标题本身*/ 
-    color: $--color-text-primary;
-    font-weight: 700;
+    color: $--color-primary;
+    font-weight: $--options-font-weight-hover;
   }
 
   &.in-active-path,
@@ -85,7 +85,8 @@
   &:not(.is-disabled) {
     cursor: pointer;
     &:hover, &:focus {
-      background: $--cascader-node-background-hover; /*都禁用了为什么还有悬停？是两种状态？*/
+      font-weight: $--options-font-weight-hover;
+      background: $--cascader-node-background-hover; /*悬停状态，不是禁用*/
     }
   }
 
@@ -94,19 +95,19 @@
     cursor: not-allowed;
   }
 
-  @include e(prefix) {
+  @include e(prefix) { /*级联面板勾图标左侧间距*/
     position: absolute;
     left: 10px;
   }
 
-  @include e(postfix) {
+  @include e(postfix) { /*级联面板箭头图标右侧间距*/
     position: absolute;
     right: 10px;
   }
 
-  @include e(label) {
+  @include e(label) { 
     flex: 1;
-    padding: 0 10px;
+    padding: 0 10px; /*级联面板标签左右间距*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

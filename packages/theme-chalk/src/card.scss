@@ -3,10 +3,10 @@
 
 @include b(card) {
   border-radius: $--card-border-radius;
-  border: 1px solid $--card-border-color;
-  background-color: $--color-white;
+  border: 1px solid $--card-border-color; /*卡片 边框 */
+  background-color: $--color-white; /*卡片 背景*/
   overflow: hidden;
-  color: $--color-text-primary;
+  color: $--color-text-primary;/*卡片 （正文+标题）文字色*/
   transition: 0.3s;
 
   @include when(always-shadow) {
@@ -22,7 +22,7 @@
 
   @include e(header) {
     padding: #{$--card-padding - 2 $--card-padding};
-    border-bottom: 1px solid $--card-border-color;
+    border-bottom: 1px solid $--card-border-color; /*标题内容分割线*/
     box-sizing: border-box;
   }
 

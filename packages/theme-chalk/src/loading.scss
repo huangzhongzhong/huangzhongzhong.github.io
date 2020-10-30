@@ -14,7 +14,7 @@
 @include b(loading-mask) {
   position: absolute;
   z-index: 2000;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: $--loading-mask-background-color; /*区域加载  白色遮罩*/
   margin: 0;
   top: 0;
   right: 0;
@@ -44,9 +44,9 @@
   position: absolute;
 
   .el-loading-text {
-    color: $--color-primary;
+    color: $--color-primary; /*自定义+服务方式 文字*/
     margin: 3px 0;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .circular {
@@ -60,12 +60,14 @@
     stroke-dasharray: 90, 150;
     stroke-dashoffset: 0;
     stroke-width: 2;
-    stroke: $--color-primary;
+    stroke: $--color-primary; /*区域加载+指令方式  菊花圈*/
     stroke-linecap: round;
   }
 
-  i {
-    color: $--color-primary;
+  i { /*自定义+服务方式 菊花圈*/
+    color: $--color-primary; 
+    font-size: 24px;
+    padding: 4px ;
   }
 }
 

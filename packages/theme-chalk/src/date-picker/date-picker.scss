@@ -2,100 +2,79 @@
 @import "../mixins/mixins";
 @import "./picker-panel.scss";
 
-/*日期选择器
-*/
-// 日期选择器
 @include b(date-picker) {
-  // DatePicker 选择日 默认 宽度
-  width: 322px;
+  width: 322px; /*日期时间选择器 日期和时间点 默认+设置默认时间 宽度*/ /*日期选择器（选择日-默认）+其他日期单位 宽度*/
 
-  //有侧边栏 有时间 
   &.has-sidebar.has-time {
-    width: 434px;
+    width: 434px; /*日期时间选择器 日期和时间点 带快捷选项 宽度*/
   }
-  
-  // 有侧边栏 
+
   &.has-sidebar {
-    width: 438px;
+    width: 438px; /*日期时间选择器 日期和时间点 带快捷选项 宽度*/ /*日期选择器 选择日 宽度*/
   }
-  
-  // 有时间  日期 面板 正文 对象？
+
+  // 有时间  日期 面板 正文 对象
   &.has-time .el-picker-panel__body-wrapper {
-    // 位置 相对
     position: relative;
   }
-
-  // 日期 面板 内容
   .el-picker-panel__content {
+    /*日期时间选择器 日期和时间点 内容区域宽度*/ /*日期选择器 选择人+其他日期单位 内容区域宽度*/
     width: 292px;
   }
-  
-  // 表格
+
   table {
-    // 表格布局
     table-layout: fixed;
     width: 100%;
   }
-  
-  // 编辑 对象
+
   @include e(editor-wrap) {
-    // 位置 相对
     position: relative;
-    // 显示 ： 表格 单元
     display: table-cell;
-    padding: 0 5px;
+    padding: 0 5px; /*日期时间选择器 日期和时间点 输入框内间距*/
   }
 
-  // 时间 标题区域
   @include e(time-header) {
     position: relative;
-    // DateTimePicker  日期和时间点 输入框与日历区分割线
-    border-bottom: 1px solid $--datepicker-inner-border-color;
-    font-size: 12px;
-    padding: 8px 5px 5px 5px;
+    border-bottom: 1px solid $--datepicker-inner-border-color; /*日期时间选择器  日期和时间点 输入框与日历区分割线*/
+    font-size: 12px; /*多次未找到对应*/
+    padding: 8px 5px 5px 5px; /*日期时间选择器 日期和时间点 输入框组内间距*/
     display: table;
     width: 100%;
-    // 这个盒子大小的作用是啥~
     box-sizing: border-box;
   }
 
-   // DatePicker 选择日 默认 标题区
   @include e(header) {
-    margin: 12px;
+    margin: 12px; /*日期时间选择器 日期和时间点 标题盒子外边距*/ /*日期选择器 选择日+其他日期单位 标题盒子外边距*/
     text-align: center;
 
-    // DatePicker 其他日期单位 年 分割线
-    @include m(bordered) {
+    @include m(bordered) { /*日期选择器 其他日期单位 年+月标题*/
       margin-bottom: 0;
-      padding-bottom: 12px;
-      border-bottom: solid 1px $--color-border-light;
-       // DatePicker 其他日期单位 年 内容区 顶部距离
+      padding-bottom: 12px; /*分割线间距*/
+      border-bottom: solid 1px $--color-border-light; /*内容分割线*/
       & + .el-picker-panel__content {
         margin-top: 0;
       }
     }
   }
 
-    // DatePicker 其他日期单位 年 标题区域
-  @include e(header-label) {
-    font-size: 16px;
+  @include e(header-label) { /*日期选择器 选择日+其他日期单位 */ /*日期时间选择器 日期和时间点 */ /*未单独写都是对应这个*/
+    font-size: 16px; /*标题*/ 
     font-weight: 500;
-    padding: 0 5px;
-    line-height: 22px;
+    padding: 0 5px;  /*日期选择器 选择日+其他日期单位（周+多个日期） 标题*/   /*日期时间选择器 日期和时间点 标题*/ 
+    line-height: 22px;   /*标题*/ 
     text-align: center;
     cursor: pointer;
-    color: $--color-text-regular;
+    color: $--color-text-regular; /*标题*/  
 
     &:hover {
-      color: $--datepicker-hover-font-color;
+      color: $--datepicker-hover-font-color;   /*标题*/  
     }
 
     &.active {
-      color: $--datepicker-active-color;
+      color: $--datepicker-active-color; /*未找到对应*/
     }
   }
 
-  
   @include e(prev-btn) {
     float: left;
   }
@@ -104,9 +83,8 @@
     float: right;
   }
 
-  // 对应区域？
   @include e(time-wrap) {
-    padding: 10px;
+    padding: 10px; /*未找到对应*/
     text-align: center;
   }
 
@@ -114,7 +92,7 @@
   @include e(time-label) {
     float: left;
     cursor: pointer;
-    line-height: 30px;
-    margin-left: 10px;
+    line-height: 30px ;
+    margin-left: 10px ;
   }
 }

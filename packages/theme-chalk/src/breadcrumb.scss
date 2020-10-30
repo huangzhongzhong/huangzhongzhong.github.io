@@ -2,7 +2,7 @@
 @import "mixins/utils";
 @import "common/var";
 
-@include b(breadcrumb) {
+@include b(breadcrumb) { /*面包屑*/
   font-size: 14px;
   line-height: 1;
   @include utils-clearfix;
@@ -10,7 +10,7 @@
   @include e(separator) {
     margin: 0 9px ;
     font-weight: bold;
-    color: $--color-text-secondary ;
+    color: $--color-text-secondary ;/*分隔符颜色*/
 
     &[class*=icon] {
       margin: 0 6px;
@@ -22,16 +22,16 @@
     float: left;
 
     @include e(inner) {
-      color: $--color-text-regular;
+      color: $--color-text-regular; /*目录与最后一级之间的文字色*/
 
       &.is-link, & a {
         font-weight: bold;
         text-decoration: none;
         transition: $--color-transition-base;
-        color: $--color-text-primary;
+        color: $--color-text-primary; /*目录级文字色*/
 
-        &:hover { /*图形分隔符悬停文字色*/
-          color: $--link-color-hover;
+        &:hover { 
+          color: $--link-color-hover; /*目录级悬停色*/
           cursor: pointer;
         }
       }
@@ -42,7 +42,7 @@
       .el-breadcrumb__inner a {
         &, &:hover {
           font-weight: normal;
-          color: $--color-text-regular;/*最后一级文字色，但不用hover*/
+          color: $--color-text-regular;/*最后一级文字色，不可点击*/
           cursor: text;
         }
       }

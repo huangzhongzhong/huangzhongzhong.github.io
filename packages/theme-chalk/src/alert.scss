@@ -1,6 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
+// 警告提示
 @include b(alert) {
   width: 100%;
   padding: $--alert-padding;
@@ -8,7 +9,7 @@
   box-sizing: border-box;
   border-radius: $--alert-border-radius;
   position: relative;
-  background-color: $--color-white;
+  background-color: $--color-white; /*未找到对应*/
   overflow: hidden;
   opacity: 1;
   display: flex;
@@ -17,17 +18,17 @@
 
   @include when(light) {
     .el-alert__closebtn {
-      // 已审
-      color: $--color-text-placeholder;
+      color: $--color-text-placeholder; /*全部关闭文字和符号 除了主题*/
     }
+    
   }
 
   @include when(dark) {
     .el-alert__closebtn {
-      color: $--color-white;
+      color: $--color-white; /*主题关闭文字和符号*/
     }
     .el-alert__description {
-      color: $--color-white;
+      color: $--color-white; /*未找到对应*/
     }
   }
 
@@ -35,12 +36,12 @@
     justify-content: center;
   }
 
-  @include m(success) {
+  @include m(success) { /*所有正确状态提示*/
     &.is-light {
-      background-color: $--alert-success-color;
+      background-color: $--alert-success-color; 
       color: $--color-success;
 
-      .el-alert__description {
+      .el-alert__description { /*辅助性文字*/
         color: $--color-success;
       }
     }
@@ -51,7 +52,7 @@
     }
   }
 
-  @include m(info) {
+  @include m(info) { /*所有信息状态提示*/
     &.is-light {
       background-color: $--alert-info-color;
       color: $--color-info;
@@ -62,17 +63,17 @@
       color: $--color-white;
     }
 
-    .el-alert__description {
+    .el-alert__description { /*辅助性文字*/
       color: $--color-info;
     }
   }
 
-  @include m(warning) {
+  @include m(warning) { /*所有警告状态提示*/
     &.is-light {
       background-color: $--alert-warning-color;
       color: $--color-warning;
 
-      .el-alert__description {
+      .el-alert__description { /*辅助性文字*/
         color: $--color-warning;
       }
     }
@@ -83,12 +84,12 @@
     }
   }
 
-  @include m(error) {
+  @include m(error) { /*所有危险状态提示*/
     &.is-light {
       background-color: $--alert-danger-color;
       color: $--color-danger;
 
-      .el-alert__description {
+      .el-alert__description { /*辅助性文字*/
         color: $--color-danger;
       }
     }

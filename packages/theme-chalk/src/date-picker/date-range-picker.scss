@@ -2,9 +2,11 @@
 
 // DatePicker 选择日期范围  默认
 @include b(date-range-picker) {
-  width: 646px;
+  /*日期选择器 选择日期范围（默认）+选择月份范围（默认）*/ /*日期时间选择器 日期和时间范围（默认）+默认的起始与结束时刻（默认）*/
+  width: 646px; 
 
-  &.has-sidebar {
+  &.has-sidebar { 
+     /*日期选择器 选择日期范围（带快捷选项）+选择月份范围（带快捷选项）*/ /*日期时间选择器 日期和时间范围（带快捷选项）*/
     width: 756px;
   }
 
@@ -14,48 +16,47 @@
   }
 
   .el-picker-panel__body {
-    min-width: 513px;
+    min-width: 513px;  /*日期选择器 选择日期范围+选择月份范围 内容区域*/ /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 内容区域*/
   }
 
-  .el-picker-panel__content {
+  .el-picker-panel__content { 
     margin: 0;
   }
 
-  @include e(header) {
+  @include e(header) { 
     position: relative;
     text-align: center;
-    height: 28px;
+    height: 28px;   /*日期选择器 选择日期范围+选择月份范围 标题区域*/ /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 标题区域*/
 
-    [class*=arrow-left] {
+    [class*="arrow-left"] {
       float: left;
     }
 
-    [class*=arrow-right] {
+    [class*="arrow-right"] {
       float: right;
     }
 
     div {
-      font-size: 16px;
+      font-size: 16px; /*日期选择器 选择日期范围+选择月份范围 标题*/ /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 标题*/
       font-weight: 500;
-      margin-right: 50px;
+      margin-right: 50px; /*日期选择器 选择日期范围+选择月份范围 标题*/ /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 标题*/
     }
   }
 
-  @include e(content) {
+  @include e(content) { /*日期选择器 选择日期范围+选择月份范围 */ /*日期时间选择器 日期和时间范围+默认的起始与结束时刻*/
     float: left;
     width: 50%;
     box-sizing: border-box;
     margin: 0;
-    padding: 16px;
+    padding: 16px;  /*标题区域*/ 
 
     @include when(left) {
-      border-right: 1px solid $--datepicker-inner-border-color;
+      border-right: 1px solid $--datepicker-inner-border-color; /*中分割线*/ 
     }
     .el-date-range-picker__header {
-
       div {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 50px; /*标题*/ 
+        margin-right: 50px; /*标题*/ 
       }
     }
   }
@@ -69,34 +70,34 @@
     }
   }
 
-  @include e(time-header) {
+  @include e(time-header) {  /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 输入框组-标题分割线*/
     position: relative;
-    border-bottom: 1px solid $--datepicker-inner-border-color;
-    font-size: 12px;
-    padding: 8px 5px 5px 5px;
+    border-bottom: 1px solid $--datepicker-inner-border-color;   /*输入框组-标题分割线*/
+    font-size: 12px; /*撑高了标题区高度，但未找到明确对应*/
+    padding: 8px 5px 5px 5px; /* 输入框组*/
     display: table;
     width: 100%;
     box-sizing: border-box;
 
     > .el-icon-arrow-right {
-      font-size: 20px;
+      font-size: 20px;  /* 输入框组中间箭头*/
       vertical-align: middle;
       display: table-cell;
-      color: $--datepicker-icon-color;
+      color: $--datepicker-icon-color;  /* 输入框组中间箭头*/
     }
   }
 
   @include e(time-picker-wrap) {
     position: relative;
     display: table-cell;
-    padding: 0 5px;
+    padding: 0 5px;  /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 输入框组*/
 
-    .el-picker-panel {
+    .el-picker-panel { 
       position: absolute;
-      top: 13px;
+      top: 13px; /*未找到对应*/
       right: 0;
       z-index: 1;
-      background: $--color-white;
+      background: $--color-white;  /*未找到对应*/
     }
   }
 }

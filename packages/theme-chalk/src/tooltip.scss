@@ -40,13 +40,13 @@
 
     &[x-placement^="top"] .popper__arrow {
       bottom: -$--tooltip-arrow-size;
-      border-top-color: $--tooltip-border-color;
+      border-top-color: $--tooltip-border-color; /*上左+上边+上右 三角边框色*/
       border-bottom-width: 0;
 
       &::after {
         bottom: 1px;
         margin-left: -5px;
-        border-top-color: $--tooltip-background;
+        border-top-color: $--tooltip-background; /*上左+上边+上右 三角填充色*/
         border-bottom-width: 0;
       }
     }
@@ -58,13 +58,13 @@
     &[x-placement^="bottom"] .popper__arrow {
       top: -$--tooltip-arrow-size;
       border-top-width: 0;
-      border-bottom-color: $--tooltip-border-color;
+      border-bottom-color: $--tooltip-border-color; /*下左+下边+下右 三角边框色*/
 
       &::after {
         top: 1px;
         margin-left: -5px;
         border-top-width: 0;
-        border-bottom-color: $--tooltip-background;
+        border-bottom-color: $--tooltip-background; /*下左+下边+下右 三角填充色*/
       }
     }
 
@@ -74,13 +74,13 @@
 
     &[x-placement^="right"] .popper__arrow {
       left: -$--tooltip-arrow-size;
-      border-right-color: $--tooltip-border-color;
+      border-right-color: $--tooltip-border-color; /*右上+右边+右下 三角边框色*/
       border-left-width: 0;
 
       &::after {
         bottom: -5px;
         left: 1px;
-        border-right-color: $--tooltip-background;
+        border-right-color: $--tooltip-background; /*右上+右边+右下 三角填充色*/
         border-left-width: 0;
       }
     }
@@ -92,25 +92,27 @@
     &[x-placement^="left"] .popper__arrow {
       right: -$--tooltip-arrow-size;
       border-right-width: 0;
-      border-left-color: $--tooltip-border-color;
+      border-left-color: $--tooltip-border-color; /*左上+左边+左下 三角边框色*/
 
       &::after {
         right: 1px;
         bottom: -5px;
         margin-left: -5px;
         border-right-width: 0;
-        border-left-color: $--tooltip-background;
+        border-left-color: $--tooltip-background; /*左上+左边+左下 三角填充色*/
       }
     }
 
     @include when(dark) {
-      background: $--tooltip-background;
-      color: $--tooltip-color;
+      background: $--tooltip-background; /*主体矩形填充色*/
+      color: $--tooltip-color; /*文字色*/
+      
     }
 
     @include when(light) {
-      background: $--tooltip-color;
-      border: 1px solid $--tooltip-background;
+      background: $--tooltip-color; /*亮色背景*/
+      border: 1px solid $--color-border-light;
+      box-shadow: $--box-shadow-light; /*亮色投影*/
 
       &[x-placement^="top"] .popper__arrow {
         border-top-color: $--tooltip-background;
@@ -119,11 +121,12 @@
         }
       }
       &[x-placement^="bottom"] .popper__arrow {
-        border-bottom-color: $--tooltip-background;
+        border-bottom-color: $--color-border-light;
         &::after {
           border-bottom-color: $--tooltip-color;
         }
       }
+
       &[x-placement^="left"] .popper__arrow {
         border-left-color: $--tooltip-background;
         &::after {

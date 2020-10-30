@@ -6,8 +6,8 @@
 @include b(tree) {
   position: relative;
   cursor: default;
-  background: $--color-white;
-  color: $--tree-font-color;
+  background: $--color-white; /*全部树选择器背景*/
+  color: $--tree-font-color; /*全部树选择器文字*/
 
   @include e(empty-block) {
     position: relative;
@@ -22,7 +22,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: $--color-text-secondary;
+    color: $--color-text-secondary; /*未找到对应*/
     font-size: $--font-size-base;
   }
 
@@ -31,7 +31,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background-color: $--color-primary;
+    background-color: $--color-primary;  /*未找到对应*/
   }
 }
 
@@ -40,14 +40,14 @@
   outline: none;
   &:focus { /* focus */
     > .el-tree-node__content {
-      background-color: $--tree-node-hover-background-color;
+      background-color: $--tree-node-hover-background-color; /*当前焦点行背景*/
     }
   }
 
   @include when(drop-inner) {
     > .el-tree-node__content .el-tree-node__label {
-      background-color: $--color-primary;
-      color: #fff;
+      background-color: $--color-primary; /*未找到对应*/
+      color: $--color-white;  /*未找到对应*/
     }
   }
 
@@ -64,7 +64,8 @@
       margin-right: 8px;
     }
     &:hover {
-      background-color: $--tree-node-hover-background-color;
+      font-weight: $--options-font-weight-hover;
+      background-color: $--tree-node-hover-background-color; /*悬停行背景*/
     }
 
     .el-tree.is-dragging & {
@@ -82,7 +83,7 @@
 
   @include e(expand-icon) {
     cursor: pointer;
-    color: $--tree-expand-icon-color;
+    color: $--tree-expand-icon-color; /*全部箭头颜色*/
     font-size: 12px;
 
     transform: rotate(0deg);
@@ -105,7 +106,7 @@
   @include e(loading-icon) {
     margin-right: 8px;
     font-size: $--font-size-base;
-    color: $--tree-expand-icon-color;
+    color: $--tree-expand-icon-color; /*加载菊花圈颜色*/
   }
 
   & > .el-tree-node__children {
@@ -119,5 +120,5 @@
 }
 
 .el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
-  background-color: mix($--color-white, $--color-primary, 92%);
+  background-color: mix($--color-white, $--color-primary, 92%); /*未找到对应*/
 }
