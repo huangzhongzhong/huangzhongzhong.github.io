@@ -33,6 +33,14 @@
   @include e(header) {
     padding: $--dialog-padding-primary;
     padding-bottom: 0px;
+    .el-dialog__title {
+      &:before { /*标题加色块*/
+        content: "";
+        width: 4px;
+        border-left: 4px solid $--color-primary;
+        padding-left: 12px;
+      }
+    }
   }
 
   @include e(headerbtn) {
@@ -63,12 +71,6 @@
     color: $--color-text-primary; /*全部对话框 标题色*/
     font-weight: $--Modal-title-font-weight;
     padding-bottom: 0 !important; /*未找到对应*/
-    &:before { /*标题加色块*/
-      content: "";
-      width: 4px;
-      border-left: 4px solid $--color-primary;
-      padding-left: 12px;
-    }
   }
 
   @include e(body) { /*正文区域*/
