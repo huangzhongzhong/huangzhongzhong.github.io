@@ -21,13 +21,13 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 
 /* Color 颜色
 -------------------------- */
-$--color-primary: #155bd4 !default; /*主题色*/
+$--color-primary: #1267E5 !default; /*主题色*/
 $--color-white: #ffffff !default; /*基础色-白色*/
 $--color-black: #000000 !default; /*基础色-黑色*/
 
 $--color-success: #209e35 !default; /*功能色-正确状态*/
 $--color-warning: #e54409 !default; /*功能色-警告状态*/
-$--color-danger: #d40000 !default; /*功能色-危险状态*/
+$--color-danger: #CC0000 !default; /*功能色-危险状态*/
 $--color-info: #58595c !default; /*功能色-提示状态*/
 
 $--color-text-primary: #000000 !default; /*一级文本 主要*/
