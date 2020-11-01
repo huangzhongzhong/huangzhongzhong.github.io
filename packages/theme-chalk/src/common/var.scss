@@ -29,44 +29,66 @@ $--color-success: #1F9933 !default; /*功能色-正确状态*/
 $--color-warning: #e54409 !default; /*功能色-警告状态*/
 $--color-danger: #CC0000 !default; /*功能色-危险状态*/
 $--color-info: #58595c !default; /*功能色-提示状态*/
+$--color-stress: #FA6114 !default; /*功能色-强调色-金额色*/
 
 $--color-text-primary: #000000 !default; /*一级文本 主要*/
 $--color-text-regular: #262729 !default; /*二级文本 常规*/
 $--color-text-secondary: #73777a !default; /*三级文本 次要*/
 $--color-text-placeholder: #adb0b8 !default; /*四级文本 占位*/
-
 $--color-border-base: #909399 !default; /*一级边框 基础*/
 $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
-
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 重*/
-
+$--color-divider: #C1CBDB !default; /*增加*/ /*分割线色*/
 //蒙版
 $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
 
-// 透明颜色：直接写transparen
-
 /*衍生颜色*/
-// $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
-// $--color-primary-light-2: mix($--color-white,$--color-primary,20%) !default; 
 $--color-primary-light-3: mix($--color-white,$--color-primary,30%) !default; 
 $--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default; 
 $--color-primary-light-7: mix($--color-white,$--color-primary,70%) !default; 
 $--color-primary-light-8: mix($--color-white,$--color-primary,80%) !default; 
 $--color-primary-light-9: mix($--color-white,$--color-primary,90%) !default; 
+$--color-primary-drak: mix($--color-black,$--color-primary,20%) !default; 
 
-/// 功能色衍生
-// 功能色-轻-叠加白色-80%
-$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
-$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
-$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+// 透明颜色：直接写transparen
+// 功能色色值衍生
+$--color-stress-light-3: mix($--color-white,$--color-stress,30%) !default; 
+$--color-stress-light-5: mix($--color-white,$--color-stress,50%) !default; 
+$--color-stress-light-7: mix($--color-white,$--color-stress,70%) !default; 
+$--color-stress-light-8: mix($--color-white,$--color-stress,80%) !default; 
+$--color-stress-light-9: mix($--color-white,$--color-stress,90%) !default; 
+$--color-stress-drak: mix($--color-black,$--color-stress,20%) !default; 
 
-// 功能色-更轻-叠加白色-90% 作为背景使用
-$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
-$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
-$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
-$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+$--color-success-light-3: mix($--color-white,$--color-success,30%) !default; 
+$--color-success-light-5: mix($--color-white,$--color-success,50%) !default; 
+$--color-success-light-7: mix($--color-white,$--color-success,70%) !default; 
+$--color-success-light-8: mix($--color-white,$--color-success,80%) !default; 
+$--color-success-light-9: mix($--color-white,$--color-success,90%) !default; 
+$--color-success-drak: mix($--color-black,$--color-success,20%) !default; 
+
+$--color-warning-light-3: mix($--color-white,$--color-warning,30%) !default; 
+$--color-warning-light-5: mix($--color-white,$--color-warning,50%) !default; 
+$--color-warning-light-7: mix($--color-white,$--color-warning,70%) !default; 
+$--color-warning-light-8: mix($--color-white,$--color-warning,80%) !default; 
+$--color-warning-light-9: mix($--color-white,$--color-warning,90%) !default; 
+$--color-warning-drak: mix($--color-black,$--color-warning,20%) !default; 
+
+$--color-danger-light-3: mix($--color-white,$--color-danger,30%) !default; 
+$--color-danger-light-5: mix($--color-white,$--color-danger,50%) !default; 
+$--color-danger-light-7: mix($--color-white,$--color-danger,70%) !default; 
+$--color-sdanger-light-8: mix($--color-white,$--color-danger,80%) !default; 
+$--color-danger-light-9: mix($--color-white,$--color-danger,90%) !default; 
+$--color-danger-drak: mix($--color-black,$--color-danger,20%) !default; 
+
+$--color-info-light-3: mix($--color-white,$--color-info,30%) !default; 
+$--color-info-light-5: mix($--color-white,$--color-info,50%) !default; 
+$--color-info-light-7: mix($--color-white,$--color-info,70%) !default; 
+$--color-info-light-8: mix($--color-white,$--color-info,80%) !default; 
+$--color-info-light-9: mix($--color-white,$--color-info,90%) !default; 
+$--color-info-drak: mix($--color-black,$--color-success,20%) !default; 
+
+
 
 /* -------------------------- 
 全局样式-引用的色值、其他属性、但不包括具体组件
@@ -78,7 +100,7 @@ $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
 
 /* 下拉菜单等选项悬停专题 */
-$--options-background-hover: $--color-primary-light-8 !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
+$--options-background-hover: mix($--color-white,$--color-primary,80%) !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
 $--options-background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 $--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/ 
@@ -127,7 +149,7 @@ $--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
 $--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
 $--box-shadow-focus-primary: 0 0 2px 2px  $--color-primary !default;
 
-$--box-shadow-primary: 0px 0px 0px 2px $--color-primary-light-7 !default;
+$--box-shadow-primary: 0px 0px 0px 2px mix($--color-white,$--color-primary,70%)  !default;
 $--box-shadow-danger: 0px 0px 0px 2px mix($--color-white, $--color-danger, 70%) !default;
 
 
@@ -898,10 +920,10 @@ $--alert-description-font-size: 12px !default; /*description 描述*/
 $--alert-close-font-size: 12px !default;
 $--alert-close-customed-font-size: 13px !default; /*customed 定制*/
 
-$--alert-success-color: $--color-success-lighter !default;
-$--alert-info-color: $--color-info-lighter !default;
-$--alert-warning-color: $--color-warning-lighter !default;
-$--alert-danger-color: $--color-danger-lighter !default;
+$--alert-success-color: $--color-success-light-9 !default;
+$--alert-info-color: $--color-info-light-9 !default;
+$--alert-warning-color: $--color-warning-light-9 !default;
+$--alert-danger-color: $--color-danger-light-9 !default;
 
 $--alert-icon-size: 16px !default;
 $--alert-icon-large-size: 28px !default;

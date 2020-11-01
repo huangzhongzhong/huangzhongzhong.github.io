@@ -134,9 +134,6 @@
       margin-right: 5px;
       background-color: $--datepicker-inrange-background-color-hover;    /*已选中单元外圈*/
       border-radius: 15px;
-      // &:hover {
-      //   background-color: $--color-primary-light-5;/*选中单元外圈*/
-      // }
     }
 
     &.selected span { /*日期选择器（其他日期单位（多个日期）） 选中单元*/
@@ -144,7 +141,7 @@
       color: $--color-white ;
       border-radius: 15px;
       &:hover {
-        background-color: $--color-primary-light-3;/*选中单元外圈*/
+        background-color: mix($--color-white,$--color-primary,30%);/*选中单元外圈 $--color-primary-light-3 */
       }
     }
 

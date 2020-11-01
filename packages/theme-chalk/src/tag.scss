@@ -93,7 +93,7 @@
 }
 
 @include b(tag) { /*全局标签样式*/
-  @include genTheme(10%, 0%, 100%, 100%); /*背景，边框，（复杂），关闭图标背景*/
+  @include genTheme(10%, 0%, 100%, 100%); /*背景，边框，（复杂），关闭图标背景色*/
   display: inline-block;
   height: 32px;
   padding: $--tag-padding;
@@ -125,11 +125,11 @@
   }
 
   @include m(dark) {
-    @include genTheme(100%, 100%, 0, 80%);
+    @include genTheme(100%, 100%, 0,0);/*背景，边框，文字，关闭图标背景*/
   }
 
   @include m(plain) {
-    @include genTheme(10%, 80%, 100%, 100%);
+    @include genTheme(10%, 70%, 100%, 100%); /*背景，边框，文字，关闭图标背景*/
   }
 
   @include m(medium) { /*中等标签*/

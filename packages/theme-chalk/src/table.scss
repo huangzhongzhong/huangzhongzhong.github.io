@@ -492,7 +492,7 @@
     & .el-table__body {
       & tr.el-table__row--striped {
         td {
-          background: $--table-stripe-background-color; /*斑马线*/
+          background: $--table-stripe-background-color; /*斑马线色*/
         }
 
         &.current-row td {
