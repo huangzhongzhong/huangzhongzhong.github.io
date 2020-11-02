@@ -146,6 +146,7 @@
     & .el-textarea__inner {
       &, &:focus {
         border-color: $--color-danger;/*错误边框*/
+        box-shadow: $--box-shadow-danger;
       }
     }
     & .el-input-group__append,

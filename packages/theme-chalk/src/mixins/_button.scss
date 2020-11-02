@@ -3,7 +3,7 @@
 @mixin button-plain($color) { /*对应：朴素（主要、成功、信息、警告、危险）按钮*/
   color:$color;
   background: mix($--color-white, $color, 90%); /*背景加90%白色*/
-  border: solid 1px  mix($--color-white, $color, 30%) ; /*边框加30%白色*/
+  border: solid 1px  mix($--color-white, $color, 0%) ; /*边框色*/
 
   &:hover,
   &:focus {
@@ -25,7 +25,7 @@
     &:active {
       color: mix($--color-white, $color, 50%); /*对应色叠加50%白色*/ 
       background-color: mix($--color-white, $color, 90%); /*对应色叠加90%白色*/
-      border-color: mix($--color-white, $color, 70%); /*对应色叠加80%白色*/ /*计算从对应色起，并非上次已计算的结果再拿来计算一遍*/
+      border-color: mix($--color-white, $color, 50%); /*计算从对应色起，并非上次已计算的结果再拿来计算一遍*/
     }
   }
 }
