@@ -28,8 +28,11 @@
   &:hover,
   &:focus {
     outline: none;
-    font-weight: $--Modal-title-font-weight;
+    // font-weight: $--options-font-weight-hover;
     background-color: $--menu-item-background-color-hover; /*侧栏（默认颜色） 除导航一和选项4之外的导航悬停背景色*/
+    .el-menu-title {
+      font-weight: $--options-font-weight-hover;
+    }
   }
 
   @include when(disabled) {
@@ -60,7 +63,7 @@
       line-height: 60px;
       margin: 0;
       border-bottom: 2px solid transparent;
-      color: $--menu-item-font-color; /*顶栏（默认颜色）订单管理  消息中心 文字色*/
+      color: $--menu-item-font-color; /*顶栏（默认颜色）订单管理  处理中心 文字色*/
 
       a,
       a:hover {
@@ -96,7 +99,7 @@
         height: 60px;
         line-height: 60px;
         border-bottom: 2px solid transparent;
-        color: $--menu-item-font-color; /*顶栏（默认颜色）“我的工作台”默认文字色*/
+        color: $--menu-item-font-color; /*顶栏（默认颜色） “我的工作台”默认文字色*/
 
         &:hover {
           background-color: $--menu-item-background-color-hover; /*顶栏（默认颜色）“我的工作台”悬停背景色*/
@@ -136,7 +139,7 @@
       color: $--menu-title-font-color-hover; /*顶栏（默认颜色 “处理中心+订单管理”悬停文字色*/
     }
     & > .el-menu-item.is-active {
-      font-weight: $--Modal-title-font-weight;
+      font-weight: $--options-font-weight-active;
       border-bottom: 2px solid $--color-primary;
       color:$--menu-title-font-color-active; /*顶栏（默认颜色 “处理中心+订单管理”已选中文字色*/
     }
@@ -220,6 +223,7 @@
     vertical-align: middle;
   }
   @include when(active) {
+    font-weight: $--options-font-weight-active;
     color: $--menu-title-font-color-active; /*侧栏（默认颜色） 已选中菜单文字色*/
     i {
       color: inherit;
@@ -236,6 +240,7 @@
     @include menu-item;
 
     &:hover {
+
       background-color: $--menu-item-background-color-hover;  /*侧栏(默认颜色) ”导航一+选项四“悬停背景色*/
     }
   }

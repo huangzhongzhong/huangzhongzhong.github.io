@@ -22,8 +22,7 @@
     }
   }
 
-  @include when(bordered) {
-    /*带有边框*/
+  @include when(bordered) { /*带有边框*/
     padding: $--checkbox-bordered-padding;
     border-radius: $--checkbox-bordered-border-radius;
     border: $--checkbox-bordered-border;
@@ -33,6 +32,10 @@
 
     &.is-checked {
       border-color: $--checkbox-bordered-checked-border;
+      background-color: $--color-primary-light-9 ;
+      &.is-disabled {
+       background-color: $--color-background-base ;
+       }
     }
 
     &.is-disabled {
