@@ -227,7 +227,7 @@ $--button-mini-padding-horizontal: 15px !default; /*按钮 超小号 内边距 �
 // 默认按钮
 /*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
 $--button-default-background-color: $--color-background-base !default;
-$--button-default-font-color: $--color-text-regular !default;
+$--button-default-font-color: $--color-text-primary !default;
 $--button-default-border-color: $--color-border-base !default;
 
 $--button-default-background-color-hover: $--color-primary-light-9 !default;
@@ -254,7 +254,7 @@ $--button-default-disabled-border-color: $--color-border-light !default;
 // 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixins-_button 文件。
 $--button-plain-background-color: $--color-white !default;
 $--button-plain-border: $--border-base !default;
-$--button-plain-font-color: $--color-text-regular !default;
+$--button-plain-font-color: $--color-text-primary !default;
 
 $--button-plain-background-color-hover: $--color-white !default;
 $--button-plain-border-color-hover: $--color-primary !default;
