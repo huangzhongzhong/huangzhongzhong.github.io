@@ -7,6 +7,9 @@ lerna-debug.log
 npm-debug.log.*
 yarn-debug.log.*
 yarn-error.log.*
+yarn.lock
+yarn.lock.*
+node_modules.*
 lerna-debug.log.*
 lib
 .idea
