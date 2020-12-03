@@ -6,14 +6,14 @@
 
 @include b(message-box) {
   display: inline-block;
-  width: $--msgbox-width;
+  width: $msgbox-width;
   padding-bottom: 24px;
   vertical-align: middle;
-  background-color: $--color-white; /*所有弹窗背景*/
-  border-radius: $--msgbox-border-radius; 
-  border: 1px solid $--color-border-light; /*所有弹窗边框*/
-  font-size: $--messagebox-font-size;
-  box-shadow: $--box-shadow-light;
+  background-color: $color-white; /*所有弹窗背景*/
+  border-radius: $msgbox-border-radius; 
+  border: 1px solid $color-border-light; /*所有弹窗边框*/
+  font-size: $messagebox-font-size;
+  box-shadow: $box-shadow-light;
   text-align: left;
   overflow: hidden;
   backface-visibility: hidden;
@@ -37,52 +37,52 @@
 
   @include e(header) {
     position: relative;
-    padding: $--msgbox-padding-primary;
+    padding: $msgbox-padding-primary;
     padding-bottom: 0px;
   }
 
   @include e(title) {
     padding-left: 0;
     margin-bottom: 0;
-    font-size: $--messagebox-font-size;
+    font-size: $messagebox-font-size;
     line-height: 1;
-    color: $--messagebox-title-color; /*所有标题文字*/
-    font-weight: $--Modal-title-font-weight;
+    color: $messagebox-title-color; /*所有标题文字*/
+    font-weight: $Modal-title-font-weight;
     &:before { /*标题加色块*/
       content: "";
       width: 4px;
-      border-left: 4px solid $--color-primary;
+      border-left: 4px solid $color-primary;
       padding-left: 12px;
     }
   }
 
   @include e(headerbtn) {
     position: absolute;
-    top: $--msgbox-padding-primary;
-    right: $--msgbox-padding-primary;
+    top: $msgbox-padding-primary;
+    right: $msgbox-padding-primary;
     padding: 0;
     border: none;
     outline: none;
     background: transparent;
-    font-size: $--message-close-size;
+    font-size: $message-close-size;
     cursor: pointer;
 
     .el-message-box__close {
-      color: $--color-info; /*所有关闭图标默认色*/
+      color: $color-info; /*所有关闭图标默认色*/
     }
 
     &:focus, &:hover {
       .el-message-box__close {
-        color: $--color-primary; /*所有关闭图标悬停色*/
+        color: $color-primary; /*所有关闭图标悬停色*/
       }
     }
 
   }
 
   @include e(content) {
-    padding: 24px $--msgbox-padding-primary; /*全部内容区*/
-    color: $--messagebox-content-color;  /*所有内容文字*/
-    font-size: $--messagebox-content-font-size;
+    padding: 24px $msgbox-padding-primary; /*全部内容区*/
+    color: $messagebox-content-color;  /*所有内容文字*/
+    font-size: $messagebox-content-font-size;
   }
   
   @include e(container) {
@@ -93,10 +93,10 @@
     padding-top: 15px;
 
     & input.invalid {
-      border-color: $--color-danger; /*提交内容-邮箱报错 边框颜色 默认*/
+      border-color: $color-danger; /*提交内容-邮箱报错 边框颜色 默认*/
       &:focus { /*提交内容-邮箱报错 边框颜色 输入中*/
-        border-color: $--color-danger; 
-        box-shadow: $--box-shadow-danger; 
+        border-color: $color-danger; 
+        box-shadow: $box-shadow-danger; 
       }
     }
   }
@@ -118,19 +118,19 @@
     }
 
     &.el-icon-success { 
-      color: $--messagebox-success-color; /*弹框字体图标 正确色*/
+      color: $messagebox-success-color; /*弹框字体图标 正确色*/
     }
 
     &.el-icon-info {
-      color: $--messagebox-info-color; /*弹框字体图标 信息色*/
+      color: $messagebox-info-color; /*弹框字体图标 信息色*/
     }
 
     &.el-icon-warning {
-      color: $--messagebox-warning-color; /*弹框字体图标 警告色*/
+      color: $messagebox-warning-color; /*弹框字体图标 警告色*/
     }
 
     &.el-icon-error {
-      color: $--messagebox-danger-color; /*弹框字体图标 危险色*/
+      color: $messagebox-danger-color; /*弹框字体图标 危险色*/
     }
   }
 
@@ -144,8 +144,8 @@
   }
 
   @include e(errormsg) { 
-    color: $--color-danger; /*未找到对应*/
-    font-size: $--messagebox-error-font-size;
+    color: $color-danger; /*未找到对应*/
+    font-size: $messagebox-error-font-size;
     min-height: 18px;
     margin-top: 2px;
   }
@@ -195,7 +195,7 @@
     }
 
     @include e(content) { 
-      $padding-horizontal: $--msgbox-padding-primary + 12px;
+      $padding-horizontal: $msgbox-padding-primary + 12px;
 
       padding-left: $padding-horizontal;
       padding-right: $padding-horizontal;

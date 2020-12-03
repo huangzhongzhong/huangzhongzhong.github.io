@@ -2,10 +2,10 @@
   import bus from '../../bus';
   import { ACTION_USER_CONFIG_UPDATE } from '../../components/theme/constant.js';
   const varMap = {
-    '$--box-shadow-light': 'boxShadowLight',
-    '$--box-shadow-base': 'boxShadowBase',
-    '$--border-radius-base': 'borderRadiusBase',
-    '$--border-radius-small': 'borderRadiusSmall'
+    '$box-shadow-light': 'boxShadowLight',
+    '$box-shadow-base': 'boxShadowBase',
+    '$border-radius-base': 'borderRadiusBase',
+    '$border-radius-small': 'borderRadiusSmall'
   };
   const original = {
     boxShadowLight: '0 2px 12px 0 rgba(0, 0, 0, 0.1)',

@@ -3,11 +3,11 @@
 
 @include b(backtop) {
   position: fixed;
-  background-color: $--backtop-background-color; /*回到底部按钮背景色*/
+  background-color: $backtop-background-color; /*回到底部按钮背景色*/
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: $--backtop-font-color; /*回到底部按钮图标色*/
+  color: $backtop-font-color; /*回到底部按钮图标色*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,6 @@
   z-index: 5;
 
   &:hover { 
-    background-color: $--backtop-hover-background-color; /*回到底部按钮悬停背景色*/
+    background-color: $backtop-hover-background-color; /*回到底部按钮悬停背景色*/
   }
 }

@@ -8,7 +8,7 @@
 
   @include e(text) {
     font-size:14px;
-    color: $--color-text-regular; /*所有默认文字颜色*/
+    color: $color-text-regular; /*所有默认文字颜色*/
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
@@ -61,31 +61,31 @@
 
   @include when(success) {
     .el-progress-bar__inner {
-      background-color: $--color-success; /*线性进度条+百分比内显 正确进度条色*/
+      background-color: $color-success; /*线性进度条+百分比内显 正确进度条色*/
     }
 
     .el-progress__text {
-      color: $--color-success; /*线性进度条+百分比内显 正确字体图标色*/
+      color: $color-success; /*线性进度条+百分比内显 正确字体图标色*/
     }
   }
 
   @include when(warning) {
     .el-progress-bar__inner {
-      background-color: $--color-warning; /*线性进度条+百分比内显 警告进度条色*/
+      background-color: $color-warning; /*线性进度条+百分比内显 警告进度条色*/
     }
 
     .el-progress__text {
-      color: $--color-warning; /*线性进度条+百分比内显 警告字体图标色*/
+      color: $color-warning; /*线性进度条+百分比内显 警告字体图标色*/
     }
   }
 
   @include when(exception) {
     .el-progress-bar__inner {
-      background-color: $--color-danger; /*线性进度条+百分比内显 危险进度条色*/
+      background-color: $color-danger; /*线性进度条+百分比内显 危险进度条色*/
     }
 
     .el-progress__text {
-      color: $--color-danger; /*线性进度条+百分比内显 危险字体图标色*/
+      color: $color-danger; /*线性进度条+百分比内显 危险字体图标色*/
     }
   }
 }
@@ -101,7 +101,7 @@
   @include e(outer) {
     height: 6px;
     border-radius: 100px;
-    background-color: $--color-border-light; /*线性进度条+百分比内显+自定义颜色 进度条背景色*/
+    background-color: $color-border-light; /*线性进度条+百分比内显+自定义颜色 进度条背景色*/
     overflow: hidden;
     position: relative;
     vertical-align: middle;
@@ -111,7 +111,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color: $--color-primary; /*线性进度条+百分比内显+自定义颜色 默认进度条色*/
+    background-color: $color-primary; /*线性进度条+百分比内显+自定义颜色 默认进度条色*/
     text-align: right;
     border-radius: 100px;
     line-height: 1;
@@ -124,7 +124,7 @@
   @include e(innerText) {
     display: inline-block;
     vertical-align: middle;
-    color: $--color-white; /*百分比内显文字色*/
+    color: $color-white; /*百分比内显文字色*/
     font-size: 12px;
     margin: 0 5px;
   }

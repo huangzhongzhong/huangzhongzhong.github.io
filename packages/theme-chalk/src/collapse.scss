@@ -3,26 +3,26 @@
 @import "common/transition";
 
 @include b(collapse) {
-  border-top: 1px solid $--collapse-border-color; /*顶部 分割线*/
-  border-bottom: 1px solid $--collapse-border-color; /*底部 分割线*/
+  border-top: 1px solid $collapse-border-color; /*顶部 分割线*/
+  border-bottom: 1px solid $collapse-border-color; /*底部 分割线*/
 }
 @include b(collapse-item) {
   @include when(disabled) {
     .el-collapse-item__header {
-      color: $--color-text-placeholder ;/*禁用 对应区域？*/
+      color: $color-text-placeholder ;/*禁用 对应区域？*/
       cursor: not-allowed;
     }
   }
   @include e(header) {
     display: flex;
     align-items: center;
-    height: $--collapse-header-height;
-    line-height: $--collapse-header-height;
-    background-color: $--collapse-header-background-color; /*全部标题背景色*/
-    color: $--collapse-header-font-color;  /*全部标题文字色*/
+    height: $collapse-header-height;
+    line-height: $collapse-header-height;
+    background-color: $collapse-header-background-color; /*全部标题背景色*/
+    color: $collapse-header-font-color;  /*全部标题文字色*/
     cursor: pointer;
-    border-bottom: 1px solid $--collapse-border-color; /*全部未展开内部分割线*/
-    font-size: $--collapse-header-font-size;
+    border-bottom: 1px solid $collapse-border-color; /*全部未展开内部分割线*/
+    font-size: $collapse-header-font-size;
     font-weight: 500;
     transition: border-bottom-color .3s;
     outline: none;
@@ -35,7 +35,7 @@
       }
     }
     &.focusing:focus:not(:hover){
-      color: $--color-primary ;  /*未发现对应*/
+      color: $color-primary ;  /*未发现对应*/
     }
     @include when(active) {
       border-bottom-color: transparent;
@@ -44,16 +44,16 @@
 
   @include e(wrap) {
     will-change: height;
-    background-color: $--collapse-content-background-color; /*全部内容区 背景色*/
+    background-color: $collapse-content-background-color; /*全部内容区 背景色*/
     overflow: hidden;
     box-sizing: border-box;
-    border-bottom: 1px solid $--collapse-border-color; /*全部展开内部分割线*/
+    border-bottom: 1px solid $collapse-border-color; /*全部展开内部分割线*/
   }
 
   @include e(content) {
     padding-bottom: 25px;
-    font-size: $--collapse-content-font-size;
-    color: $--collapse-content-font-color; /*全部内容文字色彩*/
+    font-size: $collapse-content-font-size;
+    color: $collapse-content-font-color; /*全部内容文字色彩*/
     line-height: 1.769230769230769;
   }
 

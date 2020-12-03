@@ -2,12 +2,12 @@
   import bus from '../../bus';
   import { ACTION_USER_CONFIG_UPDATE } from '../../components/theme/constant.js';
   const varMap = [
-    '$--font-size-extra-large',
-    '$--font-size-large',
-    '$--font-size-medium',
-    '$--font-size-base',
-    '$--font-size-small',
-    '$--font-size-extra-small'
+    '$font-size-extra-large',
+    '$font-size-large',
+    '$font-size-medium',
+    '$font-size-base',
+    '$font-size-small',
+    '$font-size-extra-small'
   ];
   const original = {
     'font_size_extra_large': '20px',
@@ -50,7 +50,7 @@
         immediate: true,
         handler(value) {
           varMap.forEach((v) => {
-            const key = v.replace('$--', '').replace(/-/g, '_')
+            const key = v.replace('$', '').replace(/-/g, '_')
             if (value[v]) {
               this[key] = value[v]
             } else {
@@ -68,6 +68,7 @@
 我们对字体进行统一规范，力求在各个操作系统下都有最佳展示效果。
 
 ### 字体
+
 <div class="demo-term-box">
 <img src="../../assets/images/term-pingfang.png" alt="">
 <img src="../../assets/images/term-hiragino.png" alt="">
@@ -147,5 +148,6 @@
 ### Font-family 代码
 
 ```css
-font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 ```

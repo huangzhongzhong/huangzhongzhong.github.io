@@ -19,7 +19,7 @@
       right: -20px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: $--color-border-base; /*竖分割线*/
+      background-color: $color-border-base; /*竖分割线*/
     }
 
     .el-icon-back {
@@ -36,6 +36,6 @@
 
   @include e(content) {
     font-size: 18px;
-    color: $--color-text-primary; /*“详情页面 文字色”*/
+    color: $color-text-primary; /*“详情页面 文字色”*/
   }
 }

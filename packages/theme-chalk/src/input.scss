@@ -1,91 +1,104 @@
 @import "mixins/mixins";
 @import "common/var";
 
-@include b(textarea) { /*文本域*/
+@include b(textarea) {
+  /*文本域*/
   position: relative;
   display: inline-block;
   width: 100%;
   vertical-align: bottom;
-  font-size: $--input-font-size;
+  font-size: $input-font-size;
 
   @include e(inner) {
     display: block;
     resize: vertical;
-    padding: $--input-textarea-line-height-padding; /*文本域内容间距*/
-    line-height: $--input-textarea-line-height;  /*文本域行高*/
+    padding: $input-textarea-line-height-padding;
+    /*文本域内容间距*/
+    line-height: $input-textarea-line-height;
+    /*文本域行高*/
     box-sizing: border-box;
     width: 100%;
     font-size: inherit;
-    color: $--input-font-color;
-    background-color: $--input-background-color;
+    color: $input-font-color;
+    background-color: $input-background-color;
     background-image: none;
-    border: $--input-border;
-    border-radius: $--input-border-radius;
-    transition: $--border-transition-base;
-    
-    &::placeholder { /*文本域占位文字*/
-      color: $--input-placeholder-color ;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    transition: $border-transition-base;
+
+    &::placeholder {
+      /*文本域占位文字*/
+      color: $input-placeholder-color;
     }
 
-    &:hover { /*文本域悬停色*/
-      border-color: $--input-border-hover; 
+    &:hover {
+      /*文本域悬停色*/
+      border-color: $input-border-hover;
     }
 
     &:focus {
       outline: none;
-      border-color: $--input-focus-border;
-      box-shadow: $--input-focus-shadow;
-      position: relative;  /*根源加的，解决复合文本框层级问题*/
+      border-color: $input-focus-border;
+      box-shadow: $input-focus-shadow;
+      position: relative;
+      /*根源加的，解决复合文本框层级问题*/
     }
   }
 
-  & .el-input__count { /*文本域计数数字*/
-    color: $--input-count-font-color;
-    background: $--color-white;
+  & .el-input__count {
+    /*文本域计数数字*/
+    color: $input-count-font-color;
+    background: $color-white;
     position: absolute;
-    font-size: $--input-count-font-size;
-    bottom: $--input-count-bottom;
-    right: $--input-count-right;
+    font-size: $input-count-font-size;
+    bottom: $input-count-bottom;
+    right: $input-count-right;
   }
 
   @include when(disabled) {
     .el-textarea__inner {
-      background-color: $--input-disabled-background;
-      border-color: $--input-disabled-border;
-      color: $--input-disabled-color;
+      background-color: $input-disabled-background;
+      border-color: $input-disabled-border;
+      color: $input-disabled-color;
       cursor: not-allowed;
-      &::placeholder { /*应该是文本域禁用状态*/
-        color: $--input-disabled-placeholder-color;
+
+      &::placeholder {
+        /*应该是文本域禁用状态*/
+        color: $input-disabled-placeholder-color;
       }
     }
   }
 
-  @include when(exceed) { /*出错*/
+  @include when(exceed) {
+
+    /*出错*/
     .el-textarea__inner {
-      border-color: $--input-exceed-border-color;
+      border-color: $input-exceed-border-color;
     }
 
     .el-input__count {
-      color: $--input-exceed-count-font-color;
+      color: $input-exceed-count-font-color;
     }
   }
 }
 
-@include b(input) { /*输入框全局*/
+@include b(input) {
+  /*输入框全局*/
   position: relative;
-  font-size: $--input-font-size;
+  font-size: $input-font-size;
   display: inline-block;
   width: 100%;
   @include scroll-bar;
 
   & .el-input__clear {
-    color: $--input-icon-color;
-    font-size: $--input-font-size;
+    color: $input-icon-color;
+    font-size: $input-font-size;
     cursor: pointer;
-    transition: $--color-transition-base;
+    transition: $color-transition-base;
 
-    &:hover { /*可清空图标悬停*/
-      color: $--input-clear-icon-hover-color;
+    &:hover {
+      /*可清空图标悬停*/
+      color: $input-clear-icon-hover-color;
     }
   }
 
@@ -93,60 +106,67 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    color: $--input-count-font-color;
-    font-size: $--input-count-font-size;
+    color: $input-count-font-color;
+    font-size: $input-count-font-size;
 
-    .el-input__count-inner { /*对应输入长度限制字符区域*/
-      background: $--color-white;
+    .el-input__count-inner {
+      /*对应输入长度限制字符区域*/
+      background: $color-white;
       line-height: initial;
       display: inline-block;
-      padding: $--input-count-padding;
+      padding: $input-count-padding;
     }
   }
 
-  @include e(inner) { /*输入框 全局*/
+  @include e(inner) {
+    /*输入框 全局*/
     -webkit-appearance: none;
-    background-color: $--input-background-color;
+    background-color: $input-background-color;
     background-image: none;
-    border-radius: $--input-border-radius;
-    border: $--input-border;
+    border-radius: $input-border-radius;
+    border: $input-border;
     box-sizing: border-box;
-    color: $--input-font-color;
+    color: $input-font-color;
     display: inline-block;
     font-size: inherit;
-    height: $--input-height;
-    line-height: $--input-height;
+    height: $input-height;
+    line-height: $input-height;
     outline: none;
-    padding: $--input-inner-padding;
-    transition: $--border-transition-base;
-    width: 100%; /*输入框宽度*/
-    
-    
-    &::placeholder { /*对应：input 除文本域，禁用以外的所有占位文字 */
-      color: $--input-placeholder-color ;
+    padding: $input-inner-padding;
+    transition: $border-transition-base;
+    width: 100%;
+    /*输入框宽度*/
+
+
+    &::placeholder {
+      /*对应：input 除文本域，禁用以外的所有占位文字 */
+      color: $input-placeholder-color;
     }
 
-    &:hover { /*全局悬停边框*/
-      border-color: $--input-border-hover;
+    &:hover {
+      /*全局悬停边框*/
+      border-color: $input-border-hover;
     }
 
     &:focus {
       outline: none;
-      border-color: $--input-focus-border;
-      box-shadow: $--input-focus-shadow; 
-      position: relative;  /*根源加的，解决复合文本框层级问题*/
-      
+      border-color: $input-focus-border;
+      box-shadow: $input-focus-shadow;
+      position: relative;
+      /*根源加的，解决复合文本框层级问题*/
+
       // z-index: 1; /*这个方法会导致输入框在焦点的时候隐藏图标，不行*/
     }
   }
 
-  @include e(suffix) { /*右输入框图标*/
+  @include e(suffix) {
+    /*右输入框图标*/
     position: absolute;
     height: 100%;
-    right: $--input-suffix-right;
+    right: $input-suffix-right;
     top: 0;
     text-align: center;
-    color: $--input-icon-color;
+    color: $input-icon-color;
     transition: all .3s;
     pointer-events: none;
   }
@@ -155,22 +175,24 @@
     pointer-events: all;
   }
 
-  @include e(prefix) { /*左输入框图标*/
+  @include e(prefix) {
+    /*左输入框图标*/
     position: absolute;
     height: 100%;
-    left: $--input-suffix-left;
+    left: $input-suffix-left;
     top: 0;
     text-align: center;
-    color: $--input-icon-color;
+    color: $input-icon-color;
     transition: all .3s;
   }
 
-  @include e(icon) { /*输入框图标*/
+  @include e(icon) {
+    /*输入框图标*/
     height: 100%;
-    width: $--input-icon-width;
+    width: $input-icon-width;
     text-align: center;
     transition: all .3s;
-    line-height: $--input-height;
+    line-height: $input-height;
 
     &:after {
       content: '';
@@ -185,22 +207,26 @@
     pointer-events: none;
   }
 
-  @include when(active) { /*对应？*/
+  @include when(active) {
+
+    /*对应？*/
     .el-input__inner {
       outline: none;
-      border-color: $--input-focus-border;
+      border-color: $input-focus-border;
     }
   }
 
-  @include when(disabled) { /*对应：input 禁用状态 */
+  @include when(disabled) {
+
+    /*对应：input 禁用状态 */
     .el-input__inner {
-      background-color: $--input-disabled-background;
-      border-color: $--input-disabled-border;
-      color: $--input-disabled-color;
+      background-color: $input-disabled-background;
+      border-color: $input-disabled-border;
+      color: $input-disabled-color;
       cursor: not-allowed;
-      
-      &::placeholder { 
-        color: $--input-disabled-placeholder-color;
+
+      &::placeholder {
+        color: $input-disabled-placeholder-color;
       }
     }
 
@@ -209,90 +235,101 @@
     }
   }
 
-  @include when(exceed) { /*出错*/
+  @include when(exceed) {
+
+    /*出错*/
     .el-input__inner {
-      border-color:$--input-exceed-border-color;
+      border-color: $input-exceed-border-color;
     }
 
     .el-input__suffix {
       .el-input__count {
-        color: $--input-exceed-count-font-color;
+        color: $input-exceed-count-font-color;
       }
     }
   }
 
-  @include m(suffix) {  /*对应？*/
+  @include m(suffix) {
+
+    /*对应？*/
     .el-input__inner {
-      padding-right: $--input-inner-suffix-padding-right;
+      padding-right: $input-inner-suffix-padding-right;
     }
   }
 
-  @include m(prefix) { /*对应？*/
+  @include m(prefix) {
+
+    /*对应？*/
     .el-input__inner {
-      padding-left: $--input-inner-suffix-padding-left;
+      padding-left: $input-inner-suffix-padding-left;
     }
   }
 
-  @include m(medium) { 
-    font-size: $--input-medium-font-size;
+  @include m(medium) {
+    font-size: $input-medium-font-size;
 
     @include e(inner) {
-      height: $--input-medium-height;
-      line-height: $--input-medium-height;
+      height: $input-medium-height;
+      line-height: $input-medium-height;
     }
 
     .el-input__icon {
-      line-height: $--input-medium-height;
+      line-height: $input-medium-height;
     }
   }
+
   @include m(small) {
-    font-size: $--input-small-font-size;
+    font-size: $input-small-font-size;
 
     @include e(inner) {
-      height: $--input-small-height;
-      line-height: $--input-small-height;
+      height: $input-small-height;
+      line-height: $input-small-height;
     }
 
     .el-input__icon {
-      line-height: $--input-small-height;
+      line-height: $input-small-height;
     }
   }
+
   @include m(mini) {
-    font-size: $--input-mini-font-size;
+    font-size: $input-mini-font-size;
 
     @include e(inner) {
-      height: $--input-mini-height;
-      line-height: $--input-mini-height;
+      height: $input-mini-height;
+      line-height: $input-mini-height;
     }
 
     .el-input__icon {
-      line-height: $--input-mini-height;
+      line-height: $input-mini-height;
     }
   }
 }
 
-@include b(input-group) { /*复合型输入框*/
+@include b(input-group) {
+  /*复合型输入框*/
   line-height: normal;
   display: inline-table;
   width: 100%;
   border-collapse: separate;
-  border-spacing:0;
- 
-  > .el-input__inner {
+  border-spacing: 0;
+
+  >.el-input__inner {
     vertical-align: middle;
     display: table-cell;
   }
 
-  @include e((append, prepend)) { 
-    background-color: $--input-group-background;
-    color: $--input-group-font-color;
+  @include e((append, prepend)) {
+    background-color: $input-group-background;
+    color: $input-group-font-color;
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: $--border-base;
-    border-radius: $--input-border-radius;
-    padding: $--input-group-padding; /*对应http和.com两个框*/
-    width: 1px; /*对应？*/
+    border: $border-base;
+    border-radius: $input-border-radius;
+    padding: $input-group-padding;
+    /*对应http和.com两个框*/
+    width: 1px;
+    /*对应？*/
     white-space: nowrap;
 
     &:focus {
@@ -300,9 +337,10 @@
     }
 
     .el-select,
-    .el-button { /*选择按钮和搜索图标都有影响*/
+    .el-button {
+      /*选择按钮和搜索图标都有影响*/
       display: inline-block;
-      margin: $--input-group-margin;
+      margin: $input-group-margin;
     }
 
     button.el-button,
@@ -322,7 +360,8 @@
   }
 
   @include e(prepend) {
-    border-right: 0; /*对应反应不明显*/
+    border-right: 0;
+    /*对应反应不明显*/
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -337,12 +376,15 @@
     .el-input__inner {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+
       &:focus {
-        border-top-left-radius: $--input-border-radius;
-        border-bottom-left-radius: $--input-border-radius;
-        z-index: 1; /*增加了优先级，让输入框悬停阴影得以正常显示*/
+        border-top-left-radius: $input-border-radius;
+        border-bottom-left-radius: $input-border-radius;
+        z-index: 1;
+        /*增加了优先级，让输入框悬停阴影得以正常显示*/
       }
     }
+
     .el-select .el-input.is-focus .el-input__inner {
       border-color: transparent;
     }
@@ -352,12 +394,15 @@
     .el-input__inner {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+
       &:focus {
-        border-top-right-radius: $--input-border-radius;
-        border-bottom-right-radius: $--input-border-radius;
-        z-index: 1; /*增加了优先级，让输入框悬停阴影得以正常显示*/
+        border-top-right-radius: $input-border-radius;
+        border-bottom-right-radius: $input-border-radius;
+        z-index: 1;
+        /*增加了优先级，让输入框悬停阴影得以正常显示*/
       }
     }
+
     .el-select .el-input.is-focus .el-input__inner {
       border-color: transparent;
     }

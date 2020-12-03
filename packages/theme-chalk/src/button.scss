@@ -10,36 +10,36 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--button-default-background-color ;
-  border: $--button-border;
-  border-color: $--button-default-border-color ;
-  color: $--button-default-font-color ; 
+  background: $button-default-background-color ;
+  border: $button-border;
+  border-color: $button-default-border-color ;
+  color: $button-default-font-color ; 
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
   outline: none;
   margin: 0;
   transition: .1s;
-  font-weight: $--button-font-weight ;
+  font-weight: $button-font-weight ;
   @include utils-user-select(none);
   & + & {
     margin-left: 0px;/*对应：操作项目间距，可能要去操作项目表格那边改？*/
   }
 
   /*对应： button按钮全页 全局横竖内间距、文字大小、圆角*/
-  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+  @include button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-border-radius);
 
   &:hover,
   &:focus { 
-    color: $--button-default-font-color-hover; 
-    border-color: $--button-default-border-color-hover ; 
-    background-color: $--button-default-background-color-hover; 
+    color: $button-default-font-color-hover; 
+    border-color: $button-default-border-color-hover ; 
+    background-color: $button-default-background-color-hover; 
   }
 
   &:active {
-    color: $--button-default-font-color-active;
-    border-color: $--button-default-border-color-active;
-    background: $--button-default-background-color-active ;
+    color: $button-default-font-color-active;
+    border-color: $button-default-border-color-active;
+    background: $button-default-background-color-active ;
     outline: none;
   }
 
@@ -54,39 +54,39 @@
   }
   
   @include when(plain) {/*对应：基础用法 朴素按钮 */
-    background: $--button-plain-background-color ;
-    border: $--button-plain-border;
-    color: $--button-default-font-color;
+    background: $button-plain-background-color ;
+    border: $button-plain-border;
+    color: $button-default-font-color;
     &:hover,
     &:focus {
-      background: $--button-plain-background-color-hover;
-      border-color: $--button-plain-border-color-hover;
-      color: $--button-plain-font-color-hover;
+      background: $button-plain-background-color-hover;
+      border-color: $button-plain-border-color-hover;
+      color: $button-plain-font-color-hover;
     }
 
     &:active {
-      background: $--button-plain-background-color-active;
-      border-color: $--button-plain-border-color-active;
-      color: $--button-plain-font-color-active;
+      background: $button-plain-background-color-active;
+      border-color: $button-plain-border-color-active;
+      color: $button-plain-font-color-active;
       outline: none;
     }
   }
   // 锁死第一个是黑色，后面的主色没有影响。那我只需要调整百分比，没有改动色值需求。
   // 这个可能是因为引用所以锁死了黑色，有些变量位置放常量不生效。
   @include when(active) { /* 对应： 默认按下状态 */
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: mix($color-black, $color-primary, $button-active-shade-percent);
+    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
   }
 // 
   @include when(disabled) { /* 对应：禁用状态 默认按钮 */
     &,
     &:hover,
     &:focus {
-      color: $--button-default-disabled-font-color;
+      color: $button-default-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-default-disabled-background-color;
-      border-color: $--button-default-disabled-border-color;
+      background-color: $button-default-disabled-background-color;
+      border-color: $button-default-disabled-border-color;
     }
 
     &.el-button--text { /*禁用文字按钮*/
@@ -97,9 +97,9 @@
       &,
       &:hover,
       &:focus {
-        background-color: $--button-plain-disabled-background-color;
-        border-color: $--button-plain-disabled-border-color;
-        color: $--button-plain-disabled-font-color;
+        background-color: $button-plain-disabled-background-color;
+        border-color: $button-plain-disabled-border-color;
+        color: $button-plain-disabled-font-color;
       }
     }
   }
@@ -128,47 +128,47 @@
 //  /*对应： button 所有图标按钮 */ 
   @include when(circle) {
     border-radius: 50%;
-    padding: $--button-padding-vertical;
+    padding: $button-padding-vertical;
   }
   /*对应： 主要、成功、警告、危险、信息、按钮*/
   @include m(primary) { 
-    @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+    @include button-variant($button-primary-font-color, $button-primary-background-color, $button-primary-border-color);
   }
   @include m(success) { 
-    @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+    @include button-variant($button-success-font-color, $button-success-background-color, $button-success-border-color);
   }
   @include m(warning) { 
-    @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+    @include button-variant($button-warning-font-color, $button-warning-background-color, $button-warning-border-color);
   }
   @include m(danger) { 
-    @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+    @include button-variant($button-danger-font-color, $button-danger-background-color, $button-danger-border-color);
   }
   @include m(info) { 
-    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+    @include button-variant($button-info-font-color, $button-info-background-color, $button-info-border-color);
   }
  /*对应：button 不同尺寸 */
   @include m(medium) {
-    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-border-radius);
+    @include button-size($button-medium-padding-vertical, $button-medium-padding-horizontal, $button-medium-font-size, $button-border-radius);
     @include when(circle) {
-      padding: $--button-medium-padding-vertical;
+      padding: $button-medium-padding-vertical;
     }
   }
   @include m(small) {
-    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
+    @include button-size($button-small-padding-vertical, $button-small-padding-horizontal, $button-small-font-size, $button-small-border-radius);
     @include when(circle) {
-      padding: $--button-small-padding-vertical;
+      padding: $button-small-padding-vertical;
     }
   }
   @include m(mini) {
-    @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, $--button-mini-border-radius);
+    @include button-size($button-mini-padding-vertical, $button-mini-padding-horizontal, $button-mini-font-size, $button-mini-border-radius);
     @include when(circle) {
-      padding: $--button-mini-padding-vertical;
+      padding: $button-mini-padding-vertical;
     }
   }
   // /*对应：button 文字按钮 */
   @include m(text) {
     border-color: transparent;
-    color: $--button-text-font-color;
+    color: $button-text-font-color;
     background: transparent;
     padding-left: 8px;
     padding-right: 8px;
@@ -176,21 +176,21 @@
 
     &:hover,
     &:focus {
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: mix($color-black, $color-primary, $button-active-shade-percent);
       border-color: transparent;
-      background: $--color-primary-light-9;
+      background: $color-primary-light-9;
     }
     &:active {
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: mix($color-black, $color-primary, $button-active-shade-percent);
       border-color: transparent;
-      background-color: $--color-primary-light-7;
+      background-color: $color-primary-light-7;
     }
 
     &.is-disabled,
     &.is-disabled:hover,
     &.is-disabled:focus {
       border-color: transparent;
-      color:$--button-disabled-text-font-color; /*按钮（文字按钮（禁用））*/
+      color:$button-disabled-text-font-color; /*按钮（文字按钮（禁用））*/
     }
   }
 }
@@ -218,10 +218,10 @@
       border-bottom-left-radius: 0;
     }
     &:first-child:last-child { /*对应：所有按钮 除了圆角、图标*/
-      border-top-right-radius: $--button-border-radius;
-      border-bottom-right-radius: $--button-border-radius;
-      border-top-left-radius: $--button-border-radius;
-      border-bottom-left-radius: $--button-border-radius;
+      border-top-right-radius: $button-border-radius;
+      border-bottom-right-radius: $button-border-radius;
+      border-top-left-radius: $button-border-radius;
+      border-bottom-left-radius: $button-border-radius;
 
       &.is-round { /*圆角按钮圆角？改动未见效果*/
         border-radius: 20px;
@@ -253,23 +253,23 @@
     & > .el-button {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      border-left-color: rgba($--color-white, 0.5);/*改动未见效果*/
+      border-left-color: rgba($color-white, 0.5);/*改动未见效果*/
     }
   }
 
   @each $type in (primary, success, warning, danger, info) { /*按钮组*/
     .el-button--#{$type} {
       &:first-child { /*第一页默认、悬停时右边框，但默认边框被下一个压住*/
-        border-right-color: rgba($--color-white, 0.5); 
+        border-right-color: rgba($color-white, 0.5); 
       }
       &:last-child { /*最后一个按钮默认左边框，也是悬停左边框*/
-        border-left-color: rgba($--color-white, 0.5);
+        border-left-color: rgba($color-white, 0.5);
       }
       &:not(:first-child):not(:last-child) { /*中间按钮边框*/
         /*第二个按钮默认,悬停左边框，压住了第一页的边框*/
-        border-left-color: rgba($--color-white, 0.5); 
+        border-left-color: rgba($color-white, 0.5); 
         /*第二个按钮默认,悬停右边框，但默认边框被下一个压住*/
-        border-right-color: rgba($--color-white, 0.5);
+        border-right-color: rgba($color-white, 0.5);
       }
     }
   }

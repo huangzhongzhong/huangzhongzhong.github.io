@@ -4,37 +4,37 @@
 // 选择器选项
 @include b(select-dropdown) { 
   @include e(item) {
-    font-size: $--select-font-size;
+    font-size: $select-font-size;
     padding: 0 20px;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $--select-option-color;/*默认选项字体色*/
-    height: $--select-option-height;
-    line-height: $--select-option-height;
+    color: $select-option-color;/*默认选项字体色*/
+    height: $select-option-height;
+    line-height: $select-option-height;
     box-sizing: border-box;
     cursor: pointer;
 
     @include when(disabled) { 
-      color: $--disabled-font-color;/*禁用选项字体色*/
-      background-color: $--color-white;/*没有效果，禁用状态还是会变色*/
+      color: $disabled-font-color;/*禁用选项字体色*/
+      background-color: $color-white;/*没有效果，禁用状态还是会变色*/
       cursor: not-allowed;
 
       &:hover { /*禁用选项还需要hover态？不加hover态的话才会显示出其他样式*/
         font-weight: 400; /*有效，加上400防止禁用文字被加粗*/
-        color: $--disabled-font-color; /*没有效果，禁用状态还是会变色*/
-        background-color: $--color-white;
+        color: $disabled-font-color; /*没有效果，禁用状态还是会变色*/
+        background-color: $color-white;
       }
     }
 
     &.hover, &:hover {
-      font-weight: $--options-font-weight-hover; /*选项悬停字体粗细*/
-      background-color: $--options-background-hover;  /*选项悬停背景色*/
+      font-weight: $options-font-weight-hover; /*选项悬停字体粗细*/
+      background-color: $options-background-hover;  /*选项悬停背景色*/
     }
 
     &.selected {
-      color: $--select-option-selected-font-color; /*已选中字体色*/
+      color: $select-option-selected-font-color; /*已选中字体色*/
       font-weight: bold;
     }
   }

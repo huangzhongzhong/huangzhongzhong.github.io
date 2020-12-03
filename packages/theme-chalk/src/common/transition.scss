@@ -4,7 +4,7 @@
 */
 .fade-in-linear-enter-active,
 .fade-in-linear-leave-active {
-  transition: $--fade-linear-transition;
+  transition: $fade-linear-transition;
 }
 .fade-in-linear-enter,
 .fade-in-linear-leave,
@@ -14,7 +14,7 @@
 
 .el-fade-in-linear-enter-active,
 .el-fade-in-linear-leave-active {
-  transition: $--fade-linear-transition;
+  transition: $fade-linear-transition;
 }
 .el-fade-in-linear-enter,
 .el-fade-in-linear-leave,
@@ -45,7 +45,7 @@
 .el-zoom-in-top-leave-active {
   opacity: 1;
   transform: scaleY(1);
-  transition: $--md-fade-transition;
+  transition: $md-fade-transition;
   transform-origin: center top;
 }
 .el-zoom-in-top-enter,
@@ -58,7 +58,7 @@
 .el-zoom-in-bottom-leave-active {
   opacity: 1;
   transform: scaleY(1);
-  transition: $--md-fade-transition;
+  transition: $md-fade-transition;
   transform-origin: center bottom;
 }
 .el-zoom-in-bottom-enter,
@@ -71,7 +71,7 @@
 .el-zoom-in-left-leave-active {
   opacity: 1;
   transform: scale(1, 1);
-  transition: $--md-fade-transition;
+  transition: $md-fade-transition;
   transform-origin: top left;
 }
 .el-zoom-in-left-enter,

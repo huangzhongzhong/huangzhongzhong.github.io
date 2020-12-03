@@ -1,20 +1,20 @@
 @import "../common/var";
-// 朴素按钮 
+// 朴素按钮
 @mixin button-plain($color) { /*对应：朴素（主要、成功、信息、警告、危险）按钮*/
   color:$color;
-  background: mix($--color-white, $color, 90%); /*背景加90%白色*/
-  border: solid 1px  mix($--color-white, $color, 0%) ; /*边框色*/
+  background: mix($color-white, $color, 90%); /*背景加90%白色*/
+  border: solid 1px  mix($color-white, $color, 0%) ; /*边框色*/
 
   &:hover,
   &:focus {
     background: $color;
     border-color: $color;
-    color: $--color-white;
+    color: $color-white;
   }
   &:active {
-    background: mix($--color-black, $color, $--button-active-shade-percent);
-    border-color: mix($--color-black, $color, $--button-active-shade-percent);
-    color: $--color-white;
+    background: mix($color-black, $color, $button-active-shade-percent);
+    border-color: mix($color-black, $color, $button-active-shade-percent);
+    color: $color-white;
     outline: none;
   }
 
@@ -23,9 +23,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: mix($--color-white, $color, 50%); /*对应色叠加50%白色*/ 
-      background-color: mix($--color-white, $color, 90%); /*对应色叠加90%白色*/
-      border-color: mix($--color-white, $color, 50%); /*计算从对应色起，并非上次已计算的结果再拿来计算一遍*/
+      color: mix($color-white, $color, 50%); /*对应色叠加50%白色*/
+      background-color: mix($color-white, $color, 90%); /*对应色叠加90%白色*/
+      border-color: mix($color-white, $color, 50%); /*计算从对应色起，并非上次已计算的结果再拿来计算一遍*/
     }
   }
 }
@@ -38,21 +38,21 @@
 
   &:hover,
   &:focus {
-    background: mix($--color-white, $background-color, $--button-hover-tint-percent);
-    border-color: mix($--color-white, $border-color, $--button-hover-tint-percent);
+    background: mix($color-white, $background-color, $button-hover-tint-percent);
+    border-color: mix($color-white, $border-color, $button-hover-tint-percent);
     color: $color;
   }
-  
-  &:active {  
-    background: mix($--color-black, $background-color, $--button-active-shade-percent);
-    border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
+
+  &:active {
+    background: mix($color-black, $background-color, $button-active-shade-percent);
+    border-color: mix($color-black, $border-color, $button-active-shade-percent);
     color: $color;
     outline: none;
   }
 
   &.is-active { /*对应？可能没对应，改成红色未见反应*/
-    background: mix($--color-danger, $background-color, $--button-active-shade-percent);
-    border-color: mix($--color-danger, $border-color, $--button-active-shade-percent);
+    background: mix($color-danger, $background-color, $button-active-shade-percent);
+    border-color: mix($color-danger, $border-color, $button-active-shade-percent);
     color: $color;
   }
 
@@ -61,9 +61,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $--color-white;
-      background-color: mix($background-color, $--color-white,50%);/*加上了比例*/
-      border-color: mix($border-color, $--color-white,50%);
+      color: $color-white;
+      background-color: mix($background-color, $color-white,50%);/*加上了比例*/
+      border-color: mix($border-color, $color-white,50%);
     }
   }
 

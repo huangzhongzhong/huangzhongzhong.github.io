@@ -353,7 +353,7 @@ export default {
       return DEFAULT_THEME_CONFIG;
     },
     mainColor() {
-      return this.theme.global['$--color-primary'] || '#1989FA';
+      return this.theme.global['$color-primary'] || '#1989FA';
     },
     mainColor50() {
       return tintColor(this.mainColor, 0.5);
@@ -362,13 +362,13 @@ export default {
       return tintColor(this.mainColor, 0.8);
     },
     textPrimaryColor() {
-      return this.theme.global['$--color-text-primary'] || '#303133';
+      return this.theme.global['$color-text-primary'] || '#303133';
     },
     borderBaseColor() {
-      return this.theme.global['$--color-border-base'] || '#DCDFE6';
+      return this.theme.global['$color-border-base'] || '#DCDFE6';
     },
     textSecondaryColor() {
-      return this.theme.global['$--color-text-secondary'] || '#909399';
+      return this.theme.global['$color-text-secondary'] || '#909399';
     },
     isOfficial() {
       return this.type === 'official';

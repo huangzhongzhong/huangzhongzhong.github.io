@@ -13,14 +13,14 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: $--color-primary; /*标签选中指示器*/
+    background-color: $color-primary; /*标签选中指示器*/
     z-index: 1;
     transition: transform .3s cubic-bezier(.645,.045,.355,1);
     list-style: none;
   }
   @include e(new-tab) {
     float: right;
-    border: 1px solid $--color-border-base; /*动态增减标签页 加号边框*/
+    border: 1px solid $color-border-base; /*动态增减标签页 加号边框*/
     height: 18px;
     width: 18px;
     line-height: 18px;
@@ -28,7 +28,7 @@
     border-radius: 3px;
     text-align: center;
     font-size: 12px;
-    color: $--color-text-regular; /*动态增减标签页 加号色*/
+    color: $color-text-regular; /*动态增减标签页 加号色*/
     cursor: pointer;
     transition: all .15s;
 
@@ -37,8 +37,8 @@
     }
 
     &:hover {
-      color: $--color-primary; /*动态增减标签页 加号悬停色*/
-      border: 1px solid $--color-primary; /*动态增减标签页 加号边框悬停色*/
+      color: $color-primary; /*动态增减标签页 加号悬停色*/
+      border: 1px solid $color-primary; /*动态增减标签页 加号边框悬停色*/
     }
   }
   @include e(nav-wrap) {
@@ -53,8 +53,8 @@
       bottom: 0;
       width: 100%;
       height: 2px;
-      background-color: $--color-border-light; /*基础用法 默认底分割线*/
-      z-index: $--index-normal;
+      background-color: $color-border-light; /*基础用法 默认底分割线*/
+      z-index: $index-normal;
     }
 
     @include when(scrollable) {
@@ -70,7 +70,7 @@
     cursor: pointer;
     line-height: 44px;
     font-size: 12px;
-    color: $--color-text-secondary; /*未找到对应*/
+    color: $color-text-secondary; /*未找到对应*/
   }
   @include e(nav-next) {
     right: 0;
@@ -83,7 +83,7 @@
     position: relative;
     transition: transform .3s;
     float: left;
-    z-index: #{$--index-normal + 1};
+    z-index: #{$index-normal + 1};
 
     @include when(stretch) {
       min-width: 100%;
@@ -103,7 +103,7 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
-    color: $--tab-item-font-color; /*全部未选中标签文字色 */
+    color: $tab-item-font-color; /*全部未选中标签文字色 */
     position: relative;
 
     &:focus, &:focus:active {
@@ -111,7 +111,7 @@
     }
 
     &:focus.is-active.is-focus:not(:active) {
-      box-shadow: 0 0 2px 2px $--color-primary inset;
+      box-shadow: 0 0 2px 2px $color-primary inset;
       border-radius: 3px;
     }
 
@@ -126,24 +126,24 @@
       }
 
       &:hover {
-        background-color: $--color-primary-light-9 ; /*全部关闭图标背景色*/
-        color: $--color-primary; /*全部关闭图标色*/
+        background-color: $color-primary-light-9 ; /*全部关闭图标背景色*/
+        color: $color-primary; /*全部关闭图标色*/
       }
     }
 
     @include when(active) {
-      font-weight: $--options-font-weight-active;
-      color: $--color-primary /*全部标签文字选中色*/
+      font-weight: $options-font-weight-active;
+      color: $color-primary /*全部标签文字选中色*/
     }
 
     &:hover {
-      font-weight: $--options-font-weight-hover;
-      color: $--color-primary; /*全部标签文字悬停色*/
+      font-weight: $options-font-weight-hover;
+      color: $color-primary; /*全部标签文字悬停色*/
       cursor: pointer;
     }
 
     @include when(disabled) {
-      color: $--disabled-color-base; /*应该是标签文字禁用色*/
+      color: $disabled-color-base; /*应该是标签文字禁用色*/
       cursor: default;
     }
   }
@@ -153,13 +153,13 @@
   }
   @include m(card) {
     > .el-tabs__header {
-      border-bottom: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 底分割线*/
+      border-bottom: 1px solid $color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 底分割线*/
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
       content: none;
     }
     > .el-tabs__header .el-tabs__nav {
-      border: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 左上右分割线*/
+      border: 1px solid $color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 左上右分割线*/
       border-bottom: none;
       border-radius: 4px 4px 0 0;
       box-sizing: border-box;
@@ -181,7 +181,7 @@
     }
     > .el-tabs__header .el-tabs__item {
       border-bottom: 1px solid transparent;
-      border-left: 1px solid $--color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 竖分割线*/
+      border-left: 1px solid $color-border-base; /*选项卡+动态增减标签页+自定义增加标签页触发器 竖分割线*/
       transition: color .3s cubic-bezier(.645,.045,.355,1), padding .3s cubic-bezier(.645,.045,.355,1);
       &:first-child {
         border-left: none;
@@ -197,7 +197,7 @@
         }
       }
       &.is-active {
-        border-bottom-color: $--color-white; /*选项卡+动态增减标签页+自定义增加标签页触发器  已选中卡片底分割线*/
+        border-bottom-color: $color-white; /*选项卡+动态增减标签页+自定义增加标签页触发器  已选中卡片底分割线*/
 
         &.is-closable {
           padding-left: 20px;
@@ -211,16 +211,16 @@
     }
   }
   @include m(border-card) { /*卡片化=自定义标签页*/
-    background: $--color-white; /*卡片化内容背景色*/
-    border: 1px solid $--color-border-base; /*卡片化外包围边框*/
+    background: $color-white; /*卡片化内容背景色*/
+    border: 1px solid $color-border-base; /*卡片化外包围边框*/
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
 
     > .el-tabs__content {
       padding: 15px;
     }
     > .el-tabs__header { 
-      background-color: $--color-background-base; /*卡片化 未选中标题背景色*/
-      border-bottom: 1px solid $--color-border-base; /*卡片化 未选中标题边框色*/
+      background-color: $color-background-base; /*卡片化 未选中标题背景色*/
+      border-bottom: 1px solid $color-border-base; /*卡片化 未选中标题边框色*/
       margin: 0;
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
@@ -230,7 +230,7 @@
       transition: all .3s cubic-bezier(.645,.045,.355,1);
       border: 1px solid transparent;
       margin-top: -1px;
-      color: $--tab-item-font-color; /*卡片化 未选中标题文字色*/
+      color: $tab-item-font-color; /*卡片化 未选中标题文字色*/
 
       &:first-child {
         margin-left: -1px;
@@ -241,16 +241,16 @@
       }
 
       &.is-active {
-        color: $--tab-item-font-color-active;  /*卡片化 已选中标题文字图标色*/
-        background-color: $--color-white; /*卡片化 已选中标题背景色*/
-        border-right-color: $--color-border-base; /*卡片化 已选中标题右分割线色*/
-        border-left-color: $--color-border-base; /*卡片化 已选中标题左分割线色*/
+        color: $tab-item-font-color-active;  /*卡片化 已选中标题文字图标色*/
+        background-color: $color-white; /*卡片化 已选中标题背景色*/
+        border-right-color: $color-border-base; /*卡片化 已选中标题右分割线色*/
+        border-left-color: $color-border-base; /*卡片化 已选中标题左分割线色*/
       }
       &:not(.is-disabled):hover {
-        color: $--color-primary; /*卡片化 标题悬停文字色*/
+        color: $color-primary; /*卡片化 标题悬停文字色*/
       }
       &.is-disabled {
-        color: $--disabled-color-base; /*未找到对应，可能是禁用状态*/
+        color: $disabled-color-base; /*未找到对应，可能是禁用状态*/
       }
     }
 
@@ -288,7 +288,7 @@
     &.el-tabs--border-card {
       .el-tabs__header.is-bottom {
         border-bottom: 0;
-        border-top: 1px solid $--color-border-base; /*未找到对应*/
+        border-top: 1px solid $color-border-base; /*未找到对应*/
       }
       .el-tabs__nav-wrap.is-bottom {
         margin-top: -1px;
@@ -394,17 +394,17 @@
       }
       .el-tabs__item.is-left {
         border-left: none;
-        border-right: 1px solid $--color-border-light;  /*未找到对应*/
+        border-right: 1px solid $color-border-light;  /*未找到对应*/
         border-bottom: none;
-        border-top: 1px solid $--color-border-light;  /*未找到对应*/
+        border-top: 1px solid $color-border-light;  /*未找到对应*/
         text-align: left;
       }
       .el-tabs__item.is-left:first-child {
-        border-right: 1px solid $--color-border-light;  /*未找到对应*/
+        border-right: 1px solid $color-border-light;  /*未找到对应*/
         border-top: none;
       }
       .el-tabs__item.is-left.is-active {
-        border: 1px solid $--color-border-light;  /*未找到对应*/
+        border: 1px solid $color-border-light;  /*未找到对应*/
         border-right-color: #fff;  /*未找到对应*/
         border-left: none;
         border-bottom: none;
@@ -419,7 +419,7 @@
 
       .el-tabs__nav {
         border-radius: 4px 0 0 4px;
-        border-bottom: 1px solid $--color-border-light;  /*未找到对应*/
+        border-bottom: 1px solid $color-border-light;  /*未找到对应*/
         border-right: none;
       }
 
@@ -469,14 +469,14 @@
       }
       .el-tabs__item.is-right {
         border-bottom: none;
-        border-top: 1px solid $--color-border-light;  /*未找到对应*/
+        border-top: 1px solid $color-border-light;  /*未找到对应*/
       }
       .el-tabs__item.is-right:first-child {
-        border-left: 1px solid $--color-border-light;  /*未找到对应*/
+        border-left: 1px solid $color-border-light;  /*未找到对应*/
         border-top: none;
       }
       .el-tabs__item.is-right.is-active {
-        border: 1px solid $--color-border-light;  /*未找到对应*/
+        border: 1px solid $color-border-light;  /*未找到对应*/
         border-left-color: #fff;  /*未找到对应*/
         border-right: none;
         border-bottom: none;
@@ -491,7 +491,7 @@
 
       .el-tabs__nav {
         border-radius: 0 4px 4px 0;
-        border-bottom: 1px solid $--color-border-light; /*未找到对应*/
+        border-bottom: 1px solid $color-border-light; /*未找到对应*/
         border-left: none;
       }
     }

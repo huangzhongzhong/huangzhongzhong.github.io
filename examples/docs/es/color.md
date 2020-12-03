@@ -3,21 +3,21 @@
   import { tintColor } from '../../color.js';
   import { ACTION_USER_CONFIG_UPDATE } from '../../components/theme/constant.js';
   const varMap = {
-    'primary': '$--color-primary',
-    'success': '$--color-success',
-    'warning': '$--color-warning',
-    'danger': '$--color-danger',
-    'info': '$--color-info',
-    'white': '$--color-white',
-    'black': '$--color-black',
-    'textPrimary': '$--color-text-primary',
-    'textRegular': '$--color-text-regular',
-    'textSecondary': '$--color-text-secondary',
-    'textPlaceholder': '$--color-text-placeholder',
-    'borderBase': '$--color-border-base',
-    'borderLight': '$--color-border-light',
-    'borderLighter': '$--color-border-light',
-    'borderExtraLight': '$--color-border-light'
+    'primary': '$color-primary',
+    'success': '$color-success',
+    'warning': '$color-warning',
+    'danger': '$color-danger',
+    'info': '$color-info',
+    'white': '$color-white',
+    'black': '$color-black',
+    'textPrimary': '$color-text-primary',
+    'textRegular': '$color-text-regular',
+    'textSecondary': '$color-text-secondary',
+    'textPlaceholder': '$color-text-placeholder',
+    'borderBase': '$color-border-base',
+    'borderLight': '$color-border-light',
+    'borderLighter': '$color-border-light',
+    'borderExtraLight': '$color-border-light'
   };
   const original = {
     primary: '#409EFF',
@@ -91,6 +91,7 @@
 </script>
 
 ## Color
+
 Element utiliza un conjunto de paletas para especificar colores, y así, proporcionar una apariencia y sensación coherente para los productos que construye.
 
 ### Color principal

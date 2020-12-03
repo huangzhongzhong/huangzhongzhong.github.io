@@ -51,7 +51,7 @@
     padding: 16px;  /*标题区域*/ 
 
     @include when(left) {
-      border-right: 1px solid $--datepicker-inner-border-color; /*中分割线*/ 
+      border-right: 1px solid $datepicker-inner-border-color; /*中分割线*/ 
     }
     .el-date-range-picker__header {
       div {
@@ -72,7 +72,7 @@
 
   @include e(time-header) {  /*日期时间选择器 日期和时间范围+默认的起始与结束时刻 输入框组-标题分割线*/
     position: relative;
-    border-bottom: 1px solid $--datepicker-inner-border-color;   /*输入框组-标题分割线*/
+    border-bottom: 1px solid $datepicker-inner-border-color;   /*输入框组-标题分割线*/
     font-size: 12px; /*撑高了标题区高度，但未找到明确对应*/
     padding: 8px 5px 5px 5px; /* 输入框组*/
     display: table;
@@ -83,7 +83,7 @@
       font-size: 20px;  /* 输入框组中间箭头*/
       vertical-align: middle;
       display: table-cell;
-      color: $--datepicker-icon-color;  /* 输入框组中间箭头*/
+      color: $datepicker-icon-color;  /* 输入框组中间箭头*/
     }
   }
 
@@ -97,7 +97,7 @@
       top: 13px; /*未找到对应*/
       right: 0;
       z-index: 1;
-      background: $--color-white;  /*未找到对应*/
+      background: $color-white;  /*未找到对应*/
     }
   }
 }

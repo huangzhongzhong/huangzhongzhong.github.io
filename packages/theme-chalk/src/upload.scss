@@ -13,7 +13,7 @@
 
   @include e(tip) {
     font-size: 12px;
-    color: $--color-text-regular;/*上传说明文字*/
+    color: $color-text-regular;/*上传说明文字*/
     margin-top: 7px;
   }
 
@@ -28,8 +28,8 @@
 
   /* 照片墙模式 */
   @include m(picture-card) {
-    background-color: $--color-background-base ; /*照片墙+文件缩略图 背景*/
-    border: 1px dashed $--color-border-base ; /*照片墙+文件缩略图 边框*/
+    background-color: $color-background-base ; /*照片墙+文件缩略图 背景*/
+    border: 1px dashed $color-border-base ; /*照片墙+文件缩略图 边框*/
     border-radius: 6px;
     box-sizing: border-box;
     width: 148px;
@@ -40,27 +40,27 @@
 
     i {
       font-size: 28px;
-      color: $--color-border-base; /*照片墙+文件缩略图 加号*/
+      color: $color-border-base; /*照片墙+文件缩略图 加号*/
     }
 
     &:hover {
-      border-color: $--color-primary; /*照片墙+文件缩略图 边框悬停*/
-      color: $--color-primary; /*未找到对应*/
+      border-color: $color-primary; /*照片墙+文件缩略图 边框悬停*/
+      color: $color-primary; /*未找到对应*/
     }
   }
   &:focus {
-    border-color: $--color-primary ; /*照片墙+文件缩略图 聚焦状态*/
-    color: $--color-primary ;  /*未找到对应*/
+    border-color: $color-primary ; /*照片墙+文件缩略图 聚焦状态*/
+    color: $color-primary ;  /*未找到对应*/
 
     .el-upload-dragger {
-      border-color: $--color-primary; /*未找到对应*/
+      border-color: $color-primary; /*未找到对应*/
     }
   }
 }
 
 @include b(upload-dragger) { /*拖拽上传*/
-  background-color: $--color-white;
-  border: 1px dashed $--color-border-base ; /*拖拽上传边框*/
+  background-color: $color-white;
+  border: 1px dashed $color-border-base ; /*拖拽上传边框*/
   border-radius: 6px;
   box-sizing: border-box;
   width: 360px;
@@ -72,7 +72,7 @@
 
   .el-icon-upload {
     font-size: 67px;
-    color: $--color-text-secondary ;/*拖拽上传图标*/
+    color: $color-text-secondary ;/*拖拽上传图标*/
     margin: 40px 0 16px;
     line-height: 50px;
   }
@@ -82,29 +82,29 @@
   }
 
   ~ .el-upload__files {
-    border-top: $--border-base;/*未找到对应*/
+    border-top: $border-base;/*未找到对应*/
     margin-top: 7px;
     padding-top: 5px;
   }
 
   .el-upload__text {
-    color: $--color-text-regular;/*拖拽上传文字*/
+    color: $color-text-regular;/*拖拽上传文字*/
     font-size: 14px;
     text-align: center;
 
     em {
-      color: $--color-primary;/*“点击上传”文字*/
+      color: $color-primary;/*“点击上传”文字*/
       font-style: normal;
     }
   }
 
   &:hover {
-    border-color: $--color-primary;/*选择中边框*/
+    border-color: $color-primary;/*选择中边框*/
   }
 
   @include when(dragover) { /*拖拽文件到框中悬停状态*/
-    background-color: $--color-background-dark;
-    border: 2px dashed $--color-primary;
+    background-color: $color-background-dark;
+    border: 2px dashed $color-primary;
   }
 }
 
@@ -117,7 +117,7 @@
   @include e(item) {
     transition: all .5s cubic-bezier(.55,0,.1,1);
     font-size: 14px;
-    color:$--color-text-regular;/*未找到对应*/
+    color:$color-text-regular;/*未找到对应*/
     line-height: 1.8;
     margin-top: 5px;
     position: relative;
@@ -147,7 +147,7 @@
     }
 
     & .el-icon-upload-success { /*点击上传+上传文件列表控制+手动上传*/
-      color: $--color-success; /*上传成功图标*/
+      color: $color-success; /*上传成功图标*/
     }
 
     .el-icon-close {
@@ -157,7 +157,7 @@
       right: 5px;
       cursor: pointer;
       opacity: .75;
-      color: $--color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 删除图标*/
+      color: $color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 删除图标*/
       transform: scale(.7);
 
       &:hover {
@@ -173,12 +173,12 @@
       font-size: 12px;
       cursor: pointer;
       opacity: 1;
-      color: $--color-primary; /*未找到对应*/
+      color: $color-primary; /*未找到对应*/
     }
     
     &:hover {
-      color: $--options-font-color-hover; /*想改动点击上传图标色，未生效*/
-      background-color: $--options-background-hover; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停背景*/
+      color: $options-font-color-hover; /*想改动点击上传图标色，未生效*/
+      background-color: $options-background-hover; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停背景*/
 
       .el-icon-close {
         display: inline-block;
@@ -195,7 +195,7 @@
       }
 
       .el-upload-list__item-name:hover, .el-upload-list__item-name:focus {
-        color: $--link-color-hover; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停文件名*/
+        color: $link-color-hover; /*点击上传+上传文件列表控制+拖拽上传+手动上传 悬停文件名*/
         cursor: pointer;
       }
 
@@ -227,7 +227,7 @@
   }
 
   @include e(item-name) {
-    color: $--color-text-regular;  /*点击上传+图片列表缩略图+上传文件列表控制+拖拽上传+手动上传 默认文件名*/
+    color: $color-text-regular;  /*点击上传+图片列表缩略图+上传文件列表控制+拖拽上传+手动上传 默认文件名*/
     display: block;
     margin-right: 40px;
     overflow: hidden;
@@ -239,10 +239,10 @@
     [class^="el-icon"] {
       height: 100%;
       margin-right: 7px;
-      color: $--color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
+      color: $color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
       line-height: inherit;
       &:hover{
-        color: $--color-primary;
+        color: $color-primary;
       }
     }
   }
@@ -260,11 +260,11 @@
     right: 10px;
     top: 0;
     font-size: 12px;
-    color: $--color-text-regular; /*未找到对应*/
+    color: $color-text-regular; /*未找到对应*/
     display: none;
 
     &:hover {
-      color: $--color-primary; /*未找到对应*/
+      color: $color-primary; /*未找到对应*/
     }
   }
 
@@ -275,8 +275,8 @@
 
     .el-upload-list__item {
       overflow: hidden;
-      background-color: $--color-white;/*文件缩略图 上传后背景*/
-      border: 1px solid $--color-border-base; /*文件缩略图 上传后边框*/
+      background-color: $color-white;/*文件缩略图 上传后背景*/
+      border: 1px solid $color-border-base; /*文件缩略图 上传后边框*/
       border-radius: 6px;
       box-sizing: border-box;
       width: 148px;
@@ -286,7 +286,7 @@
 
       .el-icon-check,
       .el-icon-circle-check {
-        color: $--color-white;/*照片墙 上传后选中勾图标色*/
+        color: $color-white;/*照片墙 上传后选中勾图标色*/
       }
 
       .el-icon-close {
@@ -318,7 +318,7 @@
       top: -6px;
       width: 40px;
       height: 24px;
-      background: $--color-success; /*照片墙 上传后三角背景色*/
+      background: $color-success; /*照片墙 上传后三角背景色*/
       text-align: center;
       transform: rotate(45deg);
       box-shadow: 0 0 1pc 1px rgba(0,0,0,0.2); /**/
@@ -338,10 +338,10 @@
       top: 0;
       cursor: default;
       text-align: center;
-      color: $--color-white;/*照片墙+文件缩略图 上传后悬停图标色*/
+      color: $color-white;/*照片墙+文件缩略图 上传后悬停图标色*/
       opacity: 0;
       font-size: 20px;
-      background-color: $--Mask-background-colo-base;/*照片墙+文件缩略图 上传后悬停背景蒙版*/
+      background-color: $Mask-background-colo-base;/*照片墙+文件缩略图 上传后悬停背景蒙版*/
       transition: opacity .3s;
       &::after {
         display: inline-block;
@@ -390,8 +390,8 @@
     .el-upload-list__item {
       overflow: hidden;
       z-index: 0;
-      background-color: $--color-white;/*图片列表缩略图 背景*/
-      border: 1px solid $--color-border-base; /*图片列表缩略图 边框*/
+      background-color: $color-white;/*图片列表缩略图 背景*/
+      border: 1px solid $color-border-base; /*图片列表缩略图 边框*/
       border-radius: 6px;
       box-sizing: border-box;
       margin-top: 10px;
@@ -400,7 +400,7 @@
 
       .el-icon-check,
       .el-icon-circle-check {
-        color: $--color-white; /*图片列表缩略图 勾*/
+        color: $color-white; /*图片列表缩略图 勾*/
       }
 
       &:hover {
@@ -436,7 +436,7 @@
       position: relative;
       z-index: 1;
       margin-left: -80px;
-      background-color: $--color-white /*图片列表缩略图 上传后图片背景*/
+      background-color: $color-white /*图片列表缩略图 上传后图片背景*/
     }
 
     .el-upload-list__item-name {
@@ -458,7 +458,7 @@
       top: -7px;
       width: 46px;
       height: 26px;
-      background: $--color-success;/*图片列表缩略图-三角*/
+      background: $color-success;/*图片列表缩略图-三角*/
       text-align: center;
       transform: rotate(45deg);
       box-shadow: 0 1px 1px #ccc;
@@ -500,7 +500,7 @@
     top: -6px;
     width: 40px;
     height: 24px;
-    background: $--color-success; /*未找到对应*/
+    background: $color-success; /*未找到对应*/
     text-align: center;
     transform: rotate(45deg);
     box-shadow: 0 0 1pc 1px rgba(0,0,0,0.2);
@@ -509,7 +509,7 @@
       font-size: 12px;
       margin-top: 11px;
       transform: rotate(-45deg);
-      color: $--color-white; /*未找到对应*/
+      color: $color-white; /*未找到对应*/
     }
   }
 
@@ -543,11 +543,11 @@
 
     .btn {
       display: inline-block;
-      color: $--color-white; /*未找到对应*/
+      color: $color-white; /*未找到对应*/
       font-size: 14px;
       cursor: pointer;
       vertical-align: middle;
-      transition: $--md-fade-transition;
+      transition: $md-fade-transition;
       margin-top: 60px;
 
       i {
@@ -572,7 +572,7 @@
       }
 
       i {
-        color: $--color-white;/*未找到对应*/
+        color: $color-white;/*未找到对应*/
         display: block;
         font-size: 24px;
         line-height: inherit;
@@ -585,7 +585,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: $--color-white;/*未找到对应*/
+    background-color: $color-white;/*未找到对应*/
     height: 36px;
     width: 100%;
     overflow: hidden;
@@ -597,7 +597,7 @@
     margin: 0;
     line-height: 36px;
     font-size: 14px;
-    color: $--color-text-primary;/*未找到对应*/
+    color: $color-text-primary;/*未找到对应*/
   }
 
   + .el-upload__inner {

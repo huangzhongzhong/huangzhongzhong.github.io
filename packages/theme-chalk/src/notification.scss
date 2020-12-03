@@ -3,14 +3,14 @@
 
 @include b(notification) {
   display: flex;
-  width: $--notification-width;
-  padding: $--notification-padding;
-  border-radius: $--notification-radius;
+  width: $notification-width;
+  padding: $notification-padding;
+  border-radius: $notification-radius;
   box-sizing: border-box;
-  border: 1px solid $--notification-border-color !important;/*未找到对应*/
+  border: 1px solid $notification-border-color !important;/*未找到对应*/
   position: fixed;
-  background-color: $--color-white; /*全部背景色*/
-  box-shadow: $--box-shadow-base;
+  background-color: $color-white; /*全部背景色*/
+  box-shadow: $box-shadow-base;
   transition: opacity .3s, transform .3s, left .3s, right .3s, top 0.4s, bottom .3s;
   overflow: hidden;
 
@@ -23,25 +23,25 @@
   }
 
   @include e(group) {
-    margin-left: $--notification-group-margin-left;
-    margin-right: $--notification-group-margin-right;
+    margin-left: $notification-group-margin-left;
+    margin-right: $notification-group-margin-right;
   }
 
   @include e(title) {
     font-weight: bold;
-    font-size: $--notification-title-font-size;
-    color: $--notification-title-color; /*所有标题字体色*/
+    font-size: $notification-title-font-size;
+    color: $notification-title-color; /*所有标题字体色*/
     margin: 0;
     .el-icon-error  {
-      color: $--notification-danger-icon-color; /*所有危险图标色*/ 
+      color: $notification-danger-icon-color; /*所有危险图标色*/ 
     }
   }
 
   @include e(content) {
-    font-size: $--notification-content-font-size;
+    font-size: $notification-content-font-size;
     line-height: 21px;
     margin: 6px 0 0 0;
-    color: $--notification-content-color;  /*所有内容字体色*/
+    color: $notification-content-color;  /*所有内容字体色*/
     text-align: justify;
 
     p {
@@ -50,9 +50,9 @@
   }
 
   @include e(icon) {
-    height: $--notification-icon-size;
-    width: $--notification-icon-size;
-    font-size: $--notification-icon-size;
+    height: $notification-icon-size;
+    width: $notification-icon-size;
+    font-size: $notification-icon-size;
   }
 
   @include e(closeBtn) {
@@ -60,39 +60,39 @@
     top: 18px;
     right: 15px;
     cursor: pointer; 
-    color: $--notification-close-color;  /*所有关闭按钮默认色*/  
-    font-size: $--notification-close-font-size;
+    color: $notification-close-color;  /*所有关闭按钮默认色*/  
+    font-size: $notification-close-font-size;
 
     &:hover {
-      color: $--notification-close-hover-color; /*所有关闭按钮悬停色*/  
+      color: $notification-close-hover-color; /*所有关闭按钮悬停色*/  
     }
   }
 
   .el-icon-success {
-    color: $--notification-success-icon-color; /*所有正确图标色*/
+    color: $notification-success-icon-color; /*所有正确图标色*/
     & ~ .el-notification__group .el-notification__title { /*找el-icon-success的兄弟级，再找下一级的title*/
-      color: $--notification-success-icon-color;/*所有正确标题色*/
+      color: $notification-success-icon-color;/*所有正确标题色*/
     }  
   }
 
   .el-icon-error {
-    color: $--notification-danger-icon-color; /*所有危险图标色*/ 
+    color: $notification-danger-icon-color; /*所有危险图标色*/ 
     & ~ .el-notification__group .el-notification__title {
-      color: $--notification-danger-icon-color;/*所有危险标题色*/ 
+      color: $notification-danger-icon-color;/*所有危险标题色*/ 
     }
   }
 
   .el-icon-info {
-    color: $--notification-info-icon-color; /*所有信息图标色*/ 
+    color: $notification-info-icon-color; /*所有信息图标色*/ 
     & ~ .el-notification__group .el-notification__title {
-      color: $--notification-info-icon-color;/*所有信息标题色*/ 
+      color: $notification-info-icon-color;/*所有信息标题色*/ 
     }  
   }
 
   .el-icon-warning {
-    color: $--notification-warning-icon-color; /*所有警告图标色*/
+    color: $notification-warning-icon-color; /*所有警告图标色*/
     & ~ .el-notification__group .el-notification__title {
-      color: $--notification-warning-icon-color; /*所有警告标题色*/
+      color: $notification-warning-icon-color; /*所有警告标题色*/
     }  
   }
 }

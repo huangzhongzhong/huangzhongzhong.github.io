@@ -3,13 +3,13 @@
 // /* 对应：picker选择器 面板 */ 
 @include b(picker-panel) { 
   /*日期选择器（选择日+其他日期单位(周+多个日期)+选择日期范围） 日期文字*/ /*日期选择器（选择日期范围+选择月份范围） 标题文字*/
-  color: $--color-text-regular; 
+  color: $color-text-regular; 
   /*日期选择器（全部）*/ /*日期时间选择器（全部）*/ /*时间选择器（固定时间点+固定时间范围+任意时间范围）*/
-  border: 1px solid $--datepicker-border-color; 
-  box-shadow: $--box-shadow-light;
+  border: 1px solid $datepicker-border-color; 
+  box-shadow: $box-shadow-light;
   /*日期选择器（全部）*/ /*日期时间选择器（全部）*/ /*时间选择器（固定时间点+固定时间范围+任意时间范围）*/
-  background: $--color-white;
-  border-radius: $--border-radius-base;
+  background: $color-white;
+  border-radius: $border-radius-base;
   line-height: 30px;
   margin: 5px 0;
 
@@ -27,10 +27,10 @@
   }
 
   @include e(footer) {
-    border-top: 1px solid $--datepicker-inner-border-color; /*日期时间选择器（全部） 下分割线*/
+    border-top: 1px solid $datepicker-inner-border-color; /*日期时间选择器（全部） 下分割线*/
     padding: 4px;
     text-align: right;
-    background-color: $--color-white; /*日期时间选择器（全部）+日期选择器 按钮功能区*/
+    background-color: $color-white; /*日期时间选择器（全部）+日期选择器 按钮功能区*/
     position: relative;
     font-size: 0;
   }
@@ -43,7 +43,7 @@
     line-height: 28px;
     font-size: 14px;
     /*日期时间选择器（日期和时间点（带快捷选项）日期和时间范围（带快捷选项）+日期选择器（选择日（带快捷选项）+选择日期范围（带快捷选项）+选择月份范围（带快捷选项）））*/
-    color: $--datepicker-font-color; /*左侧文字*/
+    color: $datepicker-font-color; /*左侧文字*/
     padding-left: 12px;
     text-align: left;
     outline: none;
@@ -51,12 +51,12 @@
 
     &:hover {
       /*同上*/
-      color: $--datepicker-hover-font-color;/*左侧文字*/
+      color: $datepicker-hover-font-color;/*左侧文字*/
     }
 
     &.active { /*未找到对应*/
       background-color: #e6f1fe;
-      color: $--datepicker-active-color;
+      color: $datepicker-active-color;
     }
   }
 
@@ -79,7 +79,7 @@
 
   @include e(icon-btn) { /*日期选择器（全部）+日期时间选择器（全部） 左右箭头*/
     font-size: 12px;
-    color: $--datepicker-icon-color;
+    color: $datepicker-icon-color;
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -87,12 +87,12 @@
     margin-top: 8px;
 
     &:hover {
-      color: $--options-font-color-hover;
+      color: $options-font-color-hover;
     }
 
     @include when(disabled) {
       /*日期选择器（选择日期范围（带快捷选项）+选择月份范围（带快捷选项））*/
-      color: $--disabled-font-color; /*禁用箭头*/
+      color: $disabled-font-color; /*禁用箭头*/
 
       &:hover {
         cursor: not-allowed;
@@ -111,10 +111,10 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid $--datepicker-inner-border-color;  /*左侧竖栏*/
+  border-right: 1px solid $datepicker-inner-border-color;  /*左侧竖栏*/
   box-sizing: border-box;
   padding-top: 6px;
-  background-color: $--color-white;  /*左侧竖栏*/
+  background-color: $color-white;  /*左侧竖栏*/
   overflow: auto;
 }
 

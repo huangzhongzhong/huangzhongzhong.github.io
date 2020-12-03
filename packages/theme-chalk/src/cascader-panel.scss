@@ -6,12 +6,12 @@
 
 @include b(cascader-panel) {
   display: flex;
-  border-radius: $--cascader-menu-radius; /*级联面板边框圆角，被下一个圆角样式所覆盖*/
-  font-size: $--cascader-menu-font-size;  /*级联面板的文字和右箭头大小左勾号大小*/
+  border-radius: $cascader-menu-radius; /*级联面板边框圆角，被下一个圆角样式所覆盖*/
+  font-size: $cascader-menu-font-size;  /*级联面板的文字和右箭头大小左勾号大小*/
  
   @include when(bordered) {
-    border: $--cascader-menu-border; /*级联面板边框样式*/
-    border-radius: $--cascader-menu-radius; /*级联面板边框圆角，应该是被下拉面板覆盖*//*和上一个的区别未知，都能让边框变成直角*/
+    border: $cascader-menu-border; /*级联面板边框样式*/
+    border-radius: $cascader-menu-radius; /*级联面板边框圆角，应该是被下拉面板覆盖*//*和上一个的区别未知，都能让边框变成直角*/
 
   }
 }
@@ -19,8 +19,8 @@
 @include b(cascader-menu) {
   min-width: 180px; /*级联面板最小宽度*/
   box-sizing: border-box;
-  color: $--cascader-menu-font-color;  /*级联面板默认文字、箭头色彩*/
-  border-right: $--cascader-menu-border;   /*级联面板多级分割线*/
+  color: $cascader-menu-font-color;  /*级联面板默认文字、箭头色彩*/
+  border-right: $cascader-menu-border;   /*级联面板多级分割线*/
 
   &:last-child {
     border-right: none;
@@ -57,7 +57,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $--cascader-color-empty; /*未找到对应*/
+    color: $cascader-color-empty; /*未找到对应*/
   }
 }
 
@@ -71,27 +71,27 @@
   outline: none;
 
   &.is-selectable.in-active-path {  /*选中某个标题展开下一级，但没选中这个标题本身*/ 
-    color: $--color-primary;
-    font-weight: $--options-font-weight-hover;
+    color: $color-primary;
+    font-weight: $options-font-weight-hover;
   }
 
   &.in-active-path,
   &.is-selectable.in-checked-path,
   &.is-active { /*选中某个选项或者选中其子层级*/
-    color: $--cascader-menu-selected-font-color;
+    color: $cascader-menu-selected-font-color;
     font-weight: bold;
   }
 
   &:not(.is-disabled) {
     cursor: pointer;
     &:hover, &:focus {
-      font-weight: $--options-font-weight-hover;
-      background: $--cascader-node-background-hover; /*悬停状态，不是禁用*/
+      font-weight: $options-font-weight-hover;
+      background: $cascader-node-background-hover; /*悬停状态，不是禁用*/
     }
   }
 
   @include when(disabled) {
-    color: $--cascader-node-color-disabled;
+    color: $cascader-node-color-disabled;
     cursor: not-allowed;
   }
 

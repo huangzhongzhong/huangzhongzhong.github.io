@@ -24,16 +24,16 @@
         right: $gap;
         bottom: 12px;
         height: 1px;
-        background: $--color-border-light;
+        background: $color-border-light;
       }
     }
   }
 
   @include e(title) {
     padding-left: $gap;
-    font-size: $--select-group-font-size;
-    color: $--select-group-color;
-    line-height: $--select-group-height;
+    font-size: $select-group-font-size;
+    color: $select-group-color;
+    line-height: $select-group-height;
   }
 
   & .el-select-dropdown__item {

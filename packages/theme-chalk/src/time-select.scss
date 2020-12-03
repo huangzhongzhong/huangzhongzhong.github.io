@@ -21,17 +21,17 @@
 }
 
 .time-select-item.selected:not(.disabled) {
-  color: $--color-primary;
+  color: $color-primary;
   font-weight: bold;
 }
   
 .time-select-item.disabled { /*固定时间范围  字体禁用颜色 */
-  color: $--disabled-font-color ;
+  color: $disabled-font-color ;
   cursor: not-allowed;
 }
 
 .time-select-item:hover {
-  background-color: $--options-background-hover ; /* 固定时间点  固定时间范围 */
+  background-color: $options-background-hover ; /* 固定时间点  固定时间范围 */
   font-weight: bold;
   cursor: pointer;
 }
