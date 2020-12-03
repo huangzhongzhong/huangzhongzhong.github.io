@@ -1,6 +1,6 @@
 /* Element Chalk Variables  Element全局变量*/
 
-// Special comment for theme configurator 主题配置器的特殊注释
+// Special comment for theme configuration 主题配置器的特殊注释
 // type|skipAutoTranslation|Category|Order 类型|跳过自动翻译|类别|订单
 // skipAutoTranslation
 
@@ -49,44 +49,44 @@ $--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default;
 $--color-primary-light-7: mix($--color-white,$--color-primary,70%) !default; 
 $--color-primary-light-8: mix($--color-white,$--color-primary,80%) !default; 
 $--color-primary-light-9: mix($--color-white,$--color-primary,90%) !default; 
-$--color-primary-drak: mix($--color-black,$--color-primary,20%) !default; 
+$--color-primary-dark: mix($--color-black,$--color-primary,20%) !default; 
 
-// 透明颜色：直接写transparen
+// 透明颜色：直接写transparent
 // 功能色色值衍生
 $--color-stress-light-3: mix($--color-white,$--color-stress,30%) !default; 
 $--color-stress-light-5: mix($--color-white,$--color-stress,50%) !default; 
 $--color-stress-light-7: mix($--color-white,$--color-stress,70%) !default; 
 $--color-stress-light-8: mix($--color-white,$--color-stress,80%) !default; 
 $--color-stress-light-9: mix($--color-white,$--color-stress,90%) !default; 
-$--color-stress-drak: mix($--color-black,$--color-stress,20%) !default; 
+$--color-stress-dark: mix($--color-black,$--color-stress,20%) !default; 
 
 $--color-success-light-3: mix($--color-white,$--color-success,30%) !default; 
 $--color-success-light-5: mix($--color-white,$--color-success,50%) !default; 
 $--color-success-light-7: mix($--color-white,$--color-success,70%) !default; 
 $--color-success-light-8: mix($--color-white,$--color-success,80%) !default; 
 $--color-success-light-9: mix($--color-white,$--color-success,90%) !default; 
-$--color-success-drak: mix($--color-black,$--color-success,20%) !default; 
+$--color-success-dark: mix($--color-black,$--color-success,20%) !default; 
 
 $--color-warning-light-3: mix($--color-white,$--color-warning,30%) !default; 
 $--color-warning-light-5: mix($--color-white,$--color-warning,50%) !default; 
 $--color-warning-light-7: mix($--color-white,$--color-warning,70%) !default; 
 $--color-warning-light-8: mix($--color-white,$--color-warning,80%) !default; 
 $--color-warning-light-9: mix($--color-white,$--color-warning,90%) !default; 
-$--color-warning-drak: mix($--color-black,$--color-warning,20%) !default; 
+$--color-warning-dark: mix($--color-black,$--color-warning,20%) !default; 
 
 $--color-danger-light-3: mix($--color-white,$--color-danger,30%) !default; 
 $--color-danger-light-5: mix($--color-white,$--color-danger,50%) !default; 
 $--color-danger-light-7: mix($--color-white,$--color-danger,70%) !default; 
-$--color-sdanger-light-8: mix($--color-white,$--color-danger,80%) !default; 
+$--color-danger-light-8: mix($--color-white,$--color-danger,80%) !default; 
 $--color-danger-light-9: mix($--color-white,$--color-danger,90%) !default; 
-$--color-danger-drak: mix($--color-black,$--color-danger,20%) !default; 
+$--color-danger-dark: mix($--color-black,$--color-danger,20%) !default; 
 
 $--color-info-light-3: mix($--color-white,$--color-info,30%) !default; 
 $--color-info-light-5: mix($--color-white,$--color-info,50%) !default; 
 $--color-info-light-7: mix($--color-white,$--color-info,70%) !default; 
 $--color-info-light-8: mix($--color-white,$--color-info,80%) !default; 
 $--color-info-light-9: mix($--color-white,$--color-info,90%) !default; 
-$--color-info-drak: mix($--color-black,$--color-success,20%) !default; 
+$--color-info-dark: mix($--color-black,$--color-success,20%) !default; 
 
 
 
@@ -101,7 +101,7 @@ $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜�
 
 /* 下拉菜单等选项悬停专题 */
 $--options-background-hover: mix($--color-white,$--color-primary,80%) !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
-$--options-background-hover-ligher: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
+$--options-background-hover-lighter: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 $--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/ 
 $--options-font-weight-active: 700 !default; /*选项选中字体粗细*/ 
@@ -251,7 +251,7 @@ $--button-default-disabled-background-color: $--color-background-base !default;
 $--button-default-disabled-border-color: $--color-border-light !default;
 
 // 朴素按钮
-// 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixins-_button 文件。
+// 朴素（主要、成功、信息、警告、危险）混合、禁用规律在 mixing-_button 文件。
 $--button-plain-background-color: $--color-white !default;
 $--button-plain-border: $--border-base !default;
 $--button-plain-font-color: $--color-text-primary !default;
@@ -276,7 +276,7 @@ $--button-plain-disabled-background-color: $--color-white !default;
 $--button-plain-disabled-border-color: $--color-border-light !default;
 $--button-plain-disabled-font-color: $--color-text-placeholder !default;
 
-// 主要、成功、信息、警告、危险按钮混合、禁用规律在 mixins-_button 文件。
+// 主要、成功、信息、警告、危险按钮混合、禁用规律在 mixing-_button 文件。
 // 主要按钮
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
@@ -380,7 +380,7 @@ $--radio-bordered-margin-left: 16px !default;
 $--radio-bordered-border: $--border-base !default;
 $--radio-bordered-border-radius: $--button-border-radius !default;
 
-// 是否显示单选按钮：显示则inline，隐藏则none。隐藏时paddig也要清零
+// 是否显示单选按钮：显示则inline，隐藏则none。隐藏时padding也要清零
 $--el-radio-input-display: none !default;
 $--el-radio-label-padding: 0 !default;
 
@@ -648,10 +648,10 @@ $--input-textarea-line-height-padding: 5px 15px !default;
 $--input-group-background: $--color-background-base !default;
 $--input-group-font-color: $--color-text-secondary !default;
 $--input-group-border: $--border-base !default;
-$--input-group-pddding: 0 20px !default; /*对应http和.com两个框*/
+$--input-group-padding: 0 20px !default; /*对应http和.com两个框*/
 $--input-group-margin: -10px -20px !default; /*搜索图标*/
 
-/* IuputNumber 计数器
+/* InputNumber 计数器
 --------------------------*/
 // 参数跟随其他属性，无修改必要。
 
@@ -835,7 +835,7 @@ $--table-border: 1px solid $--table-border-color !default;
 $--table-font-size: 12px !default;
 $--table-padding-padding-left: 4px !default;
 $--table-padding-padding-right: 4px !default;
-$--table-padding-paddingt: 4px 0px !default;
+// $--table-padding-padding: 6px 0px !default;
 
 $--table-font-color: $--color-text-regular !default;
 $--table-header-font-color: $--color-text-primary !default;

@@ -357,7 +357,7 @@
     <el-table-column
       fixed="right"
       label="操作"
-      width="100">
+      width="120">
       <template slot-scope="scope">
         <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
         <el-button type="text" size="small">编辑</el-button>
@@ -934,6 +934,7 @@
     :default-sort = "{prop: 'date', order: 'descending'}"
     >
     <el-table-column
+      align="right"
       prop="date"
       label="日期"
       sortable
@@ -1000,6 +1001,7 @@
     :data="tableData"
     style="width: 100%">
     <el-table-column
+      align="right"
       prop="date"
       label="日期"
       sortable

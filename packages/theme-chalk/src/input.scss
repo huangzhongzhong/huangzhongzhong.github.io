@@ -291,7 +291,7 @@
     position: relative;
     border: $--border-base;
     border-radius: $--input-border-radius;
-    padding: $--input-group-pddding; /*对应http和.com两个框*/
+    padding: $--input-group-padding; /*对应http和.com两个框*/
     width: 1px; /*对应？*/
     white-space: nowrap;
 
@@ -364,7 +364,7 @@
   }
 }
 
-/** disalbe default clear on IE */
+/** disable default clear on IE */
 .el-input__inner::-ms-clear {
   display: none;
   width: 0;

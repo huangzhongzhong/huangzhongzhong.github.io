@@ -30,7 +30,7 @@
 
       .el-time-spinner__item:hover:not(.disabled):not(.active) {
         /* 时间选择器（任意时间点+任意时间范围）右侧框内时间块悬停 */
-        background: $--options-background-hover-ligher; 
+        background: $--options-background-hover-lighter; 
         cursor: default;
       }
     }
@@ -95,7 +95,7 @@
 
     &:hover:not(.disabled):not(.active) {
       /* 时间选择器（任意时间点+任意时间范围） 左侧框内时间块悬停 */
-      background: $--options-background-hover-ligher;
+      background: $--options-background-hover-lighter;
       cursor: pointer;
     }
 
