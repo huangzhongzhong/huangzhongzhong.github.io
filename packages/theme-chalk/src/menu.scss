@@ -7,8 +7,8 @@
   /*折叠与侧栏一致，不特别说明*/
   height: 56px;
   line-height: 56px;
-  font-size: $menu-item-font-size;
-  color: $menu-item-font-color; /*侧栏（默认颜色） 默认导航文字色和百分比降低透明度后禁用文字色*/
+  font-size: $--menu-item-font-size;
+  color: $--menu-item-font-color; /*侧栏（默认颜色） 默认导航文字色和百分比降低透明度后禁用文字色*/
   padding: 0 20px;
   list-style: none;
   cursor: pointer;
@@ -22,16 +22,16 @@
   }
 
   i {
-    color: $color-text-secondary; /*顶栏（全部） 我的工作台展开后第二级箭头图标色*/ /*侧栏（全部） 默认导航图标色和百分比降低透明度后禁用图标色  箭头图标色*/
+    color: $--color-text-secondary; /*顶栏（全部） 我的工作台展开后第二级箭头图标色*/ /*侧栏（全部） 默认导航图标色和百分比降低透明度后禁用图标色  箭头图标色*/
   }
 
   &:hover,
   &:focus {
     outline: none;
-    // font-weight: $options-font-weight-hover;
-    background-color: $menu-item-background-color-hover; /*侧栏（默认颜色） 除导航一和选项4之外的导航悬停背景色*/
+    // font-weight: $--options-font-weight-hover;
+    background-color: $--menu-item-background-color-hover; /*侧栏（默认颜色） 除导航一和选项4之外的导航悬停背景色*/
     .el-menu-title {
-      font-weight: $options-font-weight-hover;
+      font-weight: $--options-font-weight-hover;
     }
   }
 
@@ -43,15 +43,15 @@
 }
 
 @include b(menu) {
-  border-right: $menu-border-right; /*顶栏+侧栏分割线*/
+  border-right: $--menu-border-right; /*顶栏+侧栏分割线*/
   list-style: none;
   position: relative;
   margin: 0;
   padding-left: 0;
-  background-color: $menu-background-color; /*顶栏（默认颜色）+侧栏（默认颜色） 导航背景色*/
+  background-color: $--menu-background-color; /*顶栏（默认颜色）+侧栏（默认颜色） 导航背景色*/
   @include utils-clearfix;
   &.el-menu--horizontal {
-    border-bottom: $menu-border-right;
+    border-bottom: $--menu-border-right;
   }
 
   @include m(horizontal) {
@@ -63,7 +63,7 @@
       line-height: 60px;
       margin: 0;
       border-bottom: 2px solid transparent;
-      color: $menu-item-font-color; /*顶栏（默认颜色）订单管理  处理中心 文字色*/
+      color: $--menu-item-font-color; /*顶栏（默认颜色）订单管理  处理中心 文字色*/
 
       a,
       a:hover {
@@ -72,7 +72,7 @@
 
       &:not(.is-disabled):hover,
       &:not(.is-disabled):focus {
-        background-color: $menu-item-background-color-hover; /*顶栏（默认颜色） （处理中心+订单管理）背景色*/
+        background-color: $--menu-item-background-color-hover; /*顶栏（默认颜色） （处理中心+订单管理）背景色*/
       }
     }
     & > .el-submenu {
@@ -83,15 +83,15 @@
         outline: none;
         .el-submenu__title {
           /*顶栏（默认颜色） 我的工作台文字未选中文字悬停色*/
-          color: $menu-title-font-color-hover; 
+          color: $--menu-title-font-color-hover; 
         }
       }
 
       &.is-active {
         .el-submenu__title { /*未找到对应，这个属性可能写死了*/ 
-          border-bottom: 2px solid $color-primary; 
-          color: $menu-title-font-color-active;
-          font-weight: $Modal-title-font-weight;/*我的工作台，已选中字体粗细*/
+          border-bottom: 2px solid $--color-primary; 
+          color: $--menu-title-font-color-active;
+          font-weight: $--Modal-title-font-weight;/*我的工作台，已选中字体粗细*/
         }
       }
 
@@ -99,10 +99,10 @@
         height: 60px;
         line-height: 60px;
         border-bottom: 2px solid transparent;
-        color: $menu-item-font-color; /*顶栏（默认颜色） “我的工作台”默认文字色*/
+        color: $--menu-item-font-color; /*顶栏（默认颜色） “我的工作台”默认文字色*/
 
         &:hover {
-          background-color: $menu-item-background-color-hover; /*顶栏（默认颜色）“我的工作台”悬停背景色*/
+          background-color: $--menu-item-background-color-hover; /*顶栏（默认颜色）“我的工作台”悬停背景色*/
         }
       }
       & .el-submenu__icon-arrow {
@@ -110,38 +110,38 @@
         vertical-align: middle;
         margin-left: 8px;
         margin-top: -3px;
-        color: $menu-item-icon-color; /* 顶栏（全部）“我的工作台”箭头色*/
+        color: $--menu-item-icon-color; /* 顶栏（全部）“我的工作台”箭头色*/
       }
     }
     & .el-menu {
       & .el-menu-item,
       & .el-submenu__title {
-        background-color: $color-white; /* 顶栏（默认颜色）“我的工作台”下拉菜单背景色*/
+        background-color: $--color-white; /* 顶栏（默认颜色）“我的工作台”下拉菜单背景色*/
         float: none;
         height: 36px;
         line-height: 36px;
         padding: 0 10px;
-        color: $menu-item-font-color; /*顶栏（默认颜色） ”我的工作台“下拉菜单默认文字色*/
+        color: $--menu-item-font-color; /*顶栏（默认颜色） ”我的工作台“下拉菜单默认文字色*/
         &:hover { 
-          background-color: $menu-item-background-color-hover; /*顶栏（默认颜色）“我的工作台”悬停背景色*/
-          font-weight: $options-font-weight-hover;
+          background-color: $--menu-item-background-color-hover; /*顶栏（默认颜色）“我的工作台”悬停背景色*/
+          font-weight: $--options-font-weight-hover;
         }
       }
       & .el-menu-item.is-active,
       & .el-submenu.is-active > .el-submenu__title {
-        color: $menu-title-font-color-active !important; /*顶栏（默认颜色） ”我的工作台“下拉菜单已选中文字色*/
-        font-weight: $options-font-weight-hover;
+        color: $--menu-title-font-color-active !important; /*顶栏（默认颜色） ”我的工作台“下拉菜单已选中文字色*/
+        font-weight: $--options-font-weight-hover;
       }
     }
     & .el-menu-item:not(.is-disabled):hover,
     & .el-menu-item:not(.is-disabled):focus {
       outline: none;
-      color: $menu-title-font-color-hover; /*顶栏（默认颜色 “处理中心+订单管理”悬停文字色*/
+      color: $--menu-title-font-color-hover; /*顶栏（默认颜色 “处理中心+订单管理”悬停文字色*/
     }
     & > .el-menu-item.is-active {
-      font-weight: $options-font-weight-active;
-      border-bottom: 2px solid $color-primary;
-      color:$menu-title-font-color-active; /*顶栏（默认颜色 “处理中心+订单管理”已选中文字色*/
+      font-weight: $--options-font-weight-active;
+      border-bottom: 2px solid $--color-primary;
+      color:$--menu-title-font-color-active; /*顶栏（默认颜色 “处理中心+订单管理”已选中文字色*/
     }
   }
   @include m(collapse) {
@@ -183,9 +183,9 @@
         top: 0;
         left: 100%;
         z-index: 10;
-        border: 1px solid $color-border-light; /*未找到对应*/
-        border-radius: $border-radius-small;
-        box-shadow: $box-shadow-light;
+        border: 1px solid $--color-border-light; /*未找到对应*/
+        border-radius: $--border-radius-small;
+        box-shadow: $--box-shadow-light;
       }
 
       &.is-opened {
@@ -200,8 +200,8 @@
     min-width: 200px;
     border: none;
     padding: 5px 0;
-    border-radius: $border-radius-small;
-    box-shadow: $box-shadow-light;
+    border-radius: $--border-radius-small;
+    box-shadow: $--box-shadow-light;
 
     &-bottom-start {
       margin-top: 5px;
@@ -223,8 +223,8 @@
     vertical-align: middle;
   }
   @include when(active) {
-    font-weight: $options-font-weight-active;
-    color: $menu-title-font-color-active; /*侧栏（默认颜色） 已选中菜单文字色*/
+    font-weight: $--options-font-weight-active;
+    color: $--menu-title-font-color-active; /*侧栏（默认颜色） 已选中菜单文字色*/
     i {
       color: inherit;
     }
@@ -241,7 +241,7 @@
 
     &:hover {
 
-      background-color: $menu-item-background-color-hover;  /*侧栏(默认颜色) ”导航一+选项四“悬停背景色*/
+      background-color: $--menu-item-background-color-hover;  /*侧栏(默认颜色) ”导航一+选项四“悬停背景色*/
     }
   }
   & .el-menu {
@@ -260,16 +260,16 @@
     margin-top: -7px;
     transition: transform 0.3s;
     font-size: 12px;
-    color: $menu-item-icon-color; /*被挡住了，被什么挡住了呢？ 用最高级后影响全部箭头色*/
+    color: $--menu-item-icon-color; /*被挡住了，被什么挡住了呢？ 用最高级后影响全部箭头色*/
   }
   @include when(active) {
     .el-submenu__title {
-      border-bottom-color: $color-primary ; /*未找到对应*/
+      border-bottom-color: $--color-primary ; /*未找到对应*/
     }
   }
   @include when(opened) {
     > .el-submenu__title .el-submenu__icon-arrow {
-      color:$menu-item-icon-color; /*侧栏(默认颜色) “导航一”箭头色*/
+      color:$--menu-item-icon-color; /*侧栏(默认颜色) “导航一”箭头色*/
       transform: rotateZ(180deg);
     }
   }
@@ -282,7 +282,7 @@
     }
   }
   [class^="el-icon-"] {
-    color:$menu-item-icon-color ; /*侧栏(默认颜色) “导航一”图标色*/
+    color:$--menu-item-icon-color ; /*侧栏(默认颜色) “导航一”图标色*/
     vertical-align: middle;
     margin-right: 5px;
     width: 24px;
@@ -299,12 +299,12 @@
     padding: 7px 0 7px 20px;
     line-height: normal;
     font-size: 12px;
-    color: $menu-item-group-font-color; /*侧栏（全部） 分组字体色*/
+    color: $--menu-item-group-font-color; /*侧栏（全部） 分组字体色*/
   }
 }
 
 .horizontal-collapse-transition .el-submenu__title .el-submenu__icon-arrow {
-  color:$menu-item-font-color; /*未找到对应*/
+  color:$--menu-item-font-color; /*未找到对应*/
   transition: 0.2s;
   opacity: 0;
 }

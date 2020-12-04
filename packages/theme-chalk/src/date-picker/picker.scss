@@ -49,7 +49,7 @@
     font-size: 14px;
     margin-left: -5px;
     /*日期时间选择器（日期和时间范围+默认的起始与结束时刻）+日期选择器（选择日期范围+选择月份范围）+时间选择器（任意时间范围）*/ 
-    color:  $color-text-secondary ;
+    color:  $--color-text-secondary ;
     float: left;
     line-height: 32px;
   }
@@ -64,12 +64,12 @@
     padding: 0;
     width: 39%;
     text-align: center;
-    font-size: $font-size-base;
+    font-size: $--font-size-base;
      /* 日期时间选择器（日期和时间范围+默认的起始与结束时刻）+日期选择器（选择日期范围+选择月份范围）+时间选择器（任意时间范围）*/ 
-    color: $color-text-regular;
+    color: $--color-text-regular;
     /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
     &::placeholder { 
-      color: $color-text-secondary ;
+      color: $--color-text-secondary ;
     }
   }
 
@@ -83,13 +83,13 @@
     font-size: 14px;
     width: 5%;
     /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
-    color: $color-text-primary;/*“至”“-”*/
+    color: $--color-text-primary;/*“至”“-”*/
   }
 
   /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
   .el-range__close-icon {
     font-size: 14px;
-    color: $color-text-secondary;/*左图标*/
+    color: $--color-text-secondary;/*左图标*/
     width: 25px;
     display: inline-block;
     float: right ; /*曾经出现过问题，修改成none后正常，但是这个不能随便改，另一处改动后出现了字段消失的异常*/
@@ -111,26 +111,26 @@
 
   /*时间选择器（任意时间范围） 日期选择器（选择日期范围+选择月份范围）   日期时间选择器（日期和时间范围+默认的起始与结束时刻）*/
   @include when(active) {
-    border-color: $color-primary; /*边框激活*/
+    border-color: $--color-primary; /*边框激活*/
 
     &:hover { /*边框输入中*/
-      border-color: $color-primary; 
-      box-shadow: $box-shadow-primary;
+      border-color: $--color-primary; 
+      box-shadow: $--box-shadow-primary;
     }
   }
 
   @include m(medium) {
     &.el-input__inner {
-      height: $input-medium-height;
+      height: $--input-medium-height;
     }
 
     .el-range-separator {
       line-height: 28px;
-      font-size: $input-medium-font-size;
+      font-size: $--input-medium-font-size;
     }
 
     .el-range-input {
-      font-size: $input-medium-font-size;
+      font-size: $--input-medium-font-size;
     }
 
     .el-range__icon,
@@ -141,16 +141,16 @@
 
   @include m(small) {
     &.el-input__inner {
-      height: $input-small-height;
+      height: $--input-small-height;
     }
 
     .el-range-separator {
       line-height: 24px;
-      font-size: $input-small-font-size;
+      font-size: $--input-small-font-size;
     }
 
     .el-range-input {
-      font-size: $input-small-font-size;
+      font-size: $--input-small-font-size;
     }
 
     .el-range__icon,
@@ -161,16 +161,16 @@
 
   @include m(mini) {
     &.el-input__inner {
-      height: $input-mini-height;
+      height: $--input-mini-height;
     }
 
     .el-range-separator {
       line-height: 20px;
-      font-size: $input-mini-font-size;
+      font-size: $--input-mini-font-size;
     }
 
     .el-range-input {
-      font-size: $input-mini-font-size;
+      font-size: $--input-mini-font-size;
     }
 
     .el-range__icon,
@@ -180,26 +180,26 @@
   }
 
   @include when(disabled) { /*不方便查看，暂且不动*/
-    background-color: $input-disabled-background;
-    border-color: $input-disabled-border;
-    color: $input-disabled-color;
+    background-color: $--input-disabled-background;
+    border-color: $--input-disabled-border;
+    color: $--input-disabled-color;
     cursor: not-allowed;
 
     &:hover, &:focus {
-      border-color: $input-disabled-border;
+      border-color: $--input-disabled-border;
     }
 
     input {
-      background-color: $input-disabled-background;
-      color: $input-disabled-color;
+      background-color: $--input-disabled-background;
+      color: $--input-disabled-color;
       cursor: not-allowed;
       &::placeholder {/*可能是上面那个状态 &::placeholder的禁用状态*/
-        color: $input-disabled-placeholder-color;
+        color: $--input-disabled-placeholder-color;
       }
     }
 
     .el-range-separator {
-      color: $input-disabled-color;
+      color: $--input-disabled-color;
     }
   }
 }

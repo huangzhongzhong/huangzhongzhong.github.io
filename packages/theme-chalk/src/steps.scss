@@ -6,7 +6,7 @@
   @include m(simple) {/*对应： 简洁风格步骤条*/
     padding: 13px 8%;
     border-radius: 4px;
-    background: $color-background-dark; /*简洁风格步骤条 背景色*/
+    background: $--color-background-dark; /*简洁风格步骤条 背景色*/
   }
 
   @include m(horizontal) {

@@ -14,7 +14,7 @@
 @include b(loading-mask) {
   position: absolute;
   z-index: 2000;
-  background-color: $loading-mask-background-color; /*区域加载  白色遮罩*/
+  background-color: $--loading-mask-background-color; /*区域加载  白色遮罩*/
   margin: 0;
   top: 0;
   right: 0;
@@ -26,11 +26,11 @@
     position: fixed;
 
     .el-loading-spinner {
-      margin-top: #{- $loading-fullscreen-spinner-size / 2};
+      margin-top: #{- $--loading-fullscreen-spinner-size / 2};
 
       .circular {
-        height: $loading-fullscreen-spinner-size;
-        width: $loading-fullscreen-spinner-size;
+        height: $--loading-fullscreen-spinner-size;
+        width: $--loading-fullscreen-spinner-size;
       }
     }
   }
@@ -38,20 +38,20 @@
 
 @include b(loading-spinner) {
   top: 50%;
-  margin-top: #{- $loading-spinner-size / 2};
+  margin-top: #{- $--loading-spinner-size / 2};
   width: 100%;
   text-align: center;
   position: absolute;
 
   .el-loading-text {
-    color: $color-primary; /*自定义+服务方式 文字*/
+    color: $--color-primary; /*自定义+服务方式 文字*/
     margin: 3px 0;
     font-size: 16px;
   }
 
   .circular {
-    height: $loading-spinner-size;
-    width: $loading-spinner-size;
+    height: $--loading-spinner-size;
+    width: $--loading-spinner-size;
     animation: loading-rotate 2s linear infinite;
   }
 
@@ -60,12 +60,12 @@
     stroke-dasharray: 90, 150;
     stroke-dashoffset: 0;
     stroke-width: 2;
-    stroke: $color-primary; /*区域加载+指令方式  菊花圈*/
+    stroke: $--color-primary; /*区域加载+指令方式  菊花圈*/
     stroke-linecap: round;
   }
 
   i { /*自定义+服务方式 菊花圈*/
-    color: $color-primary; 
+    color: $--color-primary; 
     font-size: 24px;
     padding: 4px ;
   }

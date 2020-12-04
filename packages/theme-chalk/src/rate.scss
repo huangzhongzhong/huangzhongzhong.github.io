@@ -3,7 +3,7 @@
 
 // 评分
 @include b(rate) {
-  height: $rate-height;
+  height: $--rate-height;
   line-height: 1;
 
   &:focus, &:active {
@@ -20,9 +20,9 @@
   @include e(icon) {
     position: relative;
     display: inline-block;
-    font-size: $rate-icon-size;
-    margin-right: $rate-icon-margin;
-    color: $rate-icon-color ;/*评分图标色*//*普通改动无效果,最高级改动覆盖过多，还是等于不能改*/
+    font-size: $--rate-icon-size;
+    margin-right: $--rate-icon-margin;
+    color: $--rate-icon-color ;/*评分图标色*//*普通改动无效果,最高级改动覆盖过多，还是等于不能改*/
     transition: .3s;
     &.hover {
       transform: scale(1.15);
@@ -44,7 +44,7 @@
   }
 
   @include e(text) {
-    font-size: $rate-font-size;
+    font-size: $--rate-font-size;
     vertical-align: middle;
   }
 }

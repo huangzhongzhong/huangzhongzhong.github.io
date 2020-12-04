@@ -35,12 +35,12 @@
     height: 0;
     cursor: pointer;
     border-radius: inherit;
-    background-color: $scrollbar-background-color;
+    background-color: $--scrollbar-background-color;
     transition: .3s background-color;
 
     &:hover { /*未找到对应*/
-      font-weight: $options-font-weight-hover; /*增加的*/
-      background-color: $scrollbar-hover-background-color;
+      font-weight: $--options-font-weight-hover; /*增加的*/
+      background-color: $--scrollbar-hover-background-color;
     }
   }
 

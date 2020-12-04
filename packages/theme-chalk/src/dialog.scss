@@ -6,9 +6,9 @@
 @include b(dialog) {
   position: relative;
   margin: 0 auto 50px;
-  background: $dialog-background-color; /*全部对话框 背景色*/
-  border-radius: $border-radius-small;
-  box-shadow: $dialog-box-shadow;
+  background: $--dialog-background-color; /*全部对话框 背景色*/
+  border-radius: $--border-radius-small;
+  box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
   width: 50%;
 
@@ -31,13 +31,13 @@
   }
 
   @include e(header) {
-    padding: $dialog-padding-primary;
+    padding: $--dialog-padding-primary;
     padding-bottom: 0px;
     .el-dialog__title {
       &:before { /*标题加色块*/
         content: "";
         width: 4px;
-        border-left: 4px solid $color-primary;
+        border-left: 4px solid $--color-primary;
         padding-left: 12px;
       }
     }
@@ -45,38 +45,38 @@
 
   @include e(headerbtn) {
     position: absolute;
-    top: $dialog-padding-primary;
-    right: $dialog-padding-primary;
+    top: $--dialog-padding-primary;
+    right: $--dialog-padding-primary;
     padding: 0;
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: $message-close-size;
+    font-size: $--message-close-size;
 
     .el-dialog__close {
-      color: $color-info; /*全部对话框 关闭图标色*/
+      color: $--color-info; /*全部对话框 关闭图标色*/
     }
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: $dialog-close-color-hover; /*全部对话框 关闭图标悬停色*/
+        color: $--dialog-close-color-hover; /*全部对话框 关闭图标悬停色*/
       }
     }
   }
 
   @include e(title) { /*标题区域*/
-    line-height: $dialog-font-line-height;
-    font-size: $dialog-title-font-size;
-    color: $color-text-primary; /*全部对话框 标题色*/
-    font-weight: $Modal-title-font-weight;
+    line-height: $--dialog-font-line-height;
+    font-size: $--dialog-title-font-size;
+    color: $--color-text-primary; /*全部对话框 标题色*/
+    font-weight: $--Modal-title-font-weight;
     padding-bottom: 0 !important; /*未找到对应*/
   }
 
   @include e(body) { /*正文区域*/
     padding: 24px;
-    color: $color-text-regular; /*全部对话框 正文文字色*/
-    font-size: $dialog-content-font-size;
+    color: $--color-text-regular; /*全部对话框 正文文字色*/
+    font-size: $--dialog-content-font-size;
     word-break: break-all;
   }
 
@@ -95,14 +95,14 @@
       &:before { /*标题加色块*/
         content: "";
         width: 4px;
-        border-left: 0px solid $color-primary;
+        border-left: 0px solid $--color-primary;
         padding-left: 12px;
       }
     }
 
     @include e(body) {
       text-align: center;
-      padding: 25px ($dialog-padding-primary + 5px) 30px;
+      padding: 25px ($--dialog-padding-primary + 5px) 30px;
     }
 
     @include e(footer) {

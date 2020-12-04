@@ -112,7 +112,7 @@ $directions: rtl, ltr, ttb, btt;
 @include b(drawer) {
   position: absolute;
   box-sizing: border-box;
-  background-color: $dialog-background-color;
+  background-color: $--dialog-background-color;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
@@ -140,7 +140,7 @@ $directions: rtl, ltr, ttb, btt;
     color: rgb(114, 118, 123);
     display: flex;
     margin-bottom: 32px;
-    padding: $dialog-padding-primary;
+    padding: $--dialog-padding-primary;
     padding-bottom: 0;
     & > :first-child {
       flex: 1;
@@ -157,7 +157,7 @@ $directions: rtl, ltr, ttb, btt;
   &__close-btn {
     border: none;
     cursor: pointer;
-    font-size: $font-size-extra-large;
+    font-size: $--font-size-extra-large;
     color: inherit;
     background-color: transparent;
   }

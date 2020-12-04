@@ -61,9 +61,9 @@ export default {
     },
     displayKeyName() {
       if (this.config.name) {
-        return this.config.key.replace('$', '');
+        return this.config.key.replace('$--', '');
       }
-      return this.config.key.replace(`$${this.componentName}-`, '');
+      return this.config.key.replace(`$--${this.componentName}-`, '');
     },
     isGlobal() {
       return !this.config.value.startsWith('$');

@@ -6,111 +6,111 @@
 // 单选
 @include b(radio) {
   /*单选基础样式*/
-  color: $radio-font-color;
-  font-weight: $radio-font-weight;
+  color: $--radio-font-color;
+  font-weight: $--radio-font-weight;
   line-height: 1;
   position: relative;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
   outline: none;
-  font-size: $radio-font-size;
-  margin-right: $radio-bordered-margin-right; /* 右侧外边距，可以用于快速排列*/
+  font-size: $--radio-font-size;
+  margin-right: $--radio-bordered-margin-right; /* 右侧外边距，可以用于快速排列*/
   @include utils-user-select(none);
 
   &:hover {
-    color: $color-primary; /*单选边框悬停色*/
-    font-weight: $options-font-weight-hover;
+    color: $--color-primary; /*单选边框悬停色*/
+    font-weight: $--options-font-weight-hover;
     @include e(inner) {
-     border-color: $color-primary;
+     border-color: $--color-primary;
     }
   }
 
   @include when(bordered) {
     /*对应：单选 带有边框 */
-    padding: $radio-bordered-padding; /*边框padding*/
-    border: $radio-bordered-border;
-    border-radius: $radio-bordered-border-radius;
+    padding: $--radio-bordered-padding; /*边框padding*/
+    border: $--radio-bordered-border;
+    border-radius: $--radio-bordered-border-radius;
     box-sizing: border-box;
-    height: $radio-bordered-height; /*边框高度*/
-    background: $radio-bordered-background-color;
+    height: $--radio-bordered-height; /*边框高度*/
+    background: $--radio-bordered-background-color;
 
     &:hover {
-      color:$color-primary ;
+      color:$--color-primary ;
     }
 
 
     &.is-checked {
-      border-color: $radio-bordered-checked-border-color;
-      background-color: $color-primary-light-9 ;
+      border-color: $--radio-bordered-checked-border-color;
+      background-color: $--color-primary-light-9 ;
        &.is-disabled {
-        background-color: $color-background-base ;
+        background-color: $--color-background-base ;
         }
     }
 
     &.is-disabled {
       cursor: not-allowed;
-      border-color: $radio-bordered-disabled-border-color;
+      border-color: $--radio-bordered-disabled-border-color;
 
     }
 
     & + .el-radio.is-bordered {
       /* 左侧外边距，可以用于快速排列*/
-      margin-left: $radio-bordered-margin-left;
+      margin-left: $--radio-bordered-margin-left;
     }
     .el-radio__input {
       /*单选按钮显示隐藏*/
-      display: $el-radio-input-display;
+      display: $--el-radio-input-display;
 
     
     }
     .el-radio__label { /*标签左间距，若取消显示单选按钮需要归零*/
-      padding: $el-radio-label-padding ;
+      padding: $--el-radio-label-padding ;
     }
   }
 
   @include m(medium) {
     &.is-bordered {
-      padding: $radio-bordered-medium-padding;
-      border-radius: $radio-bordered-medium-border-radius;
-      height: $radio-bordered-medium-height;
+      padding: $--radio-bordered-medium-padding;
+      border-radius: $--radio-bordered-medium-border-radius;
+      height: $--radio-bordered-medium-height;
       .el-radio__label {
-        font-size: $radio-bordered-medium-font-size;
-        padding: $el-radio-label-padding;
+        font-size: $--radio-bordered-medium-font-size;
+        padding: $--el-radio-label-padding;
       }
       .el-radio__inner {
-        height: $radio-bordered-medium-input-height;
-        width: $radio-bordered-medium-input-width;
+        height: $--radio-bordered-medium-input-height;
+        width: $--radio-bordered-medium-input-width;
       }
     }
   }
   @include m(small) {
     &.is-bordered {
-      padding: $radio-bordered-small-padding;
-      border-radius: $radio-bordered-small-border-radius;
-      height: $radio-bordered-small-height;
+      padding: $--radio-bordered-small-padding;
+      border-radius: $--radio-bordered-small-border-radius;
+      height: $--radio-bordered-small-height;
       .el-radio__label {
-        font-size: $radio-bordered-small-font-size;
-        padding: $el-radio-label-padding;
+        font-size: $--radio-bordered-small-font-size;
+        padding: $--el-radio-label-padding;
       }
       .el-radio__inner {
-        height: $radio-bordered-small-input-height;
-        width: $radio-bordered-small-input-width;
+        height: $--radio-bordered-small-input-height;
+        width: $--radio-bordered-small-input-width;
       }
     }
   }
   @include m(mini) {
     &.is-bordered {
-      padding: $radio-bordered-mini-padding;
-      border-radius: $radio-bordered-mini-border-radius;
-      height: $radio-bordered-mini-height;
+      padding: $--radio-bordered-mini-padding;
+      border-radius: $--radio-bordered-mini-border-radius;
+      height: $--radio-bordered-mini-height;
       .el-radio__label {
-        font-size: $radio-bordered-mini-font-size;
-        padding: $el-radio-label-padding;
+        font-size: $--radio-bordered-mini-font-size;
+        padding: $--el-radio-label-padding;
       }
       .el-radio__inner {
-        height: $radio-bordered-mini-input-height;
-        width: $radio-bordered-mini-input-width;
+        height: $--radio-bordered-mini-input-height;
+        width: $--radio-bordered-mini-input-width;
       }
     }
   }
@@ -133,15 +133,15 @@
     @include when(disabled) {
       // 未选中
       .el-radio__inner {
-        background-color: $radio-disabled-input-background;
-        border-color: $radio-disabled-input-border-color;
+        background-color: $--radio-disabled-input-background;
+        border-color: $--radio-disabled-input-border-color;
         cursor: not-allowed;
         //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
         &::after {
           cursor: not-allowed;
           // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来
           // 被覆盖的样式，要不要留？/*暂不删除。
-          background-color: $radio-disabled-icon-color ;
+          background-color: $--radio-disabled-icon-color ;
         }
 
         & + .el-radio__label {
@@ -151,26 +151,26 @@
       // 已选中
       &.is-checked {
         .el-radio__inner {
-          background-color: $radio-disabled-checked-input-background;
-          border-color: $radio-disabled-checked-input-border-color;
+          background-color: $--radio-disabled-checked-input-background;
+          border-color: $--radio-disabled-checked-input-border-color;
 
           &::after {
             /*中心小点*/
-            background-color: $radio-disabled-checked-icon-color;
+            background-color: $--radio-disabled-checked-icon-color;
           }
         }
       }
       & + span.el-radio__label {
         /*禁用状态 标签文字*/
-        color: $radio-disabled-font-color;
+        color: $--radio-disabled-font-color;
         cursor: not-allowed;
       }
     }
 
     @include when(checked) {
       .el-radio__inner {
-        border-color: $radio-checked-input-border-color;
-        background: $radio-checked-icon-color;
+        border-color: $--radio-checked-input-border-color;
+        background: $--radio-checked-icon-color;
 
         &::after {
           transform: translate(-50%, -50%) scale(1);
@@ -178,38 +178,38 @@
       }
 
       & + .el-radio__label {
-        color: $radio-checked-font-color;
+        color: $--radio-checked-font-color;
       }
     }
 
     @include when(focus) {
       .el-radio__inner {
-        border-color: $radio-input-border-color-hover;
+        border-color: $--radio-input-border-color-hover;
       }
     }
   }
   @include e(inner) {
     /* 对应：单选全局*/
-    border: $radio-input-border;
-    border-radius: $radio-input-border-radius;
-    width: $radio-input-width;
-    height: $radio-input-height;
-    background-color: $radio-input-background-color;
+    border: $--radio-input-border;
+    border-radius: $--radio-input-border-radius;
+    width: $--radio-input-width;
+    height: $--radio-input-height;
+    background-color: $--radio-input-background-color;
     position: relative;
     cursor: pointer;
     display: inline-block;
     box-sizing: border-box; /*加边框 对应未知*/
 
     &:hover {
-      border-color: $radio-input-border-color-hover; /*单选边框悬停色*/
+      border-color: $--radio-input-border-color-hover; /*单选边框悬停色*/
     }
 
     &::after {
       /*控制所有单选按钮小点的大小*/
       width: 4px;
       height: 4px;
-      border-radius: $radio-input-border-radius;
-      background-color: $color-white;
+      border-radius: $--radio-input-border-radius;
+      background-color: $--color-white;
 
       content: "";
       position: absolute;
@@ -237,14 +237,14 @@
   &:focus:not(.is-focus):not(:active):not(.is-disabled) {
     /*获得焦点时 样式提醒*/
     .el-radio__inner {
-      box-shadow: 0 0 2px 2px $radio-input-border-color-hover;
+      box-shadow: 0 0 2px 2px $--radio-input-border-color-hover;
     }
   }
 
   //
   @include e(label) {
     /*单选全局字体大小和间距*/
-    font-size: $radio-font-size;
-    padding-left: $radio-padding-left;
+    font-size: $--radio-font-size;
+    padding-left: $--radio-padding-left;
   }
 }

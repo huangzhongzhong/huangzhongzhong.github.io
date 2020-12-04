@@ -10,10 +10,10 @@
     height: 100%;
     display: inline-block;
     overflow: hidden;
-    z-index: #{$index-normal - 1};
+    z-index: #{$--index-normal - 1};
 
     @include when(active) {
-      z-index: #{$index-normal + 1};
+      z-index: #{$--index-normal + 1};
     }
 
     @include when(animating) {
@@ -25,14 +25,14 @@
       transition: transform .4s ease-in-out;
       &.is-in-stage {
         cursor: pointer;
-        z-index: $index-normal;
+        z-index: $--index-normal;
         &:hover .el-carousel__mask,
         &.is-hover .el-carousel__mask {
           opacity: 0.12;
         }
       }
       &.is-active {
-        z-index: #{$index-normal + 1};
+        z-index: #{$--index-normal + 1};
       }
     }
   }
@@ -43,7 +43,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: $color-white;
+    background-color: $--color-white;
     opacity: 0.24;
     transition: .2s;
   }

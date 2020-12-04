@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     updateDocStyle(e, cb) {
-      const val = e.global['$color-primary'] || ORIGINAL_THEME;
+      const val = e.global['$--color-primary'] || ORIGINAL_THEME;
       const oldVal = this.theme;
       const getHandler = (variable, id) => {
         return () => {

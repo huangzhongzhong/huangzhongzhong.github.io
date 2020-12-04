@@ -96,8 +96,8 @@
     text-align: right;
     vertical-align: middle;
     float: left;
-    font-size: $form-label-font-size;
-    color: $color-text-regular;/*标签文字*/
+    font-size: $--form-label-font-size;
+    color: $--color-text-regular;/*标签文字*/
     line-height: 40px;
     padding: 0 12px 0 0;
     box-sizing: border-box;
@@ -113,7 +113,7 @@
     }
   }
   @include e(error) {
-    color: $color-danger;/*错误文字*/
+    color: $--color-danger;/*错误文字*/
     font-size: 12px;
     line-height: 1;
     padding-top: 4px;
@@ -135,7 +135,7 @@
       & > .el-form-item__label:before,
       & .el-form-item__label-wrap > .el-form-item__label:before {
         content: '*';
-        color: $color-danger;/*星号*/
+        color: $--color-danger;/*星号*/
         margin-right: 4px;
       }
     }
@@ -145,8 +145,8 @@
     & .el-input__inner,
     & .el-textarea__inner {
       &, &:focus {
-        border-color: $color-danger;/*错误边框*/
-        box-shadow: $box-shadow-danger;
+        border-color: $--color-danger;/*错误边框*/
+        box-shadow: $--box-shadow-danger;
       }
     }
     & .el-input-group__append,
@@ -156,7 +156,7 @@
       }
     }
     .el-input__validateIcon {
-      color: $color-danger;/*错误状态清除图标*/
+      color: $--color-danger;/*错误状态清除图标*/
     }
   }
 

@@ -2,21 +2,21 @@
 @import "common/var";
 
 @include b(message) { /*info 消息状态即是默认状态*/
-  min-width: $message-min-width;
+  min-width: $--message-min-width;
   box-sizing: border-box;
-  border-radius: $border-radius-base;
-  border-width: $border-width-base;
-  border-style: $border-style-base;
-  border-color: $color-white; /*消息 边框色*/
+  border-radius: $--border-radius-base;
+  border-width: $--border-width-base;
+  border-style: $--border-style-base;
+  border-color: $--color-white; /*消息 边框色*/
   position: fixed;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
-  background-color: $color-white; /*消息 背景色*/
-  box-shadow: $box-shadow-base;
+  background-color: $--color-white; /*消息 背景色*/
+  box-shadow: $--box-shadow-base;
   transition: opacity 0.3s, transform .4s, top 0.4s;
   overflow: hidden;
-  padding: $message-padding;
+  padding: $--message-padding;
   display: flex;
   align-items: center;
 
@@ -36,34 +36,34 @@
 
   @include m(info) { 
     .el-message__content {
-      color: $message-info-font-color; /*消息 文字色*/
+      color: $--message-info-font-color; /*消息 文字色*/
     }
   }
 
   @include m(success) { /*所有正确状态消息提示*/
-    background-color: $color-white;
-    // border-color: $color-success-light-9;
+    background-color: $--color-white;
+    // border-color: $--color-success-light-9;
 
     .el-message__content {
-      color: $message-success-font-color; /*消息提示文字色*/
+      color: $--message-success-font-color; /*消息提示文字色*/
     }
   }
 
   @include m(warning) { /*所有警告状态消息提示*/
-    background-color: $color-white;
-    // border-color: $color-warning-light-9;
+    background-color: $--color-white;
+    // border-color: $--color-warning-light-9;
 
     .el-message__content {
-      color: $message-warning-font-color; /*警告状态消息提示文字色*/
+      color: $--message-warning-font-color; /*警告状态消息提示文字色*/
     }
   }
 
   @include m(error) { /*所有危险状态消息提示*/
-    background-color: $color-white;
-    // border-color: $color-danger-light-9;
+    background-color: $--color-white;
+    // border-color: $--color-danger-light-9;
 
     .el-message__content {
-      color: $message-danger-font-color; /*危险状态消息提示文字色*/
+      color: $--message-danger-font-color; /*危险状态消息提示文字色*/
     }
   }
 
@@ -86,31 +86,31 @@
     right: 15px;
     transform: translateY(-50%);
     cursor: pointer;
-    color: $message-close-icon-color; /*关闭字体图标色*/
-    font-size: $message-close-size;
+    color: $--message-close-icon-color; /*关闭字体图标色*/
+    font-size: $--message-close-size;
 
     &:focus {
       outline-width: 0;
     }
     &:hover {
-      color: $message-close-hover-color; /*悬停关闭字体图标色*/
+      color: $--message-close-hover-color; /*悬停关闭字体图标色*/
     }
   }
 
   & .el-icon-success { /*成功图标色*/
-    color: $message-success-font-color;
+    color: $--message-success-font-color;
   }
 
   & .el-icon-error { /*危险图标色*/
-    color: $message-danger-font-color;
+    color: $--message-danger-font-color;
   }
 
   & .el-icon-info { /*信息图标色*/
-    color: $message-info-font-color;
+    color: $--message-info-font-color;
   }
 
   & .el-icon-warning { /*警告图标色*/
-    color: $message-warning-font-color;
+    color: $--message-warning-font-color;
   }
 }
 

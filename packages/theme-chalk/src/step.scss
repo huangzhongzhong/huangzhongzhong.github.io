@@ -27,28 +27,28 @@
     width: 100%;
 
     @include when(process) {  /*全部 当前步骤*/ /*带图标+简洁风格（第一行） 当前步骤*/
-      color: $color-primary; /*数字色*/ /*图标色*/
-      border-color: $color-primary; /*圆圈色*/
+      color: $--color-primary; /*数字色*/ /*图标色*/
+      border-color: $--color-primary; /*圆圈色*/
     }
 
     @include when(wait) { /*全部 未进行步骤*/ /*带图标+简洁风格 未进行步骤*/
-      color: $color-text-secondary;  /*数字色*/ /*图标色*/
-      border-color: $color-text-secondary ; /*圆圈色*/
+      color: $--color-text-secondary;  /*数字色*/ /*图标色*/
+      border-color: $--color-text-secondary ; /*圆圈色*/
     }
 
     @include when(success) { /*基础用法+含状态+简洁风格（第二行）已完成步骤*/
-      color:$color-success; /*勾图标色*/
-      border-color: $color-success; /*圆圈色*/
+      color:$--color-success; /*勾图标色*/
+      border-color: $--color-success; /*圆圈色*/
     }
 
     @include when(error) { /*基础用法+含状态+简洁风格（第二行）错误步骤*/
-      color: $color-danger;
-      border-color: $color-danger;
+      color: $--color-danger;
+      border-color: $--color-danger;
     }
 
     @include when(finish) {/*有描述+居中+带图标+竖式+简洁 已完成步骤*/
-      color: $color-success; /*数字色*/ /*图标色*/
-      border-color: $color-success; /*圆圈色*/
+      color: $--color-success; /*数字色*/ /*图标色*/
+      border-color: $--color-success; /*圆圈色*/
     }
   }
 
@@ -62,7 +62,7 @@
     height: 24px;
     font-size: 14px;
     box-sizing: border-box;
-    background: $color-white; /*全部步骤块背景色，除简洁风格*/
+    background: $--color-white; /*全部步骤块背景色，除简洁风格*/
     transition: .15s ease-out;
 
     @include when(text) {
@@ -98,7 +98,7 @@
   @include e(line) {
     position: absolute;
     border-color: inherit;
-    background-color: $color-border-light ;  /*全部步骤线色，除简洁风格，除居中的已完成部分*/
+    background-color: $--color-border-light ;  /*全部步骤线色，除简洁风格，除居中的已完成部分*/
   }
 
   @include e(line-inner) {
@@ -123,23 +123,23 @@
 
     @include when(process) {
       font-weight: bold;
-      color: $color-primary ; /*当前步骤 文字颜色*/
+      color: $--color-primary ; /*当前步骤 文字颜色*/
     }
 
     @include when(wait) {
-      color: $color-text-secondary ; /*未进行步骤 文字颜色*/
+      color: $--color-text-secondary ; /*未进行步骤 文字颜色*/
     }
 
     @include when(success) { 
-      color: $color-success; /*基础用法+含状态+简洁风格（第二行） 成功步骤文字色 */
+      color: $--color-success; /*基础用法+含状态+简洁风格（第二行） 成功步骤文字色 */
     }
 
     @include when(error) {
-      color: $color-danger; /*基础用法+含状态+简洁风格（第二行）  错误步骤文字色 */
+      color: $--color-danger; /*基础用法+含状态+简洁风格（第二行）  错误步骤文字色 */
     }
 
     @include when(finish) { /*有描述+居中+带图标+竖式+简洁风格（第一行） 成功步骤文字色 */
-      color: $color-success;
+      color: $--color-success;
     }
   }
 
@@ -151,23 +151,23 @@
     font-weight: normal;
 
     @include when(process) {
-      color: $color-primary; /*有描述+居中 当前步骤描述文字*/
+      color: $--color-primary; /*有描述+居中 当前步骤描述文字*/
     }
 
     @include when(wait) {
-      color: $color-text-secondary ; /*有描述+居中+竖式 未进行步骤描述文字*/
+      color: $--color-text-secondary ; /*有描述+居中+竖式 未进行步骤描述文字*/
     }
 
     @include when(success) { 
-      color: $color-success; /*未找到对应*/
+      color: $--color-success; /*未找到对应*/
     }
 
     @include when(error) {
-      color: $color-danger;
+      color: $--color-danger;
     }
 
     @include when(finish) { 
-      color: $color-success;/*有描述+居中 已完成步骤描述文字*/
+      color: $--color-success;/*有描述+居中 已完成步骤描述文字*/
     }
   }
 
@@ -294,7 +294,7 @@
         position: absolute;
         height: 15px;
         width: 1px;
-        background: $color-text-placeholder;/*简洁风格 箭头色*/
+        background: $--color-text-placeholder;/*简洁风格 箭头色*/
       }
 
       &::before {

@@ -26,6 +26,6 @@
 
   @include e(body) {
     border-radius:2px;
-    border: 1px solid $datepicker-border-color; /*时间选择器（任意时间范围） 内边框*/
+    border: 1px solid $--datepicker-border-color; /*时间选择器（任意时间范围） 内边框*/
   }
 }

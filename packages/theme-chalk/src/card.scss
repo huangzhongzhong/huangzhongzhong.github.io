@@ -2,31 +2,31 @@
 @import "common/var";
 
 @include b(card) {
-  border-radius: $card-border-radius;
-  border: 1px solid $card-border-color; /*卡片 边框 */
-  background-color: $color-white; /*卡片 背景*/
+  border-radius: $--card-border-radius;
+  border: 1px solid $--card-border-color; /*卡片 边框 */
+  background-color: $--color-white; /*卡片 背景*/
   overflow: hidden;
-  color: $color-text-primary;/*卡片 （正文+标题）文字色*/
+  color: $--color-text-primary;/*卡片 （正文+标题）文字色*/
   transition: 0.3s;
 
   @include when(always-shadow) {
-    box-shadow: $box-shadow-light;
+    box-shadow: $--box-shadow-light;
   }
 
   @include when(hover-shadow) {
     &:hover,
     &:focus {
-      box-shadow: $box-shadow-light; 
+      box-shadow: $--box-shadow-light; 
     }
   }
 
   @include e(header) {
-    padding: #{$card-padding - 2 $card-padding};
-    border-bottom: 1px solid $card-border-color; /*标题内容分割线*/
+    padding: #{$--card-padding - 2 $--card-padding};
+    border-bottom: 1px solid $--card-border-color; /*标题内容分割线*/
     box-sizing: border-box;
   }
 
   @include e(body) {
-    padding: $card-padding;
+    padding: $--card-padding;
   }
 }

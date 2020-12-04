@@ -10,7 +10,7 @@
   @include e(separator) {
     margin: 0 9px ;
     font-weight: bold;
-    color: $color-text-secondary ;/*分隔符颜色*/
+    color: $--color-text-secondary ;/*分隔符颜色*/
 
     &[class*=icon] {
       margin: 0 6px;
@@ -22,16 +22,16 @@
     float: left;
 
     @include e(inner) {
-      color: $color-text-regular; /*目录与最后一级之间的文字色*/
+      color: $--color-text-regular; /*目录与最后一级之间的文字色*/
 
       &.is-link, & a {
         font-weight: bold;
         text-decoration: none;
-        transition: $color-transition-base;
-        color: $color-text-primary; /*目录级文字色*/
+        transition: $--color-transition-base;
+        color: $--color-text-primary; /*目录级文字色*/
 
         &:hover { 
-          color: $link-color-hover; /*目录级悬停色*/
+          color: $--link-color-hover; /*目录级悬停色*/
           cursor: pointer;
         }
       }
@@ -42,7 +42,7 @@
       .el-breadcrumb__inner a {
         &, &:hover {
           font-weight: normal;
-          color: $color-text-regular;/*最后一级文字色，不可点击*/
+          color: $--color-text-regular;/*最后一级文字色，不可点击*/
           cursor: text;
         }
       }

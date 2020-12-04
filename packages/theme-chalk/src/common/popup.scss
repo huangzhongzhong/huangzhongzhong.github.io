@@ -35,8 +35,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: $popup-modal-opacity;/*弹出框蒙版透明度*/
-  background: $popup-modal-background-color; /*弹出框蒙版背景颜色*/
+  opacity: $--popup-modal-opacity;/*弹出框蒙版透明度*/
+  background: $--popup-modal-background-color; /*弹出框蒙版背景颜色*/
 }
 
 // 弹出框 继承父级

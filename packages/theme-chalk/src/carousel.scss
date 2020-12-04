@@ -23,19 +23,19 @@
     outline: none;
     padding: 0;
     margin: 0;
-    height: $carousel-arrow-size;
-    width: $carousel-arrow-size;
+    height: $--carousel-arrow-size;
+    width: $--carousel-arrow-size;
     cursor: pointer;
     transition: .3s;
     border-radius: 50%;
-    background-color: $carousel-arrow-background; /*切换箭头 背景色*/
-    color: $color-white; /*切换箭头 图标色*/
+    background-color: $--carousel-arrow-background; /*切换箭头 背景色*/
+    color: $--color-white; /*切换箭头 图标色*/
     position: absolute;
     top: 50%;
     z-index: 10;
     transform: translateY(-50%);
     text-align: center;
-    font-size: $carousel-arrow-font-size;
+    font-size: $--carousel-arrow-font-size;
 
     @include m(left) {
       left: 16px;
@@ -46,7 +46,7 @@
     }
 
     &:hover {
-      background-color: $carousel-arrow-hover-background;/*切换箭头 悬停背景色*/
+      background-color: $--carousel-arrow-hover-background;/*切换箭头 悬停背景色*/
     }
 
     & i {
@@ -59,7 +59,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: #{$index-normal + 1};
+    z-index: #{$--index-normal + 1};
 
     @include m(horizontal) {
       bottom: 0;
@@ -74,7 +74,7 @@
     }
 
     @include m(outside) {
-      bottom: #{$carousel-indicator-height + $carousel-indicator-padding-vertical * 2};
+      bottom: #{$--carousel-indicator-height + $--carousel-indicator-padding-vertical * 2};
       text-align: center;
       position: static;
       transform: none;
@@ -82,7 +82,7 @@
         opacity: 0.64;
       }
       button {
-        background-color: $color-primary; /*卡片化 指示器色*/
+        background-color: $--color-primary; /*卡片化 指示器色*/
         opacity: 0.24;
       }
     }
@@ -116,14 +116,14 @@
 
     @include m(horizontal) {
       display: inline-block;
-      padding: $carousel-indicator-padding-vertical $carousel-indicator-padding-horizontal;
+      padding: $--carousel-indicator-padding-vertical $--carousel-indicator-padding-horizontal;
     }
 
     @include m(vertical) {
-      padding: $carousel-indicator-padding-horizontal $carousel-indicator-padding-vertical;
+      padding: $--carousel-indicator-padding-horizontal $--carousel-indicator-padding-vertical;
       .el-carousel__button {
-        width: $carousel-indicator-height;
-        height: #{$carousel-indicator-width / 2};
+        width: $--carousel-indicator-height;
+        height: #{$--carousel-indicator-width / 2};
       }
     }
 
@@ -137,8 +137,8 @@
   @include e(button) {
     display: block;
     opacity: 0.48;
-    width: $carousel-indicator-width;
-    height: $carousel-indicator-height;
+    width: $--carousel-indicator-width;
+    height: $--carousel-indicator-height;
     background-color: white; /*默认指示器色*/
     border: none;
     outline: none;

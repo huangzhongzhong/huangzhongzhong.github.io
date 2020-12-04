@@ -4,7 +4,7 @@
 
 /* Break-points 断点 
  -------------------------- */
-@mixin res($key, $map: $breakpoints) {
+@mixin res($key, $map: $--breakpoints) {
   // 循环断点Map，如果存在则返回
   @if map-has-key($map, $key) {
     @media only screen and #{inspect(map-get($map, $key))} {
@@ -19,9 +19,9 @@
  -------------------------- */
 @mixin scroll-bar {
   // 滚动条颜色
-  $scrollbar-thumb-background: #b4bccc;
+  $--scrollbar-thumb-background: #b4bccc;
   // 滚动条背景
-  $scrollbar-track-background: #fff;
+  $--scrollbar-track-background: #fff;
 
   // -webkit-代表safari、chrome私有属性  滚动条
   &::-webkit-scrollbar {
@@ -35,18 +35,18 @@
     &-thumb {
       border-radius: 5px;
       width: 6px;
-      background: $scrollbar-thumb-background;
+      background: $--scrollbar-thumb-background;
     }
     // 边框样式
     &-corner {
-      background: $scrollbar-track-background;
+      background: $--scrollbar-track-background;
     }
     // 轨道样式
     &-track {
-      background: $scrollbar-track-background;
+      background: $--scrollbar-track-background;
       // 片段
       &-piece {
-        background: $scrollbar-track-background;
+        background: $--scrollbar-track-background;
         width: 6px;
       }
     }

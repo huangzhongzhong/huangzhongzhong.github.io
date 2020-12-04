@@ -16,22 +16,22 @@
     }
     &.today {
       .cell {
-        color: $color-primary; /*当月*/
+        color: $--color-primary; /*当月*/
         font-weight: bold;
       }
       &.start-date .cell,
       &.end-date .cell {
-        color: $color-white;/*选中当月时候的文字颜色*/
+        color: $--color-white;/*选中当月时候的文字颜色*/
       }
     }
 
     &.disabled .cell { /* 未找到对应 */
-      background-color: $color-background-base; 
+      background-color: $--color-background-base; 
       cursor: not-allowed;
-      color: $color-text-placeholder;
+      color: $--color-text-placeholder;
 
       &:hover {
-        color: $color-text-placeholder;
+        color: $--color-text-placeholder;
       }
     }
 
@@ -39,32 +39,32 @@
       width: 60px; /*选中单元*/
       height: 36px;/*选中单元*/
       display: block;
-      line-height: 36px; /*改动导致内容区下移，对应未知 $datepicker-hover-font-color*/
-      color: $datepicker-font-color; /*除未选中和当月之外的月份字体颜色*/
+      line-height: 36px; /*改动导致内容区下移，对应未知 $--datepicker-hover-font-color*/
+      color: $--datepicker-font-color; /*除未选中和当月之外的月份字体颜色*/
       margin: 0 auto;
       border-radius: 18px;
       &:hover {
-        background-color: $options-background-hover;
-        font-weight: $options-font-weight-hover;
-        color: $datepicker-hover-font-color /*悬停月份字体*/
+        background-color: $--options-background-hover;
+        font-weight: $--options-font-weight-hover;
+        color: $--datepicker-hover-font-color /*悬停月份字体*/
       }
     }
 
     &.in-range div { /*日期选择器（选择月份范围）*/
-      background-color: $datepicker-inrange-background-color-hover;/*已选中单元外圈背景*/ 
+      background-color: $--datepicker-inrange-background-color-hover;/*已选中单元外圈背景*/ 
       &:hover {
-        background-color: $datepicker-inrange-background-color-hover;/*悬停单元外圈背景*/ 
+        background-color: $--datepicker-inrange-background-color-hover;/*悬停单元外圈背景*/ 
       }
     }
     &.start-date div,
     &.end-date div { 
-      color: $color-white; /*未找到对应*/
+      color: $--color-white; /*未找到对应*/
     }
 
     &.start-date .cell,
     &.end-date .cell { /*日期选择器（选择月份范围）*/
-      color: $color-white; /*已选中单元字体颜色*/
-      background-color: $datepicker-active-color; /*已选中单元背景*/
+      color: $--color-white; /*已选中单元字体颜色*/
+      background-color: $--datepicker-active-color; /*已选中单元背景*/
     }
 
     &.start-date div { /*日期选择器（选择月份范围）*/ /*已选中单元外圈左背景*/ 
@@ -78,9 +78,9 @@
     }
 
     &.current:not(.disabled) .cell { /*日期选择器（其他日期单位（月））*/
-      color: $color-white;/*选中单元字体颜色*/
+      color: $--color-white;/*选中单元字体颜色*/
       font-weight: bold;
-      background-color: $datepicker-active-color; /*选中单元背景*/
+      background-color: $--datepicker-active-color; /*选中单元背景*/
     }
   }
 }

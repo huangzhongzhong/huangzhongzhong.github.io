@@ -35,7 +35,7 @@
 
   @include e(time-header) {
     position: relative;
-    border-bottom: 1px solid $datepicker-inner-border-color; /*日期时间选择器  日期和时间点 输入框与日历区分割线*/
+    border-bottom: 1px solid $--datepicker-inner-border-color; /*日期时间选择器  日期和时间点 输入框与日历区分割线*/
     font-size: 12px; /*多次未找到对应*/
     padding: 8px 5px 5px 5px; /*日期时间选择器 日期和时间点 输入框组内间距*/
     display: table;
@@ -50,7 +50,7 @@
     @include m(bordered) { /*日期选择器 其他日期单位 年+月标题*/
       margin-bottom: 0;
       padding-bottom: 12px; /*分割线间距*/
-      border-bottom: solid 1px $color-border-light; /*内容分割线*/
+      border-bottom: solid 1px $--color-border-light; /*内容分割线*/
       & + .el-picker-panel__content {
         margin-top: 0;
       }
@@ -64,14 +64,14 @@
     line-height: 22px;   /*标题*/ 
     text-align: center;
     cursor: pointer;
-    color: $color-text-regular; /*标题*/  
+    color: $--color-text-regular; /*标题*/  
 
     &:hover {
-      color: $datepicker-hover-font-color;   /*标题*/  
+      color: $--datepicker-hover-font-color;   /*标题*/  
     }
 
     &.active {
-      color: $datepicker-active-color; /*未找到对应*/
+      color: $--datepicker-active-color; /*未找到对应*/
     }
   }
 

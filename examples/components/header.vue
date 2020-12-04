@@ -482,7 +482,7 @@
       xhr.send();
       let primaryLast = '#409EFF';
       bus.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
-        let primaryColor = val.global['$color-primary'];
+        let primaryColor = val.global['$--color-primary'];
         if (!primaryColor) primaryColor = '#409EFF';
         const base64svg = 'data:image/svg+xml;base64,';
         const imgSet = document.querySelectorAll('h1 img');

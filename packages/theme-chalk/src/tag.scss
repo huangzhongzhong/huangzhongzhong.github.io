@@ -2,91 +2,91 @@
 @import "common/var";
 
 @mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight) {
-  background-color: mix($tag-primary-color, $color-white, $backgroundColorWeight);
-  border-color: mix($tag-primary-color, $color-white, $borderColorWeight);
-  color: mix($tag-primary-color, $color-white, $fontColorWeight);
+  background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
+  border-color: mix($--tag-primary-color, $--color-white, $borderColorWeight);
+  color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
 
   @include when(hit) {
-    border-color: $tag-primary-color;/*未找到对应*/
+    border-color: $--tag-primary-color;/*未找到对应*/
   }
 // 关闭样式
   .el-tag__close {
     // 颜色 混合 
-    color: mix($tag-primary-color, $color-white, $fontColorWeight);
+    color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
     &:hover {
-      color: $color-white; /*主色标签关闭字体图标*/
-      background-color: mix($tag-primary-color, $color-white, $hoverColorWeight);
+      color: $--color-white; /*主色标签关闭字体图标*/
+      background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
     }
   }
 
   &.el-tag--info {
-    background-color: mix($tag-info-color, $color-white, $backgroundColorWeight);
-    border-color: mix($tag-info-color, $color-white, $borderColorWeight);
-    color: mix($tag-info-color, $color-white, $fontColorWeight);
+    background-color: mix($--tag-info-color, $--color-white, $backgroundColorWeight);
+    border-color: mix($--tag-info-color, $--color-white, $borderColorWeight);
+    color: mix($--tag-info-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $tag-info-color;/*未找到对应*/
+      border-color: $--tag-info-color;/*未找到对应*/
     }
 
     .el-tag__close {
-      color: mix($tag-info-color, $color-white, $fontColorWeight);
+      color: mix($--tag-info-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $color-white; /*信息标签关闭字体图标*/
-        background-color: mix($tag-info-color, $color-white, $hoverColorWeight);
+        color: $--color-white; /*信息标签关闭字体图标*/
+        background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--success {
-    background-color: mix($tag-success-color, $color-white, $backgroundColorWeight);
-    border-color: mix($tag-success-color, $color-white, $borderColorWeight);
-    color: mix($tag-success-color, $color-white, $fontColorWeight);
+    background-color: mix($--tag-success-color, $--color-white, $backgroundColorWeight);
+    border-color: mix($--tag-success-color, $--color-white, $borderColorWeight);
+    color: mix($--tag-success-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $tag-success-color;
+      border-color: $--tag-success-color;
     }
 
     .el-tag__close {
-      color: mix($tag-success-color, $color-white, $fontColorWeight);
+      color: mix($--tag-success-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $color-white; /*成功标签关闭字体图标*/
-        background-color: mix($tag-success-color, $color-white, $hoverColorWeight);
+        color: $--color-white; /*成功标签关闭字体图标*/
+        background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--warning {
-    background-color: mix($tag-warning-color, $color-white, $backgroundColorWeight);
-    border-color: mix($tag-warning-color, $color-white, $borderColorWeight);
-    color: mix($tag-warning-color, $color-white, $fontColorWeight);
+    background-color: mix($--tag-warning-color, $--color-white, $backgroundColorWeight);
+    border-color: mix($--tag-warning-color, $--color-white, $borderColorWeight);
+    color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $tag-warning-color; /*警告标签关闭字体图标*/
+      border-color: $--tag-warning-color; /*警告标签关闭字体图标*/
     }
 
     .el-tag__close {
-      color: mix($tag-warning-color, $color-white, $fontColorWeight);
+      color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $color-white;
-        background-color: mix($tag-warning-color, $color-white, $hoverColorWeight);
+        color: $--color-white;
+        background-color: mix($--tag-warning-color, $--color-white, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--danger {
-    background-color: mix($tag-danger-color, $color-white, $backgroundColorWeight);
-    border-color: mix($tag-danger-color, $color-white, $borderColorWeight);
-    color: mix($tag-danger-color, $color-white, $fontColorWeight);
+    background-color: mix($--tag-danger-color, $--color-white, $backgroundColorWeight);
+    border-color: mix($--tag-danger-color, $--color-white, $borderColorWeight);
+    color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $tag-danger-color;
+      border-color: $--tag-danger-color;
     }
 
     .el-tag__close {
-      color: mix($tag-danger-color, $color-white, $fontColorWeight);
+      color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $color-white; /*危险标签关闭字体图标*/
-        background-color: mix($tag-danger-color, $color-white, $hoverColorWeight);
+        color: $--color-white; /*危险标签关闭字体图标*/
+        background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
       }
     }
   }
@@ -96,13 +96,13 @@
   @include genTheme(10%, 0%, 100%, 100%); /*背景，边框，（复杂），关闭图标背景色*/
   display: inline-block;
   height: 32px;
-  padding: $tag-padding;
+  padding: $--tag-padding;
   line-height: 30px;
-  font-size: $tag-font-size;
-  color: $tag-primary-color;/*默认标签字体颜色*/
+  font-size: $--tag-font-size;
+  color: $--tag-primary-color;/*默认标签字体颜色*/
   border-width: 1px;
   border-style: solid;
-  border-radius: $tag-border-radius;
+  border-radius: $--tag-border-radius;
   box-sizing: border-box;
   white-space: nowrap;
 

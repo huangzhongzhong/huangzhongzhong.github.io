@@ -5,9 +5,9 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: $switch-font-size; /*未找到对应*/
-  line-height: $switch-height;  /*文字描述-文字行高-顶部向下，会挤掉下一行*/
-  height: $switch-height; /*开关盒子高度，但不影响开关大小，因为代码写死了*/
+  font-size: $--switch-font-size; /*未找到对应*/
+  line-height: $--switch-height;  /*文字描述-文字行高-顶部向下，会挤掉下一行*/
+  height: $--switch-height; /*开关盒子高度，但不影响开关大小，因为代码写死了*/
   vertical-align: middle;
   @include when(disabled) {
     & .el-switch__core,
@@ -18,16 +18,16 @@
 
   @include e(label) {
     transition: .2s;
-    height: $switch-height; /*文字描述行高-底部向上*/
+    height: $--switch-height; /*文字描述行高-底部向上*/
     display: inline-block;
-    font-size: $switch-font-size; /*文字大小似乎也是写死的，只影响盒子高度*/
+    font-size: $--switch-font-size; /*文字大小似乎也是写死的，只影响盒子高度*/
     font-weight: 500; /*文字描述粗细*/
     cursor: pointer;
     vertical-align: middle;
-    color: $color-text-primary;  /*默认文字样式*/
+    color: $--color-text-primary;  /*默认文字样式*/
 
     @include when(active) {
-      color: $color-primary; /*激活文字样式*/
+      color: $--color-primary; /*激活文字样式*/
     }
 
     @include m(left) {
@@ -38,7 +38,7 @@
     }
     & * {
       line-height: 1; /*还是文字行高-居中*/
-      font-size: $switch-font-size;/*文字大小*/
+      font-size: $--switch-font-size;/*文字大小*/
       display: inline-block;
     }
   }
@@ -56,39 +56,39 @@
     margin: 0;
     display: inline-block;
     position: relative;
-    width: $switch-width; /*未找到对应*/
-    height: $switch-height; /*开关高度*/
-    border: 1px solid $switch-off-color; /*未找到对应*/
+    width: $--switch-width; /*未找到对应*/
+    height: $--switch-height; /*开关高度*/
+    border: 1px solid $--switch-off-color; /*未找到对应*/
     outline: none;
-    border-radius: $switch-core-border-radius; /*未找到对应*/
+    border-radius: $--switch-core-border-radius; /*未找到对应*/
     box-sizing: border-box;
-    background: $switch-off-color; /*未找到对应*/
+    background: $--switch-off-color; /*未找到对应*/
     cursor: pointer;
     transition: border-color .3s, background-color .3s;
     vertical-align: middle;
-    background-color: $color-background-dark; /*禁用状态关闭背景*/
+    background-color: $--color-background-dark; /*禁用状态关闭背景*/
 
     &:after { /*开关圆圈按钮*/
       content: "";
       position: absolute;
       top: 1px; /*未找到对应*/
       left: 1px;  /*未找到对应*/
-      border-radius: $border-radius-circle; /*未找到对应*/
+      border-radius: $--border-radius-circle; /*未找到对应*/
       transition: all .3s;
-      width: $switch-button-size; /*未找到对应*/
-      height: $switch-button-size; /*未找到对应*/
-      background-color: $color-white; /*未找到对应*/
+      width: $--switch-button-size; /*未找到对应*/
+      height: $--switch-button-size; /*未找到对应*/
+      background-color: $--color-white; /*未找到对应*/
       
     }
   }
 
   @include when(checked) {
     .el-switch__core {
-      border-color: $switch-on-color; /*未找到对应*/
-      background-color: $switch-on-color; /*未找到对应*/
+      border-color: $--switch-on-color; /*未找到对应*/
+      background-color: $--switch-on-color; /*未找到对应*/
       &::after {
         left: 100%;
-        margin-left: -$switch-button-size - 1px;  /*未找到对应*/
+        margin-left: -$--switch-button-size - 1px;  /*未找到对应*/
       }
     }
   }

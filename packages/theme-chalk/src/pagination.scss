@@ -6,17 +6,17 @@
 @include b(pagination) {/*分页*/  /*无特殊说明 均排除带背景色的分页*/
   white-space: nowrap;
   padding: 2px 5px;
-  color: $pagination-font-color; /*所有未选中文字 */
+  color: $--pagination-font-color; /*所有未选中文字 */
   font-weight: bold;
   @include utils-clearfix;
 
   span:not([class*=suffix]),
   button {
     display: inline-block;
-    font-size: $pagination-font-size;
-    min-width: $pagination-button-width;
-    height: $pagination-button-height;
-    line-height: $pagination-button-height;
+    font-size: $--pagination-font-size;
+    min-width: $--pagination-button-width;
+    height: $--pagination-button-height;
+    line-height: $--pagination-button-height;
     vertical-align: top;
     box-sizing: border-box;
   }
@@ -39,7 +39,7 @@
 
     .el-input__inner {
       padding-right: 25px;
-      border-radius: $pagination-border-radius;
+      border-radius: $--pagination-border-radius;
     }
   }
 
@@ -53,12 +53,12 @@
     }
 
     &:hover {
-      color: $pagination-hover-color; /*所有悬停单箭头*/
+      color: $--pagination-hover-color; /*所有悬停单箭头*/
     }
 
     &:disabled {
-      color: $pagination-button-disabled-color; /*所有禁用单箭头*/
-      background-color: $pagination-button-disabled-background-color; /*所有禁用单箭头背景色*/
+      color: $--pagination-button-disabled-color; /*所有禁用单箭头*/
+      background-color: $--pagination-button-disabled-background-color; /*所有禁用单箭头背景色*/
       cursor: not-allowed;
     }
   }
@@ -67,10 +67,10 @@
   .btn-next {
     background: center center no-repeat;
     background-size: 16px;
-    background-color: $pagination-background-color; /*所有默认单箭头背景色*/
+    background-color: $--pagination-background-color; /*所有默认单箭头背景色*/
     cursor: pointer;
     margin: 0;
-    color: $pagination-button-color;   /*所有默认单箭头*/
+    color: $--pagination-button-color;   /*所有默认单箭头*/
     // @include when(background) { /*带有背景色的分页*/
     //   &:hover{
     //     color: red;
@@ -93,7 +93,7 @@
   }
 
   .el-pager li.disabled {
-    color: $color-text-placeholder; /*未找到对应*/
+    color: $--color-text-placeholder; /*未找到对应*/
     cursor: not-allowed;
   }
 
@@ -137,14 +137,14 @@
   @include e(sizes) {
     margin: 0 10px 0 0;
     font-weight: normal;
-    color: $color-text-regular; /*未找到对应*/
+    color: $--color-text-regular; /*未找到对应*/
 
     .el-input .el-input__inner {
-      font-size: $pagination-font-size;
+      font-size: $--pagination-font-size;
       padding-left: 8px;
 
       &:hover {
-        border-color: $pagination-hover-color;/*附加功能：页数调整框边框色*/
+        border-color: $--pagination-hover-color;/*附加功能：页数调整框边框色*/
       }
     }
   }
@@ -152,13 +152,13 @@
   @include e(total) {
     margin-right: 10px;
     font-weight: normal;
-    color: $color-text-regular; /*条数统计文字色*/
+    color: $--color-text-regular; /*条数统计文字色*/
   }
 
   @include e(jump) {
     margin-left: 24px;
     font-weight: normal;
-    color: $color-text-regular;  /*“前往 页”文字色*/
+    color: $--color-text-regular;  /*“前往 页”文字色*/
 
     .el-input__inner {
       padding: 0 3px;
@@ -172,19 +172,19 @@
   @include e(editor) {
     line-height: 18px;
     padding: 0 2px;
-    height: $pagination-button-height;
+    height: $--pagination-button-height;
       
     text-align: center;
     margin: 0 2px;
     box-sizing: border-box;
-    border-radius: $pagination-border-radius;
+    border-radius: $--pagination-border-radius;
 
     &.el-input {
       width: 50px;
     }
 
     &.el-input .el-input__inner {
-      height: $pagination-button-height;
+      height: $--pagination-button-height;
     }
 
     .el-input__inner::-webkit-inner-spin-button,
@@ -199,42 +199,42 @@
     .btn-next,
     .el-pager li {
       margin: 0 5px;
-      background-color: $color-white; /*默认背景色*/
-      color: $color-text-regular; /*默认文字和图标色*/
+      background-color: $--color-white; /*默认背景色*/
+      color: $--color-text-regular; /*默认文字和图标色*/
       min-width: 30px;
-      border: $border-base; /*带背景色的分页 边框色*/
+      border: $--border-base; /*带背景色的分页 边框色*/
       border-radius: 2px;
       line-height: 26px;
 
       &.disabled {
-        color: $color-text-placeholder;/*禁用文字色？*/
+        color: $--color-text-placeholder;/*禁用文字色？*/
       }
     }
 
     .btn-prev, .btn-next {
       padding: 0;
       &:hover {
-        color: $pagination-hover-color; /*悬停文字和双箭头色*/
-        border: $border-primary;
-        background-color: $color-primary-light-9; 
+        color: $--pagination-hover-color; /*悬停文字和双箭头色*/
+        border: $--border-primary;
+        background-color: $--color-primary-light-9; 
       }
 
       &:disabled {
-        color: $color-text-placeholder; /*禁用图标色*/
+        color: $--color-text-placeholder; /*禁用图标色*/
       }
     }
 
     .el-pager li:not(.disabled) {
       &:hover {
-        color: $pagination-hover-color; /*悬停文字和双箭头色*/
-        border: $border-primary;
-        background-color: $color-primary-light-9; 
+        color: $--pagination-hover-color; /*悬停文字和双箭头色*/
+        border: $--border-primary;
+        background-color: $--color-primary-light-9; 
       }
 
       &.active {
-        background-color: $color-primary; /*选中背景色*/
-        color: $color-white; /*选中文字色*/
-        border: $border-primary;
+        background-color: $--color-primary; /*选中背景色*/
+        color: $--color-white; /*选中文字色*/
+        border: $--border-primary;
       }
     }
 
@@ -264,13 +264,13 @@
 
   li { /*无特殊标注均排除带背景色的分页*/
     padding: 0 4px;
-    background: $pagination-background-color;/*默认背景色*/
+    background: $--pagination-background-color;/*默认背景色*/
     vertical-align: top;
     display: inline-block;
-    font-size: $pagination-font-size;
-    min-width: $pagination-button-width;
-    height: $pagination-button-height;
-    line-height: $pagination-button-height;
+    font-size: $--pagination-font-size;
+    min-width: $--pagination-button-width;
+    height: $--pagination-button-height;
+    line-height: $--pagination-button-height;
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;
@@ -279,9 +279,9 @@
     &.btn-quicknext,
     &.btn-quickprev {
       line-height: 28px;
-      color: $pagination-button-color; /*默认“...”色*/
+      color: $--pagination-button-color; /*默认“...”色*/
       &.disabled {
-        color: $color-text-placeholder;
+        color: $--color-text-placeholder;
       }
     }
 
@@ -298,11 +298,11 @@
     }
 
     &:hover {
-      color: $pagination-hover-color;/*未选中 悬停文字和双箭头色*/
+      color: $--pagination-hover-color;/*未选中 悬停文字和双箭头色*/
     }
 
     &.active {
-      color: $pagination-hover-color; /*已选中文字色*/
+      color: $--pagination-hover-color; /*已选中文字色*/
       cursor: default;
     }
   }

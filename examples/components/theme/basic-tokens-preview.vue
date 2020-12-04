@@ -235,7 +235,7 @@ export default {
       immediate: true,
       handler(value) {
         Object.keys(original).forEach((v) => {
-          const key = `$${v.replace(/_/g, '-')}`;
+          const key = `$--${v.replace(/_/g, '-')}`;
           if (value[key]) {
             this[v] = value[key];
           } else {

@@ -4,26 +4,26 @@
 
 @include b(popover) {
   position: absolute;
-  background: $popover-background-color; /*弹出框 背景色*/
+  background: $--popover-background-color; /*弹出框 背景色*/
   min-width: 150px;
   border-radius: 4px;
-  border: 1px solid $popover-border-color; /*弹出框 边框色*/
-  padding: $popover-padding;
-  z-index: $index-popper;
-  color: $color-text-regular; /*弹出框 正文文字色*/
+  border: 1px solid $--popover-border-color; /*弹出框 边框色*/
+  padding: $--popover-padding;
+  z-index: $--index-popper;
+  color: $--color-text-regular; /*弹出框 正文文字色*/
   line-height: 1.4;
   text-align: justify;
-  font-size: $popover-font-size;
-  box-shadow: $box-shadow-light;
+  font-size: $--popover-font-size;
+  box-shadow: $--box-shadow-light;
   word-break: break-all;
 
   @include m(plain) {
-    padding: $popover-padding-large;
+    padding: $--popover-padding-large;
   }
 
   @include e(title) {
-    color: $popover-title-font-color;  /*弹出框 标题文字色*/
-    font-size: $popover-title-font-size;
+    color: $--popover-title-font-color;  /*弹出框 标题文字色*/
+    font-size: $--popover-title-font-size;
     line-height: 1;
     margin-bottom: 12px;
   }
