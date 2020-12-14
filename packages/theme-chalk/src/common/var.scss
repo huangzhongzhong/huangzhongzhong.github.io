@@ -21,16 +21,15 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 
 /* Color 颜色
 -------------------------- */
-$--color-primary: #1267E5 !default; /*主题色*/
+$--color-primary: #1267e5 !default; /*主题色*/
 $--color-white: #ffffff !default; /*基础色-白色*/
 $--color-black: #000000 !default; /*基础色-黑色*/
 
-$--color-success: #1F9933 !default; /*功能色-正确状态*/
+$--color-success: #1f9933 !default; /*功能色-正确状态*/
 $--color-warning: #e54409 !default; /*功能色-警告状态*/
-$--color-danger: #CC0000 !default; /*功能色-危险状态*/
+$--color-danger: #cc0000 !default; /*功能色-危险状态*/
 $--color-info: #58595c !default; /*功能色-提示状态*/
-$--color-stress: #FA6114 !default; /*功能色-强调色-金额色*/
-// 测试
+$--color-stress: #fa6114 !default; /*功能色-强调色-金额色*/
 
 $--color-text-primary: #000000 !default; /*一级文本 主要*/
 $--color-text-regular: #262729 !default; /*二级文本 常规*/
@@ -38,56 +37,119 @@ $--color-text-secondary: #73777a !default; /*三级文本 次要*/
 $--color-text-placeholder: #adb0b8 !default; /*四级文本 占位*/
 $--color-border-base: #909399 !default; /*一级边框 基础*/
 $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
+$--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
+$--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 暗*/
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
-$--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 重*/
-$--color-divider: #C1CBDB !default; /*增加*/ /*分割线色*/
+
+$--table-border-color: #c1cbdb !default; /*表格分割线*/
+$--table-header-background-color: #ebf0fa !default; /*表头背景色*/
+$--table-stripe-background-color: #f5f7fa !default; /*表格斑马线色*/
+
+
 //蒙版
 $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
 
-/*衍生颜色*/
-$--color-primary-light-3: mix($--color-white,$--color-primary,30%) !default;
-$--color-primary-light-5: mix($--color-white,$--color-primary,50%) !default;
-$--color-primary-light-7: mix($--color-white,$--color-primary,70%) !default;
-$--color-primary-light-8: mix($--color-white,$--color-primary,80%) !default;
-$--color-primary-light-9: mix($--color-white,$--color-primary,90%) !default;
-$--color-primary-dark: mix($--color-black,$--color-primary,20%) !default;
+// 扩展颜色
+$--color-turquoise: #1094a3 !default; /*绿松石*/
+$--color-purple: #6f25b8 !default; /*紫罗兰*/
+$--color-midnightblue: #373799 !default; /*午夜蓝*/
+$--color-magenta: #cc1878 !default; /*洋红*/
+$--color-yellow: #faca0a !default; /*黄*/
+$--color-chromeyellow: #f5a70a !default; /*铭黄*/
+$--color-grassgreen: #7bb800 !default; /*草绿*/
 
-// 透明颜色：直接写transparent
-// 功能色色值衍生
-$--color-stress-light-3: mix($--color-white,$--color-stress,30%) !default;
-$--color-stress-light-5: mix($--color-white,$--color-stress,50%) !default;
-$--color-stress-light-7: mix($--color-white,$--color-stress,70%) !default;
-$--color-stress-light-8: mix($--color-white,$--color-stress,80%) !default;
-$--color-stress-light-9: mix($--color-white,$--color-stress,90%) !default;
-$--color-stress-dark: mix($--color-black,$--color-stress,20%) !default;
+/*主要颜色衍生*/
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+$--color-primary-dark: mix($--color-black, $--color-primary, 20%) !default;
 
-$--color-success-light-3: mix($--color-white,$--color-success,30%) !default;
-$--color-success-light-5: mix($--color-white,$--color-success,50%) !default;
-$--color-success-light-7: mix($--color-white,$--color-success,70%) !default;
-$--color-success-light-8: mix($--color-white,$--color-success,80%) !default;
-$--color-success-light-9: mix($--color-white,$--color-success,90%) !default;
-$--color-success-dark: mix($--color-black,$--color-success,20%) !default;
+$--color-stress-light-3: mix($--color-white, $--color-stress, 30%) !default;
+$--color-stress-light-5: mix($--color-white, $--color-stress, 50%) !default;
+$--color-stress-light-7: mix($--color-white, $--color-stress, 70%) !default;
+$--color-stress-light-8: mix($--color-white, $--color-stress, 80%) !default;
+$--color-stress-light-9: mix($--color-white, $--color-stress, 90%) !default;
+$--color-stress-dark: mix($--color-black, $--color-stress, 20%) !default;
 
-$--color-warning-light-3: mix($--color-white,$--color-warning,30%) !default;
-$--color-warning-light-5: mix($--color-white,$--color-warning,50%) !default;
-$--color-warning-light-7: mix($--color-white,$--color-warning,70%) !default;
-$--color-warning-light-8: mix($--color-white,$--color-warning,80%) !default;
-$--color-warning-light-9: mix($--color-white,$--color-warning,90%) !default;
-$--color-warning-dark: mix($--color-black,$--color-warning,20%) !default;
+$--color-success-light-3: mix($--color-white, $--color-success, 30%) !default;
+$--color-success-light-5: mix($--color-white, $--color-success, 50%) !default;
+$--color-success-light-7: mix($--color-white, $--color-success, 70%) !default;
+$--color-success-light-8: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-light-9: mix($--color-white, $--color-success, 90%) !default;
+$--color-success-dark: mix($--color-black, $--color-success, 20%) !default;
 
-$--color-danger-light-3: mix($--color-white,$--color-danger,30%) !default;
-$--color-danger-light-5: mix($--color-white,$--color-danger,50%) !default;
-$--color-danger-light-7: mix($--color-white,$--color-danger,70%) !default;
-$--color-danger-light-8: mix($--color-white,$--color-danger,80%) !default;
-$--color-danger-light-9: mix($--color-white,$--color-danger,90%) !default;
-$--color-danger-dark: mix($--color-black,$--color-danger,20%) !default;
+$--color-warning-light-3: mix($--color-white, $--color-warning, 30%) !default;
+$--color-warning-light-5: mix($--color-white, $--color-warning, 50%) !default;
+$--color-warning-light-7: mix($--color-white, $--color-warning, 70%) !default;
+$--color-warning-light-8: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-light-9: mix($--color-white, $--color-warning, 90%) !default;
+$--color-warning-dark: mix($--color-black, $--color-warning, 20%) !default;
 
-$--color-info-light-3: mix($--color-white,$--color-info,30%) !default;
-$--color-info-light-5: mix($--color-white,$--color-info,50%) !default;
-$--color-info-light-7: mix($--color-white,$--color-info,70%) !default;
-$--color-info-light-8: mix($--color-white,$--color-info,80%) !default;
-$--color-info-light-9: mix($--color-white,$--color-info,90%) !default;
-$--color-info-dark: mix($--color-black,$--color-success,20%) !default;
+$--color-danger-light-3: mix($--color-white, $--color-danger, 30%) !default;
+$--color-danger-light-5: mix($--color-white, $--color-danger, 50%) !default;
+$--color-danger-light-7: mix($--color-white, $--color-danger, 70%) !default;
+$--color-danger-light-8: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-light-9: mix($--color-white, $--color-danger, 90%) !default;
+$--color-danger-dark: mix($--color-black, $--color-danger, 20%) !default;
+
+$--color-info-light-3: mix($--color-white, $--color-info, 30%) !default;
+$--color-info-light-5: mix($--color-white, $--color-info, 50%) !default;
+$--color-info-light-7: mix($--color-white, $--color-info, 70%) !default;
+$--color-info-light-8: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-light-9: mix($--color-white, $--color-info, 90%) !default;
+$--color-info-dark: mix($--color-black, $--color-info, 20%) !default;
+
+// 扩展颜色衍生
+$--color-turquoise-light-3: mix($--color-white, $--color-turquoise, 30%) !default;
+$--color-turquoise-light-5: mix($--color-white, $--color-turquoise, 50%) !default;
+$--color-turquoise-light-7: mix($--color-white, $--color-turquoise, 70%) !default;
+$--color-turquoise-light-8: mix($--color-white, $--color-turquoise, 80%) !default;
+$--color-turquoise-light-9: mix($--color-white, $--color-turquoise, 90%) !default;
+$--color-turquoise-dark: mix($--color-black, $--color-turquoise, 20%) !default;
+
+$--color-purple-light-3: mix($--color-white, $--color-purple, 30%) !default;
+$--color-purple-light-5: mix($--color-white, $--color-purple, 50%) !default;
+$--color-purple-light-7: mix($--color-white, $--color-purple, 70%) !default;
+$--color-purple-light-8: mix($--color-white, $--color-purple, 80%) !default;
+$--color-purple-light-9: mix($--color-white, $--color-purple, 90%) !default;
+$--color-purple-dark: mix($--color-black, $--color-purple, 20%) !default;
+
+$--color-midnightblue-light-3: mix($--color-white, $--color-midnightblue, 30%) !default;
+$--color-midnightblue-light-5: mix($--color-white, $--color-midnightblue, 50%) !default;
+$--color-midnightblue-light-7: mix($--color-white, $--color-midnightblue, 70%) !default;
+$--color-midnightblue-light-8: mix($--color-white, $--color-midnightblue, 80%) !default;
+$--color-midnightblue-light-9: mix($--color-white, $--color-midnightblue, 90%) !default;
+$--color-midnightblue-dark: mix($--color-black, $--color-midnightblue, 20%) !default;
+
+$--color-magenta-light-3: mix($--color-white, $--color-magenta, 30%) !default;
+$--color-magenta-light-5: mix($--color-white, $--color-magenta, 50%) !default;
+$--color-magenta-light-7: mix($--color-white, $--color-magenta, 70%) !default;
+$--color-magenta-light-8: mix($--color-white, $--color-magenta, 80%) !default;
+$--color-magenta-light-9: mix($--color-white, $--color-magenta, 90%) !default;
+$--color-magenta-dark: mix($--color-black, $--color-magenta, 20%) !default;
+
+$--color-yellow-light-3: mix($--color-white, $--color-yellow, 30%) !default;
+$--color-yellow-light-5: mix($--color-white, $--color-yellow, 50%) !default;
+$--color-yellow-light-7: mix($--color-white, $--color-yellow, 70%) !default;
+$--color-yellow-light-8: mix($--color-white, $--color-yellow, 80%) !default;
+$--color-yellow-light-9: mix($--color-white, $--color-yellow, 90%) !default;
+$--color-yellow-dark: mix($--color-black, $--color-yellow, 20%) !default;
+
+$--color-chromeyellow-light-3: mix($--color-white, $--color-chromeyellow, 30%) !default;
+$--color-chromeyellow-light-5: mix($--color-white, $--color-chromeyellow, 50%) !default;
+$--color-chromeyellow-light-7: mix($--color-white, $--color-chromeyellow, 70%) !default;
+$--color-chromeyellow-light-8: mix($--color-white, $--color-chromeyellow, 80%) !default;
+$--color-chromeyellow-light-9: mix($--color-white, $--color-chromeyellow, 90%) !default;
+$--color-chromeyellow-dark: mix($--color-black, $--color-chromeyellow, 20%) !default;
+
+$--color-grassgreen-light-3: mix($--color-white, $--color-grassgreen, 30%) !default;
+$--color-grassgreen-light-5: mix($--color-white, $--color-grassgreen, 50%) !default;
+$--color-grassgreen-light-7: mix($--color-white, $--color-grassgreen, 70%) !default;
+$--color-grassgreen-light-8: mix($--color-white, $--color-grassgreen, 80%) !default;
+$--color-grassgreen-light-9: mix($--color-white, $--color-grassgreen, 90%) !default;
+$--color-grassgreen-dark: mix($--color-black, $--color-grassgreen, 20%) !default;
 
 
 
@@ -101,7 +163,11 @@ $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
 
 /* 下拉菜单等选项悬停专题 */
-$--options-background-hover: mix($--color-white,$--color-primary,80%) !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
+$--options-background-hover: mix(
+  $--color-white,
+  $--color-primary,
+  80%
+) !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
 $--options-background-hover-lighter: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 $--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/
@@ -110,7 +176,6 @@ $--options-font-weight-active: 700 !default; /*选项选中字体粗细*/
 // 其他悬停
 $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/
 $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
-
 
 // 可清空图标悬停颜色
 $--line-icon-color-hover: $--color-text-regular !default;
@@ -125,7 +190,6 @@ $--link-color-base: $--color-primary !default; /*链接 颜色 基础*/
 $--Modal-title-font-size: 20px !default;
 $--Modal-title-font-weight: 700 !default;
 
-
 // 其他
 $--loading-icon-color: $--color-text-secondary !default; /*链接 颜色 基础*/
 
@@ -135,7 +199,6 @@ $--border-style-base: solid !default; /*边框 样式 基础  ： solid单实线
 $--border-base: $--border-width-base $--border-style-base $--color-border-base !default;
 $--border-primary: $--border-width-base $--border-style-base $--color-primary !default;
 
-
 /* 圆角*/
 $--border-radius-base: 4px !default; /*大圆角*/
 $--border-radius-small: 2px !default; /*小圆角*/
@@ -143,16 +206,16 @@ $--border-radius-circle: 100% !default; /*全圆角（只能用于方形）*/
 $--border-radius-zero: 0 !default; /*无圆角*/
 
 // 投影
-$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
+$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
 $--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
-  0px 4px 32px  rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
+  0px 4px 32px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
 $--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
-$--box-shadow-focus-primary: 0 0 2px 2px  $--color-primary !default;
+$--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
 
-$--box-shadow-primary: 0px 0px 0px 2px mix($--color-white,$--color-primary,70%)  !default;
+$--box-shadow-primary: 0px 0px 0px 2px
+  mix($--color-white, $--color-primary, 70%) !default;
 $--box-shadow-danger: 0px 0px 0px 2px mix($--color-white, $--color-danger, 70%) !default;
-
 
 /* Typography
 -------------------------- */
@@ -171,7 +234,6 @@ $--font-weight-bold: 700 !default; /*加粗字体粗细*/ /*增加*/
 
 $--font-line-height-primary: 24px !default; /*主要字体行高*/
 $--font-line-height-secondary: 16px !default; /*次要字体行高*/
-
 
 /* Size 大小 这是哪里的大小？
 -------------------------- */
@@ -719,7 +781,6 @@ $--select-input-remote-height-mini: 14px !default; /*最小号内容高度*/
 /* Cascader 级联选择器
 -------------------------- */
 
-
 $--cascader-menu-font-color: $--color-text-regular !default;
 $--cascader-menu-selected-font-color: $--color-primary !default;
 $--cascader-menu-background: $--color-white !default;
@@ -831,7 +892,8 @@ $--form-label-font-size: $--font-size-base !default;
 
 /* Table 表格
 -------------------------- */
-$--table-border-color: #c1cbdb !default; /*表格分割线*/
+
+
 $--table-border: 1px solid $--table-border-color !default;
 $--table-font-size: 12px !default;
 $--table-padding-padding-left: 4px !default;
@@ -845,8 +907,6 @@ $--table-header-font-color: $--color-text-primary !default;
 $--table-row-hover-background-color: $--options-background-hover !default; /*row 行*/ /*表尾合计行 背景*/ /*表格悬停颜色*/
 $--table-current-row-background-color: $--color-primary-light-9 !default; /*选中 行*/
 
-$--table-header-background-color: #ebf0fa !default; /*表头背景色*/
-$--table-stripe-background-color: #f5f7fa !default; /*表格斑马线色*/
 $--table-fixed-box-shadow: $--box-shadow-base !default;
 // 斑马线呢？
 
@@ -1028,10 +1088,16 @@ $--tab-header-color-active: $--color-text-secondary !default;
 $--tab-header-color-hover: $--color-text-regular !default;
 $--tab-header-color: $--color-text-regular !default;
 $--tab-item-font-color: $--color-text-primary !default;
-$--tab-item-font-color-active: $--color-primary!default;
+$--tab-item-font-color-active: $--color-primary !default;
 
-$--tab-header-background-active: rgba( $--color-black,0.06) !default; /*独立色值待调整*/
-$--tab-header-background-hover: rgba($--color-black,0.06) !default; /*独立色值待调整*/
+$--tab-header-background-active: rgba(
+  $--color-black,
+  0.06
+) !default; /*独立色值待调整*/
+$--tab-header-background-hover: rgba(
+  $--color-black,
+  0.06
+) !default; /*独立色值待调整*/
 
 $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
