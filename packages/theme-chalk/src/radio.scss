@@ -22,7 +22,7 @@
     color: $--color-primary; /*单选边框悬停色*/
     font-weight: $--options-font-weight-hover;
     @include e(inner) {
-     border-color: $--color-primary;
+      border-color: $--color-primary;
     }
   }
 
@@ -36,22 +36,20 @@
     background: $--radio-bordered-background-color;
 
     &:hover {
-      color:$--color-primary ;
+      color: $--color-primary;
     }
-
 
     &.is-checked {
       border-color: $--radio-bordered-checked-border-color;
-      background-color: $--color-primary-light-9 ;
-       &.is-disabled {
-        background-color: $--color-background-base ;
-        }
+      background-color: $--color-primary-light-9;
+      &.is-disabled {
+        background-color: $--color-background-base;
+      }
     }
 
     &.is-disabled {
       cursor: not-allowed;
       border-color: $--radio-bordered-disabled-border-color;
-
     }
 
     & + .el-radio.is-bordered {
@@ -61,11 +59,10 @@
     .el-radio__input {
       /*单选按钮显示隐藏*/
       display: $--el-radio-input-display;
-
-    
     }
-    .el-radio__label { /*标签左间距，若取消显示单选按钮需要归零*/
-      padding: $--el-radio-label-padding ;
+    .el-radio__label {
+      /*标签左间距，若取消显示单选按钮需要归零*/
+      padding: $--el-radio-label-padding;
     }
   }
 
@@ -139,9 +136,9 @@
         //  单选未选中情况下不应该有这个中间小点啊~ 整个块注释掉正常运转。
         &::after {
           cursor: not-allowed;
-          // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来
+          // 优先级原因，有一个优先级比这个更高，加了 !important 后在已选中图标中显示出来.更高的是哪个？
           // 被覆盖的样式，要不要留？/*暂不删除。
-          background-color: $--radio-disabled-icon-color ;
+          background-color: $--radio-disabled-icon-color;
         }
 
         & + .el-radio__label {
@@ -160,9 +157,8 @@
           }
         }
       }
-      & + span.el-radio__label {
-        /*禁用状态 标签文字*/
-        color: $--radio-disabled-font-color;
+      & + span.el-radio__label { /*禁用状态 选项文字*/
+        color: $--disabled-font-colo-dark;
         cursor: not-allowed;
       }
     }
@@ -220,8 +216,7 @@
     }
   }
 
-  @include e(original) {
-    /*对应？*/
+  @include e(original) { /*对应？*/
     opacity: 0;
     outline: none;
     position: absolute;
@@ -241,7 +236,6 @@
     }
   }
 
-  //
   @include e(label) {
     /*单选全局字体大小和间距*/
     font-size: $--radio-font-size;

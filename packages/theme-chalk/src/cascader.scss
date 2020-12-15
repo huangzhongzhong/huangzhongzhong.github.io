@@ -113,10 +113,10 @@
       .el-icon-close {
         flex: none;
         background-color: transparent ;
-        color: $--tag-icon-close-color ; /*多选-关闭字体图标颜色*/
+        color: $--color-text-secondary ; /*多选-关闭图标颜色*/
 
         &:hover {
-          background-color: $--tag-icon-close-background-color-hover; /*多选-关闭字体图标悬停背景色*/
+          background-color: $--tag-icon-close-background-color-hover; /*多选-关闭图标悬停背景色*/
         }
       }
     }

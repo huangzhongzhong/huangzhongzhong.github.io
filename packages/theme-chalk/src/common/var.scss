@@ -41,17 +41,27 @@ $--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 暗*/
 $--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
 
-$--table-border-color: #c1cbdb !default; /*表格分割线*/
+$--table-border-color: $--color-divider !default; /*表格分割线*/
 $--table-header-background-color: #ebf0fa !default; /*表头背景色*/
 $--table-stripe-background-color: #f5f7fa !default; /*表格斑马线色*/
-
+$--table-font-color: $--color-text-regular !default; /*表格内容文字色*/
+$--table-header-font-color: $--color-text-primary !default;/*表头文字色*/
+$--body-font-color: $--color-text-primary !default; /*表格内容文字色*/
+$--body-header-font-color: $--color-text-regular !default;/*表头文字色*/
 
 //蒙版
 $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
+// 投影
+$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
+$--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
+  0px 4px 32px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
+$--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
+$--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
 
 // 扩展颜色
 $--color-turquoise: #1094a3 !default; /*绿松石*/
-$--color-purple: #6f25b8 !default; /*紫罗兰*/
+$--color-purple: #6f25b8 !default; /*紫色*/
 $--color-midnightblue: #373799 !default; /*午夜蓝*/
 $--color-magenta: #cc1878 !default; /*洋红*/
 $--color-yellow: #faca0a !default; /*黄*/
@@ -161,13 +171,14 @@ $--disabled-background-base: $--color-background-base !default; /*禁用 填充 
 $--disabled-color-base: $--color-text-placeholder !default; /*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*/
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
+$--disabled-font-colo-dark: $--color-info !default; /*禁用 字体颜色 加重*/ /*用于用户要求强调的禁用文字*/
 
 /* 下拉菜单等选项悬停专题 */
 $--options-background-hover: mix(
   $--color-white,
   $--color-primary,
   80%
-) !default; /*增加*/ /*背景 悬浮*/ /*主要应用在下拉框*/
+) !default; /*背景 悬浮*/ /*主要应用在下拉框*/
 $--options-background-hover-lighter: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 $--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/
@@ -176,12 +187,11 @@ $--options-font-weight-active: 700 !default; /*选项选中字体粗细*/
 // 其他悬停
 $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用于非蓝色的链接，转hover，为了语义更清晰，减少疑惑，允许多出一个样式*/
 $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
+$--line-icon-color-hover: $--color-text-regular !default; /*可清空图标悬停颜色*/ /*轮廓图标悬停色*/
 
-// 可清空图标悬停颜色
-$--line-icon-color-hover: $--color-text-regular !default;
 
-$--tag-icon-close-color: $--color-text-regular !default; /*多选-关闭字体图标色*/
-$--tag-icon-close-background-color-hover: $--color-text-secondary !default; /*多选-关闭字体图标悬停背景色*/
+$--tag-icon-close-color: $--color-text-regular !default; /*级联选择器-标签-关闭图标色*/
+$--tag-icon-close-background-color-hover: $--color-text-secondary !default; /**级联选择器-标签-关闭图标悬停背景色*/
 
 /* 链接 */
 $--link-color-base: $--color-primary !default; /*链接 颜色 基础*/
@@ -205,13 +215,6 @@ $--border-radius-small: 2px !default; /*小圆角*/
 $--border-radius-circle: 100% !default; /*全圆角（只能用于方形）*/
 $--border-radius-zero: 0 !default; /*无圆角*/
 
-// 投影
-$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
-$--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
-  0px 4px 32px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
-$--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
-$--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
 
 $--box-shadow-primary: 0px 0px 0px 2px
   mix($--color-white, $--color-primary, 70%) !default;
@@ -900,8 +903,7 @@ $--table-padding-padding-left: 4px !default;
 $--table-padding-padding-right: 4px !default;
 // $--table-padding-padding: 6px 0px !default;
 
-$--table-font-color: $--color-text-regular !default;
-$--table-header-font-color: $--color-text-primary !default;
+
 
 // 表格 行 悬停 背景 颜色
 $--table-row-hover-background-color: $--options-background-hover !default; /*row 行*/ /*表尾合计行 背景*/ /*表格悬停颜色*/
