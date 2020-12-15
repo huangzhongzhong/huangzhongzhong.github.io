@@ -11,7 +11,7 @@
   }
 // 关闭样式
   .el-tag__close {
-    // 颜色 混合 
+    // 颜色 混合
     color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
     &:hover {
       color: $--color-white; /*主色标签关闭字体图标*/
@@ -85,7 +85,7 @@
     .el-tag__close {
       color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white; /*危险标签关闭字体图标*/
+        color: $--color-white; /*危险标签关闭图标*/
         background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
       }
     }

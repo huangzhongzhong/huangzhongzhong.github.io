@@ -189,8 +189,6 @@ $--link-color-hover: $--color-primary !default; /*链接 颜色 悬停*/ /*用�
 $--border-color-hover: $--color-primary !default; /*边框 颜色 悬停*/
 $--line-icon-color-hover: $--color-text-regular !default; /*可清空图标悬停颜色*/ /*轮廓图标悬停色*/
 
-
-$--tag-icon-close-color: $--color-text-regular !default; /*级联选择器-标签-关闭图标色*/
 $--tag-icon-close-background-color-hover: $--color-text-secondary !default; /**级联选择器-标签-关闭图标悬停背景色*/
 
 /* 链接 */
@@ -735,9 +733,9 @@ $--select-input-focus-shadow: $--input-focus-shadow !default;
 $--select-input-icon-color: $--color-text-secondary !default;
 
 // 选择框所有标签
-$--select-input-tag-icon-close-margin: 2px 0 2px 6px !default; /*标签外边距*/
+// $--select-input-tag-icon-close-margin: 2px 0 2px 6px !default; /*标签外边距*/ 只有一个
 // 选择框所有标签删除按钮默认背景
-$--select-input-tag-icon-close-background-color: transparent !default;
+// $--select-input-tag-icon-close-background-color: transparent !default;
 
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
@@ -797,7 +795,7 @@ $--cascader-node-background-hover: $--options-background-hover !default; /*node 
 $--cascader-node-color-disabled: $--disabled-font-color !default;
 
 $--cascader-color-empty: $--color-text-secondary !default;
-$--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
+// $--cascader-tag-background: mix($--color-white, $--color-info, 90%) !default;
 
 /* Switch 开关
 -------------------------- */

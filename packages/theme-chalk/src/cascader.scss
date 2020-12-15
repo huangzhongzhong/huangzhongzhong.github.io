@@ -98,11 +98,11 @@
       max-width: 100%;
       margin: 2px 0 2px 6px;
       text-overflow: ellipsis;
-      background: $--cascader-tag-background;
+      // background: $--cascader-tag-background;
 
-      &:not(.is-hit) {
-        border-color: transparent;
-      }
+      // &:not(.is-hit) {
+      //   border-color: transparent;
+      // }
 
       > span {
         flex: 1;
@@ -116,7 +116,7 @@
         color: $--color-text-secondary ; /*多选-关闭图标颜色*/
 
         &:hover {
-          background-color: $--tag-icon-close-background-color-hover; /*多选-关闭图标悬停背景色*/
+          background-color: $--color-text-secondary; /*多选-关闭图标悬停背景色*/
         }
       }
     }

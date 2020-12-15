@@ -128,24 +128,24 @@
   .el-tag__close {
     margin-top: -2px;
   }
-  
-  
+
+
   .el-tag { /* 选择框所有标签*/
     box-sizing: border-box;
-    border-color: $--select-input-tag-icon-close-background-color ;
-    margin: $--select-input-tag-icon-close-margin;
-    // 加上！后能显示出红色，那是哪里的更高级盖住了它？是el-tag--info
-    background-color:#f0f2f5 ;/*标签背景*/
+    // border-color: $--select-input-tag-icon-close-background-color ;
+    margin: 2px 0 2px 6px;
+    // background-color:#f0f2f5 ;/*标签背景*/
+    // background-color和 border-color加上！后能显示出红色，那是哪里的更高级盖住了它？是el-tag--info
 
     &__close.el-icon-close { /* 选择框所有标签删除按钮*/
       // #f0f2f500
-      background-color: transparent; 
+      background-color: transparent;
       right: -7px;
       top: 0;
-      color: $--color-white;  /*标签图标颜色*/ /*被覆盖，可能是el-tag--info*/ 
+      color: $--color-white;  /*标签图标颜色*/ /*被覆盖，可能是el-tag--info*/
 
       &:hover {
-        background-color: $--tag-icon-close-background-color-hover;/*标签图标悬浮背景色*/ /*被覆盖，可能是el-tag--info*/ 
+        background-color: $--tag-icon-close-background-color-hover;/*标签图标悬浮背景色*/ /*被覆盖，可能是el-tag--info*/
       }
 
       &::before {
