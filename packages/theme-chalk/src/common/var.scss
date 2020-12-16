@@ -21,37 +21,30 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 
 /* Color 颜色
 -------------------------- */
+// 主要颜色
 $--color-primary: #1267e5 !default; /*主题色*/
 $--color-white: #ffffff !default; /*基础色-白色*/
 $--color-black: #000000 !default; /*基础色-黑色*/
 
-$--color-success: #1f9933 !default; /*功能色-正确状态*/
-$--color-warning: #e54409 !default; /*功能色-警告状态*/
-$--color-danger: #cc0000 !default; /*功能色-危险状态*/
-$--color-info: #58595c !default; /*功能色-提示状态*/
-$--color-stress: #fa6114 !default; /*功能色-强调色-金额色*/
+$--color-success: #1f9933 !default; /*成功色*/
+$--color-warning: #e54409 !default; /*警告色*/
+$--color-danger: #cc0000 !default; /*危险色*/
+$--color-info: #58595c !default; /*信息色*/
+$--color-stress: #fa6114 !default; /*强调色-金额色*/
 
-$--color-text-primary: #000000 !default; /*一级文本 主要*/
-$--color-text-regular: #262729 !default; /*二级文本 常规*/
-$--color-text-secondary: #73777a !default; /*三级文本 次要*/
-$--color-text-placeholder: #adb0b8 !default; /*四级文本 占位*/
+$--color-text-primary: #000000 !default; /*主要文字色*/
+$--color-text-regular: #262729 !default; /*常规文字色*/
+$--color-text-secondary: #73777a !default; /*辅助文字色*/
+$--color-text-placeholder: #adb0b8 !default; /*占位文字色*/
 $--color-text-disable-dark: #434547 !default; /*禁用文字加重色*/
 
-$--color-border-base: #909399 !default; /*一级边框 基础*/
+$--color-border: #909399 !default; /*一级边框 基础*/
 $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 暗*/
-$--color-background-base: #f2f3f5 !default; /*背景 颜色 基础*/
+$--color-background: #f2f3f5 !default; /*背景 颜色 基础*/
 
-$--table-border-color: $--color-divider !default; /*表格分割线*/
-$--table-header-background-color: #ebf0fa !default; /*表头背景色*/
-$--table-stripe-background-color: #f5f7fa !default; /*表格斑马线色*/
-$--table-font-color: $--color-text-regular !default; /*表格内容文字色*/
-$--table-header-font-color: $--color-text-primary !default;/*表头文字色*/
-$--body-font-color: $--color-text-primary !default; /*表格内容文字色*/
-$--body-header-font-color: $--color-text-regular !default;/*表头文字色*/
-
-// 扩展颜色  测试一下会自动更新吗？
+// 扩展颜色
 $--color-turquoise: #1094a3 !default; /*绿松石*/
 $--color-purple: #6f25b8 !default; /*紫色*/
 $--color-midnightblue: #373799 !default; /*午夜蓝*/
@@ -60,17 +53,24 @@ $--color-yellow: #faca0a !default; /*黄*/
 $--color-chromeyellow: #f5a70a !default; /*铭黄*/
 $--color-grassgreen: #7bb800 !default; /*草绿*/
 
+// 特定颜色
+$--table-border-color: $--color-divider !default; /*表格分割线*/
+$--table-header-background-color: #ebf0fa !default; /*表头背景色*/
+$--table-stripe-background-color: #f5f7fa !default; /*表格斑马线色*/
+$--table-font-color: $--color-text-regular !default; /*表格内容文字色*/
+$--table-header-font-color: $--color-text-primary !default;/*表头文字色*/
+$--body-font-color: $--color-text-primary !default; /*详情页内容文字色*/
+$--body-header-font-color: $--color-text-regular !default;/*详情页标题文字色*/
+
 //蒙版
-$--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
+$--Mask-background-color: rgba(0, 0, 0, 0.5) !default;
 // 投影
-$--box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+$--box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
   0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
 $--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
   0px 4px 32px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
 $--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
 $--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
-
-
 
 /*主要颜色衍生*/
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
@@ -171,7 +171,7 @@ $--color-grassgreen-dark: mix($--color-black, $--color-grassgreen, 20%) !default
 全局样式-引用的色值、其他属性、但不包括具体组件
 -------------------------- */
 /* 禁用 */
-$--disabled-background-base: $--color-background-base !default; /*禁用 填充 基础*/
+$--disabled-background-base: $--color-background !default; /*禁用 填充 基础*/
 $--disabled-color-base: $--color-text-placeholder !default; /*禁用 颜色 基础*/
 $--disabled-border-base: $--color-border-light !default; /*禁用 边框 基础*/
 $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜色 基础*/
@@ -208,7 +208,7 @@ $--loading-icon-color: $--color-text-secondary !default; /*链接 颜色 基础*
 /* 边框*/
 $--border-width-base: 1px !default; /*边框 宽度 大小 基础*/
 $--border-style-base: solid !default; /*边框 样式 基础  ： solid单实线*/
-$--border-base: $--border-width-base $--border-style-base $--color-border-base !default;
+$--border-base: $--border-width-base $--border-style-base $--color-border !default;
 $--border-primary: $--border-width-base $--border-style-base $--color-primary !default;
 
 /* 圆角*/
@@ -294,9 +294,9 @@ $--button-mini-padding-horizontal: 15px !default; /*按钮 超小号 内边距 �
 
 // 默认按钮
 /*对应 button 基础用法 默认、朴素、圆角、图标，不同尺寸所有 */
-$--button-default-background-color: $--color-background-base !default;
+$--button-default-background-color: $--color-background !default;
 $--button-default-font-color: $--color-text-primary !default;
-$--button-default-border-color: $--color-border-base !default;
+$--button-default-border-color: $--color-border !default;
 
 $--button-default-background-color-hover: $--color-primary-light-9 !default;
 $--button-default-border-color-hover: $--color-primary !default;
@@ -315,7 +315,7 @@ $--button-default-border-color-active: mix(
 ) !default;
 
 $--button-default-disabled-font-color: $--color-text-placeholder !default;
-$--button-default-disabled-background-color: $--color-background-base !default;
+$--button-default-disabled-background-color: $--color-background !default;
 $--button-default-disabled-border-color: $--color-border-light !default;
 
 // 朴素按钮
@@ -665,7 +665,7 @@ $--input-font-size: $--font-size-base !default;
 $--input-font-color: $--color-text-regular !default;
 
 $--input-border: $--border-base !default;
-$--input-border-color: $--color-border-base !default;
+$--input-border-color: $--color-border !default;
 $--input-border-radius: $--border-radius-base !default;
 
 $--input-background-color: $--color-white !default;
@@ -713,7 +713,7 @@ $--input-textarea-line-height: 1.5 !default;
 $--input-textarea-line-height-padding: 5px 15px !default;
 
 // 复合型输入框
-$--input-group-background: $--color-background-base !default;
+$--input-group-background: $--color-background !default;
 $--input-group-font-color: $--color-text-secondary !default;
 $--input-group-border: $--border-base !default;
 $--input-group-padding: 0 20px !default; /*对应http和.com两个框*/
@@ -752,7 +752,7 @@ $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
 $--select-option-hover-background: $--options-background-hover !default;
 $--select-option-selected-font-color: $--color-primary !default;
-$--select-option-selected-hover: $--color-background-base !default; /*选择器 选项 选中 悬停 */
+$--select-option-selected-hover: $--color-background !default; /*选择器 选项 选中 悬停 */
 
 // 选择器 分组标题 颜色 对应：
 $--select-group-color: $--color-info !default;
@@ -911,7 +911,7 @@ $--table-padding-padding-right: 4px !default;
 $--table-row-hover-background-color: $--options-background-hover !default; /*row 行*/ /*表尾合计行 背景*/ /*表格悬停颜色*/
 $--table-current-row-background-color: $--color-primary-light-9 !default; /*选中 行*/
 
-$--table-fixed-box-shadow: $--box-shadow-base !default;
+$--table-fixed-box-shadow: $--box-shadow !default;
 // 斑马线呢？
 
 /* Tag 标签
@@ -1006,9 +1006,9 @@ $--loading-mask-background-color: rgba(
 
 /* Message  消息提示
 -------------------------- */
-$--message-shadow: $--box-shadow-base !default;
+$--message-shadow: $--box-shadow !default;
 $--message-min-width: 380px !default;
-$--message-background-color: $--color-background-base !default;
+$--message-background-color: $--color-background !default;
 $--message-padding: 15px 15px 15px 20px !default;
 
 $--message-close-icon-color: $--color-text-placeholder !default;
@@ -1086,7 +1086,7 @@ $--menu-border-right: solid 1px $--color-border-light !default; /*顶栏+侧栏�
 /* Tab 标签页
 -------------------------- */
 $--tab-font-size: $--font-size-base !default;
-$--tab-border-line: 1px solid $--color-border-base !default;
+$--tab-border-line: 1px solid $--color-border !default;
 
 $--tab-header-color-active: $--color-text-secondary !default;
 $--tab-header-color-hover: $--color-text-regular !default;

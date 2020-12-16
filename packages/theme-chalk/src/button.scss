@@ -170,20 +170,21 @@
     border-color: transparent;
     color: $--button-text-font-color;
     background: transparent;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 4px;
+    padding: 0px;
+    border-radius: 0px;
 
     &:hover,
     &:focus {
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: mix($--color-black, $--color-primary, 50%);
       border-color: transparent;
-      background: $--color-primary-light-9;
+      background: transparent;
+      // background: $--color-primary-light-9;
     }
     &:active {
       color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       border-color: transparent;
-      background-color: $--color-primary-light-7;
+      background: transparent;
+      // background-color: $--color-primary-light-7;
     }
 
     &.is-disabled,

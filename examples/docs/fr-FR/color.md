@@ -14,7 +14,7 @@
     'textRegular': '$--color-text-regular',
     'textSecondary': '$--color-text-secondary',
     'textPlaceholder': '$--color-text-placeholder',
-    'borderBase': '$--color-border-base',
+    'borderBase': '$--color-border',
     'borderLight': '$--color-border-light',
     'borderLighter': '$--color-border-light',
     'borderExtraLight': '$--color-border-light'

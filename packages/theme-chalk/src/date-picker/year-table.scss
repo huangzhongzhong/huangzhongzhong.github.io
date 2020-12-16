@@ -23,7 +23,7 @@
     }
 
     &.disabled .cell {/*未找到对应*/
-      background-color: $--color-background-base;
+      background-color: $--color-background;
       cursor: not-allowed;
       color: $--color-text-placeholder;
       &:hover {

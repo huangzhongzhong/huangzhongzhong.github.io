@@ -3,7 +3,7 @@
   import { ACTION_USER_CONFIG_UPDATE } from '../../components/theme/constant.js';
   const varMap = {
     '$--box-shadow-light': 'boxShadowLight',
-    '$--box-shadow-base': 'boxShadowBase',
+    '$--box-shadow': 'boxShadowBase',
     '$--border-radius-base': 'borderRadiusBase',
     '$--border-radius-small': 'borderRadiusSmall'
   };

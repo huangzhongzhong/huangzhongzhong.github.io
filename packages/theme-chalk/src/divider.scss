@@ -2,7 +2,7 @@
 @import "mixins/mixins";
 
 @include b(divider) {
-  background-color: $--color-border-base; /*默认 分割线色*/
+  background-color: $--color-border; /*默认 分割线色*/
   position: relative;
 
   @include m(horizontal) {

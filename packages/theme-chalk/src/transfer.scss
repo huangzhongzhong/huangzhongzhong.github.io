@@ -30,12 +30,12 @@
 
     @include when(disabled) {
       border: $--border-base;
-      background-color: $--color-background-base;
+      background-color: $--color-background;
       color: $--color-text-placeholder;
 
       &:hover {
         border: $--border-base;
-        background-color: $--color-background-base;
+        background-color: $--color-background;
         color: $--color-text-placeholder;
       }
     }
@@ -59,7 +59,7 @@
 }
 
 @include b(transfer-panel) {
-  border: 1px solid $--color-border-base;/*穿梭框（全部） 边框*/
+  border: 1px solid $--color-border;/*穿梭框（全部） 边框*/
   border-radius: $--transfer-border-radius;
   overflow: hidden;
   background: $--color-white;/*穿梭框（全部） 背景*/
@@ -155,10 +155,10 @@
   .el-transfer-panel__header {
     height: $--transfer-panel-header-height;
     line-height: $--transfer-panel-header-height;
-    background: $--color-background-base; /*穿梭框（全部） 标题背景*/
+    background: $--color-background; /*穿梭框（全部） 标题背景*/
     margin: 0;
     padding-left: 15px;
-    border-bottom: 1px solid $--color-border-base;/*穿梭框（全部） 标题内容分割线*/
+    border-bottom: 1px solid $--color-border;/*穿梭框（全部） 标题内容分割线*/
     box-sizing: border-box;
     color: $--color-black;/*未找到对应*/
 
@@ -190,7 +190,7 @@
     background: $--color-white;/*穿梭框（可自定义） 底栏背景*/
     margin: 0;
     padding: 0;
-    border-top: 1px solid $--color-border-base;/*穿梭框（可自定义） 内容底栏分割线*/
+    border-top: 1px solid $--color-border;/*穿梭框（可自定义） 内容底栏分割线*/
     position: absolute;
     bottom: 0;
     left: 0;

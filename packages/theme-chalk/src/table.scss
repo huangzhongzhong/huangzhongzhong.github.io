@@ -63,7 +63,7 @@
   }
 
   @include e(expanded-cell) {
-    background-color: $--color-background-base;/*展开行背景色*/
+    background-color: $--color-background;/*展开行背景色*/
 
     // 纯属为了增加权重
     &[class*=cell] {
@@ -71,7 +71,7 @@
     }
 
     &:hover {
-      background-color: $--color-background-base !important;
+      background-color: $--color-background !important;
     }
   }
 

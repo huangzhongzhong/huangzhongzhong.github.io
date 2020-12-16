@@ -28,8 +28,8 @@
 
   /* 照片墙模式 */
   @include m(picture-card) {
-    background-color: $--color-background-base ; /*照片墙+文件缩略图 背景*/
-    border: 1px dashed $--color-border-base ; /*照片墙+文件缩略图 边框*/
+    background-color: $--color-background ; /*照片墙+文件缩略图 背景*/
+    border: 1px dashed $--color-border ; /*照片墙+文件缩略图 边框*/
     border-radius: 6px;
     box-sizing: border-box;
     width: 148px;
@@ -40,7 +40,7 @@
 
     i {
       font-size: 28px;
-      color: $--color-border-base; /*照片墙+文件缩略图 加号*/
+      color: $--color-border; /*照片墙+文件缩略图 加号*/
     }
 
     &:hover {
@@ -60,7 +60,7 @@
 
 @include b(upload-dragger) { /*拖拽上传*/
   background-color: $--color-white;
-  border: 1px dashed $--color-border-base ; /*拖拽上传边框*/
+  border: 1px dashed $--color-border ; /*拖拽上传边框*/
   border-radius: 6px;
   box-sizing: border-box;
   width: 360px;
@@ -276,7 +276,7 @@
     .el-upload-list__item {
       overflow: hidden;
       background-color: $--color-white;/*文件缩略图 上传后背景*/
-      border: 1px solid $--color-border-base; /*文件缩略图 上传后边框*/
+      border: 1px solid $--color-border; /*文件缩略图 上传后边框*/
       border-radius: 6px;
       box-sizing: border-box;
       width: 148px;
@@ -341,7 +341,7 @@
       color: $--color-white;/*照片墙+文件缩略图 上传后悬停图标色*/
       opacity: 0;
       font-size: 20px;
-      background-color: $--Mask-background-colo-base;/*照片墙+文件缩略图 上传后悬停背景蒙版*/
+      background-color: $--Mask-background-color;/*照片墙+文件缩略图 上传后悬停背景蒙版*/
       transition: opacity .3s;
       &::after {
         display: inline-block;
@@ -391,7 +391,7 @@
       overflow: hidden;
       z-index: 0;
       background-color: $--color-white;/*图片列表缩略图 背景*/
-      border: 1px solid $--color-border-base; /*图片列表缩略图 边框*/
+      border: 1px solid $--color-border; /*图片列表缩略图 边框*/
       border-radius: 6px;
       box-sizing: border-box;
       margin-top: 10px;
