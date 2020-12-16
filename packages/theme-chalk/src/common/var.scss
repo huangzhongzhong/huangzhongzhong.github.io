@@ -35,6 +35,8 @@ $--color-text-primary: #000000 !default; /*一级文本 主要*/
 $--color-text-regular: #262729 !default; /*二级文本 常规*/
 $--color-text-secondary: #73777a !default; /*三级文本 次要*/
 $--color-text-placeholder: #adb0b8 !default; /*四级文本 占位*/
+$--color-text-disable-dark: #434547 !default; /*禁用文字加重色*/
+
 $--color-border-base: #909399 !default; /*一级边框 基础*/
 $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
@@ -49,6 +51,15 @@ $--table-header-font-color: $--color-text-primary !default;/*表头文字色*/
 $--body-font-color: $--color-text-primary !default; /*表格内容文字色*/
 $--body-header-font-color: $--color-text-regular !default;/*表头文字色*/
 
+// 扩展颜色  测试一下会自动更新吗？
+$--color-turquoise: #1094a3 !default; /*绿松石*/
+$--color-purple: #6f25b8 !default; /*紫色*/
+$--color-midnightblue: #373799 !default; /*午夜蓝*/
+$--color-magenta: #cc1878 !default; /*洋红*/
+$--color-yellow: #faca0a !default; /*黄*/
+$--color-chromeyellow: #f5a70a !default; /*铭黄*/
+$--color-grassgreen: #7bb800 !default; /*草绿*/
+
 //蒙版
 $--Mask-background-colo-base: rgba(0, 0, 0, 0.5) !default;
 // 投影
@@ -59,14 +70,7 @@ $--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
 $--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
 $--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
 
-// 扩展颜色
-$--color-turquoise: #1094a3 !default; /*绿松石*/
-$--color-purple: #6f25b8 !default; /*紫色*/
-$--color-midnightblue: #373799 !default; /*午夜蓝*/
-$--color-magenta: #cc1878 !default; /*洋红*/
-$--color-yellow: #faca0a !default; /*黄*/
-$--color-chromeyellow: #f5a70a !default; /*铭黄*/
-$--color-grassgreen: #7bb800 !default; /*草绿*/
+
 
 /*主要颜色衍生*/
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
