@@ -158,7 +158,7 @@
         }
       }
       & + span.el-radio__label { /*禁用状态 选项文字*/
-        color: $--disabled-font-colo-dark;
+        color: $--disabled-font-color;
         cursor: not-allowed;
       }
     }
