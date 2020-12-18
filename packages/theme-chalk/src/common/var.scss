@@ -662,7 +662,7 @@ $--input-suffix-left: 5px !default; /*输入框图标盒子左边距*/
 $--input-icon-width: 25px !default; /*输入框图标盒子宽度*/
 
 $--input-font-size: $--font-size-base !default;
-$--input-font-color: $--color-text-regular !default;
+$--input-font-color: $--color-text-primary !default;
 
 $--input-border: $--border-base !default;
 $--input-border-color: $--color-border !default;
@@ -671,7 +671,7 @@ $--input-border-radius: $--border-radius-base !default;
 $--input-background-color: $--color-white !default;
 $--input-icon-color: $--color-text-secondary !default;
 
-$--input-placeholder-color: $--color-text-secondary !default;
+$--input-placeholder-color: $--color-text-placeholder !default;
 
 // 计数
 $--input-count-font-color: $--color-text-secondary !default;
