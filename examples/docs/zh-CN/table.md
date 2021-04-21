@@ -934,7 +934,6 @@
     :default-sort = "{prop: 'date', order: 'descending'}"
     >
     <el-table-column
-      align="right"
       prop="date"
       label="日期"
       sortable
@@ -1001,7 +1000,6 @@
     :data="tableData"
     style="width: 100%">
     <el-table-column
-      align="right"
       prop="date"
       label="日期"
       sortable
