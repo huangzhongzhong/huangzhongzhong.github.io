@@ -43,6 +43,7 @@ $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 暗*/
 $--color-background: #f2f3f5 !default; /*背景 颜色 基础*/
+$--color-opacity: rgba(0, 0, 0, 0) !default; /*背景 颜色 基础*/
 
 // 扩展颜色
 $--color-turquoise: #1094a3 !default; /*绿松石*/
@@ -239,6 +240,14 @@ $--font-weight-bold: 700 !default; /*加粗字体粗细*/ /*增加*/
 
 $--font-line-height-primary: 24px !default; /*主要字体行高*/
 $--font-line-height-secondary: 16px !default; /*次要字体行高*/
+
+$--font-line-height-extra-large: 28px !default; /*主标题字体大小 最大*/
+$--font-line-height-large: 18px !default; /*标题字体大小 大号*/
+$--font-line-height-medium: 16px !default; /*小标题字体大小 中号*/
+$--font-line-height-base: 22px !default; /*正文本体大小 基础*/
+$--font-line-height-small: 22px !default; /*正文（小）字体大小 小号*/
+$--font-line-height-extra-small: 20px !default; /*辅助字体大小 超小号*/
+
 
 /* Size 大小 这是哪里的大小？
 -------------------------- */

@@ -144,7 +144,11 @@
   @include when(error) {
     & .el-input__inner,
     & .el-textarea__inner {
-      &, &:focus {
+      &{
+        border-color: $--color-danger;/*错误边框*/
+      }
+
+      &:focus {
         border-color: $--color-danger;/*错误边框*/
         box-shadow: $--box-shadow-danger;
       }

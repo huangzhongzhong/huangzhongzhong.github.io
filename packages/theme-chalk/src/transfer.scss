@@ -13,6 +13,7 @@
     display: inline-block;
     vertical-align: middle;
     padding: 0 30px;
+    
   }
 
   @include e(button) {/*被覆盖*/
@@ -45,7 +46,7 @@
     }
 
     &:nth-child(2) {
-      margin: 0;
+      margin-left: 0;
     }
 
     i, span {
@@ -53,7 +54,7 @@
     }
 
     & [class*="el-icon-"] + span {
-      margin-left: 0;
+      margin-left: 0x;
     }
   }
 }

@@ -13,8 +13,9 @@
 
   @include e(tip) {
     font-size: 12px;
+    line-height: $--font-line-height-extra-small;
     color: $--color-text-regular;/*上传说明文字*/
-    margin-top: 7px;
+    margin-top: 8px;
   }
 
   iframe {
@@ -71,10 +72,10 @@
   overflow: hidden;
 
   .el-icon-upload {
-    font-size: 67px;
-    color: $--color-text-secondary ;/*拖拽上传图标*/
-    margin: 40px 0 16px;
-    line-height: 50px;
+    font-size: 64px;
+    color: $--color-text-placeholder ;/*拖拽上传图标*/
+    margin: 32px 0 8px;
+    line-height: 64px;
   }
 
   + .el-upload__tip {
@@ -83,7 +84,7 @@
 
   ~ .el-upload__files {
     border-top: $--border-base;/*未找到对应*/
-    margin-top: 7px;
+    margin-top: 8px;
     padding-top: 5px;
   }
 
@@ -119,10 +120,10 @@
     font-size: 14px;
     color:$--color-text-regular;/*未找到对应*/
     line-height: 1.8;
-    margin-top: 5px;
+    margin-top: 4px;
     position: relative;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 100%;
 
     .el-progress {
@@ -143,7 +144,7 @@
     }
 
     &:first-child {
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     & .el-icon-upload-success { /*点击上传+上传文件列表控制+手动上传*/
@@ -230,6 +231,7 @@
     color: $--color-text-regular;  /*点击上传+图片列表缩略图+上传文件列表控制+拖拽上传+手动上传 默认文件名*/
     display: block;
     margin-right: 40px;
+    line-height: 24px;
     overflow: hidden;
     padding-left: 4px;
     text-overflow: ellipsis;
@@ -239,7 +241,7 @@
     [class^="el-icon"] {
       height: 100%;
       margin-right: 7px;
-      color: $--color-text-regular; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
+      color: $--color-text-secondary; /*点击上传+上传文件列表控制+拖拽上传+手动上传 默认文件图标颜色*/
       line-height: inherit;
       &:hover{
         color: $--color-primary;

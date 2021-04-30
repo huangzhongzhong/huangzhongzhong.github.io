@@ -1,7 +1,7 @@
 .upload-tip {
   color: #8492a6;
   font-size: 12px;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 .demo-block {
   margin-bottom: 24px;
@@ -11,15 +11,15 @@
   }
   .avatar-uploader {
     .el-upload {
-      border: 1px dashed #d9d9d9;
-      border-radius: 6px;
+      border: 1px dashed #909399 ;
+      border-radius: 4px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
 
       &:hover,
       &:focus {
-        border-color: #409eff;
+        border-color: #1267e5;
       }
     }
     .avatar-uploader-icon {

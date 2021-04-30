@@ -58,7 +58,7 @@
     position: relative;
     width: $--switch-width; /*未找到对应*/
     height: $--switch-height; /*开关高度*/
-    border: 1px solid $--switch-off-color; /*未找到对应*/
+    border: 1px solid $--color-opacity ; /*关闭状态开关描边*/
     outline: none;
     border-radius: $--switch-core-border-radius; /*未找到对应*/
     box-sizing: border-box;
@@ -66,7 +66,7 @@
     cursor: pointer;
     transition: border-color .3s, background-color .3s;
     vertical-align: middle;
-    background-color: $--color-background-dark; /*禁用状态关闭背景*/
+    background-color: $--color-divider; /*禁用状态关闭背景*/
 
     &:after { /*开关圆圈按钮*/
       content: "";
@@ -95,7 +95,7 @@
 
   @include when(disabled) {
     
-    opacity: 0.6;
+    opacity: 0.5;/*禁用状态下的开关透明度与默认状态的透明度百分比*/
   }
 
   @include m(wide) {
