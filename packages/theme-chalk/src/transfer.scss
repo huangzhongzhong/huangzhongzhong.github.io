@@ -81,7 +81,7 @@
 
   @include e(list) {
     margin: 0;
-    padding: 6px 0;
+    padding: 8px 0;
     list-style: none;
     height: $--transfer-panel-body-height;
     overflow: auto;
@@ -104,6 +104,7 @@
     }
 
     &.el-checkbox {
+      margin-right: 23px;
       color: $--color-text-regular; /*穿梭框（全部） 备选项文字*/
     }
 
@@ -116,7 +117,7 @@
       @include utils-ellipsis;
       display: block;
       box-sizing: border-box;
-      padding-left: 24px;
+      padding-left: 22px;
       line-height: $--transfer-item-height;
     }
 
@@ -126,9 +127,9 @@
     }
   }
 
-  @include e(filter) {
+  @include e(filter) {/*搜索框*/
     text-align: center;
-    margin: 15px;
+    margin: 15px 15px 12px 15px;
     box-sizing: border-box;
     display: block;
     width: auto;
@@ -139,7 +140,7 @@
       font-size: 12px;
       display: inline-block;
       box-sizing: border-box;
-      border-radius: #{$--transfer-filter-height / 2};
+      border-radius: 4px;
       padding-right: 10px;
       padding-left: 30px;
     }
@@ -178,8 +179,10 @@
         span {
           position: absolute;
           right: 15px;
+          top: 9px;
           color: $--color-text-secondary;/*穿梭框（全部） 选项数量*/
           font-size: 12px;
+          line-height: $--font-line-height-extra-small;
           font-weight: normal;
         }
       }

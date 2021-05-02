@@ -255,7 +255,7 @@
   @include e(label) {
     /*全局多选标签文字*/
     display: inline-block;
-    padding-left: 10px;
+    padding-left: 8px;
     line-height:$--checkbox-line-height;
     font-size: $--checkbox-font-size;
   }

@@ -239,6 +239,6 @@
   @include e(label) {
     /*单选全局字体大小和间距*/
     font-size: $--radio-font-size;
-    padding-left: $--radio-padding-left;
+    padding-left: 8px;
   }
 }
