@@ -10,7 +10,7 @@
   /*日期选择器（全部）*/ /*日期时间选择器（全部）*/ /*时间选择器（固定时间点+固定时间范围+任意时间范围）*/
   background: $--color-white;
   border-radius: $--border-radius-base;
-  line-height: 30px;
+  line-height: 32px;
   margin: 5px 0;
 
   @include e((body, body-wrapper)) {
@@ -84,7 +84,7 @@
     background: transparent;
     cursor: pointer;
     outline: none;
-    margin-top: 8px;
+    margin-top: 10px;
 
     &:hover {
       color: $--options-font-color-hover;

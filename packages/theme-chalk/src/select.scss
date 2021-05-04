@@ -36,8 +36,7 @@
   
   .el-input { /*选择输入框*/
     & .el-select__caret {
-      // 控制选择框图标颜色 
-      color: $--select-input-icon-color ;
+      color: $--select-input-icon-color ;/*控制选择框图标颜色 */
       font-size: $--select-input-font-size;
       transition: transform .3s;
       transform: rotateZ(180deg);

@@ -31,6 +31,7 @@
     font-weight: bold;
     font-size: $--notification-title-font-size;
     color: $--notification-title-color; /*所有标题字体色*/
+    line-height: $--font-line-height-medium;
     margin: 0;
     .el-icon-error  {
       color: $--notification-danger-icon-color; /*所有危险图标色*/ 
@@ -39,8 +40,8 @@
 
   @include e(content) {
     font-size: $--notification-content-font-size;
-    line-height: 21px;
-    margin: 6px 0 0 0;
+    line-height: $--font-line-height-base;
+    margin: 8px 0 0 0;
     color: $--notification-content-color;  /*所有内容字体色*/
     text-align: justify;
 
@@ -57,7 +58,7 @@
 
   @include e(closeBtn) {
     position: absolute;
-    top: 18px;
+    top: 19px;
     right: 15px;
     cursor: pointer; 
     color: $--notification-close-color;  /*所有关闭按钮默认色*/  

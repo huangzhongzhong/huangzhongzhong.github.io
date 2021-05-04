@@ -66,11 +66,9 @@ $--body-header-font-color: $--color-text-regular !default;/*详情页标题文�
 //蒙版
 $--Mask-background-color: rgba(0, 0, 0, 0.5) !default;
 // 投影
-$--box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !default;
-$--box-shadow-dark: 0px 16px 24px rgba(0, 4, 10, 0.16),
-  0px 4px 32px rgba(0, 4, 10, 0.16), 0px 0px 12px -4px rgba(0, 4, 10, 0.16) !default;
-$--box-shadow-light: 0px 2px 8px rgba(0, 0, 0, 0.15) !default;
+$--box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.12), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 16px 4px rgba(0, 0, 0, 0.04) !default;
+$--box-shadow-dark: 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px 2px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.04) !default;
+$--box-shadow-light: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.06), 0px 4px 8px 2px rgba(0, 0, 0, 0.04) !default;
 $--box-shadow-focus-primary: 0 0 2px 2px $--color-primary !default;
 
 /*主要颜色衍生*/
@@ -179,12 +177,12 @@ $--disabled-font-color: $--color-text-placeholder !default; /*禁用 字体颜�
 $--disabled-font-colo-dark: $--color-info !default; /*禁用 字体颜色 加重*/ /*用于用户要求强调的禁用文字*/
 
 /* 下拉菜单等选项悬停专题 */
-$--options-background-hover: mix(
-  $--color-white,
-  $--color-primary,
-  80%
-) !default; /*背景 悬浮*/ /*主要应用在下拉框*/
-$--options-background-hover-lighter: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
+$--options-background-hover: $--color-primary-light-8
+ !default; /*背景 悬浮*/ /*主要应用在下拉框*/
+$--options-background-hover-light: $--color-background-dark !default; /*增加*/ /*背景 悬浮*/
+$--options-background-hover-lighter: $--color-background !default; /*增加*/ /*背景 悬浮*/
+
+
 $--options-font-color-hover: $--color-primary !default; /*字体 颜色 悬停*/
 $--options-font-weight-hover: 700 !default; /*选项悬停字体粗细*/
 $--options-font-weight-active: 700 !default; /*选项选中字体粗细*/
@@ -242,8 +240,8 @@ $--font-line-height-primary: 24px !default; /*主要字体行高*/
 $--font-line-height-secondary: 16px !default; /*次要字体行高*/
 
 $--font-line-height-extra-large: 28px !default; /*主标题字体大小 最大*/
-$--font-line-height-large: 18px !default; /*标题字体大小 大号*/
-$--font-line-height-medium: 16px !default; /*小标题字体大小 中号*/
+$--font-line-height-large: 26px !default; /*标题字体大小 大号*/
+$--font-line-height-medium: 24px !default; /*小标题字体大小 中号*/
 $--font-line-height-base: 22px !default; /*正文本体大小 基础*/
 $--font-line-height-small: 22px !default; /*正文（小）字体大小 小号*/
 $--font-line-height-extra-small: 20px !default; /*辅助字体大小 超小号*/
@@ -943,7 +941,7 @@ $--tag-padding: 0 10px !default;
 /* Tree 树形控件
 -------------------------- */
 // 树形控件 节点 悬浮 背景 颜色
-$--tree-node-hover-background-color: $--options-background-hover !default;
+$--tree-node-hover-background-color: $--options-background-hover-light !default;
 // 树形控件 字体 颜色
 $--tree-font-color: $--color-text-regular !default;
 // 树形控件 扩大 图标 颜色
@@ -1018,9 +1016,8 @@ $--loading-mask-background-color: rgba(
 $--message-shadow: $--box-shadow !default;
 $--message-min-width: 380px !default;
 $--message-background-color: $--color-background !default;
-$--message-padding: 15px 15px 15px 20px !default;
+$--message-padding: 15px 15px 15px 15px !default;
 
-$--message-close-icon-color: $--color-text-placeholder !default;
 $--message-close-size: 16px !default;
 $--message-close-hover-color: $--color-text-secondary !default;
 
@@ -1050,7 +1047,7 @@ $--messagebox-danger-color: $--color-danger !default;
 /* Notification  通知
 -------------------------- */
 $--notification-width: 330px !default;
-$--notification-padding: 14px 26px 14px 13px !default;
+$--notification-padding: 15px 23px 15px 19px !default;
 $--notification-radius: 8px !default;
 $--notification-shadow: $--box-shadow-light !default;
 
@@ -1058,8 +1055,8 @@ $--notification-border-color: $--color-white !default;
 $--notification-icon-size: 24px !default;
 $--notification-close-font-size: $--message-close-size !default;
 
-$--notification-group-margin-left: 13px !default;
-$--notification-group-margin-right: 8px !default;
+$--notification-group-margin-left: 12px !default;
+$--notification-group-margin-right: 0px !default;
 $--notification-content-font-size: $--font-size-base !default;
 $--notification-content-color: $--color-text-regular !default;
 

@@ -25,7 +25,7 @@
   &:last-child {
     border-right: none;
     .el-cascader-node {
-      padding-right: 20px ;/*级联面板最后一版右侧padding*/
+      padding-right: 19px ;/*级联面板最后一版右侧padding*/
     }
   }
 
@@ -37,7 +37,7 @@
     position: relative;
     min-height: 100%;
     margin: 0;
-    padding: 6px 0; /*级联面板内容区-上下边缘距离*/
+    padding: 7px 0; /*级联面板内容区-上下边缘距离*/
     list-style: none;
     box-sizing: border-box;
   }
@@ -65,9 +65,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 30px 0 20px; /*级联面板菜单单行左右间距*/
-  height: 34px; /*级联面板菜单行高度*/
-  line-height: 34px; /*级联面板菜单行高度*/
+  padding: 0 31px 0 19px; /*级联面板菜单单行左右间距*/
+  height: 32px; /*级联面板菜单行高度*/
+  line-height: 32px; /*级联面板菜单行高度*/
   outline: none;
 
   &.is-selectable.in-active-path {  /*选中某个标题展开下一级，但没选中这个标题本身*/ 
@@ -97,17 +97,19 @@
 
   @include e(prefix) { /*级联面板勾图标左侧间距*/
     position: absolute;
-    left: 10px;
+    left: 11px;
+    font-size: $--select-dropdown-after-font-size;
+    font-weight:$--select-dropdown-after-font-weight;
   }
 
   @include e(postfix) { /*级联面板箭头图标右侧间距*/
     position: absolute;
-    right: 10px;
+    right: 11px;
   }
 
   @include e(label) { 
     flex: 1;
-    padding: 0 10px; /*级联面板标签左右间距*/
+    padding: 0 8px; /*级联面板标签左右间距*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

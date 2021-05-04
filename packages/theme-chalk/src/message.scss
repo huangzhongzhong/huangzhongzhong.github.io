@@ -9,8 +9,8 @@
   border-style: $--border-style-base;
   border-color: $--color-white; /*消息 边框色*/
   position: fixed;
-  left: 50%;
-  top: 20px;
+  left: 50%;/*提示框位置*/
+  top: 20px;/*未知对应*/
   transform: translateX(-50%);
   background-color: $--color-white; /*消息 背景色*/
   box-shadow: $--box-shadow;
@@ -26,7 +26,7 @@
 
   @include when(closable) {
     .el-message__content {
-      padding-right: 16px;
+      padding-right: 16px;/*未知对应*/
     }
   }
 
@@ -68,7 +68,7 @@
   }
 
   @include e(icon) {
-    margin-right: 10px;
+    margin-right: 8px;/*icon与提示文字的距离*/
   }
 
   @include e(content) {
@@ -83,10 +83,10 @@
   @include e(closeBtn) {
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 15px;/*关闭图标位置*/
     transform: translateY(-50%);
     cursor: pointer;
-    color: $--message-close-icon-color; /*关闭字体图标色*/
+    color: $--color-text-secondary; /*关闭字体图标色*/
     font-size: $--message-close-size;
 
     &:focus {
