@@ -6,14 +6,29 @@
   user-select: none;
 
   @include when(week-mode) { /*week：周*/ /*日期选择器 其他日期单位 周*/
+
+
     .el-date-table__row {
+      color: $--datepicker-font-color;
       &:hover {
         div {
+          font-weight: $--font-weight-secondary;
           background-color: $--datepicker-inrange-background-color-hover ; /*悬停区域*/
         }
         td.available:hover { /*周文字色*/
           color: $--datepicker-font-color;
+
         }
+        td.prev-month :hover span { 
+          color:$--color-text-placeholder;
+          font-weight: $--font-weight-secondary;
+        }
+        td.next-month :hover span { 
+          color:$--color-text-placeholder;
+          font-weight: $--font-weight-secondary;
+        }
+
+
         td:first-child div {  /*周选择条 左侧*/
           margin-left: 5px;
           border-top-left-radius: 15px;
@@ -28,6 +43,7 @@
 
       &.current div { /*周选择条 选中区域*/
         background-color: $--datepicker-inrange-background-color-hover;
+
       }
     }
   }
@@ -67,13 +83,18 @@
     &.prev-month {
       /*日期时间选择器（全部） 禁用日期*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  禁用日期*/
       color: $--disabled-font-color; 
+      &:hover span {
+        color: $--color-primary-light-5;
+        font-weight: $--font-weight-bold;
+        background-color: $--color-opacity;
+      }
     }
 
     &.today {
       position: relative;
       span {
         color: $--link-color-base; /*日期时间选择器（全部） 当前日期*/  /*日期选择器 选择日+其他日期单位（周+多个日期）+选择日期范围  当前日期*/
-        font-weight: $--options-font-weight-hover;
+        font-weight: $--font-weight-bold;
       }
       &.start-date span,
       &.end-date span {
@@ -96,6 +117,7 @@
 
     &.current:not(.disabled) span { /*日期时间选择器(日期和时间点) 选中文字*/ /*日期选择器(选择日) 选中文字*/
       color: $--color-white; /*选中文字*/ 
+      font-weight: $--font-weight-bold;
       background-color: $--datepicker-active-color; /*选中背景*/ 
     }
     &.start-date div,
@@ -127,6 +149,9 @@
       opacity: 1;
       cursor: not-allowed;
       color: $--disabled-font-color;/*已审*/
+      &:hover span {
+        background-color:$--disabled-background-base;
+      }
     }
 
     &.selected div {  /*日期选择器（其他日期单位（多个日期）） */

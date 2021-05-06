@@ -43,7 +43,7 @@ $--color-border-light: #c0c3cc !default; /*二级边框 轻*/
 $--color-divider: #c1cbdb !default; /*增加*/ /*分割线色*/
 $--color-background-dark: #d8dde5 !default; /*增加*/ /*背景 颜色 暗*/
 $--color-background: #f2f3f5 !default; /*背景 颜色 基础*/
-$--color-opacity: rgba(0, 0, 0, 0) !default; /*背景 颜色 基础*/
+$--color-opacity: rgba(0, 0, 0, 0) !default; /*透明色*/
 
 // 扩展颜色
 $--color-turquoise: #1094a3 !default; /*绿松石*/
@@ -842,9 +842,9 @@ $--slider-button-wrapper-offset: -15px !default;
 
 /* DatePicker 日期选择器
 --------------------------*/
-$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-font-color: $--color-text-primary !default;
 
-$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-header-font-color: $--color-text-primary !default;
 $--datepicker-icon-color: $--color-text-primary !default;
 $--datepicker-border-color: $--color-border-light !default;
 
@@ -854,8 +854,8 @@ $--datepicker-inner-border-color: $--color-border-light !default;
 $--datepicker-inrange-background-color-hover: $--options-background-hover !default;
 
 $--datepicker-active-color: $--color-primary !default;
-$--datepicker-hover-font-color: $--link-color-hover !default;
-// 日期选择器  单元 悬停 颜色
+$--datepicker-hover-font-color: $--link-color-hover !default;/*日期选择器  单元 悬停 颜色*/
+
 $--datepicker-cell-hover-color: $--color-white !default;
 
 /* Date Time Picker 时间日期选择器

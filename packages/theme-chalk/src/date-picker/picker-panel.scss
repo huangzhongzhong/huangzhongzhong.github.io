@@ -40,7 +40,7 @@
     width: 100%;
     border: 0;
     background-color: transparent;
-    line-height: 28px;
+    line-height: 30px;
     font-size: 14px;
     /*日期时间选择器（日期和时间点（带快捷选项）日期和时间范围（带快捷选项）+日期选择器（选择日（带快捷选项）+选择日期范围（带快捷选项）+选择月份范围（带快捷选项）））*/
     color: $--datepicker-font-color; /*左侧文字*/
@@ -113,7 +113,7 @@
   width: 110px;
   border-right: 1px solid $--datepicker-inner-border-color;  /*左侧竖栏*/
   box-sizing: border-box;
-  padding-top: 6px;
+  padding-top: 8px;
   background-color: $--color-white;  /*左侧竖栏*/
   overflow: auto;
 }
