@@ -281,13 +281,13 @@ $--button-border-radius-small: $--border-radius-small !default;
 
 // 全局纵向padding，但不影响圆角按钮 因为圆角按钮单独的。
 $--button-padding-vertical: 12px !default;
-$--button-padding-horizontal: 20px !default;
+$--button-padding-horizontal: 19px !default;
 
 // 按钮中号
 $--button-medium-font-size: $--font-size-base !default;
 $--button-medium-border-radius: $--border-radius-base !default;
 $--button-medium-padding-vertical: 10px !default;
-$--button-medium-padding-horizontal: 20px !default;
+$--button-medium-padding-horizontal: 19px !default;
 // 按钮小号
 $--button-small-font-size: 12px !default;
 $--button-small-border-radius: #{$--border-radius-base - 1} !default;
@@ -377,6 +377,7 @@ $--button-info-background-color: $--color-info !default;
 // 文字按钮
 $--button-text-font-color: $--color-primary !default;
 $--button-disabled-text-font-color: $--color-text-placeholder !default;
+
 
 /* Link 链接
 --------------------------*/
